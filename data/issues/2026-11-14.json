@@ -1,7 +1,7 @@
 {
   "issue_date": "2026-11-14",
   "issue_number": 1,
-  "generated_at": "2026-11-14T13:15:49.148884+08:00",
+  "generated_at": "2026-11-14T14:20:17.788170+08:00",
   "description": "从 4 个数据通道收录 36 条 AI 研究更新，聚焦大模型、Agent、综合。",
   "ai_enabled": false,
   "source_health": [
@@ -112,7 +112,7 @@
         "生成与创造",
         "IJCV"
       ],
-      "score": 42.67,
+      "score": 42.6,
       "ai_tldr": "",
       "ai_why": "",
       "external_id": "10.1007/s11263-026-03112-7",
@@ -164,7 +164,7 @@
         "检索与知识",
         "community pick"
       ],
-      "score": 28.67,
+      "score": 28.6,
       "ai_tldr": "",
       "ai_why": "",
       "external_id": "2611.16728",
@@ -194,7 +194,7 @@
         "ML Applications",
         "Open Source"
       ],
-      "score": 23.73,
+      "score": 23.67,
       "ai_tldr": "",
       "ai_why": "",
       "external_id": "",
@@ -251,7 +251,7 @@
         "推理",
         "IJCV"
       ],
-      "score": 38.17,
+      "score": 38.1,
       "ai_tldr": "",
       "ai_why": "",
       "external_id": "10.1007/s11263-026-03118-1",
@@ -293,7 +293,7 @@
         "训练与系统",
         "community pick"
       ],
-      "score": 28.67,
+      "score": 28.6,
       "ai_tldr": "",
       "ai_why": "",
       "external_id": "2611.17334",
@@ -738,7 +738,7 @@
         "评测与安全",
         "IJCV"
       ],
-      "score": 37.67,
+      "score": 37.6,
       "ai_tldr": "",
       "ai_why": "",
       "external_id": "10.1007/s11263-026-03119-0",
@@ -776,7 +776,7 @@
         "训练与系统",
         "Nature Machine Intelligence"
       ],
-      "score": 36.67,
+      "score": 36.6,
       "ai_tldr": "",
       "ai_why": "",
       "external_id": "10.1038/s42256-026-01328-3",
@@ -813,7 +813,7 @@
         "多模态",
         "IJCV"
       ],
-      "score": 35.17,
+      "score": 35.1,
       "ai_tldr": "",
       "ai_why": "",
       "external_id": "10.1007/s11263-026-03079-5",
@@ -846,7 +846,7 @@
         "训练与系统",
         "IJCV"
       ],
-      "score": 32.67,
+      "score": 32.6,
       "ai_tldr": "",
       "ai_why": "",
       "external_id": "10.1007/s11263-026-03096-4",
@@ -882,7 +882,7 @@
         "综合",
         "IJCV"
       ],
-      "score": 30.17,
+      "score": 30.1,
       "ai_tldr": "",
       "ai_why": "",
       "external_id": "10.1007/s11263-026-03123-4",
@@ -916,7 +916,7 @@
         "机器人与具身",
         "Nature Machine Intelligence"
       ],
-      "score": 29.67,
+      "score": 29.6,
       "ai_tldr": "",
       "ai_why": "",
       "external_id": "10.1038/s42256-026-01335-4",
@@ -950,7 +950,7 @@
         "训练与系统",
         "community pick"
       ],
-      "score": 28.67,
+      "score": 28.6,
       "ai_tldr": "",
       "ai_why": "",
       "external_id": "2611.16409",
@@ -983,7 +983,7 @@
         "综合",
         "IJCV"
       ],
-      "score": 28.67,
+      "score": 28.6,
       "ai_tldr": "",
       "ai_why": "",
       "external_id": "10.1007/s11263-026-03082-w",
@@ -1015,7 +1015,7 @@
         "综合",
         "IJCV"
       ],
-      "score": 28.67,
+      "score": 28.6,
       "ai_tldr": "",
       "ai_why": "",
       "external_id": "10.1007/s11263-026-03078-6",
@@ -1050,7 +1050,7 @@
         "综合",
         "IJCV"
       ],
-      "score": 27.17,
+      "score": 27.1,
       "ai_tldr": "",
       "ai_why": "",
       "external_id": "10.1007/s11263-026-03124-3",
@@ -1128,7 +1128,7 @@
         "评测与安全",
         "community pick"
       ],
-      "score": 26.17,
+      "score": 26.1,
       "ai_tldr": "",
       "ai_why": "",
       "external_id": "2611.17190",
@@ -1164,7 +1164,7 @@
         "生成与创造",
         "community pick"
       ],
-      "score": 26.17,
+      "score": 26.1,
       "ai_tldr": "",
       "ai_why": "",
       "external_id": "2611.16961",
@@ -1216,7 +1216,7 @@
         "生成与创造",
         "community pick"
       ],
-      "score": 24.67,
+      "score": 24.6,
       "ai_tldr": "",
       "ai_why": "",
       "external_id": "2611.15094",
@@ -1250,7 +1250,7 @@
         "检索与知识",
         "community pick"
       ],
-      "score": 24.17,
+      "score": 24.1,
       "ai_tldr": "",
       "ai_why": "",
       "external_id": "2611.12750",
@@ -1291,7 +1291,7 @@
         "生成与创造",
         "community pick"
       ],
-      "score": 23.67,
+      "score": 23.6,
       "ai_tldr": "",
       "ai_why": "",
       "external_id": "2611.17336",
@@ -1318,7 +1318,7 @@
         "评测与安全",
         "Global Affairs"
       ],
-      "score": 23.17,
+      "score": 23.1,
       "ai_tldr": "",
       "ai_why": "",
       "external_id": "",
