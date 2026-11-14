@@ -16,6 +16,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 
 import sync_papers  # noqa: E402
 import archive_deep_read  # noqa: E402
+import sync_conferences  # noqa: E402
 
 
 class FeedParsingTests(unittest.TestCase):
@@ -181,7 +182,132 @@ class SelectionTests(unittest.TestCase):
             self.assertIn('title: "Deep Paper"', markdown)
             self.assertIn("## 方法拆解", markdown)
             self.assertEqual(data["status"], "queued")
-            self.assertEqual(data["issue_number"], 42)
+        self.assertEqual(data["issue_number"], 42)
+
+
+class ConferenceParsingTests(unittest.TestCase):
+    def test_parses_cvf_page(self) -> None:
+        page = """
+        <dt class="ptitle"><br><a href="/content/CVPR2026/html/Test_paper.html">A Test Paper</a></dt>
+        <dd>
+        <form><input type="hidden" name="query_author" value="Ada Lovelace"></form>
+        <form><input type="hidden" name="query_author" value="Alan Turing"></form>
+        [<a href="/content/CVPR2026/papers/Test_paper.pdf">pdf</a>]
+        </dd>
+        """
+        papers = sync_conferences.parse_cvf(
+            page,
+            {
+                "slug": "cvpr-2026",
+                "name": "CVPR 2026",
+                "year": 2026,
+            },
+            "Main Conference",
+        )
+        self.assertEqual(len(papers), 1)
+        self.assertEqual(papers[0].title, "A Test Paper")
+        self.assertEqual(papers[0].authors, ["Ada Lovelace", "Alan Turing"])
+        self.assertTrue(papers[0].pdf_url.endswith("Test_paper.pdf"))
+
+    def test_parses_bibtex_fields_with_nested_braces(self) -> None:
+        bib = """
+        @InProceedings{test2026,
+          title = {{LLM} Reasoning: A {Test}},
+          author = {Lovelace, Ada and Turing, Alan},
+          url = {https://example.com/paper},
+          abstract = {We test {nested} braces and a comma, then report results.}
+        }
+        """
+        entries = list(sync_conferences.parse_bib_entries(bib))
+        self.assertEqual(len(entries), 1)
+        self.assertEqual(entries[0]["title"], "{LLM} Reasoning: A {Test}")
+        self.assertIn("nested", entries[0]["abstract"])
+        self.assertEqual(
+            sync_conferences.parse_bib_authors(entries[0]["author"]),
+            ["Ada Lovelace", "Alan Turing"],
+        )
+
+    def test_deduplicates_conference_papers(self) -> None:
+        paper = sync_conferences.ConferencePaper(
+            id="one",
+            title="A Paper",
+            authors=[],
+            url="https://example.com/paper",
+            pdf_url="",
+            venue="CVPR 2026",
+            track="Main",
+            year=2026,
+            source="CVF",
+        )
+        duplicate = sync_conferences.dataclasses.replace(paper, id="two")
+        self.assertEqual(len(sync_conferences.dedupe_papers([paper, duplicate])), 1)
+
+    def test_parses_ijcai_track_authors_and_pdf(self) -> None:
+        page = """
+        <div class="section"><div class="section_title"><h3>Main Track</h3></div>
+          <div class="subsection"><div class="subsection_title">Agents</div>
+          <div class="paper_wrapper">
+            <a class="title" href="/proceedings/2026/1">Agent Paper</a>
+            <div class="authors"><a>Ada Lovelace</a>, <a>Alan Turing</a></div>
+            <div class="paper-row__actions"><a href="/proceedings/2026/0001.pdf">PDF</a></div>
+          </div></div>
+        </div>
+        """
+        papers = sync_conferences.parse_ijcai(
+            page,
+            {"slug": "ijcai-2026", "name": "IJCAI 2026", "year": 2026},
+        )
+        self.assertEqual(len(papers), 1)
+        self.assertEqual(papers[0].track, "Main Track / Agents")
+        self.assertEqual(papers[0].authors, ["Ada Lovelace", "Alan Turing"])
+        self.assertTrue(papers[0].pdf_url.endswith("0001.pdf"))
+
+    def test_parses_neurips_list_and_derives_pdf(self) -> None:
+        page = """
+        <ul class="paper-list">
+          <li class="conference">
+            <a title="paper title" href="/paper_files/paper/2025/hash/abc-Abstract-Conference.html">Paper</a>
+            <span class="paper-authors">Ada Lovelace, Alan Turing</span>
+            <span class="paper-track-badge">Main Conference Track</span>
+          </li>
+        </ul>
+        """
+        papers = sync_conferences.parse_neurips(
+            page,
+            {"slug": "neurips-2025", "name": "NeurIPS 2025", "year": 2025},
+        )
+        self.assertEqual(len(papers), 1)
+        self.assertEqual(papers[0].authors, ["Ada Lovelace", "Alan Turing"])
+        self.assertTrue(papers[0].pdf_url.endswith("abc-Paper-Conference.pdf"))
+
+    def test_parses_huggingface_preprints(self) -> None:
+        payload = json.dumps(
+            [
+                {
+                    "paper": {
+                        "id": "2611.12345",
+                        "title": "A Strong Preprint",
+                        "summary": "Summary.",
+                        "authors": [{"name": "Ada Lovelace"}],
+                        "upvotes": 42,
+                    }
+                }
+            ]
+        )
+        papers = sync_conferences.parse_huggingface(
+            payload,
+            {
+                "slug": "preprints-2026",
+                "name": "高质量预印本 2026",
+                "year": 2026,
+                "min_upvotes": 5,
+                "max_items": 100,
+            },
+        )
+        self.assertEqual(len(papers), 1)
+        self.assertEqual(papers[0].url, "https://arxiv.org/abs/2611.12345")
+        self.assertEqual(papers[0].track, "Hugging Face Daily")
+        self.assertEqual(papers[0].signal, "42 upvotes")
 
 
 if __name__ == "__main__":

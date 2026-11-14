@@ -1,0 +1,97 @@
+---
+import fs from "node:fs";
+import path from "node:path";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { withBase } from "../../lib/url";
+
+const indexPath = path.join(process.cwd(), "public", "data", "conferences", "index.json");
+const data = JSON.parse(fs.readFileSync(indexPath, "utf8"));
+const conferences = data.conferences.filter(
+  (conference: any) => (conference.kind || "conference") === "conference",
+);
+const preprints = data.conferences.filter(
+  (conference: any) => conference.kind === "preprint",
+);
+---
+
+<BaseLayout
+  title="顶会论文库｜AI Research Signal"
+  description="检索 AI、大模型、多模态、视觉与 NLP 顶会论文集和高质量预印本。"
+>
+  <section class="conference-hero section-shell">
+    <div>
+      <p class="overline">OFFICIAL PROCEEDINGS / FULL PAPER INDEX</p>
+      <h1>顶会论文<br /><em>全量索引。</em></h1>
+    </div>
+    <div class="conference-hero-copy">
+      <p>
+        直接索引 CVF、PMLR、ACL Anthology、AAAI、IJCAI、ICLR 和 NeurIPS
+        的官方论文页面。会议论文与高质量预印本分开标注，支持标题、作者和 Track 检索。
+      </p>
+      <dl>
+        <div><dt>{data.total_papers.toLocaleString("zh-CN")}</dt><dd>已收录论文</dd></div>
+        <div><dt>{conferences.length}</dt><dd>顶会论文集</dd></div>
+        <div><dt>{preprints.reduce((sum: number, item: any) => sum + item.paper_count, 0)}</dt><dd>精选预印本</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="conference-library section-shell" aria-labelledby="conference-library-title">
+    <header class="section-header">
+      <div>
+        <p class="overline">CONFERENCE LIBRARY</p>
+        <h2 id="conference-library-title">顶会论文集</h2>
+      </div>
+      <p>只收录已经发布且可回到官方页面的正式论文。</p>
+    </header>
+    <div class="conference-card-grid">
+      {conferences.map((conference: any, index: number) => (
+        <article class="conference-card">
+          <header>
+            <span>{String(index + 1).padStart(2, "0")}</span>
+            <span>{conference.source}</span>
+          </header>
+          <p>{conference.year} / {conference.full_name}</p>
+          <h3>
+            <a href={withBase(`conferences/${conference.slug}/`)}>{conference.name}</a>
+          </h3>
+          <div class="conference-tracks">
+            {conference.tracks.slice(0, 3).map((track: any) => (
+              <span>{track.name} · {track.count}</span>
+            ))}
+          </div>
+          <footer>
+            <strong>{conference.paper_count.toLocaleString("zh-CN")}</strong>
+            <span>篇论文</span>
+            <a href={withBase(`conferences/${conference.slug}/`)}>打开目录 →</a>
+          </footer>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="preprint-library section-shell" aria-labelledby="preprint-library-title">
+    <header class="section-header">
+      <div>
+        <p class="overline">PREPRINT RADAR</p>
+        <h2 id="preprint-library-title">高质量预印本</h2>
+      </div>
+      <p>社区关注只是候选信号，不代表同行评审或质量认证。</p>
+    </header>
+    {preprints.map((conference: any) => (
+      <a class="preprint-banner" href={withBase(`conferences/${conference.slug}/`)}>
+        <div>
+          <span>PREPRINT / {conference.year}</span>
+          <h3>{conference.name}</h3>
+        </div>
+        <p>
+          收录 Hugging Face Daily Papers 中达到社区关注阈值的工作，
+          保留 arXiv 原文，并明确标注为预印本。
+        </p>
+        <strong>{conference.paper_count}</strong>
+        <span aria-hidden="true">→</span>
+      </a>
+    ))}
+  </section>
+</BaseLayout>
+

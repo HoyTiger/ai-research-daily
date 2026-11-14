@@ -21,6 +21,15 @@ if (latestDate) {
     latestIssue = JSON.parse(fs.readFileSync(issueFile, "utf8"));
   }
 }
+const conferenceIndex = JSON.parse(
+  fs.readFileSync(
+    path.join(process.cwd(), "public", "data", "conferences", "index.json"),
+    "utf8",
+  ),
+);
+const featuredConferences = conferenceIndex.conferences
+  .filter((item: any) => (item.kind || "conference") === "conference")
+  .slice(0, 6);
 const picks = latestIssue?.items?.slice(0, 3) ?? [];
 const topics = Array.from(
   new Set(
@@ -179,10 +188,33 @@ const todayLabel = latest ? formatIssueDate(latest.data.date) : "WAITING FOR DAT
     </div>
   </section>
 
-  <section class="recent-issues section-shell" aria-labelledby="recent-title">
+  <section class="conference-home section-shell" aria-labelledby="conference-home-title">
     <header class="section-header">
       <div>
         <span class="section-number">03</span>
+        <p class="overline">CONFERENCE PAPER LIBRARY</p>
+        <h2 id="conference-home-title">顶会论文全量库</h2>
+      </div>
+      <a class="text-link" href={withBase("conferences/")}>检索全部论文 <span>→</span></a>
+    </header>
+    <div class="conference-home-summary">
+      <p>{conferenceIndex.total_papers.toLocaleString("zh-CN")}</p>
+      <span>篇正式会议论文与高质量预印本</span>
+      <div>
+        {featuredConferences.map((item: any) => (
+          <a href={withBase(`conferences/${item.slug}/`)}>
+            <strong>{item.name}</strong>
+            <span>{item.paper_count.toLocaleString("zh-CN")} 篇</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="recent-issues section-shell" aria-labelledby="recent-title">
+    <header class="section-header">
+      <div>
+        <span class="section-number">04</span>
         <p class="overline">ISSUE ARCHIVE</p>
         <h2 id="recent-title">最近期号</h2>
       </div>
@@ -197,7 +229,7 @@ const todayLabel = latest ? formatIssueDate(latest.data.date) : "WAITING FOR DAT
   <section class="deep-read-home section-shell" aria-labelledby="deep-read-home-title">
     <header class="section-header">
       <div>
-        <span class="section-number">04</span>
+        <span class="section-number">05</span>
         <p class="overline">DEEP READING DESK</p>
         <h2 id="deep-read-home-title">值得读透的论文</h2>
       </div>

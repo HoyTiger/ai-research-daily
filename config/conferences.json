@@ -1,0 +1,144 @@
+{
+  "request": {
+    "timeout_seconds": 120,
+    "retries": 4,
+    "range_chunk_bytes": 262144,
+    "user_agent": "AIResearchDaily/1.0 (+https://github.com/HoyTiger/ai-research-daily)"
+  },
+  "conferences": [
+    {
+      "slug": "cvpr-2026",
+      "name": "CVPR 2026",
+      "full_name": "IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+      "year": 2026,
+      "source": "cvf",
+      "source_url": "https://openaccess.thecvf.com/CVPR2026",
+      "days": [
+        "2026-06-05",
+        "2026-06-06",
+        "2026-06-07"
+      ]
+    },
+    {
+      "slug": "icml-2026",
+      "name": "ICML 2026",
+      "full_name": "International Conference on Machine Learning",
+      "year": 2026,
+      "source": "bibtex",
+      "source_url": "https://proceedings.mlr.press/v306/",
+      "bib_url": "https://proceedings.mlr.press/v306/assets/bib/bibliography.bib",
+      "default_track": "Main Conference"
+    },
+    {
+      "slug": "iclr-2026",
+      "name": "ICLR 2026",
+      "full_name": "International Conference on Learning Representations",
+      "year": 2026,
+      "source": "iclr_virtual",
+      "source_url": "https://iclr.cc/virtual/2026/papers.html?filter=titles",
+      "default_track": "Accepted Papers"
+    },
+    {
+      "slug": "aaai-2026",
+      "name": "AAAI 2026",
+      "full_name": "AAAI Conference on Artificial Intelligence",
+      "year": 2026,
+      "source": "aaai_ojs",
+      "source_url": "https://ojs.aaai.org/index.php/AAAI/issue/archive",
+      "volume_prefix": "Vol. 40"
+    },
+    {
+      "slug": "ijcai-2026",
+      "name": "IJCAI 2026",
+      "full_name": "International Joint Conference on Artificial Intelligence",
+      "year": 2026,
+      "source": "ijcai",
+      "source_url": "https://www.ijcai.org/proceedings/2026/"
+    },
+    {
+      "slug": "acl-2026",
+      "name": "ACL 2026",
+      "full_name": "Annual Meeting of the Association for Computational Linguistics",
+      "year": 2026,
+      "source": "bibtex",
+      "source_url": "https://aclanthology.org/events/acl-2026/",
+      "volumes": [
+        {
+          "id": "2026.acl-long",
+          "name": "Long Papers",
+          "url": "https://aclanthology.org/volumes/2026.acl-long.bib"
+        },
+        {
+          "id": "2026.acl-short",
+          "name": "Short Papers",
+          "url": "https://aclanthology.org/volumes/2026.acl-short.bib"
+        },
+        {
+          "id": "2026.findings-acl",
+          "name": "Findings",
+          "url": "https://aclanthology.org/volumes/2026.findings-acl.bib"
+        },
+        {
+          "id": "2026.acl-demo",
+          "name": "System Demonstrations",
+          "url": "https://aclanthology.org/volumes/2026.acl-demo.bib"
+        },
+        {
+          "id": "2026.acl-industry",
+          "name": "Industry Track",
+          "url": "https://aclanthology.org/volumes/2026.acl-industry.bib"
+        }
+      ]
+    },
+    {
+      "slug": "emnlp-2026",
+      "name": "EMNLP 2026",
+      "full_name": "Conference on Empirical Methods in Natural Language Processing",
+      "year": 2026,
+      "source": "bibtex",
+      "source_url": "https://aclanthology.org/events/emnlp-2026/",
+      "volumes": [
+        {
+          "id": "2026.emnlp-main",
+          "name": "Main Conference",
+          "url": "https://aclanthology.org/volumes/2026.emnlp-main.bib"
+        },
+        {
+          "id": "2026.findings-emnlp",
+          "name": "Findings",
+          "url": "https://aclanthology.org/volumes/2026.findings-emnlp.bib"
+        },
+        {
+          "id": "2026.emnlp-demos",
+          "name": "System Demonstrations",
+          "url": "https://aclanthology.org/volumes/2026.emnlp-demos.bib"
+        },
+        {
+          "id": "2026.emnlp-industry",
+          "name": "Industry Track",
+          "url": "https://aclanthology.org/volumes/2026.emnlp-industry.bib"
+        }
+      ]
+    },
+    {
+      "slug": "neurips-2025",
+      "name": "NeurIPS 2025",
+      "full_name": "Conference on Neural Information Processing Systems",
+      "year": 2025,
+      "source": "neurips",
+      "source_url": "https://proceedings.neurips.cc/paper_files/paper/2025/vol38-main-conference"
+    },
+    {
+      "slug": "preprints-2026",
+      "name": "高质量预印本 2026",
+      "full_name": "Curated AI Preprint Radar",
+      "year": 2026,
+      "kind": "preprint",
+      "source": "huggingface",
+      "source_url": "https://huggingface.co/papers",
+      "api_url": "https://huggingface.co/api/daily_papers?limit=100",
+      "min_upvotes": 5,
+      "max_items": 100
+    }
+  ]
+}

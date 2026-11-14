@@ -13,6 +13,7 @@
 - 每日 JSON 数据、Markdown 原稿、静态 HTML、归档检索和来源健康状态。
 - RSS 订阅、响应式页面与 GitHub Pages 项目子路径支持。
 - 论文卡片自带“精读并存档”按钮，通过 GitHub Issue 建立可长期迭代的中文精读档案。
+- 独立顶会论文全量库，支持标题、作者和 Track 检索，覆盖 CVPR、ICLR、ICML、AAAI、IJCAI、ACL、EMNLP、NeurIPS，并收录高质量预印本。
 - 默认使用离线 Argos 模型生成中文标题与摘要；配置自己的 OpenAI 兼容接口后可获得更好的中文研究导读。
 - GitHub Actions 每日北京时间 07:17 自动同步、构建、提交并部署。
 
@@ -44,6 +45,13 @@ python3 scripts/sync_papers.py --dry-run --no-llm
 
 ```bash
 python3 scripts/sync_papers.py --date 2026-11-14 --no-llm
+```
+
+同步全部会议论文集和高质量预印本：
+
+```bash
+python -m pip install -r requirements-conferences.txt
+pnpm run sync:conferences
 ```
 
 ## 发布到 GitHub Pages
@@ -114,6 +122,11 @@ GitHub Actions 默认安装并缓存开源的 Argos 英中翻译模型，把当�
 - `src/pages/`：首页、归档、关于和日报详情页。
 - `src/content/deep-reads/`：待读、精读中和已完成的论文精读档案。
 - `data/deep-reads/`：精读任务的结构化元数据。
+- `public/data/conferences/`：会议库按会议拆分的全量论文 JSON。
+- `config/conferences.json`：会议来源、分卷和预印本筛选规则。
+
+会议库每周自动更新一次。完整的 CVPR、ACL、EMNLP、ICML、AAAI 等 proceedings
+可能包含数千篇论文，因此不会塞进每日精选；每日精选仍由 `sync_papers.py` 生成。
 
 生成器默认覆盖同一天的文件。再次运行同一天不会把当天内容当作历史内容去重。
 

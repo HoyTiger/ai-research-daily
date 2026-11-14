@@ -6,6 +6,7 @@
   "packageManager": "pnpm@11.25.0",
   "scripts": {
     "sync": "python3 scripts/sync_papers.py",
+    "sync:conferences": "python3 scripts/sync_conferences.py",
     "dev": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",

@@ -1,0 +1,417 @@
+{
+  "generated_at": "2026-11-14T13:06:17.323619+00:00",
+  "total_papers": 35524,
+  "conferences": [
+    {
+      "slug": "preprints-2026",
+      "name": "高质量预印本 2026",
+      "full_name": "Curated AI Preprint Radar",
+      "year": 2026,
+      "kind": "preprint",
+      "source_url": "https://huggingface.co/papers",
+      "source": "Hugging Face Daily",
+      "paper_count": 60,
+      "tracks": [
+        {
+          "name": "Hugging Face Daily",
+          "count": 60
+        }
+      ],
+      "generated_at": "2026-11-14T13:06:17.323619+00:00",
+      "errors": [],
+      "status": "complete"
+    },
+    {
+      "slug": "ijcai-2026",
+      "name": "IJCAI 2026",
+      "full_name": "International Joint Conference on Artificial Intelligence",
+      "year": 2026,
+      "kind": "conference",
+      "source_url": "https://www.ijcai.org/proceedings/2026/",
+      "source": "IJCAI Proceedings",
+      "paper_count": 972,
+      "tracks": [
+        {
+          "name": "Main Track / Machine Learning",
+          "count": 143
+        },
+        {
+          "name": "Main Track / Computer Vision",
+          "count": 139
+        },
+        {
+          "name": "Main Track / Data Mining",
+          "count": 99
+        },
+        {
+          "name": "Main Track / Agent-based and Multi-agent Systems",
+          "count": 55
+        },
+        {
+          "name": "Main Track / Natural Language Processing",
+          "count": 51
+        },
+        {
+          "name": "AI and Social Good / Robotics",
+          "count": 51
+        },
+        {
+          "name": "Demo Track / Robotics",
+          "count": 47
+        },
+        {
+          "name": "AI and Health / Robotics",
+          "count": 45
+        },
+        {
+          "name": "Main Track / AI Ethics, Trust, Fairnes",
+          "count": 42
+        },
+        {
+          "name": "Survey Track / Robotics",
+          "count": 42
+        },
+        {
+          "name": "Main Track / Knowledge Representation and Reasoning",
+          "count": 39
+        },
+        {
+          "name": "Main Track / Constraint Satisfaction and Optimization",
+          "count": 27
+        },
+        {
+          "name": "Main Track / Game Theory and Economic Paradigms",
+          "count": 26
+        },
+        {
+          "name": "AI4Tech: AI Enabling Technologies / Robotics",
+          "count": 24
+        },
+        {
+          "name": "Main Track / Multidisciplinary Topics and Applications",
+          "count": 22
+        },
+        {
+          "name": "Main Track / Humans and AI",
+          "count": 21
+        },
+        {
+          "name": "Sister Conferences Best Papers / Robotics",
+          "count": 17
+        },
+        {
+          "name": "Doctoral Consortium / Robotics",
+          "count": 17
+        },
+        {
+          "name": "Search / Robotics",
+          "count": 12
+        },
+        {
+          "name": "Early Career Spotlight / Robotics",
+          "count": 11
+        },
+        {
+          "name": "AI and Robotics / Robotics",
+          "count": 10
+        },
+        {
+          "name": "Main Track / Planning and Scheduling",
+          "count": 9
+        },
+        {
+          "name": "Human-Centred AI / Robotics",
+          "count": 9
+        },
+        {
+          "name": "Journal Track / Robotics",
+          "count": 6
+        },
+        {
+          "name": "Main Track / Robotics",
+          "count": 5
+        },
+        {
+          "name": "Uncertainty in AI / Robotics",
+          "count": 3
+        }
+      ],
+      "generated_at": "2026-11-14T13:06:17.323619+00:00",
+      "errors": [],
+      "status": "complete"
+    },
+    {
+      "slug": "icml-2026",
+      "name": "ICML 2026",
+      "full_name": "International Conference on Machine Learning",
+      "year": 2026,
+      "kind": "conference",
+      "source_url": "https://proceedings.mlr.press/v306/",
+      "source": "PMLR",
+      "paper_count": 6552,
+      "tracks": [
+        {
+          "name": "Main Conference",
+          "count": 6552
+        }
+      ],
+      "generated_at": "2026-11-14T13:06:17.323619+00:00",
+      "errors": [],
+      "status": "complete"
+    },
+    {
+      "slug": "iclr-2026",
+      "name": "ICLR 2026",
+      "full_name": "International Conference on Learning Representations",
+      "year": 2026,
+      "kind": "conference",
+      "source_url": "https://iclr.cc/virtual/2026/papers.html?filter=titles",
+      "source": "ICLR Virtual",
+      "paper_count": 5468,
+      "tracks": [
+        {
+          "name": "Accepted Papers",
+          "count": 5468
+        }
+      ],
+      "generated_at": "2026-11-14T13:06:17.323619+00:00",
+      "errors": [],
+      "status": "complete"
+    },
+    {
+      "slug": "emnlp-2026",
+      "name": "EMNLP 2026",
+      "full_name": "Conference on Empirical Methods in Natural Language Processing",
+      "year": 2026,
+      "kind": "conference",
+      "source_url": "https://aclanthology.org/events/emnlp-2026/",
+      "source": "ACL Anthology",
+      "paper_count": 5534,
+      "tracks": [
+        {
+          "name": "Main Conference",
+          "count": 2704
+        },
+        {
+          "name": "Findings",
+          "count": 2478
+        },
+        {
+          "name": "Industry Track",
+          "count": 266
+        },
+        {
+          "name": "System Demonstrations",
+          "count": 86
+        }
+      ],
+      "generated_at": "2026-11-14T13:06:17.323619+00:00",
+      "errors": [],
+      "status": "complete"
+    },
+    {
+      "slug": "cvpr-2026",
+      "name": "CVPR 2026",
+      "full_name": "IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+      "year": 2026,
+      "kind": "conference",
+      "source_url": "https://openaccess.thecvf.com/CVPR2026",
+      "source": "CVF Open Access",
+      "paper_count": 4042,
+      "tracks": [
+        {
+          "name": "Main Conference / 2026-06-07",
+          "count": 1396
+        },
+        {
+          "name": "Main Conference / 2026-06-06",
+          "count": 1329
+        },
+        {
+          "name": "Main Conference / 2026-06-05",
+          "count": 1317
+        }
+      ],
+      "generated_at": "2026-11-14T13:06:17.323619+00:00",
+      "errors": [],
+      "status": "complete"
+    },
+    {
+      "slug": "acl-2026",
+      "name": "ACL 2026",
+      "full_name": "Annual Meeting of the Association for Computational Linguistics",
+      "year": 2026,
+      "kind": "conference",
+      "source_url": "https://aclanthology.org/events/acl-2026/",
+      "source": "ACL Anthology",
+      "paper_count": 4698,
+      "tracks": [
+        {
+          "name": "Long Papers",
+          "count": 2222
+        },
+        {
+          "name": "Findings",
+          "count": 2163
+        },
+        {
+          "name": "Industry Track",
+          "count": 154
+        },
+        {
+          "name": "System Demonstrations",
+          "count": 85
+        },
+        {
+          "name": "Short Papers",
+          "count": 74
+        }
+      ],
+      "generated_at": "2026-11-14T13:06:17.323619+00:00",
+      "errors": [],
+      "status": "complete"
+    },
+    {
+      "slug": "aaai-2026",
+      "name": "AAAI 2026",
+      "full_name": "AAAI Conference on Artificial Intelligence",
+      "year": 2026,
+      "kind": "conference",
+      "source_url": "https://ojs.aaai.org/index.php/AAAI/issue/archive",
+      "source": "AAAI OJS",
+      "paper_count": 2375,
+      "tracks": [
+        {
+          "name": "AAAI-26 Technical Tracks 16",
+          "count": 109
+        },
+        {
+          "name": "AAAI-26 Technical Tracks 25",
+          "count": 103
+        },
+        {
+          "name": "AAAI-26 Technical Tracks 17",
+          "count": 102
+        },
+        {
+          "name": "AAAI-26 Technical Tracks 24",
+          "count": 102
+        },
+        {
+          "name": "AAAI-26 Technical Tracks 6",
+          "count": 101
+        },
+        {
+          "name": "AAAI-26 Technical Tracks 8",
+          "count": 101
+        },
+        {
+          "name": "AAAI-26 Technical Tracks 9",
+          "count": 101
+        },
+        {
+          "name": "AAAI-26 Technical Tracks 14",
+          "count": 101
+        },
+        {
+          "name": "AAAI-26 Technical Tracks 4",
+          "count": 100
+        },
+        {
+          "name": "AAAI-26 Technical Tracks 5",
+          "count": 100
+        },
+        {
+          "name": "AAAI-26 Technical Tracks 7",
+          "count": 100
+        },
+        {
+          "name": "AAAI-26 Technical Tracks 10",
+          "count": 100
+        },
+        {
+          "name": "AAAI-26 Technical Tracks 11",
+          "count": 100
+        },
+        {
+          "name": "AAAI-26 Technical Tracks 12",
+          "count": 100
+        },
+        {
+          "name": "AAAI-26 Technical Tracks 13",
+          "count": 100
+        },
+        {
+          "name": "AAAI-26 Technical Tracks 15",
+          "count": 100
+        },
+        {
+          "name": "AAAI-26 Technical Tracks 2",
+          "count": 94
+        },
+        {
+          "name": "AAAI-26 Technical Tracks 1",
+          "count": 94
+        },
+        {
+          "name": "AAAI-26 Technical Tracks 18",
+          "count": 90
+        },
+        {
+          "name": "AAAI-26 Technical Tracks 21",
+          "count": 87
+        },
+        {
+          "name": "AAAI-26 Technical Tracks 22",
+          "count": 87
+        },
+        {
+          "name": "AAAI-26 Technical Tracks 20",
+          "count": 85
+        },
+        {
+          "name": "AAAI-26 Technical Tracks 19",
+          "count": 84
+        },
+        {
+          "name": "AAAI-26 Technical Tracks 3",
+          "count": 67
+        },
+        {
+          "name": "AAAI-26 Technical Tracks 23",
+          "count": 67
+        }
+      ],
+      "generated_at": "2026-11-14T13:06:17.323619+00:00",
+      "errors": [],
+      "status": "complete"
+    },
+    {
+      "slug": "neurips-2025",
+      "name": "NeurIPS 2025",
+      "full_name": "Conference on Neural Information Processing Systems",
+      "year": 2025,
+      "kind": "conference",
+      "source_url": "https://proceedings.neurips.cc/paper_files/paper/2025/vol38-main-conference",
+      "source": "NeurIPS Proceedings",
+      "paper_count": 5823,
+      "tracks": [
+        {
+          "name": "Main Conference Track",
+          "count": 5286
+        },
+        {
+          "name": "Datasets and Benchmarks Track",
+          "count": 497
+        },
+        {
+          "name": "Position Paper Track",
+          "count": 40
+        }
+      ],
+      "generated_at": "2026-11-14T13:06:17.323619+00:00",
+      "errors": [],
+      "status": "complete"
+    }
+  ]
+}

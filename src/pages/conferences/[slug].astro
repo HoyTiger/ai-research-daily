@@ -1,0 +1,256 @@
+---
+import fs from "node:fs";
+import path from "node:path";
+import type { GetStaticPaths } from "astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { withBase } from "../../lib/url";
+import { site } from "../../site";
+
+interface TrackSummary {
+  name: string;
+  count: number;
+}
+
+interface ConferenceSummary {
+  slug: string;
+  name: string;
+  full_name: string;
+  year: number;
+  kind?: "conference" | "preprint";
+  source: string;
+  source_url: string;
+  paper_count: number;
+  tracks: TrackSummary[];
+  status: "complete" | "partial";
+}
+
+export const getStaticPaths = (async () => {
+  const indexPath = path.join(process.cwd(), "public", "data", "conferences", "index.json");
+  const data = JSON.parse(fs.readFileSync(indexPath, "utf8")) as {
+    conferences: ConferenceSummary[];
+  };
+  return data.conferences.map((conference) => ({
+    params: { slug: conference.slug },
+    props: { conference },
+  }));
+}) satisfies GetStaticPaths;
+
+const { conference } = Astro.props as { conference: ConferenceSummary };
+const kindLabel = conference.kind === "preprint" ? "预印本雷达" : "正式论文集";
+const dataUrl = withBase(`data/conferences/${conference.slug}.json`);
+---
+
+<BaseLayout
+  title={`${conference.name} 论文库｜AI Research Signal`}
+  description={`${conference.name} 全量论文目录，共 ${conference.paper_count} 篇。`}
+>
+  <section class="conference-detail-hero section-shell">
+    <div class="article-hero-top">
+      <a class="back-link" href={withBase("conferences/")}>← 返回会议库</a>
+      <span>{kindLabel} / {conference.source}</span>
+    </div>
+    <div
+      class:list={[
+        "conference-detail-title",
+        { "conference-detail-title--preprint": conference.kind === "preprint" },
+      ]}
+    >
+      <div>
+        <p class="overline">{conference.year} / {conference.full_name}</p>
+        <h1>{conference.name}</h1>
+      </div>
+      <dl>
+        <div><dt>{conference.paper_count.toLocaleString("zh-CN")}</dt><dd>收录论文</dd></div>
+        <div><dt>{conference.tracks.length}</dt><dd>Track 分类</dd></div>
+        <div>
+          <dt>{conference.status === "complete" ? "完整" : "部分"}</dt>
+          <dd>同步状态</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="conference-browser section-shell" aria-labelledby="paper-index-title">
+    <header class="conference-browser-head">
+      <div>
+        <p class="overline">PAPER INDEX</p>
+        <h2 id="paper-index-title">论文目录</h2>
+      </div>
+      {conference.source_url && (
+        <a href={conference.source_url} target="_blank" rel="noopener noreferrer">
+          查看官方来源 ↗
+        </a>
+      )}
+    </header>
+    <div class="conference-filters">
+      <label>
+        <span>搜索标题或作者</span>
+        <input type="search" placeholder="例如 multimodal、agent、注意力机制" data-paper-search />
+      </label>
+      <label>
+        <span>Track</span>
+        <select data-track-filter>
+          <option value="">全部 Track</option>
+          {conference.tracks.map((track: any) => (
+            <option value={track.name}>{track.name}（{track.count}）</option>
+          ))}
+        </select>
+      </label>
+      <p><strong data-paper-count>{conference.paper_count}</strong> 篇结果</p>
+    </div>
+    <div class="conference-paper-list" data-paper-list aria-live="polite">
+      <p class="conference-loading">正在加载 {conference.paper_count} 篇论文索引…</p>
+    </div>
+    <button class="conference-load-more" type="button" data-load-more hidden>加载更多</button>
+  </section>
+</BaseLayout>
+
+<script define:vars={{ dataUrl, repo: site.githubUrl, kind: conference.kind || "conference" }}>
+  const search = document.querySelector("[data-paper-search]");
+  const trackFilter = document.querySelector("[data-track-filter]");
+  const list = document.querySelector("[data-paper-list]");
+  const count = document.querySelector("[data-paper-count]");
+  const loadMore = document.querySelector("[data-load-more]");
+
+  let papers = [];
+  let filtered = [];
+  let visible = 0;
+  const pageSize = 60;
+
+  function base64Url(value) {
+    const bytes = new TextEncoder().encode(value);
+    let binary = "";
+    bytes.forEach((byte) => {
+      binary += String.fromCharCode(byte);
+    });
+    return btoa(binary).replaceAll("+", "-").replaceAll("/", "_");
+  }
+
+  function deepReadUrl(paper) {
+    const metadata = {
+      paper_id: paper.id,
+      title: paper.title,
+      source: paper.venue,
+      venue: paper.track,
+      authors: paper.authors.slice(0, 12),
+      url: paper.url,
+      published_at: `${paper.year}-01-01T00:00:00+00:00`,
+    };
+    const body = [
+      `<!-- deep-read-meta:${base64Url(JSON.stringify(metadata))} -->`,
+      "## 论文信息",
+      "",
+      `- 原标题：${paper.title}`,
+      `- 来源：${paper.source}`,
+      `- Track：${paper.track}`,
+      `- 原文：${paper.url}`,
+      "",
+      "## 我的精读目标",
+      "",
+      "- 这篇论文解决什么问题？",
+      "- 方法相比已有工作的关键差异是什么？",
+      "- 哪些实验真正支持了结论？",
+      "- 有哪些局限、反例或未验证假设？",
+      "- 哪些思路可以迁移到我的工作？",
+    ].join("\n");
+    const params = new URLSearchParams({
+      title: `[精读] ${paper.title}`,
+      body,
+      labels: "deep-read",
+    });
+    return `${repo}/issues/new?${params}`;
+  }
+
+  function createLink(text, href, className = "") {
+    const link = document.createElement("a");
+    link.textContent = text;
+    link.href = href;
+    if (className) link.className = className;
+    if (!href.startsWith("/")) {
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+    }
+    return link;
+  }
+
+  function render(reset = true) {
+    if (!list) return;
+    if (reset) {
+      list.replaceChildren();
+      visible = 0;
+    }
+    const next = filtered.slice(visible, visible + pageSize);
+    next.forEach((paper) => {
+      const article = document.createElement("article");
+      article.className = "conference-paper";
+
+      const meta = document.createElement("div");
+      meta.className = "conference-paper-meta";
+      const track = document.createElement("span");
+      track.textContent = paper.track;
+      const type = document.createElement("span");
+      type.textContent =
+        kind === "preprint"
+          ? `PREPRINT${paper.signal ? ` · ${paper.signal}` : ""}`
+          : paper.source;
+      meta.append(track, type);
+
+      const title = document.createElement("h3");
+      title.append(createLink(paper.title, paper.url));
+
+      const authors = document.createElement("p");
+      authors.textContent = paper.authors.slice(0, 8).join("、") || "作者信息见官方页面";
+
+      const summary = document.createElement("p");
+      summary.className = "conference-abstract";
+      summary.textContent = paper.abstract
+        ? `${paper.abstract.slice(0, 360)}${paper.abstract.length > 360 ? "…" : ""}`
+        : "官方目录未提供摘要，请打开论文页面查看。";
+
+      const actions = document.createElement("footer");
+      if (paper.pdf_url) actions.append(createLink("PDF ↗", paper.pdf_url));
+      actions.append(createLink("论文页面 ↗", paper.url));
+      actions.append(createLink("精读并存档 ↗", deepReadUrl(paper), "conference-deep-read"));
+
+      article.append(meta, title, authors, summary, actions);
+      list.append(article);
+    });
+    visible += next.length;
+    if (loadMore) loadMore.hidden = visible >= filtered.length;
+  }
+
+  function applyFilters() {
+    const query = search?.value.trim().toLocaleLowerCase() || "";
+    const track = trackFilter?.value || "";
+    filtered = papers.filter((paper) => {
+      const haystack = `${paper.title} ${paper.authors.join(" ")}`.toLocaleLowerCase();
+      return (!query || haystack.includes(query)) && (!track || paper.track === track);
+    });
+    if (count) count.textContent = filtered.length.toLocaleString("zh-CN");
+    render(true);
+  }
+
+  async function load() {
+    try {
+      const response = await fetch(dataUrl);
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const data = await response.json();
+      papers = data.papers;
+      filtered = papers;
+      render(true);
+    } catch (error) {
+      if (list) {
+        list.innerHTML = "";
+        const message = document.createElement("p");
+        message.className = "empty-note";
+        message.textContent = `论文目录加载失败：${error.message}`;
+        list.append(message);
+      }
+    }
+  }
+
+  search?.addEventListener("input", applyFilters);
+  trackFilter?.addEventListener("change", applyFilters);
+  loadMore?.addEventListener("click", () => render(false));
+  load();
+</script>
