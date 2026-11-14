@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T13:06:17.323619+00:00",
+  "generated_at": "2026-11-14T13:15:41.060439+00:00",
   "total_papers": 35524,
   "conferences": [
     {
@@ -17,7 +17,7 @@
           "count": 60
         }
       ],
-      "generated_at": "2026-11-14T13:06:17.323619+00:00",
+      "generated_at": "2026-11-14T13:15:41.060439+00:00",
       "errors": [],
       "status": "complete"
     },
@@ -136,7 +136,7 @@
           "count": 3
         }
       ],
-      "generated_at": "2026-11-14T13:06:17.323619+00:00",
+      "generated_at": "2026-11-14T13:15:41.060439+00:00",
       "errors": [],
       "status": "complete"
     },
@@ -155,7 +155,7 @@
           "count": 6552
         }
       ],
-      "generated_at": "2026-11-14T13:06:17.323619+00:00",
+      "generated_at": "2026-11-14T13:15:41.060439+00:00",
       "errors": [],
       "status": "complete"
     },
@@ -174,7 +174,7 @@
           "count": 5468
         }
       ],
-      "generated_at": "2026-11-14T13:06:17.323619+00:00",
+      "generated_at": "2026-11-14T13:15:41.060439+00:00",
       "errors": [],
       "status": "complete"
     },
@@ -205,7 +205,7 @@
           "count": 86
         }
       ],
-      "generated_at": "2026-11-14T13:06:17.323619+00:00",
+      "generated_at": "2026-11-14T13:15:41.060439+00:00",
       "errors": [],
       "status": "complete"
     },
@@ -232,7 +232,7 @@
           "count": 1317
         }
       ],
-      "generated_at": "2026-11-14T13:06:17.323619+00:00",
+      "generated_at": "2026-11-14T13:15:41.060439+00:00",
       "errors": [],
       "status": "complete"
     },
@@ -267,7 +267,7 @@
           "count": 74
         }
       ],
-      "generated_at": "2026-11-14T13:06:17.323619+00:00",
+      "generated_at": "2026-11-14T13:15:41.060439+00:00",
       "errors": [],
       "status": "complete"
     },
@@ -346,11 +346,11 @@
           "count": 100
         },
         {
-          "name": "AAAI-26 Technical Tracks 2",
+          "name": "AAAI-26 Technical Tracks 1",
           "count": 94
         },
         {
-          "name": "AAAI-26 Technical Tracks 1",
+          "name": "AAAI-26 Technical Tracks 2",
           "count": 94
         },
         {
@@ -382,7 +382,7 @@
           "count": 67
         }
       ],
-      "generated_at": "2026-11-14T13:06:17.323619+00:00",
+      "generated_at": "2026-11-14T13:15:41.060439+00:00",
       "errors": [],
       "status": "complete"
     },
@@ -409,7 +409,7 @@
           "count": 40
         }
       ],
-      "generated_at": "2026-11-14T13:06:17.323619+00:00",
+      "generated_at": "2026-11-14T13:15:41.060439+00:00",
       "errors": [],
       "status": "complete"
     }
