@@ -1,0 +1,114 @@
+name: Archive deep-read paper
+
+on:
+  issues:
+    types: [opened, labeled]
+  workflow_dispatch:
+    inputs:
+      issue_number:
+        description: Existing deep-read issue number
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+  issues: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  archive-build-deploy:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      contains(github.event.issue.labels.*.name, 'deep-read')
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    env:
+      SITE_URL: https://${{ github.repository_owner }}.github.io
+      BASE_PATH: ${{ endsWith(github.event.repository.name, '.github.io') && '/' || format('/{0}/', github.event.repository.name) }}
+      PUBLIC_GITHUB_URL: ${{ github.server_url }}/${{ github.repository }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: pnpm
+
+      - name: Load issue data
+        id: issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+          INPUT_ISSUE_NUMBER: ${{ inputs.issue_number }}
+        run: |
+          ISSUE_NUMBER="${INPUT_ISSUE_NUMBER:-${{ github.event.issue.number }}}"
+          gh api "repos/${GITHUB_REPOSITORY}/issues/${ISSUE_NUMBER}" > /tmp/deep-read-issue.json
+          {
+            echo "ISSUE_NUMBER=${ISSUE_NUMBER}"
+            echo "ISSUE_TITLE=$(python -c 'import json; print(json.load(open("/tmp/deep-read-issue.json"))["title"])')"
+            echo "ISSUE_URL=$(python -c 'import json; print(json.load(open("/tmp/deep-read-issue.json"))["html_url"])')"
+            echo "ISSUE_CREATED_AT=$(python -c 'import json; print(json.load(open("/tmp/deep-read-issue.json"))["created_at"])')"
+            echo "ISSUE_BODY<<EOF"
+            python -c 'import json; print(json.load(open("/tmp/deep-read-issue.json"))["body"] or "")'
+            echo "EOF"
+          } >> "$GITHUB_ENV"
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Create deep-read archive
+        id: archive
+        run: python scripts/archive_deep_read.py
+
+      - name: Build site
+        run: pnpm run build
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Confirm archive on issue
+        if: steps.archive.outputs.created == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          ARCHIVE_URL="${SITE_URL}${BASE_PATH}deep-reads/deep-read-${ISSUE_NUMBER}/"
+          gh api "repos/${GITHUB_REPOSITORY}/issues/${ISSUE_NUMBER}/comments" \
+            -f body="精读档案已创建并发布：${ARCHIVE_URL}"
+
+      - name: Commit deep-read archive
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/deep-reads src/content/deep-reads
+          if git diff --cached --quiet; then
+            echo "No new deep-read archive."
+          else
+            git commit -m "docs: archive deep read #${ISSUE_NUMBER}"
+            git push
+          fi

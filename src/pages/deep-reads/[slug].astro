@@ -1,0 +1,60 @@
+---
+import type { GetStaticPaths } from "astro";
+import { getCollection, render } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { formatIssueDate, withBase } from "../../lib/url";
+import { site } from "../../site";
+
+export const getStaticPaths = (async () => {
+  const papers = await getCollection("deepReads", ({ data }) => !data.draft);
+  return papers.map((paper) => ({ params: { slug: paper.id }, props: { paper } }));
+}) satisfies GetStaticPaths;
+
+const { paper } = Astro.props;
+const { Content } = await render(paper);
+const statusLabel = {
+  queued: "待精读",
+  reading: "精读中",
+  complete: "已完成",
+} as const;
+---
+
+<BaseLayout title={`${paper.data.title}｜精读档案`} description={`${paper.data.title} 的中文精读档案。`}>
+  <article class="deep-read-article section-shell">
+    <header class="deep-read-article-head">
+      <div class="article-hero-top">
+        <a class="back-link" href={withBase("deep-reads/")}>← 返回精读档案</a>
+        <span>ISSUE / #{paper.data.issueNumber}</span>
+      </div>
+      <div class="deep-read-title-row">
+        <div>
+          <p class="overline">{paper.data.source} / DEEP READING</p>
+          <h1>{paper.data.title}</h1>
+          <p>{paper.data.venue || "会议或期刊信息待补充"}</p>
+        </div>
+        <div class="deep-read-facts">
+          <span class:list={["deep-status", `deep-status-${paper.data.status}`]}>
+            {statusLabel[paper.data.status]}
+          </span>
+          <time datetime={paper.data.date.toISOString()}>{formatIssueDate(paper.data.date)}</time>
+          {paper.data.paperUrl && (
+            <a href={paper.data.paperUrl} target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+          )}
+          {paper.data.issueUrl && (
+            <a href={paper.data.issueUrl} target="_blank" rel="noopener noreferrer">讨论 Issue ↗</a>
+          )}
+          <a
+            href={`${site.githubUrl}/edit/main/src/content/deep-reads/${paper.id}.md`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            编辑精读档案 ↗
+          </a>
+        </div>
+      </div>
+    </header>
+    <div class="deep-read-content">
+      <Content />
+    </div>
+  </article>
+</BaseLayout>

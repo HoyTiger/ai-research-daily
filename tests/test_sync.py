@@ -2,7 +2,12 @@ from __future__ import annotations
 
 import sys
 import unittest
+import base64
+import json
+import os
+import tempfile
 from pathlib import Path
+from unittest import mock
 from zoneinfo import ZoneInfo
 
 
@@ -10,6 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
 import sync_papers  # noqa: E402
+import archive_deep_read  # noqa: E402
 
 
 class FeedParsingTests(unittest.TestCase):
@@ -112,6 +118,13 @@ class SelectionTests(unittest.TestCase):
         self.assertIn("&lt;script&gt;", rendered)
         self.assertNotIn("javascript:", rendered)
 
+    def test_deep_read_link_targets_github_issue_form(self) -> None:
+        paper = self.make_paper("A Paper Worth Reading")
+        url = sync_papers.deep_read_issue_url(paper)
+        self.assertTrue(url.startswith("https://github.com/HoyTiger/ai-research-daily/issues/new?"))
+        self.assertIn("labels=deep-read", url)
+        self.assertIn("A+Paper+Worth+Reading", url)
+
     def test_crossref_venue_match(self) -> None:
         self.assertTrue(
             sync_papers.crossref_venue_matches(
@@ -123,6 +136,52 @@ class SelectionTests(unittest.TestCase):
                 "Nature Machine Intelligence", "Machine Learning Research"
             )
         )
+
+    def test_deep_read_issue_metadata_decoding(self) -> None:
+        metadata = {"title": "Deep Paper", "authors": ["Ada"], "url": "https://example.com"}
+        encoded = base64.urlsafe_b64encode(
+            json.dumps(metadata, ensure_ascii=False).encode("utf-8")
+        ).decode("ascii")
+        parsed = archive_deep_read.read_metadata(
+            f"<!-- deep-read-meta:{encoded} -->\n\n## Details"
+        )
+        self.assertEqual(parsed, metadata)
+
+    def test_deep_read_archive_writes_markdown_and_json(self) -> None:
+        metadata = {
+            "title": "Deep Paper",
+            "authors": ["Ada"],
+            "url": "https://example.com/paper",
+            "source": "TMLR",
+            "venue": "Accepted by TMLR",
+        }
+        encoded = base64.urlsafe_b64encode(
+            json.dumps(metadata, ensure_ascii=False).encode("utf-8")
+        ).decode("ascii")
+        with tempfile.TemporaryDirectory(dir=ROOT) as temp_dir:
+            root = Path(temp_dir)
+            content_dir = root / "src" / "content" / "deep-reads"
+            data_dir = root / "data" / "deep-reads"
+            environment = {
+                "ISSUE_NUMBER": "42",
+                "ISSUE_TITLE": "[精读] Deep Paper",
+                "ISSUE_BODY": f"<!-- deep-read-meta:{encoded} -->",
+                "ISSUE_URL": "https://github.com/example/repo/issues/42",
+                "ISSUE_CREATED_AT": "2026-11-14T00:00:00+00:00",
+            }
+            with (
+                mock.patch.object(archive_deep_read, "ROOT", root),
+                mock.patch.object(archive_deep_read, "CONTENT_DIR", content_dir),
+                mock.patch.object(archive_deep_read, "DATA_DIR", data_dir),
+                mock.patch.dict(os.environ, environment, clear=False),
+            ):
+                self.assertEqual(archive_deep_read.main(), 0)
+            markdown = (content_dir / "deep-read-42.md").read_text(encoding="utf-8")
+            data = json.loads((data_dir / "42.json").read_text(encoding="utf-8"))
+            self.assertIn('title: "Deep Paper"', markdown)
+            self.assertIn("## 方法拆解", markdown)
+            self.assertEqual(data["status"], "queued")
+            self.assertEqual(data["issue_number"], 42)
 
 
 if __name__ == "__main__":

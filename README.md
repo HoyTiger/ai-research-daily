@@ -12,7 +12,8 @@
 - 跨来源、跨期去重，来源均衡精选，主题分类和启发式排序。
 - 每日 JSON 数据、Markdown 原稿、静态 HTML、归档检索和来源健康状态。
 - RSS 订阅、响应式页面与 GitHub Pages 项目子路径支持。
-- 默认通过 GitHub Models 生成中文标题、摘要和研究要点；也可切换到自己的 OpenAI 兼容接口。
+- 论文卡片自带“精读并存档”按钮，通过 GitHub Issue 建立可长期迭代的中文精读档案。
+- 默认使用离线 Argos 模型生成中文标题与摘要；配置自己的 OpenAI 兼容接口后可获得更好的中文研究导读。
 - GitHub Actions 每日北京时间 07:17 自动同步、构建、提交并部署。
 
 ## 本地运行
@@ -92,7 +93,9 @@ Crossref 的匿名请求可能被限流。建议在仓库 Variables 中设置可
 
 ## 中文报告与 AI 导读
 
-GitHub Actions 默认使用仓库临时令牌访问 GitHub Models，把当期的标题和摘要整理成中文，不需要额外配置 Key。中文导读只依据原始摘要生成，页面同时保留英文原始标题和原文链接。
+GitHub Actions 默认安装并缓存开源的 Argos 英中翻译模型，把当期标题和摘要整理成中文，不需要额外配置 Key。离线翻译完全在 Action Runner 内执行，页面同时保留英文原始标题和原文链接。
+
+首次运行需要下载约 70MB 的英中模型，后续会从 Actions 缓存恢复。机器翻译可能出现术语偏差，因此页面保留原文；配置自己的大模型接口可以显著改善中文导读质量。
 
 如果你希望使用自己的模型服务，在 GitHub 仓库设置：
 
@@ -100,7 +103,7 @@ GitHub Actions 默认使用仓库临时令牌访问 GitHub Models，把当期的
 - Variable `LLM_BASE_URL`：OpenAI 兼容 API 根地址，例如 `https://api.openai.com/v1`。
 - Variable `LLM_MODEL`：支持 JSON 输出的模型名称。
 
-系统只会把当期条目的标题、摘要和会议名称发送到模型服务。每个模型的名称与可用参数可能不同，发布前应先用 `workflow_dispatch` 手动运行验证。本地无令牌运行时会保留英文原文；线上每日任务默认生成中文。
+系统只会把当期条目的标题、摘要和会议名称发送到配置的模型服务。每个模型的名称与可用参数可能不同，发布前应先用 `workflow_dispatch` 手动运行验证。未配置模型时，线上任务使用离线翻译兜底。
 
 ## 内容结构
 
@@ -109,8 +112,20 @@ GitHub Actions 默认使用仓库临时令牌访问 GitHub Models，把当期的
 - `data/issues/YYYY-MM-DD.json`：结构化日报，用于来源状态和无障碍页面数据。
 - `src/content/posts/YYYY-MM-DD.md`：可版本管理、可手工修订的日报原稿。
 - `src/pages/`：首页、归档、关于和日报详情页。
+- `src/content/deep-reads/`：待读、精读中和已完成的论文精读档案。
+- `data/deep-reads/`：精读任务的结构化元数据。
 
 生成器默认覆盖同一天的文件。再次运行同一天不会把当天内容当作历史内容去重。
+
+## 精读论文
+
+在任意日报卡片底部点击“精读并存档”，GitHub 会打开预填论文信息的 Issue 表单。提交 Issue 后：
+
+1. `deep-read` 工作流读取论文元数据。
+2. 自动生成 `src/content/deep-reads/deep-read-<issue>.md`。
+3. 发布到 `/deep-reads/` 精读档案，并在 Issue 中回复档案地址。
+
+生成的精读档案包含问题定义、方法、实验证据、局限、迁移价值和检查清单。直接在 Markdown 中填写内容，并把 `status` 从 `queued` 改为 `reading` 或 `complete`，推送后即可更新状态和公开页面。
 
 ## 版权与边界
 

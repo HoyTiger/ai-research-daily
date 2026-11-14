@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import base64
 import concurrent.futures
 import dataclasses
 import datetime as dt
@@ -997,6 +998,72 @@ def enrich_with_llm(items: list[Paper]) -> int:
     return localized
 
 
+def localize_with_argos(items: list[Paper]) -> int:
+    if os.environ.get("ARGOS_TRANSLATE", "").casefold() not in {"1", "true", "yes"}:
+        return 0
+    pending = [item for item in items if not (item.zh_title and item.zh_summary)]
+    if not pending:
+        return 0
+    try:
+        from argostranslate import translate
+
+        languages = translate.get_installed_languages()
+        english = next(language for language in languages if language.code == "en")
+        chinese = next(language for language in languages if language.code == "zh")
+        translator = english.get_translation(chinese)
+    except Exception as exc:
+        print(f"[warn] Offline Chinese translation unavailable: {exc}", file=sys.stderr)
+        return 0
+
+    glossary = {
+        "本文件": "本文",
+        "多式联运": "多模态",
+        "多种语文模式": "多模态",
+        "多模态模式": "多模态模型",
+        "代理框架": "智能体框架",
+        "代理人": "智能体",
+        "多代理": "多智能体",
+        "代理机构": "智能体",
+        "大型语言模型": "大语言模型",
+        "精细调整": "微调",
+        "预先培训": "预训练",
+        "预训": "预训练",
+        "培训": "训练",
+        "基因政策": "生成策略",
+        "政策": "策略",
+        "模具化": "模块化",
+        "变形器": "Transformer",
+        "空间情报": "空间智能",
+        "愿景编码": "视觉编码",
+        "综合基准": "合成基准",
+        "辉光": "GLU",
+    }
+
+    def translate_zh(value: str, item: Paper) -> str:
+        result = clean_text(translator.translate(value))
+        for source, target in glossary.items():
+            result = result.replace(source, target)
+        if "Agent" in item.tags:
+            result = result.replace("机构", "智能体").replace("代理", "智能体")
+        if "多模态" in item.tags:
+            result = result.replace("模式", "模态").replace("愿景", "视觉")
+        return result
+
+    localized = 0
+    for item in pending:
+        try:
+            if not item.zh_title:
+                item.zh_title = translate_zh(item.title, item)[:260]
+            if not item.zh_summary:
+                source_text = item.summary[:760].strip() or item.title
+                item.zh_summary = translate_zh(source_text, item)[:900]
+            if item.zh_title and item.zh_summary:
+                localized += 1
+        except Exception as exc:
+            print(f"[warn] Translation failed for {item.id}: {exc}", file=sys.stderr)
+    return localized
+
+
 def article_label(item: Paper) -> str:
     if item.source_id == "openreview":
         return "顶会"
@@ -1028,6 +1095,45 @@ def display_summary(item: Paper, limit: int) -> str:
             excerpt += "…"
         return html.escape(excerpt)
     return "原始来源未提供摘要，请通过链接查看完整内容。"
+
+
+def deep_read_issue_url(item: Paper) -> str:
+    repository = os.environ.get("GITHUB_REPOSITORY", "HoyTiger/ai-research-daily")
+    metadata = {
+        "paper_id": item.id,
+        "title": item.title,
+        "source": item.source_name,
+        "venue": item.venue,
+        "authors": item.authors[:12],
+        "url": item.url,
+        "published_at": item.published_at,
+    }
+    encoded = base64.urlsafe_b64encode(
+        json.dumps(metadata, ensure_ascii=False).encode("utf-8")
+    ).decode("ascii")
+    body = (
+        f"<!-- deep-read-meta:{encoded} -->\n"
+        "## 论文信息\n\n"
+        f"- 原标题：{item.title}\n"
+        f"- 来源：{item.source_name}\n"
+        f"- 会议 / 期刊：{item.venue or '未注明'}\n"
+        f"- 原文：[{item.url or '未提供'}]({item.url or ''})\n\n"
+        "## 我的精读目标\n\n"
+        "- 这篇论文解决什么问题？\n"
+        "- 方法相比已有工作的关键差异是什么？\n"
+        "- 哪些实验真正支持了结论？\n"
+        "- 有哪些局限、反例或未验证假设？\n"
+        "- 哪些思路可以迁移到我的工作？\n\n"
+        "> 创建 Issue 后，系统会自动生成精读档案并发布到博客。"
+    )
+    query = urllib.parse.urlencode(
+        {
+            "title": f"[精读] {item.title}",
+            "body": body,
+            "labels": "deep-read",
+        }
+    )
+    return f"https://github.com/{repository}/issues/new?{query}"
 
 
 def published_label(item: Paper, timezone: ZoneInfo) -> str:
@@ -1062,6 +1168,10 @@ def render_card(item: Paper, timezone: ZoneInfo, featured: bool = False, rank: i
         if source_url
         else ""
     )
+    deep_read_link = (
+        f'<a class="deep-read-action" href="{html.escape(deep_read_issue_url(item), quote=True)}" '
+        'target="_blank" rel="noopener noreferrer">精读并存档 ↗</a>'
+    )
     rank_markup = f'<span class="paper-rank">{rank:02d}</span>' if featured else ""
     ai_note = (
         f'<p class="paper-why"><span>为何关注</span>{html.escape(item.ai_why)}</p>'
@@ -1092,7 +1202,7 @@ def render_card(item: Paper, timezone: ZoneInfo, featured: bool = False, rank: i
   {abstract}
   <footer class="paper-actions">
     <span>{html.escape(item.venue or "来源未注明")}</span>
-    <div>{pdf_link}{source_link}</div>
+    <div>{pdf_link}{source_link}{deep_read_link}</div>
   </footer>
 </article>"""
 
@@ -1150,7 +1260,7 @@ def build_markdown(
     papers_markup = "\n".join(render_card(item, timezone) for item in papers)
     reports_markup = "\n".join(render_card(item, timezone) for item in reports)
     ai_notice = (
-        '<p class="ai-notice">中文标题与研究要点由 AI 辅助整理，仅依据原始摘要；专有名词保留英文，具体结论请以原文为准。</p>'
+        '<p class="ai-notice">中文标题与摘要由离线机器翻译或配置的模型自动生成，仅依据原始摘要；专有名词保留英文，具体结论请以原文为准。</p>'
         if ai_enabled
         else '<p class="ai-notice">本期未启用中文生成；卡片保留原始标题、摘要与结构化元数据。</p>'
     )
@@ -1315,6 +1425,9 @@ def main() -> int:
     ai_enabled = False
     if not args.no_llm:
         localized_count = enrich_with_llm(items)
+        localized_count += localize_with_argos(
+            [item for item in items if not (item.zh_title and item.zh_summary)]
+        )
         ai_enabled = localized_count > 0
         print(
             f"[zh] {localized_count}/{len(items)} items localized",

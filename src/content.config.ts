@@ -15,5 +15,20 @@ const posts = defineCollection({
   }),
 });
 
-export const collections = { posts };
+const deepReads = defineCollection({
+  loader: glob({ base: "./src/content/deep-reads", pattern: "**/*.md" }),
+  schema: z.object({
+    title: z.string(),
+    paperUrl: z.string().optional(),
+    source: z.string(),
+    venue: z.string().optional(),
+    authors: z.array(z.string()).default([]),
+    date: z.coerce.date(),
+    status: z.enum(["queued", "reading", "complete"]).default("queued"),
+    issueNumber: z.number(),
+    issueUrl: z.string().optional(),
+    draft: z.boolean().default(false),
+  }),
+});
 
+export const collections = { posts, deepReads };
