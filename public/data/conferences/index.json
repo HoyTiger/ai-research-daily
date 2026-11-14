@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-14T13:22:20.640591+00:00",
-  "total_papers": 35524,
+  "generated_at": "2026-11-14T13:58:30.967214+00:00",
+  "total_papers": 35525,
   "conferences": [
     {
       "slug": "preprints-2026",
@@ -75,7 +75,7 @@
         }
       ],
       "summary": "高质量预印本 2026 共收录 60 篇论文，覆盖 1 个 Track。主题信号最集中的方向为评测与安全（24篇，40.0%）、大模型（21篇，35.0%）、Agent（19篇，31.7%）。同一论文可以属于多个主题，因此主题计数不用于计算论文总量；本期有 2 篇未能通过关键词明确归类。",
-      "generated_at": "2026-11-14T13:22:20.640591+00:00",
+      "generated_at": "2026-11-14T13:58:30.967214+00:00",
       "errors": [],
       "status": "complete"
     },
@@ -196,63 +196,63 @@
       ],
       "topics": [
         {
-          "name": "大模型",
-          "count": 135,
-          "share": 13.9
+          "name": "评测与安全",
+          "count": 450,
+          "share": 46.3
+        },
+        {
+          "name": "检索与知识",
+          "count": 386,
+          "share": 39.7
         },
         {
           "name": "训练与系统",
+          "count": 351,
+          "share": 36.1
+        },
+        {
+          "name": "大模型",
+          "count": 261,
+          "share": 26.9
+        },
+        {
+          "name": "Agent",
+          "count": 170,
+          "share": 17.5
+        },
+        {
+          "name": "推理",
+          "count": 120,
+          "share": 12.3
+        },
+        {
+          "name": "多模态",
+          "count": 109,
+          "share": 11.2
+        },
+        {
+          "name": "生成与视觉",
           "count": 97,
           "share": 10.0
         },
         {
-          "name": "评测与安全",
-          "count": 92,
-          "share": 9.5
-        },
-        {
-          "name": "Agent",
-          "count": 72,
-          "share": 7.4
-        },
-        {
-          "name": "生成与视觉",
-          "count": 62,
-          "share": 6.4
-        },
-        {
-          "name": "推理",
-          "count": 59,
-          "share": 6.1
-        },
-        {
-          "name": "多模态",
-          "count": 59,
-          "share": 6.1
-        },
-        {
-          "name": "检索与知识",
-          "count": 58,
-          "share": 6.0
-        },
-        {
           "name": "AI for Science",
-          "count": 38,
-          "share": 3.9
+          "count": 76,
+          "share": 7.8
         },
         {
           "name": "机器人与具身",
-          "count": 20,
-          "share": 2.1
+          "count": 33,
+          "share": 3.4
         },
         {
           "name": "语音与音频",
-          "count": 11,
-          "share": 1.1
+          "count": 20,
+          "share": 2.1
         }
       ],
-      "summary": "IJCAI 2026 共收录 972 篇论文，覆盖 26 个 Track。主题信号最集中的方向为大模型（135篇，13.9%）、训练与系统（97篇，10.0%）、评测与安全（92篇，9.5%）。同一论文可以属于多个主题，因此主题计数不用于计算论文总量；本期有 476 篇未能通过关键词明确归类。",
-      "generated_at": "2026-11-14T13:22:20.640591+00:00",
+      "summary": "IJCAI 2026 共收录 972 篇论文，覆盖 26 个 Track。主题信号最集中的方向为评测与安全（450篇，46.3%）、检索与知识（386篇，39.7%）、训练与系统（351篇，36.1%）。同一论文可以属于多个主题，因此主题计数不用于计算论文总量；本期有 66 篇未能通过关键词明确归类。",
+      "generated_at": "2026-11-14T13:58:30.967214+00:00",
       "errors": [],
       "status": "complete"
     },
@@ -329,7 +329,7 @@
         }
       ],
       "summary": "ICML 2026 共收录 6552 篇论文，覆盖 1 个 Track。主题信号最集中的方向为训练与系统（3163篇，48.3%）、评测与安全（2786篇，42.5%）、大模型（2703篇，41.3%）。同一论文可以属于多个主题，因此主题计数不用于计算论文总量；本期有 400 篇未能通过关键词明确归类。",
-      "generated_at": "2026-11-14T13:22:20.640591+00:00",
+      "generated_at": "2026-11-14T13:58:30.967214+00:00",
       "errors": [],
       "status": "complete"
     },
@@ -341,72 +341,72 @@
       "kind": "conference",
       "source_url": "https://iclr.cc/virtual/2026/papers.html?filter=titles",
       "source": "ICLR Virtual",
-      "paper_count": 5468,
+      "paper_count": 5469,
       "tracks": [
         {
           "name": "Accepted Papers",
-          "count": 5468
+          "count": 5469
         }
       ],
       "topics": [
         {
-          "name": "大模型",
-          "count": 1233,
-          "share": 22.5
+          "name": "训练与系统",
+          "count": 2723,
+          "share": 49.8
         },
         {
-          "name": "训练与系统",
-          "count": 825,
-          "share": 15.1
+          "name": "大模型",
+          "count": 2511,
+          "share": 45.9
         },
         {
           "name": "评测与安全",
-          "count": 651,
-          "share": 11.9
-        },
-        {
-          "name": "生成与视觉",
-          "count": 566,
-          "share": 10.4
-        },
-        {
-          "name": "推理",
-          "count": 562,
-          "share": 10.3
-        },
-        {
-          "name": "多模态",
-          "count": 414,
-          "share": 7.6
-        },
-        {
-          "name": "Agent",
-          "count": 375,
-          "share": 6.9
+          "count": 2328,
+          "share": 42.6
         },
         {
           "name": "检索与知识",
-          "count": 245,
-          "share": 4.5
+          "count": 1654,
+          "share": 30.2
+        },
+        {
+          "name": "推理",
+          "count": 1027,
+          "share": 18.8
+        },
+        {
+          "name": "生成与视觉",
+          "count": 934,
+          "share": 17.1
+        },
+        {
+          "name": "多模态",
+          "count": 723,
+          "share": 13.2
+        },
+        {
+          "name": "Agent",
+          "count": 656,
+          "share": 12.0
         },
         {
           "name": "机器人与具身",
-          "count": 139,
-          "share": 2.5
+          "count": 267,
+          "share": 4.9
         },
         {
           "name": "AI for Science",
-          "count": 102,
-          "share": 1.9
+          "count": 233,
+          "share": 4.3
         },
         {
           "name": "语音与音频",
-          "count": 75,
-          "share": 1.4
+          "count": 105,
+          "share": 1.9
         }
       ],
-      "summary": "ICLR 2026 共收录 5468 篇论文，覆盖 1 个 Track。主题信号最集中的方向为大模型（1233篇，22.5%）、训练与系统（825篇，15.1%）、评测与安全（651篇，11.9%）。同一论文可以属于多个主题，因此主题计数不用于计算论文总量；本期有 2045 篇未能通过关键词明确归类。",
-      "generated_at": "2026-11-14T13:22:20.640591+00:00",
+      "summary": "ICLR 2026 共收录 5469 篇论文，覆盖 1 个 Track。主题信号最集中的方向为训练与系统（2723篇，49.8%）、大模型（2511篇，45.9%）、评测与安全（2328篇，42.6%）。同一论文可以属于多个主题，因此主题计数不用于计算论文总量；本期有 243 篇未能通过关键词明确归类。",
+      "generated_at": "2026-11-14T13:58:30.967214+00:00",
       "errors": [],
       "status": "complete"
     },
@@ -440,62 +440,62 @@
       "topics": [
         {
           "name": "大模型",
-          "count": 2055,
-          "share": 37.1
+          "count": 4066,
+          "share": 73.5
         },
         {
           "name": "评测与安全",
-          "count": 1059,
-          "share": 19.1
-        },
-        {
-          "name": "Agent",
-          "count": 948,
-          "share": 17.1
-        },
-        {
-          "name": "推理",
-          "count": 763,
-          "share": 13.8
+          "count": 2707,
+          "share": 48.9
         },
         {
           "name": "训练与系统",
-          "count": 661,
-          "share": 11.9
+          "count": 2028,
+          "share": 36.6
         },
         {
           "name": "检索与知识",
-          "count": 642,
-          "share": 11.6
+          "count": 1722,
+          "share": 31.1
+        },
+        {
+          "name": "推理",
+          "count": 1480,
+          "share": 26.7
+        },
+        {
+          "name": "Agent",
+          "count": 1325,
+          "share": 23.9
         },
         {
           "name": "多模态",
-          "count": 504,
-          "share": 9.1
-        },
-        {
-          "name": "生成与视觉",
-          "count": 159,
-          "share": 2.9
-        },
-        {
-          "name": "AI for Science",
-          "count": 156,
-          "share": 2.8
+          "count": 809,
+          "share": 14.6
         },
         {
           "name": "语音与音频",
-          "count": 153,
-          "share": 2.8
+          "count": 236,
+          "share": 4.3
+        },
+        {
+          "name": "AI for Science",
+          "count": 215,
+          "share": 3.9
+        },
+        {
+          "name": "生成与视觉",
+          "count": 210,
+          "share": 3.8
         },
         {
           "name": "机器人与具身",
-          "count": 54,
-          "share": 1.0
+          "count": 82,
+          "share": 1.5
         }
       ],
-      "summary": "EMNLP 2026 共收录 5534 篇论文，覆盖 4 个 Track。主题信号最集中的方向为大模型（2055篇，37.1%）、评测与安全（1059篇，19.1%）、Agent（948篇，17.1%）。同一论文可以属于多个主题，因此主题计数不用于计算论文总量；本期有 1137 篇未能通过关键词明确归类。",
-      "generated_at": "2026-11-14T13:22:20.640591+00:00",
+      "summary": "EMNLP 2026 共收录 5534 篇论文，覆盖 4 个 Track。主题信号最集中的方向为大模型（4066篇，73.5%）、评测与安全（2707篇，48.9%）、训练与系统（2028篇，36.6%）。同一论文可以属于多个主题，因此主题计数不用于计算论文总量；本期有 43 篇未能通过关键词明确归类。",
+      "generated_at": "2026-11-14T13:58:30.967214+00:00",
       "errors": [],
       "status": "complete"
     },
@@ -524,63 +524,63 @@
       ],
       "topics": [
         {
-          "name": "生成与视觉",
-          "count": 820,
-          "share": 20.3
-        },
-        {
-          "name": "多模态",
-          "count": 664,
-          "share": 16.4
-        },
-        {
-          "name": "大模型",
-          "count": 416,
-          "share": 10.3
-        },
-        {
           "name": "评测与安全",
-          "count": 410,
-          "share": 10.1
+          "count": 1807,
+          "share": 44.7
         },
         {
           "name": "训练与系统",
-          "count": 391,
-          "share": 9.7
+          "count": 1658,
+          "share": 41.0
         },
         {
-          "name": "推理",
-          "count": 296,
-          "share": 7.3
+          "name": "生成与视觉",
+          "count": 1431,
+          "share": 35.4
         },
         {
-          "name": "机器人与具身",
-          "count": 156,
-          "share": 3.9
-        },
-        {
-          "name": "Agent",
-          "count": 138,
-          "share": 3.4
+          "name": "多模态",
+          "count": 1259,
+          "share": 31.1
         },
         {
           "name": "检索与知识",
-          "count": 117,
-          "share": 2.9
+          "count": 1206,
+          "share": 29.8
+        },
+        {
+          "name": "大模型",
+          "count": 1142,
+          "share": 28.3
+        },
+        {
+          "name": "推理",
+          "count": 570,
+          "share": 14.1
+        },
+        {
+          "name": "机器人与具身",
+          "count": 323,
+          "share": 8.0
+        },
+        {
+          "name": "Agent",
+          "count": 294,
+          "share": 7.3
         },
         {
           "name": "AI for Science",
-          "count": 79,
-          "share": 2.0
+          "count": 152,
+          "share": 3.8
         },
         {
           "name": "语音与音频",
-          "count": 46,
-          "share": 1.1
+          "count": 73,
+          "share": 1.8
         }
       ],
-      "summary": "CVPR 2026 共收录 4042 篇论文，覆盖 3 个 Track。主题信号最集中的方向为生成与视觉（820篇，20.3%）、多模态（664篇，16.4%）、大模型（416篇，10.3%）。同一论文可以属于多个主题，因此主题计数不用于计算论文总量；本期有 1687 篇未能通过关键词明确归类。",
-      "generated_at": "2026-11-14T13:22:20.640591+00:00",
+      "summary": "CVPR 2026 共收录 4042 篇论文，覆盖 3 个 Track。主题信号最集中的方向为评测与安全（1807篇，44.7%）、训练与系统（1658篇，41.0%）、生成与视觉（1431篇，35.4%）。同一论文可以属于多个主题，因此主题计数不用于计算论文总量；本期有 121 篇未能通过关键词明确归类。",
+      "generated_at": "2026-11-14T13:58:30.967214+00:00",
       "errors": [],
       "status": "complete"
     },
@@ -618,62 +618,62 @@
       "topics": [
         {
           "name": "大模型",
-          "count": 1905,
-          "share": 40.5
+          "count": 3685,
+          "share": 78.4
         },
         {
           "name": "评测与安全",
-          "count": 918,
-          "share": 19.5
-        },
-        {
-          "name": "推理",
-          "count": 806,
-          "share": 17.2
-        },
-        {
-          "name": "Agent",
-          "count": 708,
-          "share": 15.1
+          "count": 2256,
+          "share": 48.0
         },
         {
           "name": "训练与系统",
-          "count": 649,
-          "share": 13.8
+          "count": 1766,
+          "share": 37.6
         },
         {
           "name": "检索与知识",
-          "count": 516,
-          "share": 11.0
+          "count": 1501,
+          "share": 31.9
+        },
+        {
+          "name": "推理",
+          "count": 1432,
+          "share": 30.5
+        },
+        {
+          "name": "Agent",
+          "count": 998,
+          "share": 21.2
         },
         {
           "name": "多模态",
-          "count": 430,
-          "share": 9.2
+          "count": 661,
+          "share": 14.1
         },
         {
           "name": "语音与音频",
-          "count": 157,
-          "share": 3.3
-        },
-        {
-          "name": "生成与视觉",
-          "count": 109,
-          "share": 2.3
+          "count": 197,
+          "share": 4.2
         },
         {
           "name": "AI for Science",
-          "count": 101,
-          "share": 2.1
+          "count": 152,
+          "share": 3.2
+        },
+        {
+          "name": "生成与视觉",
+          "count": 145,
+          "share": 3.1
         },
         {
           "name": "机器人与具身",
-          "count": 42,
-          "share": 0.9
+          "count": 62,
+          "share": 1.3
         }
       ],
-      "summary": "ACL 2026 共收录 4698 篇论文，覆盖 5 个 Track。主题信号最集中的方向为大模型（1905篇，40.5%）、评测与安全（918篇，19.5%）、推理（806篇，17.2%）。同一论文可以属于多个主题，因此主题计数不用于计算论文总量；本期有 834 篇未能通过关键词明确归类。",
-      "generated_at": "2026-11-14T13:22:20.640591+00:00",
+      "summary": "ACL 2026 共收录 4698 篇论文，覆盖 5 个 Track。主题信号最集中的方向为大模型（3685篇，78.4%）、评测与安全（2256篇，48.0%）、训练与系统（1766篇，37.6%）。同一论文可以属于多个主题，因此主题计数不用于计算论文总量；本期有 42 篇未能通过关键词明确归类。",
+      "generated_at": "2026-11-14T13:58:30.967214+00:00",
       "errors": [],
       "status": "complete"
     },
@@ -724,10 +724,6 @@
           "count": 100
         },
         {
-          "name": "AAAI-26 Technical Tracks 5",
-          "count": 100
-        },
-        {
           "name": "AAAI-26 Technical Tracks 7",
           "count": 100
         },
@@ -749,6 +745,10 @@
         },
         {
           "name": "AAAI-26 Technical Tracks 15",
+          "count": 100
+        },
+        {
+          "name": "AAAI-26 Technical Tracks 5",
           "count": 100
         },
         {
@@ -790,63 +790,63 @@
       ],
       "topics": [
         {
-          "name": "生成与视觉",
-          "count": 398,
-          "share": 16.8
-        },
-        {
-          "name": "多模态",
-          "count": 265,
-          "share": 11.2
-        },
-        {
-          "name": "大模型",
-          "count": 262,
-          "share": 11.0
+          "name": "评测与安全",
+          "count": 1061,
+          "share": 44.7
         },
         {
           "name": "训练与系统",
-          "count": 247,
-          "share": 10.4
-        },
-        {
-          "name": "评测与安全",
-          "count": 231,
-          "share": 9.7
+          "count": 937,
+          "share": 39.5
         },
         {
           "name": "检索与知识",
-          "count": 134,
-          "share": 5.6
+          "count": 904,
+          "share": 38.1
+        },
+        {
+          "name": "生成与视觉",
+          "count": 615,
+          "share": 25.9
+        },
+        {
+          "name": "大模型",
+          "count": 589,
+          "share": 24.8
+        },
+        {
+          "name": "多模态",
+          "count": 495,
+          "share": 20.8
         },
         {
           "name": "推理",
-          "count": 131,
-          "share": 5.5
-        },
-        {
-          "name": "机器人与具身",
-          "count": 86,
-          "share": 3.6
+          "count": 251,
+          "share": 10.6
         },
         {
           "name": "Agent",
-          "count": 83,
-          "share": 3.5
+          "count": 215,
+          "share": 9.1
+        },
+        {
+          "name": "机器人与具身",
+          "count": 150,
+          "share": 6.3
         },
         {
           "name": "AI for Science",
-          "count": 59,
-          "share": 2.5
+          "count": 146,
+          "share": 6.1
         },
         {
           "name": "语音与音频",
-          "count": 22,
-          "share": 0.9
+          "count": 35,
+          "share": 1.5
         }
       ],
-      "summary": "AAAI 2026 共收录 2375 篇论文，覆盖 25 个 Track。主题信号最集中的方向为生成与视觉（398篇，16.8%）、多模态（265篇，11.2%）、大模型（262篇，11.0%）。同一论文可以属于多个主题，因此主题计数不用于计算论文总量；本期有 1062 篇未能通过关键词明确归类。",
-      "generated_at": "2026-11-14T13:22:20.640591+00:00",
+      "summary": "AAAI 2026 共收录 2375 篇论文，覆盖 25 个 Track。主题信号最集中的方向为评测与安全（1061篇，44.7%）、训练与系统（937篇，39.5%）、检索与知识（904篇，38.1%）。同一论文可以属于多个主题，因此主题计数不用于计算论文总量；本期有 116 篇未能通过关键词明确归类。",
+      "generated_at": "2026-11-14T13:58:30.967214+00:00",
       "errors": [],
       "status": "complete"
     },
@@ -875,63 +875,63 @@
       ],
       "topics": [
         {
-          "name": "大模型",
-          "count": 1046,
-          "share": 18.0
-        },
-        {
           "name": "训练与系统",
-          "count": 848,
-          "share": 14.6
+          "count": 2735,
+          "share": 47.0
         },
         {
           "name": "评测与安全",
-          "count": 624,
-          "share": 10.7
+          "count": 2361,
+          "share": 40.5
         },
         {
-          "name": "生成与视觉",
-          "count": 589,
-          "share": 10.1
-        },
-        {
-          "name": "推理",
-          "count": 451,
-          "share": 7.7
-        },
-        {
-          "name": "多模态",
-          "count": 390,
-          "share": 6.7
-        },
-        {
-          "name": "Agent",
-          "count": 263,
-          "share": 4.5
+          "name": "大模型",
+          "count": 2104,
+          "share": 36.1
         },
         {
           "name": "检索与知识",
-          "count": 238,
-          "share": 4.1
+          "count": 1893,
+          "share": 32.5
         },
         {
-          "name": "AI for Science",
-          "count": 111,
-          "share": 1.9
+          "name": "生成与视觉",
+          "count": 955,
+          "share": 16.4
+        },
+        {
+          "name": "推理",
+          "count": 807,
+          "share": 13.9
+        },
+        {
+          "name": "多模态",
+          "count": 711,
+          "share": 12.2
+        },
+        {
+          "name": "Agent",
+          "count": 565,
+          "share": 9.7
         },
         {
           "name": "机器人与具身",
-          "count": 109,
-          "share": 1.9
+          "count": 279,
+          "share": 4.8
+        },
+        {
+          "name": "AI for Science",
+          "count": 270,
+          "share": 4.6
         },
         {
           "name": "语音与音频",
-          "count": 58,
-          "share": 1.0
+          "count": 93,
+          "share": 1.6
         }
       ],
-      "summary": "NeurIPS 2025 共收录 5823 篇论文，覆盖 3 个 Track。主题信号最集中的方向为大模型（1046篇，18.0%）、训练与系统（848篇，14.6%）、评测与安全（624篇，10.7%）。同一论文可以属于多个主题，因此主题计数不用于计算论文总量；本期有 2623 篇未能通过关键词明确归类。",
-      "generated_at": "2026-11-14T13:22:20.640591+00:00",
+      "summary": "NeurIPS 2025 共收录 5823 篇论文，覆盖 3 个 Track。主题信号最集中的方向为训练与系统（2735篇，47.0%）、评测与安全（2361篇，40.5%）、大模型（2104篇，36.1%）。同一论文可以属于多个主题，因此主题计数不用于计算论文总量；本期有 411 篇未能通过关键词明确归类。",
+      "generated_at": "2026-11-14T13:58:30.967214+00:00",
       "errors": [],
       "status": "complete"
     }
@@ -939,48 +939,48 @@
   "topics": [
     {
       "name": "大模型",
-      "count": 9776,
-      "share": 27.5,
+      "count": 17082,
+      "share": 48.1,
       "conferences": [
+        {
+          "slug": "emnlp-2026",
+          "name": "EMNLP 2026",
+          "count": 4066
+        },
+        {
+          "slug": "acl-2026",
+          "name": "ACL 2026",
+          "count": 3685
+        },
         {
           "slug": "icml-2026",
           "name": "ICML 2026",
           "count": 2703
         },
         {
-          "slug": "emnlp-2026",
-          "name": "EMNLP 2026",
-          "count": 2055
-        },
-        {
-          "slug": "acl-2026",
-          "name": "ACL 2026",
-          "count": 1905
-        },
-        {
           "slug": "iclr-2026",
           "name": "ICLR 2026",
-          "count": 1233
+          "count": 2511
         },
         {
           "slug": "neurips-2025",
           "name": "NeurIPS 2025",
-          "count": 1046
+          "count": 2104
         },
         {
           "slug": "cvpr-2026",
           "name": "CVPR 2026",
-          "count": 416
+          "count": 1142
         },
         {
           "slug": "aaai-2026",
           "name": "AAAI 2026",
-          "count": 262
+          "count": 589
         },
         {
           "slug": "ijcai-2026",
           "name": "IJCAI 2026",
-          "count": 135
+          "count": 261
         },
         {
           "slug": "preprints-2026",
@@ -990,9 +990,61 @@
       ]
     },
     {
+      "name": "评测与安全",
+      "count": 15780,
+      "share": 44.4,
+      "conferences": [
+        {
+          "slug": "icml-2026",
+          "name": "ICML 2026",
+          "count": 2786
+        },
+        {
+          "slug": "emnlp-2026",
+          "name": "EMNLP 2026",
+          "count": 2707
+        },
+        {
+          "slug": "neurips-2025",
+          "name": "NeurIPS 2025",
+          "count": 2361
+        },
+        {
+          "slug": "iclr-2026",
+          "name": "ICLR 2026",
+          "count": 2328
+        },
+        {
+          "slug": "acl-2026",
+          "name": "ACL 2026",
+          "count": 2256
+        },
+        {
+          "slug": "cvpr-2026",
+          "name": "CVPR 2026",
+          "count": 1807
+        },
+        {
+          "slug": "aaai-2026",
+          "name": "AAAI 2026",
+          "count": 1061
+        },
+        {
+          "slug": "ijcai-2026",
+          "name": "IJCAI 2026",
+          "count": 450
+        },
+        {
+          "slug": "preprints-2026",
+          "name": "高质量预印本 2026",
+          "count": 24
+        }
+      ]
+    },
+    {
       "name": "训练与系统",
-      "count": 6897,
-      "share": 19.4,
+      "count": 15377,
+      "share": 43.3,
       "conferences": [
         {
           "slug": "icml-2026",
@@ -1002,32 +1054,240 @@
         {
           "slug": "neurips-2025",
           "name": "NeurIPS 2025",
-          "count": 848
+          "count": 2735
         },
         {
           "slug": "iclr-2026",
           "name": "ICLR 2026",
-          "count": 825
+          "count": 2723
         },
         {
           "slug": "emnlp-2026",
           "name": "EMNLP 2026",
-          "count": 661
+          "count": 2028
         },
         {
           "slug": "acl-2026",
           "name": "ACL 2026",
-          "count": 649
+          "count": 1766
         },
         {
           "slug": "cvpr-2026",
           "name": "CVPR 2026",
-          "count": 391
+          "count": 1658
         },
         {
           "slug": "aaai-2026",
           "name": "AAAI 2026",
-          "count": 247
+          "count": 937
+        },
+        {
+          "slug": "ijcai-2026",
+          "name": "IJCAI 2026",
+          "count": 351
+        },
+        {
+          "slug": "preprints-2026",
+          "name": "高质量预印本 2026",
+          "count": 16
+        }
+      ]
+    },
+    {
+      "name": "检索与知识",
+      "count": 11137,
+      "share": 31.3,
+      "conferences": [
+        {
+          "slug": "neurips-2025",
+          "name": "NeurIPS 2025",
+          "count": 1893
+        },
+        {
+          "slug": "icml-2026",
+          "name": "ICML 2026",
+          "count": 1865
+        },
+        {
+          "slug": "emnlp-2026",
+          "name": "EMNLP 2026",
+          "count": 1722
+        },
+        {
+          "slug": "iclr-2026",
+          "name": "ICLR 2026",
+          "count": 1654
+        },
+        {
+          "slug": "acl-2026",
+          "name": "ACL 2026",
+          "count": 1501
+        },
+        {
+          "slug": "cvpr-2026",
+          "name": "CVPR 2026",
+          "count": 1206
+        },
+        {
+          "slug": "aaai-2026",
+          "name": "AAAI 2026",
+          "count": 904
+        },
+        {
+          "slug": "ijcai-2026",
+          "name": "IJCAI 2026",
+          "count": 386
+        },
+        {
+          "slug": "preprints-2026",
+          "name": "高质量预印本 2026",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "name": "推理",
+      "count": 6866,
+      "share": 19.3,
+      "conferences": [
+        {
+          "slug": "emnlp-2026",
+          "name": "EMNLP 2026",
+          "count": 1480
+        },
+        {
+          "slug": "acl-2026",
+          "name": "ACL 2026",
+          "count": 1432
+        },
+        {
+          "slug": "icml-2026",
+          "name": "ICML 2026",
+          "count": 1169
+        },
+        {
+          "slug": "iclr-2026",
+          "name": "ICLR 2026",
+          "count": 1027
+        },
+        {
+          "slug": "neurips-2025",
+          "name": "NeurIPS 2025",
+          "count": 807
+        },
+        {
+          "slug": "cvpr-2026",
+          "name": "CVPR 2026",
+          "count": 570
+        },
+        {
+          "slug": "aaai-2026",
+          "name": "AAAI 2026",
+          "count": 251
+        },
+        {
+          "slug": "ijcai-2026",
+          "name": "IJCAI 2026",
+          "count": 120
+        },
+        {
+          "slug": "preprints-2026",
+          "name": "高质量预印本 2026",
+          "count": 10
+        }
+      ]
+    },
+    {
+      "name": "多模态",
+      "count": 5531,
+      "share": 15.6,
+      "conferences": [
+        {
+          "slug": "cvpr-2026",
+          "name": "CVPR 2026",
+          "count": 1259
+        },
+        {
+          "slug": "emnlp-2026",
+          "name": "EMNLP 2026",
+          "count": 809
+        },
+        {
+          "slug": "icml-2026",
+          "name": "ICML 2026",
+          "count": 755
+        },
+        {
+          "slug": "iclr-2026",
+          "name": "ICLR 2026",
+          "count": 723
+        },
+        {
+          "slug": "neurips-2025",
+          "name": "NeurIPS 2025",
+          "count": 711
+        },
+        {
+          "slug": "acl-2026",
+          "name": "ACL 2026",
+          "count": 661
+        },
+        {
+          "slug": "aaai-2026",
+          "name": "AAAI 2026",
+          "count": 495
+        },
+        {
+          "slug": "ijcai-2026",
+          "name": "IJCAI 2026",
+          "count": 109
+        },
+        {
+          "slug": "preprints-2026",
+          "name": "高质量预印本 2026",
+          "count": 9
+        }
+      ]
+    },
+    {
+      "name": "生成与视觉",
+      "count": 5341,
+      "share": 15.0,
+      "conferences": [
+        {
+          "slug": "cvpr-2026",
+          "name": "CVPR 2026",
+          "count": 1431
+        },
+        {
+          "slug": "neurips-2025",
+          "name": "NeurIPS 2025",
+          "count": 955
+        },
+        {
+          "slug": "icml-2026",
+          "name": "ICML 2026",
+          "count": 938
+        },
+        {
+          "slug": "iclr-2026",
+          "name": "ICLR 2026",
+          "count": 934
+        },
+        {
+          "slug": "aaai-2026",
+          "name": "AAAI 2026",
+          "count": 615
+        },
+        {
+          "slug": "emnlp-2026",
+          "name": "EMNLP 2026",
+          "count": 210
+        },
+        {
+          "slug": "acl-2026",
+          "name": "ACL 2026",
+          "count": 145
         },
         {
           "slug": "ijcai-2026",
@@ -1042,274 +1302,19 @@
       ]
     },
     {
-      "name": "评测与安全",
-      "count": 6795,
-      "share": 19.1,
-      "conferences": [
-        {
-          "slug": "icml-2026",
-          "name": "ICML 2026",
-          "count": 2786
-        },
-        {
-          "slug": "emnlp-2026",
-          "name": "EMNLP 2026",
-          "count": 1059
-        },
-        {
-          "slug": "acl-2026",
-          "name": "ACL 2026",
-          "count": 918
-        },
-        {
-          "slug": "iclr-2026",
-          "name": "ICLR 2026",
-          "count": 651
-        },
-        {
-          "slug": "neurips-2025",
-          "name": "NeurIPS 2025",
-          "count": 624
-        },
-        {
-          "slug": "cvpr-2026",
-          "name": "CVPR 2026",
-          "count": 410
-        },
-        {
-          "slug": "aaai-2026",
-          "name": "AAAI 2026",
-          "count": 231
-        },
-        {
-          "slug": "ijcai-2026",
-          "name": "IJCAI 2026",
-          "count": 92
-        },
-        {
-          "slug": "preprints-2026",
-          "name": "高质量预印本 2026",
-          "count": 24
-        }
-      ]
-    },
-    {
-      "name": "推理",
-      "count": 4247,
-      "share": 12.0,
-      "conferences": [
-        {
-          "slug": "icml-2026",
-          "name": "ICML 2026",
-          "count": 1169
-        },
-        {
-          "slug": "acl-2026",
-          "name": "ACL 2026",
-          "count": 806
-        },
-        {
-          "slug": "emnlp-2026",
-          "name": "EMNLP 2026",
-          "count": 763
-        },
-        {
-          "slug": "iclr-2026",
-          "name": "ICLR 2026",
-          "count": 562
-        },
-        {
-          "slug": "neurips-2025",
-          "name": "NeurIPS 2025",
-          "count": 451
-        },
-        {
-          "slug": "cvpr-2026",
-          "name": "CVPR 2026",
-          "count": 296
-        },
-        {
-          "slug": "aaai-2026",
-          "name": "AAAI 2026",
-          "count": 131
-        },
-        {
-          "slug": "ijcai-2026",
-          "name": "IJCAI 2026",
-          "count": 59
-        },
-        {
-          "slug": "preprints-2026",
-          "name": "高质量预印本 2026",
-          "count": 10
-        }
-      ]
-    },
-    {
-      "name": "检索与知识",
-      "count": 3821,
-      "share": 10.8,
-      "conferences": [
-        {
-          "slug": "icml-2026",
-          "name": "ICML 2026",
-          "count": 1865
-        },
-        {
-          "slug": "emnlp-2026",
-          "name": "EMNLP 2026",
-          "count": 642
-        },
-        {
-          "slug": "acl-2026",
-          "name": "ACL 2026",
-          "count": 516
-        },
-        {
-          "slug": "iclr-2026",
-          "name": "ICLR 2026",
-          "count": 245
-        },
-        {
-          "slug": "neurips-2025",
-          "name": "NeurIPS 2025",
-          "count": 238
-        },
-        {
-          "slug": "aaai-2026",
-          "name": "AAAI 2026",
-          "count": 134
-        },
-        {
-          "slug": "cvpr-2026",
-          "name": "CVPR 2026",
-          "count": 117
-        },
-        {
-          "slug": "ijcai-2026",
-          "name": "IJCAI 2026",
-          "count": 58
-        },
-        {
-          "slug": "preprints-2026",
-          "name": "高质量预印本 2026",
-          "count": 6
-        }
-      ]
-    },
-    {
-      "name": "生成与视觉",
-      "count": 3657,
-      "share": 10.3,
-      "conferences": [
-        {
-          "slug": "icml-2026",
-          "name": "ICML 2026",
-          "count": 938
-        },
-        {
-          "slug": "cvpr-2026",
-          "name": "CVPR 2026",
-          "count": 820
-        },
-        {
-          "slug": "neurips-2025",
-          "name": "NeurIPS 2025",
-          "count": 589
-        },
-        {
-          "slug": "iclr-2026",
-          "name": "ICLR 2026",
-          "count": 566
-        },
-        {
-          "slug": "aaai-2026",
-          "name": "AAAI 2026",
-          "count": 398
-        },
-        {
-          "slug": "emnlp-2026",
-          "name": "EMNLP 2026",
-          "count": 159
-        },
-        {
-          "slug": "acl-2026",
-          "name": "ACL 2026",
-          "count": 109
-        },
-        {
-          "slug": "ijcai-2026",
-          "name": "IJCAI 2026",
-          "count": 62
-        },
-        {
-          "slug": "preprints-2026",
-          "name": "高质量预印本 2026",
-          "count": 16
-        }
-      ]
-    },
-    {
-      "name": "多模态",
-      "count": 3490,
-      "share": 9.8,
-      "conferences": [
-        {
-          "slug": "icml-2026",
-          "name": "ICML 2026",
-          "count": 755
-        },
-        {
-          "slug": "cvpr-2026",
-          "name": "CVPR 2026",
-          "count": 664
-        },
-        {
-          "slug": "emnlp-2026",
-          "name": "EMNLP 2026",
-          "count": 504
-        },
-        {
-          "slug": "acl-2026",
-          "name": "ACL 2026",
-          "count": 430
-        },
-        {
-          "slug": "iclr-2026",
-          "name": "ICLR 2026",
-          "count": 414
-        },
-        {
-          "slug": "neurips-2025",
-          "name": "NeurIPS 2025",
-          "count": 390
-        },
-        {
-          "slug": "aaai-2026",
-          "name": "AAAI 2026",
-          "count": 265
-        },
-        {
-          "slug": "ijcai-2026",
-          "name": "IJCAI 2026",
-          "count": 59
-        },
-        {
-          "slug": "preprints-2026",
-          "name": "高质量预印本 2026",
-          "count": 9
-        }
-      ]
-    },
-    {
       "name": "Agent",
-      "count": 3485,
-      "share": 9.8,
+      "count": 5121,
+      "share": 14.4,
       "conferences": [
         {
           "slug": "emnlp-2026",
           "name": "EMNLP 2026",
-          "count": 948
+          "count": 1325
+        },
+        {
+          "slug": "acl-2026",
+          "name": "ACL 2026",
+          "count": 998
         },
         {
           "slug": "icml-2026",
@@ -1317,34 +1322,29 @@
           "count": 879
         },
         {
-          "slug": "acl-2026",
-          "name": "ACL 2026",
-          "count": 708
-        },
-        {
           "slug": "iclr-2026",
           "name": "ICLR 2026",
-          "count": 375
+          "count": 656
         },
         {
           "slug": "neurips-2025",
           "name": "NeurIPS 2025",
-          "count": 263
+          "count": 565
         },
         {
           "slug": "cvpr-2026",
           "name": "CVPR 2026",
-          "count": 138
+          "count": 294
         },
         {
           "slug": "aaai-2026",
           "name": "AAAI 2026",
-          "count": 83
+          "count": 215
         },
         {
           "slug": "ijcai-2026",
           "name": "IJCAI 2026",
-          "count": 72
+          "count": 170
         },
         {
           "slug": "preprints-2026",
@@ -1355,48 +1355,48 @@
     },
     {
       "name": "AI for Science",
-      "count": 913,
-      "share": 2.6,
+      "count": 1511,
+      "share": 4.3,
       "conferences": [
+        {
+          "slug": "neurips-2025",
+          "name": "NeurIPS 2025",
+          "count": 270
+        },
         {
           "slug": "icml-2026",
           "name": "ICML 2026",
           "count": 265
         },
         {
-          "slug": "emnlp-2026",
-          "name": "EMNLP 2026",
-          "count": 156
-        },
-        {
-          "slug": "neurips-2025",
-          "name": "NeurIPS 2025",
-          "count": 111
-        },
-        {
           "slug": "iclr-2026",
           "name": "ICLR 2026",
-          "count": 102
+          "count": 233
         },
         {
-          "slug": "acl-2026",
-          "name": "ACL 2026",
-          "count": 101
+          "slug": "emnlp-2026",
+          "name": "EMNLP 2026",
+          "count": 215
         },
         {
           "slug": "cvpr-2026",
           "name": "CVPR 2026",
-          "count": 79
+          "count": 152
+        },
+        {
+          "slug": "acl-2026",
+          "name": "ACL 2026",
+          "count": 152
         },
         {
           "slug": "aaai-2026",
           "name": "AAAI 2026",
-          "count": 59
+          "count": 146
         },
         {
           "slug": "ijcai-2026",
           "name": "IJCAI 2026",
-          "count": 38
+          "count": 76
         },
         {
           "slug": "preprints-2026",
@@ -1407,48 +1407,48 @@
     },
     {
       "name": "机器人与具身",
-      "count": 868,
-      "share": 2.4,
+      "count": 1458,
+      "share": 4.1,
       "conferences": [
+        {
+          "slug": "cvpr-2026",
+          "name": "CVPR 2026",
+          "count": 323
+        },
+        {
+          "slug": "neurips-2025",
+          "name": "NeurIPS 2025",
+          "count": 279
+        },
+        {
+          "slug": "iclr-2026",
+          "name": "ICLR 2026",
+          "count": 267
+        },
         {
           "slug": "icml-2026",
           "name": "ICML 2026",
           "count": 255
         },
         {
-          "slug": "cvpr-2026",
-          "name": "CVPR 2026",
-          "count": 156
-        },
-        {
-          "slug": "iclr-2026",
-          "name": "ICLR 2026",
-          "count": 139
-        },
-        {
-          "slug": "neurips-2025",
-          "name": "NeurIPS 2025",
-          "count": 109
-        },
-        {
           "slug": "aaai-2026",
           "name": "AAAI 2026",
-          "count": 86
+          "count": 150
         },
         {
           "slug": "emnlp-2026",
           "name": "EMNLP 2026",
-          "count": 54
+          "count": 82
         },
         {
           "slug": "acl-2026",
           "name": "ACL 2026",
-          "count": 42
+          "count": 62
         },
         {
           "slug": "ijcai-2026",
           "name": "IJCAI 2026",
-          "count": 20
+          "count": 33
         },
         {
           "slug": "preprints-2026",
@@ -1459,18 +1459,23 @@
     },
     {
       "name": "语音与音频",
-      "count": 625,
-      "share": 1.8,
+      "count": 862,
+      "share": 2.4,
       "conferences": [
-        {
-          "slug": "acl-2026",
-          "name": "ACL 2026",
-          "count": 157
-        },
         {
           "slug": "emnlp-2026",
           "name": "EMNLP 2026",
-          "count": 153
+          "count": 236
+        },
+        {
+          "slug": "acl-2026",
+          "name": "ACL 2026",
+          "count": 197
+        },
+        {
+          "slug": "iclr-2026",
+          "name": "ICLR 2026",
+          "count": 105
         },
         {
           "slug": "icml-2026",
@@ -1478,29 +1483,24 @@
           "count": 101
         },
         {
-          "slug": "iclr-2026",
-          "name": "ICLR 2026",
-          "count": 75
-        },
-        {
           "slug": "neurips-2025",
           "name": "NeurIPS 2025",
-          "count": 58
+          "count": 93
         },
         {
           "slug": "cvpr-2026",
           "name": "CVPR 2026",
-          "count": 46
+          "count": 73
         },
         {
           "slug": "aaai-2026",
           "name": "AAAI 2026",
-          "count": 22
+          "count": 35
         },
         {
           "slug": "ijcai-2026",
           "name": "IJCAI 2026",
-          "count": 11
+          "count": 20
         },
         {
           "slug": "preprints-2026",
@@ -1510,7 +1510,7 @@
       ]
     }
   ],
-  "classified_papers": 25258,
-  "unclassified_papers": 10266,
-  "summary": "全部论文库共 35524 篇，其中 25258 篇获得至少一个主题标签，10266 篇暂未明确归类。主题信号最强的方向为大模型（9776篇）、训练与系统（6897篇）、评测与安全（6795篇）、推理（4247篇）、检索与知识（3821篇）。主题支持多标签，因此各主题计数之和大于论文总数。"
+  "classified_papers": 34081,
+  "unclassified_papers": 1444,
+  "summary": "全部论文库共 35525 篇，其中 34081 篇获得至少一个主题标签，1444 篇暂未明确归类。主题信号最强的方向为大模型（17082篇）、评测与安全（15780篇）、训练与系统（15377篇）、检索与知识（11137篇）、推理（6866篇）。主题支持多标签，因此各主题计数之和大于论文总数。"
 }
