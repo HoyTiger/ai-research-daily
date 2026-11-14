@@ -1,0 +1,25 @@
+{
+  "issue_number": 1,
+  "issue_url": "https://github.com/HoyTiger/ai-research-daily/issues/1",
+  "paper_title": "A Survey on Foundations and Frontiers of Multimodal Agentic Frameworks: Techniques and Applications",
+  "paper_url": "https://openreview.net/forum?id=eaVoaI7f8v",
+  "source": "TMLR",
+  "venue": "Accepted by TMLR",
+  "authors": [
+    "Neel Mokaria",
+    "Rishie Raj",
+    "Dheeraj Baiju",
+    "Xiaoqian Shen",
+    "Shraman Pramanick",
+    "Kevin Qinghong Lin",
+    "Arda Senocak",
+    "Mike Zheng Shou",
+    "Philip Torr",
+    "Mohamed Elhoseiny",
+    "Yapeng Tian",
+    "Ruohan Gao"
+  ],
+  "published_at": "2026-05-26T07:50:39.555000+00:00",
+  "created_at": "2026-11-14T08:27:40Z",
+  "status": "queued"
+}
