@@ -71,7 +71,9 @@ jobs:
           } >> "$GITHUB_ENV"
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: |
+          python -m pip install --disable-pip-version-check -r requirements-conferences.txt
+          pnpm install --frozen-lockfile
 
       - name: Create deep-read archive
         id: archive
