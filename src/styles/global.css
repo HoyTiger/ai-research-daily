@@ -1835,6 +1835,7 @@ code {
 
 .deep-read-card footer {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   gap: 15px;
   margin-top: auto;
@@ -1842,6 +1843,27 @@ code {
   border-top: 1px solid var(--rule);
   font-family: var(--mono);
   font-size: 9px;
+}
+
+.deep-read-edit {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0 12px;
+  color: var(--paper-bright);
+  background: var(--ink);
+}
+
+.deep-read-card footer .deep-read-edit {
+  order: 3;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 4px;
+}
+
+.deep-read-facts .deep-read-edit {
+  margin-top: 8px;
+  color: var(--paper-bright);
 }
 
 .deep-status {

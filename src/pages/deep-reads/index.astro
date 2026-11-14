@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { withBase } from "../../lib/url";
+import { site } from "../../site";
 
 const papers = (
   await getCollection("deepReads", ({ data }) => !data.draft)
@@ -65,6 +66,14 @@ const counts = {
             <p>{paper.data.authors.slice(0, 4).join("、") || "作者见原文"}</p>
             <footer>
               <a href={withBase(`deep-reads/${paper.id}/`)}>打开精读档案 →</a>
+              <a
+                class="deep-read-edit"
+                href={`${site.githubUrl}/edit/main/src/content/deep-reads/${paper.id}.md`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                编辑档案 ↗
+              </a>
               {paper.data.paperUrl && (
                 <a href={paper.data.paperUrl} target="_blank" rel="noopener noreferrer">原文 ↗</a>
               )}
@@ -80,4 +89,3 @@ const counts = {
     )}
   </section>
 </BaseLayout>
-

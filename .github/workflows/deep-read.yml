@@ -2,7 +2,7 @@ name: Archive deep-read paper
 
 on:
   issues:
-    types: [opened, labeled]
+    types: [opened]
   workflow_dispatch:
     inputs:
       issue_number:
