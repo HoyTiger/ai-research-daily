@@ -1,0 +1,73 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import IssueCard from "../components/IssueCard.astro";
+
+const posts = (await getCollection("posts", ({ data }) => !data.draft && data.type === "daily")).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+---
+
+<BaseLayout
+  title="研究日报归档｜AI Research Signal"
+  description="浏览全部 AI 论文、顶会、顶刊与技术报告日报。"
+>
+  <section class="archive-hero section-shell">
+    <div>
+      <p class="overline">COMPLETE ARCHIVE / {posts.length.toString().padStart(2, "0")} ISSUES</p>
+      <h1>研究信号<br /><em>归档。</em></h1>
+    </div>
+    <p>
+      按日期回看研究流。每一期只收录此前没有出现过的条目，避免同一条论文反复占据版面。
+    </p>
+  </section>
+
+  <section class="archive-browser section-shell" aria-label="筛选日报">
+    <div class="archive-toolbar">
+      <label>
+        <span>SEARCH ARCHIVE</span>
+        <input
+          type="search"
+          placeholder="输入主题、来源或期号"
+          aria-label="搜索日报"
+          data-archive-search
+        />
+      </label>
+      <p><strong data-result-count>{posts.length}</strong> 期可浏览</p>
+    </div>
+    <div class="issue-list archive-list" data-archive-list>
+      {posts.map((post, index) => (
+        <div
+          data-search-text={`${post.data.title} ${post.data.description} ${post.data.sources.join(" ")}`}
+        >
+          <IssueCard post={post} index={index} />
+        </div>
+      ))}
+      <p class="empty-note archive-empty" data-archive-empty hidden>
+        没有匹配的期号，试试更短的关键词。
+      </p>
+    </div>
+  </section>
+  <script>
+    const input = document.querySelector<HTMLInputElement>("[data-archive-search]");
+    const list = document.querySelector<HTMLElement>("[data-archive-list]");
+    const count = document.querySelector<HTMLElement>("[data-result-count]");
+    const empty = document.querySelector<HTMLElement>("[data-archive-empty]");
+    const entries = Array.from(
+      list?.querySelectorAll<HTMLElement>("[data-search-text]") ?? [],
+    );
+    const filter = () => {
+      const query = input?.value.trim().toLocaleLowerCase() ?? "";
+      let visible = 0;
+      entries.forEach((entry) => {
+        const matches = entry.dataset.searchText?.toLocaleLowerCase().includes(query) ?? true;
+        entry.hidden = !matches;
+        if (matches) visible += 1;
+      });
+      if (count) count.textContent = String(visible);
+      if (empty) empty.hidden = visible !== 0;
+    };
+    input?.addEventListener("input", filter);
+  </script>
+</BaseLayout>
+

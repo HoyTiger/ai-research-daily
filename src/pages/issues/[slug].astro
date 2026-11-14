@@ -1,0 +1,84 @@
+---
+import type { GetStaticPaths } from "astro";
+import { getCollection, render } from "astro:content";
+import fs from "node:fs";
+import path from "node:path";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { formatIssueDate, withBase } from "../../lib/url";
+
+export const getStaticPaths = (async () => {
+  const posts = await getCollection("posts", ({ data }) => !data.draft);
+  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
+}) satisfies GetStaticPaths;
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const issueDate = formatIssueDate(post.data.date);
+const issueFile = path.join(process.cwd(), "data", "issues", `${post.id}.json`);
+let issue: any = null;
+if (fs.existsSync(issueFile)) {
+  issue = JSON.parse(fs.readFileSync(issueFile, "utf8"));
+}
+const health = issue?.source_health ?? [];
+const statusLabel: Record<string, string> = {
+  ok: "正常",
+  partial: "部分成功",
+  failed: "失败",
+  empty: "无更新",
+};
+---
+
+<BaseLayout title={`${post.data.title}｜AI Research Signal`} description={post.data.description}>
+  <article class="article-shell">
+    <header class="article-hero">
+      <div class="article-hero-top">
+        <a class="back-link" href={withBase("archive/")}>← 返回归档</a>
+        <span>ISSUE / {String(post.data.issue ?? 1).padStart(3, "0")}</span>
+      </div>
+      <div class="article-title-grid">
+        <div>
+          <p class="overline">DAILY RESEARCH BRIEF / {issueDate}</p>
+          <h1>{post.data.title}</h1>
+          <p>{post.data.description}</p>
+        </div>
+        <dl>
+          <div><dt>{post.data.total ?? "—"}</dt><dd>收录条目</dd></div>
+          <div><dt>{post.data.sources.length}</dt><dd>内容来源</dd></div>
+          <div><dt>{formatIssueDate(post.data.date).replaceAll(".", " / ")}</dt><dd>发布时间</dd></div>
+        </dl>
+      </div>
+    </header>
+
+    <div class="article-layout">
+      <div class="article-content">
+        <Content />
+      </div>
+      {health.length > 0 && (
+        <aside class="source-panel" aria-labelledby="source-health-title">
+          <div class="source-panel-head">
+            <span>SYSTEM STATUS</span>
+            <h2 id="source-health-title">来源状态</h2>
+          </div>
+          <ul>
+            {health.map((source: any) => (
+              <li>
+                <span class:list={["status-dot", `status-${source.status}`]}></span>
+                <div>
+                  <strong>{source.source_name}</strong>
+                  <small>{source.item_count} 条 · {statusLabel[source.status] ?? source.status}</small>
+                  {source.errors.length > 0 && (
+                    <details>
+                      <summary>查看错误</summary>
+                      {source.errors.map((error: string) => <code>{error}</code>)}
+                    </details>
+                  )}
+                </div>
+              </li>
+            ))}
+          </ul>
+          <p>失败源不会阻塞其他来源发布。下一期会重新尝试。</p>
+        </aside>
+      )}
+    </div>
+  </article>
+</BaseLayout>

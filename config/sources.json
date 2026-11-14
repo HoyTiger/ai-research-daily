@@ -1,0 +1,105 @@
+{
+  "timezone": "Asia/Shanghai",
+  "lookback_days": 4,
+  "max_items": 36,
+  "editor_picks": 7,
+  "request": {
+    "timeout_seconds": 35,
+    "retries": 3,
+    "user_agent": "AIResearchDaily/1.0 (+https://github.com/; research metadata aggregator)"
+  },
+  "topics": {
+    "大模型": ["large language model", "llm", "foundation model", "language model"],
+    "多模态": ["multimodal", "vision-language", "image generation", "video generation", "audio-language"],
+    "Agent": ["agent", "tool use", "computer use", "multi-agent", "agentic"],
+    "推理": ["reasoning", "chain-of-thought", "test-time", "inference-time"],
+    "训练与系统": ["pretraining", "post-training", "reinforcement learning", "mixture-of-experts", "moe", "inference", "serving", "efficient"],
+    "检索与知识": ["retrieval", "rag", "graphrag", "knowledge base", "citation"],
+    "生成与创造": ["diffusion", "autoregressive", "world model", "video", "image", "3d generation"],
+    "评测与安全": ["benchmark", "evaluation", "safety", "alignment", "hallucination", "robustness"],
+    "机器人与具身": ["robot", "embodied", "vision-language-action", "vla"],
+    "AI for Science": ["protein", "molecule", "biology", "science", "weather"]
+  },
+  "ranking": {
+    "topic_weight": 2.5,
+    "accepted_venue_bonus": 18,
+    "source_weights": {
+      "openreview": 26,
+      "crossref": 24,
+      "arxiv": 10,
+      "huggingface": 14,
+      "rss": 16
+    },
+    "negative_terms": ["customer story", "webinar", "podcast", "hiring", "partnership announcement", "sponsored"]
+  },
+  "sources": {
+    "arxiv": {
+      "enabled": true,
+      "max_per_feed": 18,
+      "feeds": [
+        {"name": "arXiv cs.AI", "url": "https://rss.arxiv.org/rss/cs.AI"},
+        {"name": "arXiv cs.CL", "url": "https://rss.arxiv.org/rss/cs.CL"},
+        {"name": "arXiv cs.CV", "url": "https://rss.arxiv.org/rss/cs.CV"},
+        {"name": "arXiv cs.LG", "url": "https://rss.arxiv.org/rss/cs.LG"},
+        {"name": "arXiv cs.MA", "url": "https://rss.arxiv.org/rss/cs.MA"},
+        {"name": "arXiv stat.ML", "url": "https://rss.arxiv.org/rss/stat.ML"}
+      ]
+    },
+    "openreview": {
+      "enabled": true,
+      "queries": ["large language model", "multimodal", "agent", "reasoning"],
+      "limit_per_query": 6,
+      "max_items": 14,
+      "venues": [
+        {"name": "ICLR 2026", "group": "ICLR.cc/2026/Conference"},
+        {"name": "ICML 2026", "group": "ICML.cc/2026/Conference"},
+        {"name": "NeurIPS 2025", "group": "NeurIPS.cc/2025/Conference"},
+        {"name": "TMLR", "group": "TMLR"}
+      ]
+    },
+    "crossref": {
+      "enabled": true,
+      "lookback_days": 240,
+      "rows_per_journal": 16,
+      "max_items": 12,
+      "journals": [
+        {"name": "Nature Machine Intelligence", "query": "Nature Machine Intelligence", "issn": "2522-5839"},
+        {"name": "IEEE TPAMI", "query": "IEEE Transactions on Pattern Analysis and Machine Intelligence", "issn": "0162-8828"},
+        {"name": "IJCV", "query": "International Journal of Computer Vision", "issn": "0920-5691"}
+      ]
+    },
+    "huggingface": {
+      "enabled": true,
+      "url": "https://huggingface.co/api/daily_papers?limit=30",
+      "max_items": 10
+    },
+    "rss": {
+      "enabled": true,
+      "lookback_days": 9,
+      "max_per_feed": 8,
+      "max_items": 12,
+      "negative_terms": [
+        "customer story",
+        "customer support",
+        "webinar",
+        "podcast",
+        "sponsored",
+        "hiring",
+        "wallet",
+        "veterans",
+        "caregivers",
+        "marketplace",
+        "procurement",
+        "revenue"
+      ],
+      "exclude_url_parts": ["/business/", "/customer-stories/"],
+      "feeds": [
+        {"name": "OpenAI", "url": "https://openai.com/news/rss.xml"},
+        {"name": "Google DeepMind", "url": "https://deepmind.google/blog/rss.xml"},
+        {"name": "Microsoft Research", "url": "https://www.microsoft.com/en-us/research/feed/"},
+        {"name": "Meta Engineering", "url": "https://engineering.fb.com/feed/"},
+        {"name": "Google AI", "url": "https://blog.google/technology/ai/rss/"}
+      ]
+    }
+  }
+}

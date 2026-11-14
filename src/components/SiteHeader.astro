@@ -1,0 +1,39 @@
+---
+import { withBase } from "../lib/url";
+import { site } from "../site";
+
+const path = Astro.url.pathname.replace(import.meta.env.BASE_URL, "/");
+const links = [
+  { href: withBase(), label: "今日", match: "/" },
+  { href: withBase("archive/"), label: "归档", match: "/archive/" },
+  { href: withBase("about/"), label: "关于", match: "/about/" },
+];
+---
+
+<header class="site-header" data-site-header>
+  <a class="brand" href={withBase()} aria-label="AI Research Signal 首页">
+    <span class="brand-mark" aria-hidden="true">
+      <svg viewBox="0 0 40 40"><path d="M7 29 20 8l13 21H7Z"></path><circle cx="20" cy="24" r="3.5"></circle></svg>
+    </span>
+    <span class="brand-copy">
+      <strong>RESEARCH / SIGNAL</strong>
+      <small>AI PAPER INTELLIGENCE</small>
+    </span>
+  </a>
+
+  <nav class="site-nav" aria-label="主导航">
+    {links.map((link) => (
+      <a
+        class:list={{ "is-active": path === link.match || (link.match === "/" && path === "") }}
+        href={link.href}
+      >
+        {link.label}
+      </a>
+    ))}
+  </nav>
+
+  <a class="header-cta" href={site.githubUrl} target="_blank" rel="noopener noreferrer">
+    <span>GitHub</span>
+    <span aria-hidden="true">↗</span>
+  </a>
+</header>
