@@ -10,6 +10,7 @@ permissions:
   contents: write
   pages: write
   id-token: write
+  models: read
 
 concurrency:
   group: pages
@@ -54,9 +55,9 @@ jobs:
 
       - name: Sync latest research
         env:
-          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
-          LLM_BASE_URL: ${{ vars.LLM_BASE_URL }}
-          LLM_MODEL: ${{ vars.LLM_MODEL }}
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY || github.token }}
+          LLM_BASE_URL: ${{ vars.LLM_BASE_URL || 'https://models.github.ai/inference' }}
+          LLM_MODEL: ${{ vars.LLM_MODEL || 'openai/gpt-4o-mini' }}
           CROSSREF_MAILTO: ${{ vars.CROSSREF_MAILTO }}
         run: pnpm run sync
 

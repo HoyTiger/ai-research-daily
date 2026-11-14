@@ -124,9 +124,14 @@ const todayLabel = latest ? formatIssueDate(latest.data.date) : "WAITING FOR DAT
               <span>{item.tags?.[0] || "研究"}</span>
             </div>
             <h3>
-              <a href={item.url} target="_blank" rel="noopener noreferrer">{item.title}</a>
+              <a href={item.url} target="_blank" rel="noopener noreferrer">
+                {item.zh_title || item.title}
+              </a>
             </h3>
-            <p>{item.ai_tldr || item.summary?.slice(0, 260) || "打开原文查看研究详情。"}</p>
+            {item.zh_title && (
+              <p class="story-original-title">{item.title}</p>
+            )}
+            <p>{item.zh_summary || item.ai_tldr || item.summary?.slice(0, 260) || "打开原文查看研究详情。"}</p>
             <footer>
               <span>{item.authors?.slice(0, 2).join("、") || "作者见原文"}</span>
               <span aria-hidden="true">↗</span>
@@ -186,4 +191,3 @@ const todayLabel = latest ? formatIssueDate(latest.data.date) : "WAITING FOR DAT
     </div>
   </section>
 </BaseLayout>
-

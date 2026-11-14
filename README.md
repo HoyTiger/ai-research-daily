@@ -12,7 +12,7 @@
 - 跨来源、跨期去重，来源均衡精选，主题分类和启发式排序。
 - 每日 JSON 数据、Markdown 原稿、静态 HTML、归档检索和来源健康状态。
 - RSS 订阅、响应式页面与 GitHub Pages 项目子路径支持。
-- 可选 OpenAI 兼容接口，只根据原始摘要生成中文导读。
+- 默认通过 GitHub Models 生成中文标题、摘要和研究要点；也可切换到自己的 OpenAI 兼容接口。
 - GitHub Actions 每日北京时间 07:17 自动同步、构建、提交并部署。
 
 ## 本地运行
@@ -90,15 +90,17 @@ export const site = {
 
 Crossref 的匿名请求可能被限流。建议在仓库 Variables 中设置可选 `CROSSREF_MAILTO` 为你的联系邮箱，Crossref 会将它用于礼貌访问标识；该值不会传入浏览器端。
 
-## 可选 AI 导读
+## 中文报告与 AI 导读
 
-不配置 Key 也能完整运行；没有 Key 时显示原始摘要摘录。启用 AI 导读时，在 GitHub 仓库设置：
+GitHub Actions 默认使用仓库临时令牌访问 GitHub Models，把当期的标题和摘要整理成中文，不需要额外配置 Key。中文导读只依据原始摘要生成，页面同时保留英文原始标题和原文链接。
+
+如果你希望使用自己的模型服务，在 GitHub 仓库设置：
 
 - Secret `LLM_API_KEY`：接口密钥。
 - Variable `LLM_BASE_URL`：OpenAI 兼容 API 根地址，例如 `https://api.openai.com/v1`。
 - Variable `LLM_MODEL`：支持 JSON 输出的模型名称。
 
-系统只会把精选条目的标题、摘要和会议名称发送到配置的模型服务。每个模型的名称与可用参数可能不同，发布前应先用 `workflow_dispatch` 手动运行验证。
+系统只会把当期条目的标题、摘要和会议名称发送到模型服务。每个模型的名称与可用参数可能不同，发布前应先用 `workflow_dispatch` 手动运行验证。本地无令牌运行时会保留英文原文；线上每日任务默认生成中文。
 
 ## 内容结构
 

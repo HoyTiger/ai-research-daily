@@ -737,6 +737,14 @@ ul {
   background-size: 100% 1px;
 }
 
+.story-original-title {
+  margin: -8px 0 20px !important;
+  color: var(--orange-deep) !important;
+  font-family: var(--mono);
+  font-size: 10px !important;
+  line-height: 1.5 !important;
+}
+
 .lead-story > p {
   position: relative;
   max-width: 760px;
@@ -1560,6 +1568,14 @@ code {
   margin-bottom: 22px;
   color: var(--muted);
   font-size: 10px;
+}
+
+.paper-original-title {
+  margin: -6px 0 15px;
+  color: var(--orange-deep);
+  font-family: var(--mono);
+  font-size: 9px;
+  line-height: 1.55;
 }
 
 .paper-summary {

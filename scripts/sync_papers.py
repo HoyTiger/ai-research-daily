@@ -77,6 +77,8 @@ class Paper:
     venue: str
     tags: list[str]
     score: float = 0.0
+    zh_title: str = ""
+    zh_summary: str = ""
     ai_tldr: str = ""
     ai_why: str = ""
     external_id: str = ""
@@ -919,67 +921,80 @@ def build_source_health(
     return health
 
 
-def enrich_with_llm(items: list[Paper]) -> bool:
+def enrich_with_llm(items: list[Paper]) -> int:
     api_key = os.environ.get("LLM_API_KEY", "").strip()
     if not api_key or not items:
-        return False
-    base_url = (
-        os.environ.get("LLM_BASE_URL") or "https://api.openai.com/v1"
-    ).rstrip("/")
-    model = os.environ.get("LLM_MODEL") or "gpt-4.1-mini"
-    endpoint = f"{base_url}/chat/completions"
-    payload_items = [
-        {
-            "id": item.id,
-            "title": item.title,
-            "abstract": item.summary[:1800],
-            "venue": item.venue,
-        }
-        for item in items
-    ]
-    prompt = (
-        "你是严谨的 AI 研究编辑。仅依据每条记录的标题和摘要，为每条生成中文导读。"
-        "不得引入摘要之外的事实、数字或评价，不确定时保持保守。"
-        "只返回 JSON 对象，格式为 {\"items\":[{\"id\":\"原 id\","
-        "\"tldr\":\"一句核心贡献\",\"why\":\"一句为何值得关注\"}]}。"
-        "每句不超过 70 个汉字。\n\n"
-        + json.dumps(payload_items, ensure_ascii=False)
+        return 0
+    base_url = (os.environ.get("LLM_BASE_URL") or "https://api.openai.com/v1").rstrip(
+        "/"
     )
-    body = json.dumps(
-        {
+    model = os.environ.get("LLM_MODEL") or "gpt-4o-mini"
+    endpoint = f"{base_url}/chat/completions"
+    by_id = {item.id: item for item in items}
+    localized = 0
+    batch_size = 7
+    for offset in range(0, len(items), batch_size):
+        batch = items[offset : offset + batch_size]
+        payload_items = [
+            {
+                "id": item.id,
+                "title": item.title,
+                "abstract": item.summary[:1400],
+                "venue": item.venue,
+            }
+            for item in batch
+        ]
+        prompt = (
+            "你是严谨的中文 AI 研究编辑。把每条英文研究记录整理成中文。"
+            "zh_title 是准确简洁的中文标题；zh_summary 只依据摘要概括问题、方法和主要结果；"
+            "why 说明该工作值得关注的原因。不得补充摘要之外的事实、数字或评价，"
+            "专有名词和模型名保留英文。只返回 JSON 对象，格式为 "
+            "{\"items\":[{\"id\":\"原 id\",\"zh_title\":\"中文标题\","
+            "\"zh_summary\":\"2-3句中文摘要\",\"why\":\"一句为何关注\"}]}。"
+            "每条 zh_summary 不超过 150 个汉字，why 不超过 60 个汉字。\n\n"
+            + json.dumps(payload_items, ensure_ascii=False)
+        )
+        request_body: dict[str, Any] = {
             "model": model,
             "temperature": 0.2,
             "response_format": {"type": "json_object"},
             "messages": [{"role": "user", "content": prompt}],
         }
-    ).encode("utf-8")
-    request = urllib.request.Request(
-        endpoint,
-        data=body,
-        method="POST",
-        headers={
-            "Authorization": f"Bearer {api_key}",
-            "Content-Type": "application/json",
-            "User-Agent": "AIResearchDaily/1.0",
-        },
-    )
-    try:
-        with urllib.request.urlopen(request, timeout=60) as response:
-            result = json.loads(response.read().decode("utf-8"))
-        content = result["choices"][0]["message"]["content"]
-        parsed = json.loads(content)
-        requested = {item.id for item in items}
-        by_id = {item.id: item for item in items}
-        for entry in parsed.get("items", []):
-            item_id = entry.get("id")
-            if item_id not in requested:
-                continue
-            by_id[item_id].ai_tldr = clean_text(entry.get("tldr"))[:220]
-            by_id[item_id].ai_why = clean_text(entry.get("why"))[:220]
-        return True
-    except Exception as exc:
-        print(f"[warn] LLM enrichment skipped: {exc}", file=sys.stderr)
-        return False
+        try:
+            body = json.dumps(request_body).encode("utf-8")
+            request = urllib.request.Request(
+                endpoint,
+                data=body,
+                method="POST",
+                headers={
+                    "Authorization": f"Bearer {api_key}",
+                    "Content-Type": "application/json",
+                    "User-Agent": "AIResearchDaily/1.0",
+                },
+            )
+            with urllib.request.urlopen(request, timeout=90) as response:
+                result = json.loads(response.read().decode("utf-8"))
+            content = result["choices"][0]["message"]["content"].strip()
+            if content.startswith("```"):
+                content = re.sub(r"^```(?:json)?\s*", "", content, flags=re.I)
+                content = re.sub(r"\s*```$", "", content)
+            parsed = json.loads(content)
+            for entry in parsed.get("items", []):
+                item_id = entry.get("id")
+                if item_id not in by_id:
+                    continue
+                item = by_id[item_id]
+                item.zh_title = clean_text(entry.get("zh_title"))[:240]
+                item.zh_summary = clean_text(entry.get("zh_summary"))[:700]
+                item.ai_why = clean_text(entry.get("why"))[:240]
+                if item.zh_title and item.zh_summary:
+                    localized += 1
+        except Exception as exc:
+            print(
+                f"[warn] Chinese enrichment batch {offset // batch_size + 1} failed: {exc}",
+                file=sys.stderr,
+            )
+    return localized
 
 
 def article_label(item: Paper) -> str:
@@ -1003,6 +1018,8 @@ def render_authors(item: Paper) -> str:
 
 
 def display_summary(item: Paper, limit: int) -> str:
+    if item.zh_summary:
+        return html.escape(item.zh_summary)
     if item.ai_tldr:
         return html.escape(item.ai_tldr)
     if item.summary:
@@ -1023,10 +1040,16 @@ def render_card(item: Paper, timezone: ZoneInfo, featured: bool = False, rank: i
     safe_article_url = safe_url(item.url)
     safe_pdf_url = safe_url(item.pdf_url)
     source_url = html.escape(safe_article_url, quote=True) if safe_article_url else ""
+    display_title = item.zh_title or item.title
     title = (
-        f'<a href="{source_url}" target="_blank" rel="noopener noreferrer">{html.escape(item.title)}</a>'
+        f'<a href="{source_url}" target="_blank" rel="noopener noreferrer">{html.escape(display_title)}</a>'
         if source_url
-        else html.escape(item.title)
+        else html.escape(display_title)
+    )
+    original_title = (
+        f'<p class="paper-original-title">{html.escape(item.title)}</p>'
+        if item.zh_title and item.zh_title != item.title
+        else ""
     )
     tags = "".join(f"<span>{html.escape(tag)}</span>" for tag in item.tags[:4])
     pdf_link = (
@@ -1061,6 +1084,7 @@ def render_card(item: Paper, timezone: ZoneInfo, featured: bool = False, rank: i
     <time datetime="{html.escape(item.published_at, quote=True)}">{published_label(item, timezone)}</time>
   </header>
   <h3>{title}</h3>
+  {original_title}
   <p class="paper-authors">{render_authors(item)}</p>
   <p class="paper-summary">{display_summary(item, 680 if featured else 420)}</p>
   {ai_note}
@@ -1126,9 +1150,9 @@ def build_markdown(
     papers_markup = "\n".join(render_card(item, timezone) for item in papers)
     reports_markup = "\n".join(render_card(item, timezone) for item in reports)
     ai_notice = (
-        '<p class="ai-notice">部分精选的中文导读由 AI 辅助生成，仅依据原始摘要，具体结论请以论文原文为准。</p>'
+        '<p class="ai-notice">中文标题与研究要点由 AI 辅助整理，仅依据原始摘要；专有名词保留英文，具体结论请以原文为准。</p>'
         if ai_enabled
-        else '<p class="ai-notice">本期未启用 AI 改写；卡片文字来自原始标题、摘要与结构化元数据。</p>'
+        else '<p class="ai-notice">本期未启用中文生成；卡片保留原始标题、摘要与结构化元数据。</p>'
     )
     empty_notice = (
         '<p class="empty-note">今天没有发现首次收录的新条目。研究发布并非每天等量发生，稍后会继续同步。</p>'
@@ -1290,7 +1314,12 @@ def main() -> int:
 
     ai_enabled = False
     if not args.no_llm:
-        ai_enabled = enrich_with_llm(picks)
+        localized_count = enrich_with_llm(items)
+        ai_enabled = localized_count > 0
+        print(
+            f"[zh] {localized_count}/{len(items)} items localized",
+            flush=True,
+        )
 
     source_health = build_source_health(labels, results)
     issue_paths = sorted(ISSUES_DIR.glob("*.json")) if ISSUES_DIR.exists() else []
