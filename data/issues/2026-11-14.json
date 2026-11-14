@@ -1,7 +1,7 @@
 {
   "issue_date": "2026-11-14",
   "issue_number": 1,
-  "generated_at": "2026-11-14T14:20:17.788170+08:00",
+  "generated_at": "2026-11-14T14:24:28.267716+08:00",
   "description": "从 4 个数据通道收录 36 条 AI 研究更新，聚焦大模型、Agent、综合。",
   "ai_enabled": false,
   "source_health": [
@@ -36,11 +36,9 @@
     {
       "source_id": "rss",
       "source_name": "Official technical blogs",
-      "status": "partial",
+      "status": "ok",
       "item_count": 12,
-      "errors": [
-        "Google DeepMind: Invalid XML from Google DeepMind: not well-formed (invalid token): line 1, column 0"
-      ]
+      "errors": []
     }
   ],
   "items": [
@@ -79,6 +77,8 @@
         "Agent"
       ],
       "score": 64.0,
+      "zh_title": "",
+      "zh_summary": "",
       "ai_tldr": "",
       "ai_why": "",
       "external_id": "eaVoaI7f8v",
@@ -113,6 +113,8 @@
         "IJCV"
       ],
       "score": 42.6,
+      "zh_title": "",
+      "zh_summary": "",
       "ai_tldr": "",
       "ai_why": "",
       "external_id": "10.1007/s11263-026-03112-7",
@@ -165,6 +167,8 @@
         "community pick"
       ],
       "score": 28.6,
+      "zh_title": "",
+      "zh_summary": "",
       "ai_tldr": "",
       "ai_why": "",
       "external_id": "2611.16728",
@@ -176,31 +180,32 @@
       ]
     },
     {
-      "id": "rss-8756231853c7",
-      "title": "How We Built TLX: A Hardware-Native GPU Compiler for Production ML at Scale",
-      "summary": "Triton Low-Level Extensions (TLX), is an extension to Triton that helps engineers optimize GPU performance while preserving Triton’s productive programming model. TLX introduces explicit warp-group and cluster-level orchestration, letting developers adopt new hardware capabilities without sacrificing velocity. TLX has demonstrated performance improvements in RecSys training, RecSys inference, and large-scale LLM pretraining. Modern GPU architectures increasingly [...] Read More... The post How We Built TLX: A Hardware-Native GPU Compiler for Production ML at Scale appeared first on Engineering at Meta .",
+      "id": "rss-7da5e10bfd6b",
+      "title": "Gemini Robotics 2.5 accelerates real-world general dexterity",
+      "summary": "Our most capable vision-language-action model enhances robot dexterity, reliability, and safety",
       "authors": [],
-      "url": "https://engineering.fb.com/2026/11/10/open-source/tlx-a-hardware-native-gpu-compiler-for-production-ml/",
+      "url": "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/",
       "pdf_url": "",
       "source_id": "rss",
-      "source_name": "Meta Engineering",
+      "source_name": "Google DeepMind",
       "kind": "report",
-      "published_at": "2026-11-10T16:59:31+00:00",
-      "venue": "Meta Engineering 官方博客",
+      "published_at": "2026-11-09T19:51:47+00:00",
+      "venue": "Google DeepMind 官方博客",
       "tags": [
-        "大模型",
-        "训练与系统",
-        "DevInfra",
-        "ML Applications",
-        "Open Source"
+        "多模态",
+        "评测与安全",
+        "机器人与具身",
+        "technical report"
       ],
-      "score": 23.67,
+      "score": 24.84,
+      "zh_title": "",
+      "zh_summary": "",
       "ai_tldr": "",
       "ai_why": "",
       "external_id": "",
       "dedupe_keys": [
-        "title:howwebuilttlxahardwarenativegpucompilerforproductionmlatscale",
-        "url:https://engineering.fb.com/2026/11/10/open-source/tlx-a-hardware-native-gpu-compiler-for-production-ml"
+        "title:geminirobotics25acceleratesrealworldgeneraldexterity",
+        "url:https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence"
       ]
     },
     {
@@ -221,6 +226,8 @@
         "检索与知识"
       ],
       "score": 56.5,
+      "zh_title": "",
+      "zh_summary": "",
       "ai_tldr": "",
       "ai_why": "",
       "external_id": "RYoVZPIUoZ",
@@ -252,6 +259,8 @@
         "IJCV"
       ],
       "score": 38.1,
+      "zh_title": "",
+      "zh_summary": "",
       "ai_tldr": "",
       "ai_why": "",
       "external_id": "10.1007/s11263-026-03118-1",
@@ -294,6 +303,8 @@
         "community pick"
       ],
       "score": 28.6,
+      "zh_title": "",
+      "zh_summary": "",
       "ai_tldr": "",
       "ai_why": "",
       "external_id": "2611.17334",
@@ -329,6 +340,8 @@
         "Generative Policies"
       ],
       "score": 54.0,
+      "zh_title": "",
+      "zh_summary": "",
       "ai_tldr": "",
       "ai_why": "",
       "external_id": "nc5WYNeI17",
@@ -361,6 +374,8 @@
         "safety"
       ],
       "score": 54.0,
+      "zh_title": "",
+      "zh_summary": "",
       "ai_tldr": "",
       "ai_why": "",
       "external_id": "Na3YzWMXwz",
@@ -398,6 +413,8 @@
         "Large Language Model"
       ],
       "score": 54.0,
+      "zh_title": "",
+      "zh_summary": "",
       "ai_tldr": "",
       "ai_why": "",
       "external_id": "ff4b0ELdU0",
@@ -425,6 +442,8 @@
         "评测与安全"
       ],
       "score": 51.5,
+      "zh_title": "",
+      "zh_summary": "",
       "ai_tldr": "",
       "ai_why": "",
       "external_id": "5TVJ7pHMgr",
@@ -452,6 +471,8 @@
         "推理"
       ],
       "score": 51.5,
+      "zh_title": "",
+      "zh_summary": "",
       "ai_tldr": "",
       "ai_why": "",
       "external_id": "z2llaNTP7E",
@@ -495,6 +516,8 @@
         "评测与安全"
       ],
       "score": 51.5,
+      "zh_title": "",
+      "zh_summary": "",
       "ai_tldr": "",
       "ai_why": "",
       "external_id": "RggcWYWR3N",
@@ -529,6 +552,8 @@
         "large reasoning models"
       ],
       "score": 51.5,
+      "zh_title": "",
+      "zh_summary": "",
       "ai_tldr": "",
       "ai_why": "",
       "external_id": "SX7LSFG4IH",
@@ -564,6 +589,8 @@
         "Model Routing"
       ],
       "score": 51.5,
+      "zh_title": "",
+      "zh_summary": "",
       "ai_tldr": "",
       "ai_why": "",
       "external_id": "PZ9XUkURiG",
@@ -607,6 +634,8 @@
         "domain-specific model"
       ],
       "score": 51.5,
+      "zh_title": "",
+      "zh_summary": "",
       "ai_tldr": "",
       "ai_why": "",
       "external_id": "NiHC3GlPQU",
@@ -636,6 +665,8 @@
         "训练与系统"
       ],
       "score": 49.0,
+      "zh_title": "",
+      "zh_summary": "",
       "ai_tldr": "",
       "ai_why": "",
       "external_id": "STfiVfnJtX",
@@ -668,6 +699,8 @@
         "训练与系统"
       ],
       "score": 49.0,
+      "zh_title": "",
+      "zh_summary": "",
       "ai_tldr": "",
       "ai_why": "",
       "external_id": "Dmu7agmmTQ",
@@ -706,6 +739,8 @@
         "Faithfulness"
       ],
       "score": 49.0,
+      "zh_title": "",
+      "zh_summary": "",
       "ai_tldr": "",
       "ai_why": "",
       "external_id": "kTjSSqgqGf",
@@ -739,6 +774,8 @@
         "IJCV"
       ],
       "score": 37.6,
+      "zh_title": "",
+      "zh_summary": "",
       "ai_tldr": "",
       "ai_why": "",
       "external_id": "10.1007/s11263-026-03119-0",
@@ -777,6 +814,8 @@
         "Nature Machine Intelligence"
       ],
       "score": 36.6,
+      "zh_title": "",
+      "zh_summary": "",
       "ai_tldr": "",
       "ai_why": "",
       "external_id": "10.1038/s42256-026-01328-3",
@@ -814,6 +853,8 @@
         "IJCV"
       ],
       "score": 35.1,
+      "zh_title": "",
+      "zh_summary": "",
       "ai_tldr": "",
       "ai_why": "",
       "external_id": "10.1007/s11263-026-03079-5",
@@ -847,6 +888,8 @@
         "IJCV"
       ],
       "score": 32.6,
+      "zh_title": "",
+      "zh_summary": "",
       "ai_tldr": "",
       "ai_why": "",
       "external_id": "10.1007/s11263-026-03096-4",
@@ -883,6 +926,8 @@
         "IJCV"
       ],
       "score": 30.1,
+      "zh_title": "",
+      "zh_summary": "",
       "ai_tldr": "",
       "ai_why": "",
       "external_id": "10.1007/s11263-026-03123-4",
@@ -917,6 +962,8 @@
         "Nature Machine Intelligence"
       ],
       "score": 29.6,
+      "zh_title": "",
+      "zh_summary": "",
       "ai_tldr": "",
       "ai_why": "",
       "external_id": "10.1038/s42256-026-01335-4",
@@ -951,6 +998,8 @@
         "community pick"
       ],
       "score": 28.6,
+      "zh_title": "",
+      "zh_summary": "",
       "ai_tldr": "",
       "ai_why": "",
       "external_id": "2611.16409",
@@ -984,6 +1033,8 @@
         "IJCV"
       ],
       "score": 28.6,
+      "zh_title": "",
+      "zh_summary": "",
       "ai_tldr": "",
       "ai_why": "",
       "external_id": "10.1007/s11263-026-03082-w",
@@ -1016,6 +1067,8 @@
         "IJCV"
       ],
       "score": 28.6,
+      "zh_title": "",
+      "zh_summary": "",
       "ai_tldr": "",
       "ai_why": "",
       "external_id": "10.1007/s11263-026-03078-6",
@@ -1051,6 +1104,8 @@
         "IJCV"
       ],
       "score": 27.1,
+      "zh_title": "",
+      "zh_summary": "",
       "ai_tldr": "",
       "ai_why": "",
       "external_id": "10.1007/s11263-026-03124-3",
@@ -1097,6 +1152,8 @@
         "Nature Machine Intelligence"
       ],
       "score": 26.5,
+      "zh_title": "",
+      "zh_summary": "",
       "ai_tldr": "",
       "ai_why": "",
       "external_id": "10.1038/s42256-026-01317-6",
@@ -1129,6 +1186,8 @@
         "community pick"
       ],
       "score": 26.1,
+      "zh_title": "",
+      "zh_summary": "",
       "ai_tldr": "",
       "ai_why": "",
       "external_id": "2611.17190",
@@ -1165,6 +1224,8 @@
         "community pick"
       ],
       "score": 26.1,
+      "zh_title": "",
+      "zh_summary": "",
       "ai_tldr": "",
       "ai_why": "",
       "external_id": "2611.16961",
@@ -1217,6 +1278,8 @@
         "community pick"
       ],
       "score": 24.6,
+      "zh_title": "",
+      "zh_summary": "",
       "ai_tldr": "",
       "ai_why": "",
       "external_id": "2611.15094",
@@ -1251,6 +1314,8 @@
         "community pick"
       ],
       "score": 24.1,
+      "zh_title": "",
+      "zh_summary": "",
       "ai_tldr": "",
       "ai_why": "",
       "external_id": "2611.12750",
@@ -1259,6 +1324,36 @@
         "external:2611.12750",
         "title:thenarrativegapcanllmshelpusnavigatediversenarrativesacrosslanguages",
         "url:https://arxiv.org/abs/2611.12750"
+      ]
+    },
+    {
+      "id": "rss-8756231853c7",
+      "title": "How We Built TLX: A Hardware-Native GPU Compiler for Production ML at Scale",
+      "summary": "Triton Low-Level Extensions (TLX), is an extension to Triton that helps engineers optimize GPU performance while preserving Triton’s productive programming model. TLX introduces explicit warp-group and cluster-level orchestration, letting developers adopt new hardware capabilities without sacrificing velocity. TLX has demonstrated performance improvements in RecSys training, RecSys inference, and large-scale LLM pretraining. Modern GPU architectures increasingly [...] Read More... The post How We Built TLX: A Hardware-Native GPU Compiler for Production ML at Scale appeared first on Engineering at Meta .",
+      "authors": [],
+      "url": "https://engineering.fb.com/2026/11/10/open-source/tlx-a-hardware-native-gpu-compiler-for-production-ml/",
+      "pdf_url": "",
+      "source_id": "rss",
+      "source_name": "Meta Engineering",
+      "kind": "report",
+      "published_at": "2026-11-10T16:59:31+00:00",
+      "venue": "Meta Engineering 官方博客",
+      "tags": [
+        "大模型",
+        "训练与系统",
+        "DevInfra",
+        "ML Applications",
+        "Open Source"
+      ],
+      "score": 23.66,
+      "zh_title": "",
+      "zh_summary": "",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "",
+      "dedupe_keys": [
+        "title:howwebuilttlxahardwarenativegpucompilerforproductionmlatscale",
+        "url:https://engineering.fb.com/2026/11/10/open-source/tlx-a-hardware-native-gpu-compiler-for-production-ml"
       ]
     },
     {
@@ -1292,6 +1387,8 @@
         "community pick"
       ],
       "score": 23.6,
+      "zh_title": "",
+      "zh_summary": "",
       "ai_tldr": "",
       "ai_why": "",
       "external_id": "2611.17336",
@@ -1300,31 +1397,6 @@
         "external:2611.17336",
         "title:backtopixelsliftinglatentvideodiffusionintopixelspace",
         "url:https://arxiv.org/abs/2611.17336"
-      ]
-    },
-    {
-      "id": "rss-4409ea26a313",
-      "title": "Supporting research on AI and children’s safety",
-      "summary": "OpenAI commits $2 million to research on AI and children’s safety. The work supports shared tools to measure risks and opportunities for young people.",
-      "authors": [],
-      "url": "https://openai.com/index/children-first-declaration",
-      "pdf_url": "",
-      "source_id": "rss",
-      "source_name": "OpenAI",
-      "kind": "report",
-      "published_at": "2026-11-12T00:00:00+00:00",
-      "venue": "OpenAI 官方博客",
-      "tags": [
-        "评测与安全",
-        "Global Affairs"
-      ],
-      "score": 23.1,
-      "ai_tldr": "",
-      "ai_why": "",
-      "external_id": "",
-      "dedupe_keys": [
-        "title:supportingresearchonaiandchildrenssafety",
-        "url:https://openai.com/index/children-first-declaration"
       ]
     }
   ]
