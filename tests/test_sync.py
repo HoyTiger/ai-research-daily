@@ -309,6 +309,34 @@ class ConferenceParsingTests(unittest.TestCase):
         self.assertEqual(papers[0].track, "Hugging Face Daily")
         self.assertEqual(papers[0].signal, "42 upvotes")
 
+    def test_classifies_and_summarizes_paper_topics(self) -> None:
+        paper = sync_conferences.ConferencePaper(
+            id="topic-test",
+            title="A Multimodal Agent for Visual Reasoning",
+            authors=[],
+            url="https://example.com/topic",
+            pdf_url="",
+            venue="Test",
+            track="Main",
+            year=2026,
+            source="Test",
+            abstract="We evaluate a multimodal retrieval and reasoning system.",
+        )
+        topics = sync_conferences.classify_topics(
+            paper,
+            {
+                "多模态": ["multimodal", "vision-language"],
+                "Agent": ["agent"],
+                "推理": ["reasoning"],
+                "检索与知识": ["retrieval"],
+            },
+        )
+        self.assertEqual(topics[:3], ["多模态", "Agent", "推理"])
+        paper.topics = topics
+        distribution = sync_conferences.topic_distribution([paper])
+        self.assertEqual(distribution[0]["count"], 1)
+        self.assertNotIn("其他", [item["name"] for item in distribution])
+
 
 if __name__ == "__main__":
     unittest.main()

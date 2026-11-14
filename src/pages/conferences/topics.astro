@@ -1,0 +1,96 @@
+---
+import fs from "node:fs";
+import path from "node:path";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { withBase } from "../../lib/url";
+
+const base = path.join(process.cwd(), "public", "data", "conferences");
+const index = JSON.parse(fs.readFileSync(path.join(base, "index.json"), "utf8"));
+const topicData = JSON.parse(fs.readFileSync(path.join(base, "topics.json"), "utf8"));
+const conferences = index.conferences;
+---
+
+<BaseLayout
+  title="顶会主题全景｜AI Research Signal"
+  description="汇总 AI 顶会论文中的大模型、多模态、Agent、推理、训练、RAG、安全、具身和 AI for Science 主题分布。"
+>
+  <section class="topic-hero section-shell">
+    <div>
+      <p class="overline">RESEARCH LANDSCAPE / MULTI-LABEL TOPICS</p>
+      <h1>研究版图，<br /><em>按主题汇总。</em></h1>
+    </div>
+    <div>
+      <p>{topicData.summary}</p>
+      <dl>
+        <div><dt>{topicData.total_papers.toLocaleString("zh-CN")}</dt><dd>论文总量</dd></div>
+        <div><dt>{index.classified_papers.toLocaleString("zh-CN")}</dt><dd>已归类论文</dd></div>
+        <div><dt>{topicData.topics.length}</dt><dd>主题类别</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="topic-landscape section-shell" aria-labelledby="topic-landscape-title">
+    <header class="section-header">
+      <div>
+        <p class="overline">TOPIC DISTRIBUTION</p>
+        <h2 id="topic-landscape-title">主题热度</h2>
+      </div>
+      <p>一个主题可以覆盖多个会议，一篇论文也可以属于多个主题。</p>
+    </header>
+    <div class="topic-landscape-list">
+      {topicData.topics.map((topic: any, index: number) => (
+        <article>
+          <header>
+            <span>{String(index + 1).padStart(2, "0")}</span>
+            <h3>{topic.name}</h3>
+            <strong>{topic.count.toLocaleString("zh-CN")}</strong>
+            <small>{topic.share}% 论文覆盖</small>
+          </header>
+          <div class="topic-landscape-bar">
+            <i style={`--share: ${Math.min(100, topic.share * 3.2)}%`}></i>
+          </div>
+          <footer>
+            {topic.conferences.slice(0, 4).map((conference: any) => (
+              <a href={withBase(`conferences/${conference.slug}/`)}>
+                {conference.name} · {conference.count}
+              </a>
+            ))}
+          </footer>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="topic-matrix section-shell" aria-labelledby="matrix-title">
+    <header class="section-header">
+      <div>
+        <p class="overline">CROSS-VENUE MATRIX</p>
+        <h2 id="matrix-title">会议 × 主题</h2>
+      </div>
+      <a class="text-link" href={withBase("conferences/")}>返回会议库 <span>→</span></a>
+    </header>
+    <div class="topic-table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>会议</th>
+            {topicData.topics.slice(0, 8).map((topic: any) => <th>{topic.name}</th>)}
+          </tr>
+        </thead>
+        <tbody>
+          {conferences.map((conference: any) => (
+            <tr>
+              <th>
+                <a href={withBase(`conferences/${conference.slug}/`)}>{conference.name}</a>
+              </th>
+              {topicData.topics.slice(0, 8).map((globalTopic: any) => {
+                const local = conference.topics.find((topic: any) => topic.name === globalTopic.name);
+                return <td>{local ? local.count : "—"}</td>;
+              })}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+</BaseLayout>

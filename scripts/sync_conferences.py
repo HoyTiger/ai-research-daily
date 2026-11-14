@@ -26,6 +26,7 @@ from bs4 import BeautifulSoup
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_CONFIG = ROOT / "config" / "conferences.json"
+TOPICS_CONFIG = ROOT / "config" / "topics.json"
 OUTPUT_DIR = ROOT / "public" / "data" / "conferences"
 
 
@@ -47,9 +48,28 @@ class ConferencePaper:
     doi: str = ""
     signal: str = ""
     abstract: str = ""
+    topics: list[str] = dataclasses.field(default_factory=list)
 
     def to_dict(self) -> dict[str, Any]:
         return dataclasses.asdict(self)
+
+
+def paper_from_dict(value: dict[str, Any]) -> ConferencePaper:
+    return ConferencePaper(
+        id=value["id"],
+        title=value["title"],
+        authors=list(value.get("authors", [])),
+        url=value["url"],
+        pdf_url=value.get("pdf_url", ""),
+        venue=value["venue"],
+        track=value["track"],
+        year=int(value["year"]),
+        source=value["source"],
+        doi=value.get("doi", ""),
+        signal=value.get("signal", ""),
+        abstract=value.get("abstract", ""),
+        topics=list(value.get("topics", [])),
+    )
 
 
 def clean_text(value: str | None) -> str:
@@ -73,6 +93,35 @@ def clean_latex(value: str | None) -> str:
 
 def normalized_title(value: str) -> str:
     return re.sub(r"[^\w]+", "", value.casefold(), flags=re.UNICODE)
+
+
+def classify_topics(
+    paper: ConferencePaper, topic_keywords: dict[str, list[str]]
+) -> list[str]:
+    title = paper.title.casefold()
+    body = f"{paper.title} {paper.abstract}".casefold()
+    scores: list[tuple[int, str]] = []
+    for topic, keywords in topic_keywords.items():
+        score = 0
+        for keyword in keywords:
+            needle = keyword.casefold()
+            if needle in title:
+                score += 3
+            elif needle in body:
+                score += 1
+        if score:
+            scores.append((score, topic))
+    return [
+        topic
+        for _, topic in sorted(scores, key=lambda item: -item[0])[:3]
+    ]
+
+
+def tag_papers(
+    papers: list[ConferencePaper], topic_keywords: dict[str, list[str]]
+) -> None:
+    for paper in papers:
+        paper.topics = classify_topics(paper, topic_keywords)
 
 
 def stable_id(slug: str, value: str) -> str:
@@ -623,6 +672,38 @@ def dedupe_papers(papers: Iterable[ConferencePaper]) -> list[ConferencePaper]:
     return result
 
 
+def topic_distribution(papers: list[ConferencePaper]) -> list[dict[str, Any]]:
+    counts = Counter(topic for paper in papers for topic in paper.topics)
+    total = max(1, len(papers))
+    return [
+        {
+            "name": topic,
+            "count": count,
+            "share": round(count / total * 100, 1),
+        }
+        for topic, count in counts.most_common()
+    ]
+
+
+def conference_summary(
+    conference: dict[str, Any],
+    papers: list[ConferencePaper],
+    topic_counts: list[dict[str, Any]],
+) -> str:
+    track_count = len({paper.track for paper in papers})
+    leading = "、".join(
+        f"{item['name']}（{item['count']}篇，{item['share']}%）"
+        for item in topic_counts[:3]
+    )
+    classified = sum(1 for paper in papers if paper.topics)
+    unclassified = len(papers) - classified
+    return (
+        f"{conference['name']} 共收录 {len(papers)} 篇论文，覆盖 {track_count} 个 Track。"
+        f"主题信号最集中的方向为{leading}。同一论文可以属于多个主题，"
+        f"因此主题计数不用于计算论文总量；本期有 {unclassified} 篇未能通过关键词明确归类。"
+    )
+
+
 def collect_conference(
     conference: dict[str, Any], request_config: dict[str, Any]
 ) -> tuple[list[ConferencePaper], list[str]]:
@@ -735,6 +816,7 @@ def build_index_entry(
     generated_at: str,
 ) -> dict[str, Any]:
     track_counts = Counter(paper.track for paper in papers)
+    topics = topic_distribution(papers)
     return {
         "slug": conference["slug"],
         "name": conference["name"],
@@ -758,6 +840,8 @@ def build_index_entry(
             {"name": name, "count": count}
             for name, count in track_counts.most_common()
         ],
+        "topics": topics,
+        "summary": conference_summary(conference, papers, topics),
         "generated_at": generated_at,
         "errors": errors,
         "status": "partial" if errors else "complete",
@@ -769,10 +853,16 @@ def main() -> int:
     parser.add_argument("--config", type=Path, default=DEFAULT_CONFIG)
     parser.add_argument("--only", help="Only sync one conference slug.")
     parser.add_argument("--limit", type=int, help="Limit papers per conference for testing.")
+    parser.add_argument(
+        "--from-existing",
+        action="store_true",
+        help="Re-tag and summarize existing JSON without downloading proceedings.",
+    )
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
 
     config = json.loads(args.config.read_text(encoding="utf-8"))
+    topic_keywords = json.loads(TOPICS_CONFIG.read_text(encoding="utf-8"))
     request_config = config.get("request", {})
     conferences = [
         conference
@@ -798,11 +888,31 @@ def main() -> int:
     failures = 0
 
     for conference in conferences:
-        print(f"[conference] {conference['name']}: fetching", flush=True)
-        try:
-            papers, errors = collect_conference(conference, request_config)
-        except Exception as exc:
-            papers, errors = [], [str(exc)]
+        if args.from_existing:
+            data_path = OUTPUT_DIR / f"{conference['slug']}.json"
+            if not data_path.exists():
+                print(
+                    f"[conference] {conference['name']}: missing {data_path.name}",
+                    file=sys.stderr,
+                )
+                failures += 1
+                continue
+            old_data = json.loads(data_path.read_text(encoding="utf-8"))
+            papers = [
+                paper_from_dict(value) for value in old_data.get("papers", [])
+            ]
+            errors = list(old_data.get("errors", []))
+            print(
+                f"[conference] {conference['name']}: re-summarizing existing data",
+                flush=True,
+            )
+        else:
+            print(f"[conference] {conference['name']}: fetching", flush=True)
+            try:
+                papers, errors = collect_conference(conference, request_config)
+            except Exception as exc:
+                papers, errors = [], [str(exc)]
+        tag_papers(papers, topic_keywords)
         if args.limit:
             papers = papers[: args.limit]
         if not papers:
@@ -843,6 +953,57 @@ def main() -> int:
         "total_papers": sum(item.get("paper_count", 0) for item in ordered),
         "conferences": ordered,
     }
+    global_topic_counts: Counter[str] = Counter()
+    topic_by_conference: dict[str, list[dict[str, Any]]] = {}
+    for conference in ordered:
+        for topic in conference.get("topics", []):
+            global_topic_counts[topic["name"]] += topic["count"]
+            topic_by_conference.setdefault(topic["name"], []).append(
+                {
+                    "slug": conference["slug"],
+                    "name": conference["name"],
+                    "count": topic["count"],
+                }
+            )
+    total_papers = max(1, index_data["total_papers"])
+    global_topics = [
+        {
+            "name": topic,
+            "count": count,
+            "share": round(count / total_papers * 100, 1),
+            "conferences": sorted(
+                topic_by_conference.get(topic, []),
+                key=lambda item: item["count"],
+                reverse=True,
+            ),
+        }
+        for topic, count in global_topic_counts.most_common()
+    ]
+    index_data["topics"] = global_topics
+    # Count papers with at least one topic by examining each data file.
+    classified_total = 0
+    for conference in ordered:
+        data_path = OUTPUT_DIR / f"{conference['slug']}.json"
+        if not data_path.exists():
+            continue
+        conference_data = json.loads(data_path.read_text(encoding="utf-8"))
+        classified_total += sum(
+            1 for paper in conference_data.get("papers", []) if paper.get("topics")
+        )
+    index_data["classified_papers"] = classified_total
+    index_data["unclassified_papers"] = max(
+        0, index_data["total_papers"] - classified_total
+    )
+    leading_topics = "、".join(
+        f"{topic['name']}（{topic['count']}篇）" for topic in global_topics[:5]
+    )
+    index_data["summary"] = (
+        f"全部论文库共 {index_data['total_papers']} 篇，"
+        f"其中 {classified_total} 篇获得至少一个主题标签，"
+        f"{index_data['unclassified_papers']} 篇暂未明确归类。"
+        f"主题信号最强的方向为{leading_topics}。"
+        "主题支持多标签，因此各主题计数之和大于论文总数。"
+    )
     if args.dry_run:
         print(json.dumps(index_data, ensure_ascii=False, indent=2))
     else:
@@ -850,6 +1011,21 @@ def main() -> int:
             json.dumps(index_data, ensure_ascii=False, indent=2) + "\n",
             encoding="utf-8",
         )
+        (OUTPUT_DIR / "topics.json").write_text(
+            json.dumps(
+                {
+                    "generated_at": generated_at,
+                    "total_papers": index_data["total_papers"],
+                    "summary": index_data["summary"],
+                    "topics": global_topics,
+                },
+                ensure_ascii=False,
+                indent=2,
+            )
+            + "\n",
+            encoding="utf-8",
+        )
+        print(f"[write] {(OUTPUT_DIR / 'topics.json').relative_to(ROOT)}", flush=True)
         print(f"[write] {index_path.relative_to(ROOT)}", flush=True)
     return 0
 

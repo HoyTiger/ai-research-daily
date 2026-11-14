@@ -14,6 +14,7 @@
 - RSS 订阅、响应式页面与 GitHub Pages 项目子路径支持。
 - 论文卡片自带“精读并存档”按钮，通过 GitHub Issue 建立可长期迭代的中文精读档案。
 - 独立顶会论文全量库，支持标题、作者和 Track 检索，覆盖 CVPR、ICLR、ICML、AAAI、IJCAI、ACL、EMNLP、NeurIPS，并收录高质量预印本。
+- 对全量论文做多标签主题归类，汇总大模型、多模态、Agent、推理、训练系统、RAG、评测安全、具身智能等方向。
 - 默认使用离线 Argos 模型生成中文标题与摘要；配置自己的 OpenAI 兼容接口后可获得更好的中文研究导读。
 - GitHub Actions 每日北京时间 07:17 自动同步、构建、提交并部署。
 
@@ -124,9 +125,12 @@ GitHub Actions 默认安装并缓存开源的 Argos 英中翻译模型，把当�
 - `data/deep-reads/`：精读任务的结构化元数据。
 - `public/data/conferences/`：会议库按会议拆分的全量论文 JSON。
 - `config/conferences.json`：会议来源、分卷和预印本筛选规则。
+- `config/topics.json`：主题关键词和分类规则。
+- `public/data/conferences/topics.json`：跨会议主题汇总与各会议主题分布。
 
 会议库每周自动更新一次。完整的 CVPR、ACL、EMNLP、ICML、AAAI 等 proceedings
 可能包含数千篇论文，因此不会塞进每日精选；每日精选仍由 `sync_papers.py` 生成。
+会议库会为论文赋予最多三个主题标签；官方元数据不足、无法可靠匹配的论文不会强行归入“其他”，而是单独统计为未归类。
 
 生成器默认覆盖同一天的文件。再次运行同一天不会把当天内容当作历史内容去重。
 

@@ -1,0 +1,111 @@
+{
+  "大模型": [
+    "large language model",
+    "llm",
+    "foundation model",
+    "language model",
+    "pretrained model",
+    "mixture-of-experts",
+    "moe"
+  ],
+  "多模态": [
+    "multimodal",
+    "vision-language",
+    "vlm",
+    "mllm",
+    "image-text",
+    "audio-language",
+    "video-language",
+    "cross-modal"
+  ],
+  "Agent": [
+    "agent",
+    "tool use",
+    "tool-use",
+    "computer use",
+    "multi-agent",
+    "agentic",
+    "planning"
+  ],
+  "推理": [
+    "reasoning",
+    "chain-of-thought",
+    "test-time",
+    "inference-time",
+    "mathematical reasoning",
+    "logical reasoning"
+  ],
+  "训练与系统": [
+    "pretraining",
+    "post-training",
+    "reinforcement learning",
+    "rlhf",
+    "dpo",
+    "fine-tuning",
+    "inference",
+    "serving",
+    "efficient",
+    "quantization",
+    "distributed training"
+  ],
+  "检索与知识": [
+    "retrieval",
+    "rag",
+    "graphrag",
+    "knowledge graph",
+    "knowledge base",
+    "citation",
+    "search"
+  ],
+  "生成与视觉": [
+    "diffusion",
+    "image generation",
+    "video generation",
+    "text-to-image",
+    "text-to-video",
+    "world model",
+    "3d generation",
+    "rendering",
+    "segmentation",
+    "object detection"
+  ],
+  "评测与安全": [
+    "benchmark",
+    "evaluation",
+    "safety",
+    "alignment",
+    "hallucination",
+    "robustness",
+    "watermark",
+    "privacy",
+    "adversarial"
+  ],
+  "机器人与具身": [
+    "robot",
+    "robotics",
+    "embodied",
+    "vision-language-action",
+    "vla",
+    "manipulation",
+    "navigation"
+  ],
+  "语音与音频": [
+    "speech",
+    "audio",
+    "asr",
+    "speech recognition",
+    "text-to-speech",
+    "music generation"
+  ],
+  "AI for Science": [
+    "protein",
+    "molecule",
+    "chemistry",
+    "biology",
+    "drug discovery",
+    "weather",
+    "climate",
+    "medical",
+    "clinical"
+  ]
+}

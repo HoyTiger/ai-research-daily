@@ -11,6 +11,12 @@ interface TrackSummary {
   count: number;
 }
 
+interface TopicSummary {
+  name: string;
+  count: number;
+  share: number;
+}
+
 interface ConferenceSummary {
   slug: string;
   name: string;
@@ -21,6 +27,8 @@ interface ConferenceSummary {
   source_url: string;
   paper_count: number;
   tracks: TrackSummary[];
+  topics: TopicSummary[];
+  summary: string;
   status: "complete" | "partial";
 }
 
@@ -70,6 +78,26 @@ const dataUrl = withBase(`data/conferences/${conference.slug}.json`);
     </div>
   </section>
 
+  <section class="conference-topic-detail section-shell" aria-labelledby="conference-topic-title">
+    <header>
+      <div>
+        <p class="overline">CLASSIFICATION SUMMARY</p>
+        <h2 id="conference-topic-title">主题分布</h2>
+      </div>
+      <p>{conference.summary}</p>
+    </header>
+    <div class="conference-topic-grid">
+      {conference.topics.map((topic, index) => (
+        <div>
+          <span>{String(index + 1).padStart(2, "0")}</span>
+          <strong>{topic.name}</strong>
+          <i style={`--share: ${Math.min(100, topic.share * 2.5)}%`}></i>
+          <small>{topic.count.toLocaleString("zh-CN")} 篇 / {topic.share}%</small>
+        </div>
+      ))}
+    </div>
+  </section>
+
   <section class="conference-browser section-shell" aria-labelledby="paper-index-title">
     <header class="conference-browser-head">
       <div>
@@ -96,6 +124,15 @@ const dataUrl = withBase(`data/conferences/${conference.slug}.json`);
           ))}
         </select>
       </label>
+      <label>
+        <span>主题</span>
+        <select data-topic-filter>
+          <option value="">全部主题</option>
+          {conference.topics.map((topic) => (
+            <option value={topic.name}>{topic.name}（{topic.count}）</option>
+          ))}
+        </select>
+      </label>
       <p><strong data-paper-count>{conference.paper_count}</strong> 篇结果</p>
     </div>
     <div class="conference-paper-list" data-paper-list aria-live="polite">
@@ -108,6 +145,7 @@ const dataUrl = withBase(`data/conferences/${conference.slug}.json`);
 <script define:vars={{ dataUrl, repo: site.githubUrl, kind: conference.kind || "conference" }}>
   const search = document.querySelector("[data-paper-search]");
   const trackFilter = document.querySelector("[data-track-filter]");
+  const topicFilter = document.querySelector("[data-topic-filter]");
   const list = document.querySelector("[data-paper-list]");
   const count = document.querySelector("[data-paper-count]");
   const loadMore = document.querySelector("[data-load-more]");
@@ -222,9 +260,14 @@ const dataUrl = withBase(`data/conferences/${conference.slug}.json`);
   function applyFilters() {
     const query = search?.value.trim().toLocaleLowerCase() || "";
     const track = trackFilter?.value || "";
+    const topic = topicFilter?.value || "";
     filtered = papers.filter((paper) => {
       const haystack = `${paper.title} ${paper.authors.join(" ")}`.toLocaleLowerCase();
-      return (!query || haystack.includes(query)) && (!track || paper.track === track);
+      return (
+        (!query || haystack.includes(query)) &&
+        (!track || paper.track === track) &&
+        (!topic || (paper.topics || []).includes(topic))
+      );
     });
     if (count) count.textContent = filtered.length.toLocaleString("zh-CN");
     render(true);
@@ -251,6 +294,7 @@ const dataUrl = withBase(`data/conferences/${conference.slug}.json`);
 
   search?.addEventListener("input", applyFilters);
   trackFilter?.addEventListener("change", applyFilters);
+  topicFilter?.addEventListener("change", applyFilters);
   loadMore?.addEventListener("click", () => render(false));
   load();
 </script>
