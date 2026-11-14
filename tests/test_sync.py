@@ -17,6 +17,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 import sync_papers  # noqa: E402
 import archive_deep_read  # noqa: E402
 import sync_conferences  # noqa: E402
+import enrich_conference_abstracts  # noqa: E402
 
 
 class FeedParsingTests(unittest.TestCase):
@@ -308,6 +309,46 @@ class ConferenceParsingTests(unittest.TestCase):
         self.assertEqual(papers[0].url, "https://arxiv.org/abs/2611.12345")
         self.assertEqual(papers[0].track, "Hugging Face Daily")
         self.assertEqual(papers[0].signal, "42 upvotes")
+
+    def test_extracts_official_abstract_nodes(self) -> None:
+        cases = [
+            (
+                '<div id="abstract"> CVPR abstract. </div>',
+                "https://openaccess.thecvf.com/content/CVPR2026/html/test.html",
+                "CVPR abstract.",
+            ),
+            (
+                '<div class="acl-abstract"><h5>Abstract</h5><span>ACL abstract.</span></div>',
+                "https://aclanthology.org/2026.acl-long.1/",
+                "ACL abstract.",
+            ),
+            (
+                '<section class="item abstract"><h2>Abstract</h2>AAAI abstract.</section>',
+                "https://ojs.aaai.org/index.php/AAAI/article/view/1",
+                "AAAI abstract.",
+            ),
+            (
+                '<div class="article__abstract"><p class="eyebrow">Abstract</p><p>IJCAI abstract.</p></div>',
+                "https://www.ijcai.org/proceedings/2026/1",
+                "IJCAI abstract.",
+            ),
+            (
+                '<p class="paper-abstract">NeurIPS abstract.</p>',
+                "https://proceedings.neurips.cc/paper_files/paper/2025/hash/test-Abstract-Conference.html",
+                "NeurIPS abstract.",
+            ),
+            (
+                '<div class="abstract-text-inner">ICLR abstract.</div>',
+                "https://iclr.cc/virtual/2026/poster/1",
+                "ICLR abstract.",
+            ),
+        ]
+        for page, url, expected in cases:
+            with self.subTest(url=url):
+                self.assertEqual(
+                    enrich_conference_abstracts.extract_abstract(page, url),
+                    expected,
+                )
 
     def test_classifies_and_summarizes_paper_topics(self) -> None:
         paper = sync_conferences.ConferencePaper(
