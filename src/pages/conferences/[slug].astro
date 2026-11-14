@@ -29,6 +29,7 @@ interface ConferenceSummary {
   tracks: TrackSummary[];
   topics: TopicSummary[];
   summary: string;
+  generated_at: string;
   status: "complete" | "partial";
 }
 
@@ -45,7 +46,9 @@ export const getStaticPaths = (async () => {
 
 const { conference } = Astro.props as { conference: ConferenceSummary };
 const kindLabel = conference.kind === "preprint" ? "预印本雷达" : "正式论文集";
-const dataUrl = withBase(`data/conferences/${conference.slug}.json`);
+const dataUrl = withBase(
+  `data/conferences/${conference.slug}.json?v=${encodeURIComponent(conference.generated_at)}`,
+);
 ---
 
 <BaseLayout
@@ -105,9 +108,12 @@ const dataUrl = withBase(`data/conferences/${conference.slug}.json`);
         <h2 id="paper-index-title">论文目录</h2>
       </div>
       {conference.source_url && (
-        <a href={conference.source_url} target="_blank" rel="noopener noreferrer">
-          查看官方来源 ↗
-        </a>
+        <div class="conference-source-actions">
+          <span>数据更新：{conference.generated_at.slice(0, 10)}</span>
+          <a href={conference.source_url} target="_blank" rel="noopener noreferrer">
+            查看官方来源 ↗
+          </a>
+        </div>
       )}
     </header>
     <div class="conference-filters">

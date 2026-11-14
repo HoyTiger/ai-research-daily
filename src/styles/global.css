@@ -2494,10 +2494,21 @@ code {
   font-weight: 500;
 }
 
-.conference-browser-head > a {
+.conference-browser-head > a,
+.conference-source-actions a {
   padding-bottom: 4px;
   border-bottom: 1px solid var(--ink);
   font-size: 11px;
+}
+
+.conference-source-actions {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  gap: 10px;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 8px;
 }
 
 .conference-filters {
