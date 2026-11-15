@@ -1,23 +1,13 @@
 {
-  "generated_at": "2026-11-14T13:58:30.967214+00:00",
-  "total_papers": 35525,
-  "summary": "全部论文库共 35525 篇，其中 34081 篇获得至少一个主题标签，1444 篇暂未明确归类。主题信号最强的方向为大模型（17082篇）、评测与安全（15780篇）、训练与系统（15377篇）、检索与知识（11137篇）、推理（6866篇）。主题支持多标签，因此各主题计数之和大于论文总数。",
+  "generated_at": "2026-11-15T09:25:00.450506+00:00",
+  "total_papers": 35532,
+  "summary": "全部论文库共 35532 篇，其中 27068 篇获得至少一个主题标签，8464 篇暂未明确归类。主题信号最强的方向为大模型（11055篇）、训练与系统（8800篇）、评测与安全（8475篇）、检索与知识（5230篇）、推理（4714篇）。主题支持多标签，因此各主题计数之和大于论文总数。",
   "topics": [
     {
       "name": "大模型",
-      "count": 17082,
-      "share": 48.1,
+      "count": 11055,
+      "share": 31.1,
       "conferences": [
-        {
-          "slug": "emnlp-2026",
-          "name": "EMNLP 2026",
-          "count": 4066
-        },
-        {
-          "slug": "acl-2026",
-          "name": "ACL 2026",
-          "count": 3685
-        },
         {
           "slug": "icml-2026",
           "name": "ICML 2026",
@@ -29,24 +19,86 @@
           "count": 2511
         },
         {
+          "slug": "emnlp-2026",
+          "name": "EMNLP 2026",
+          "count": 2055
+        },
+        {
+          "slug": "acl-2026",
+          "name": "ACL 2026",
+          "count": 1905
+        },
+        {
           "slug": "neurips-2025",
           "name": "NeurIPS 2025",
-          "count": 2104
+          "count": 1046
         },
         {
           "slug": "cvpr-2026",
           "name": "CVPR 2026",
-          "count": 1142
+          "count": 416
         },
         {
           "slug": "aaai-2026",
           "name": "AAAI 2026",
-          "count": 589
+          "count": 262
         },
         {
           "slug": "ijcai-2026",
           "name": "IJCAI 2026",
-          "count": 261
+          "count": 135
+        },
+        {
+          "slug": "preprints-2026",
+          "name": "高质量预印本 2026",
+          "count": 22
+        }
+      ]
+    },
+    {
+      "name": "训练与系统",
+      "count": 8800,
+      "share": 24.8,
+      "conferences": [
+        {
+          "slug": "icml-2026",
+          "name": "ICML 2026",
+          "count": 3163
+        },
+        {
+          "slug": "iclr-2026",
+          "name": "ICLR 2026",
+          "count": 2723
+        },
+        {
+          "slug": "neurips-2025",
+          "name": "NeurIPS 2025",
+          "count": 848
+        },
+        {
+          "slug": "emnlp-2026",
+          "name": "EMNLP 2026",
+          "count": 661
+        },
+        {
+          "slug": "acl-2026",
+          "name": "ACL 2026",
+          "count": 649
+        },
+        {
+          "slug": "cvpr-2026",
+          "name": "CVPR 2026",
+          "count": 391
+        },
+        {
+          "slug": "aaai-2026",
+          "name": "AAAI 2026",
+          "count": 247
+        },
+        {
+          "slug": "ijcai-2026",
+          "name": "IJCAI 2026",
+          "count": 97
         },
         {
           "slug": "preprints-2026",
@@ -57,8 +109,8 @@
     },
     {
       "name": "评测与安全",
-      "count": 15780,
-      "share": 44.4,
+      "count": 8475,
+      "share": 23.9,
       "conferences": [
         {
           "slug": "icml-2026",
@@ -66,118 +118,56 @@
           "count": 2786
         },
         {
-          "slug": "emnlp-2026",
-          "name": "EMNLP 2026",
-          "count": 2707
-        },
-        {
-          "slug": "neurips-2025",
-          "name": "NeurIPS 2025",
-          "count": 2361
-        },
-        {
           "slug": "iclr-2026",
           "name": "ICLR 2026",
           "count": 2328
         },
         {
+          "slug": "emnlp-2026",
+          "name": "EMNLP 2026",
+          "count": 1059
+        },
+        {
           "slug": "acl-2026",
           "name": "ACL 2026",
-          "count": 2256
-        },
-        {
-          "slug": "cvpr-2026",
-          "name": "CVPR 2026",
-          "count": 1807
-        },
-        {
-          "slug": "aaai-2026",
-          "name": "AAAI 2026",
-          "count": 1061
-        },
-        {
-          "slug": "ijcai-2026",
-          "name": "IJCAI 2026",
-          "count": 450
-        },
-        {
-          "slug": "preprints-2026",
-          "name": "高质量预印本 2026",
-          "count": 24
-        }
-      ]
-    },
-    {
-      "name": "训练与系统",
-      "count": 15377,
-      "share": 43.3,
-      "conferences": [
-        {
-          "slug": "icml-2026",
-          "name": "ICML 2026",
-          "count": 3163
+          "count": 918
         },
         {
           "slug": "neurips-2025",
           "name": "NeurIPS 2025",
-          "count": 2735
-        },
-        {
-          "slug": "iclr-2026",
-          "name": "ICLR 2026",
-          "count": 2723
-        },
-        {
-          "slug": "emnlp-2026",
-          "name": "EMNLP 2026",
-          "count": 2028
-        },
-        {
-          "slug": "acl-2026",
-          "name": "ACL 2026",
-          "count": 1766
+          "count": 624
         },
         {
           "slug": "cvpr-2026",
           "name": "CVPR 2026",
-          "count": 1658
+          "count": 410
         },
         {
           "slug": "aaai-2026",
           "name": "AAAI 2026",
-          "count": 937
+          "count": 231
         },
         {
           "slug": "ijcai-2026",
           "name": "IJCAI 2026",
-          "count": 351
+          "count": 92
         },
         {
           "slug": "preprints-2026",
           "name": "高质量预印本 2026",
-          "count": 16
+          "count": 27
         }
       ]
     },
     {
       "name": "检索与知识",
-      "count": 11137,
-      "share": 31.3,
+      "count": 5230,
+      "share": 14.7,
       "conferences": [
-        {
-          "slug": "neurips-2025",
-          "name": "NeurIPS 2025",
-          "count": 1893
-        },
         {
           "slug": "icml-2026",
           "name": "ICML 2026",
           "count": 1865
-        },
-        {
-          "slug": "emnlp-2026",
-          "name": "EMNLP 2026",
-          "count": 1722
         },
         {
           "slug": "iclr-2026",
@@ -185,24 +175,34 @@
           "count": 1654
         },
         {
-          "slug": "acl-2026",
-          "name": "ACL 2026",
-          "count": 1501
+          "slug": "emnlp-2026",
+          "name": "EMNLP 2026",
+          "count": 642
         },
         {
-          "slug": "cvpr-2026",
-          "name": "CVPR 2026",
-          "count": 1206
+          "slug": "acl-2026",
+          "name": "ACL 2026",
+          "count": 516
+        },
+        {
+          "slug": "neurips-2025",
+          "name": "NeurIPS 2025",
+          "count": 238
         },
         {
           "slug": "aaai-2026",
           "name": "AAAI 2026",
-          "count": 904
+          "count": 134
+        },
+        {
+          "slug": "cvpr-2026",
+          "name": "CVPR 2026",
+          "count": 117
         },
         {
           "slug": "ijcai-2026",
           "name": "IJCAI 2026",
-          "count": 386
+          "count": 58
         },
         {
           "slug": "preprints-2026",
@@ -213,19 +213,9 @@
     },
     {
       "name": "推理",
-      "count": 6866,
-      "share": 19.3,
+      "count": 4714,
+      "share": 13.3,
       "conferences": [
-        {
-          "slug": "emnlp-2026",
-          "name": "EMNLP 2026",
-          "count": 1480
-        },
-        {
-          "slug": "acl-2026",
-          "name": "ACL 2026",
-          "count": 1432
-        },
         {
           "slug": "icml-2026",
           "name": "ICML 2026",
@@ -237,99 +227,47 @@
           "count": 1027
         },
         {
-          "slug": "neurips-2025",
-          "name": "NeurIPS 2025",
-          "count": 807
-        },
-        {
-          "slug": "cvpr-2026",
-          "name": "CVPR 2026",
-          "count": 570
-        },
-        {
-          "slug": "aaai-2026",
-          "name": "AAAI 2026",
-          "count": 251
-        },
-        {
-          "slug": "ijcai-2026",
-          "name": "IJCAI 2026",
-          "count": 120
-        },
-        {
-          "slug": "preprints-2026",
-          "name": "高质量预印本 2026",
-          "count": 10
-        }
-      ]
-    },
-    {
-      "name": "多模态",
-      "count": 5531,
-      "share": 15.6,
-      "conferences": [
-        {
-          "slug": "cvpr-2026",
-          "name": "CVPR 2026",
-          "count": 1259
+          "slug": "acl-2026",
+          "name": "ACL 2026",
+          "count": 806
         },
         {
           "slug": "emnlp-2026",
           "name": "EMNLP 2026",
-          "count": 809
-        },
-        {
-          "slug": "icml-2026",
-          "name": "ICML 2026",
-          "count": 755
-        },
-        {
-          "slug": "iclr-2026",
-          "name": "ICLR 2026",
-          "count": 723
+          "count": 763
         },
         {
           "slug": "neurips-2025",
           "name": "NeurIPS 2025",
-          "count": 711
+          "count": 451
         },
         {
-          "slug": "acl-2026",
-          "name": "ACL 2026",
-          "count": 661
+          "slug": "cvpr-2026",
+          "name": "CVPR 2026",
+          "count": 296
         },
         {
           "slug": "aaai-2026",
           "name": "AAAI 2026",
-          "count": 495
+          "count": 131
         },
         {
           "slug": "ijcai-2026",
           "name": "IJCAI 2026",
-          "count": 109
+          "count": 59
         },
         {
           "slug": "preprints-2026",
           "name": "高质量预印本 2026",
-          "count": 9
+          "count": 12
         }
       ]
     },
     {
       "name": "生成与视觉",
-      "count": 5341,
-      "share": 15.0,
+      "count": 4025,
+      "share": 11.3,
       "conferences": [
-        {
-          "slug": "cvpr-2026",
-          "name": "CVPR 2026",
-          "count": 1431
-        },
-        {
-          "slug": "neurips-2025",
-          "name": "NeurIPS 2025",
-          "count": 955
-        },
         {
           "slug": "icml-2026",
           "name": "ICML 2026",
@@ -341,24 +279,34 @@
           "count": 934
         },
         {
+          "slug": "cvpr-2026",
+          "name": "CVPR 2026",
+          "count": 820
+        },
+        {
+          "slug": "neurips-2025",
+          "name": "NeurIPS 2025",
+          "count": 589
+        },
+        {
           "slug": "aaai-2026",
           "name": "AAAI 2026",
-          "count": 615
+          "count": 398
         },
         {
           "slug": "emnlp-2026",
           "name": "EMNLP 2026",
-          "count": 210
+          "count": 159
         },
         {
           "slug": "acl-2026",
           "name": "ACL 2026",
-          "count": 145
+          "count": 109
         },
         {
           "slug": "ijcai-2026",
           "name": "IJCAI 2026",
-          "count": 97
+          "count": 62
         },
         {
           "slug": "preprints-2026",
@@ -368,24 +316,76 @@
       ]
     },
     {
-      "name": "Agent",
-      "count": 5121,
-      "share": 14.4,
+      "name": "多模态",
+      "count": 3799,
+      "share": 10.7,
       "conferences": [
+        {
+          "slug": "icml-2026",
+          "name": "ICML 2026",
+          "count": 755
+        },
+        {
+          "slug": "iclr-2026",
+          "name": "ICLR 2026",
+          "count": 723
+        },
+        {
+          "slug": "cvpr-2026",
+          "name": "CVPR 2026",
+          "count": 664
+        },
         {
           "slug": "emnlp-2026",
           "name": "EMNLP 2026",
-          "count": 1325
+          "count": 504
         },
         {
           "slug": "acl-2026",
           "name": "ACL 2026",
-          "count": 998
+          "count": 430
+        },
+        {
+          "slug": "neurips-2025",
+          "name": "NeurIPS 2025",
+          "count": 390
+        },
+        {
+          "slug": "aaai-2026",
+          "name": "AAAI 2026",
+          "count": 265
+        },
+        {
+          "slug": "ijcai-2026",
+          "name": "IJCAI 2026",
+          "count": 59
+        },
+        {
+          "slug": "preprints-2026",
+          "name": "高质量预印本 2026",
+          "count": 9
+        }
+      ]
+    },
+    {
+      "name": "Agent",
+      "count": 3769,
+      "share": 10.6,
+      "conferences": [
+        {
+          "slug": "emnlp-2026",
+          "name": "EMNLP 2026",
+          "count": 948
         },
         {
           "slug": "icml-2026",
           "name": "ICML 2026",
           "count": 879
+        },
+        {
+          "slug": "acl-2026",
+          "name": "ACL 2026",
+          "count": 708
         },
         {
           "slug": "iclr-2026",
@@ -395,40 +395,35 @@
         {
           "slug": "neurips-2025",
           "name": "NeurIPS 2025",
-          "count": 565
+          "count": 263
         },
         {
           "slug": "cvpr-2026",
           "name": "CVPR 2026",
-          "count": 294
+          "count": 138
         },
         {
           "slug": "aaai-2026",
           "name": "AAAI 2026",
-          "count": 215
+          "count": 83
         },
         {
           "slug": "ijcai-2026",
           "name": "IJCAI 2026",
-          "count": 170
+          "count": 72
         },
         {
           "slug": "preprints-2026",
           "name": "高质量预印本 2026",
-          "count": 19
+          "count": 22
         }
       ]
     },
     {
       "name": "AI for Science",
-      "count": 1511,
-      "share": 4.3,
+      "count": 1044,
+      "share": 2.9,
       "conferences": [
-        {
-          "slug": "neurips-2025",
-          "name": "NeurIPS 2025",
-          "count": 270
-        },
         {
           "slug": "icml-2026",
           "name": "ICML 2026",
@@ -442,27 +437,32 @@
         {
           "slug": "emnlp-2026",
           "name": "EMNLP 2026",
-          "count": 215
+          "count": 156
         },
         {
-          "slug": "cvpr-2026",
-          "name": "CVPR 2026",
-          "count": 152
+          "slug": "neurips-2025",
+          "name": "NeurIPS 2025",
+          "count": 111
         },
         {
           "slug": "acl-2026",
           "name": "ACL 2026",
-          "count": 152
+          "count": 101
+        },
+        {
+          "slug": "cvpr-2026",
+          "name": "CVPR 2026",
+          "count": 79
         },
         {
           "slug": "aaai-2026",
           "name": "AAAI 2026",
-          "count": 146
+          "count": 59
         },
         {
           "slug": "ijcai-2026",
           "name": "IJCAI 2026",
-          "count": 76
+          "count": 38
         },
         {
           "slug": "preprints-2026",
@@ -473,19 +473,9 @@
     },
     {
       "name": "机器人与具身",
-      "count": 1458,
-      "share": 4.1,
+      "count": 997,
+      "share": 2.8,
       "conferences": [
-        {
-          "slug": "cvpr-2026",
-          "name": "CVPR 2026",
-          "count": 323
-        },
-        {
-          "slug": "neurips-2025",
-          "name": "NeurIPS 2025",
-          "count": 279
-        },
         {
           "slug": "iclr-2026",
           "name": "ICLR 2026",
@@ -497,46 +487,56 @@
           "count": 255
         },
         {
+          "slug": "cvpr-2026",
+          "name": "CVPR 2026",
+          "count": 156
+        },
+        {
+          "slug": "neurips-2025",
+          "name": "NeurIPS 2025",
+          "count": 109
+        },
+        {
           "slug": "aaai-2026",
           "name": "AAAI 2026",
-          "count": 150
+          "count": 86
         },
         {
           "slug": "emnlp-2026",
           "name": "EMNLP 2026",
-          "count": 82
+          "count": 54
         },
         {
           "slug": "acl-2026",
           "name": "ACL 2026",
-          "count": 62
+          "count": 42
         },
         {
           "slug": "ijcai-2026",
           "name": "IJCAI 2026",
-          "count": 33
+          "count": 20
         },
         {
           "slug": "preprints-2026",
           "name": "高质量预印本 2026",
-          "count": 7
+          "count": 8
         }
       ]
     },
     {
       "name": "语音与音频",
-      "count": 862,
-      "share": 2.4,
+      "count": 655,
+      "share": 1.8,
       "conferences": [
-        {
-          "slug": "emnlp-2026",
-          "name": "EMNLP 2026",
-          "count": 236
-        },
         {
           "slug": "acl-2026",
           "name": "ACL 2026",
-          "count": 197
+          "count": 157
+        },
+        {
+          "slug": "emnlp-2026",
+          "name": "EMNLP 2026",
+          "count": 153
         },
         {
           "slug": "iclr-2026",
@@ -551,22 +551,22 @@
         {
           "slug": "neurips-2025",
           "name": "NeurIPS 2025",
-          "count": 93
+          "count": 58
         },
         {
           "slug": "cvpr-2026",
           "name": "CVPR 2026",
-          "count": 73
+          "count": 46
         },
         {
           "slug": "aaai-2026",
           "name": "AAAI 2026",
-          "count": 35
+          "count": 22
         },
         {
           "slug": "ijcai-2026",
           "name": "IJCAI 2026",
-          "count": 20
+          "count": 11
         },
         {
           "slug": "preprints-2026",
