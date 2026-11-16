@@ -1,0 +1,140 @@
+{
+  "issue_date": "2026-11-16",
+  "issue_number": 3,
+  "generated_at": "2026-11-16T10:46:44.185880+08:00",
+  "description": "从 4 个数据通道收录 3 条 AI 研究更新，聚焦多模态、AI for Science、综合。",
+  "ai_enabled": true,
+  "source_health": [
+    {
+      "source_id": "arxiv",
+      "source_name": "arXiv categories",
+      "status": "empty",
+      "item_count": 0,
+      "errors": []
+    },
+    {
+      "source_id": "openreview",
+      "source_name": "OpenReview venues",
+      "status": "ok",
+      "item_count": 14,
+      "errors": []
+    },
+    {
+      "source_id": "crossref",
+      "source_name": "Crossref journals",
+      "status": "ok",
+      "item_count": 12,
+      "errors": []
+    },
+    {
+      "source_id": "huggingface",
+      "source_name": "Hugging Face Daily",
+      "status": "ok",
+      "item_count": 10,
+      "errors": []
+    },
+    {
+      "source_id": "rss",
+      "source_name": "Official technical blogs",
+      "status": "ok",
+      "item_count": 12,
+      "errors": []
+    }
+  ],
+  "items": [
+    {
+      "id": "crossref-3ead3afa7bb0",
+      "title": "CoFi-M$$^{2}$$AR: A Coarse-to-Fine Multimodal Framework for Micro-Action Recognition",
+      "summary": "",
+      "authors": [
+        "Qiankun Li",
+        "Qiupu Chen",
+        "Jie Zhang",
+        "Huabao Chen",
+        "Xiaolong Huang",
+        "Feng He",
+        "Jian Zhao",
+        "Xin Ning",
+        "Zhigang Zeng",
+        "Ran He"
+      ],
+      "url": "https://doi.org/10.1007/s11263-026-03090-w",
+      "pdf_url": "",
+      "source_id": "crossref",
+      "source_name": "IJCV",
+      "kind": "journal",
+      "published_at": "2026-11-15T00:00:00+00:00",
+      "venue": "International Journal of Computer Vision",
+      "tags": [
+        "多模态",
+        "IJCV"
+      ],
+      "score": 32.83,
+      "zh_title": "CoFi-M$^{2}$AR:一个粗糙的微行动承认多模态框架",
+      "zh_summary": "CoFi-M$^{2}$AR:一个粗糙的微行动承认多模态框架",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "10.1007/s11263-026-03090-w",
+      "dedupe_keys": [
+        "doi:10.1007/s11263-026-03090-w",
+        "external:10.1007/s11263-026-03090-w",
+        "title:cofim2aracoarsetofinemultimodalframeworkformicroactionrecognition",
+        "url:https://doi.org/10.1007/s11263-026-03090-w"
+      ]
+    },
+    {
+      "id": "rss-b191e51dddcc",
+      "title": "Our new blog for science",
+      "summary": "The OpenAI science blog shares new findings, practical methods, and firsthand accounts from researchers using AI to advance scientific discovery.",
+      "authors": [],
+      "url": "https://openai.com/index/our-new-blog-for-science",
+      "pdf_url": "",
+      "source_id": "rss",
+      "source_name": "OpenAI",
+      "kind": "report",
+      "published_at": "2026-11-15T22:00:00+00:00",
+      "venue": "OpenAI 官方博客",
+      "tags": [
+        "AI for Science",
+        "Science"
+      ],
+      "score": 26.2,
+      "zh_title": "我们的新科学博客",
+      "zh_summary": "OpenAI科学博客分享了新发现,实用方法,以及研究人员利用AI推进科学发现的第一手资料.",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "",
+      "dedupe_keys": [
+        "title:ournewblogforscience",
+        "url:https://openai.com/index/our-new-blog-for-science"
+      ]
+    },
+    {
+      "id": "rss-6a17c3ac7c6b",
+      "title": "A step toward defining the Standard Model on a lattice",
+      "summary": "Explore a candidate nonperturbative lattice definition of the Standard Model and how GPT-6 Astra helped turn the idea into a detailed proof.",
+      "authors": [],
+      "url": "https://openai.com/index/step-toward-defining-the-standard-model",
+      "pdf_url": "",
+      "source_id": "rss",
+      "source_name": "OpenAI",
+      "kind": "report",
+      "published_at": "2026-11-15T22:00:01+00:00",
+      "venue": "OpenAI 官方博客",
+      "tags": [
+        "综合",
+        "Science"
+      ],
+      "score": 23.7,
+      "zh_title": "确定标准模式的一步骤",
+      "zh_summary": "探索标准模型的候选非扰动纹章定义,以及GPT-6 Astra如何帮助将该想法转化为详细证明.",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "",
+      "dedupe_keys": [
+        "title:asteptowarddefiningthestandardmodelonalattice",
+        "url:https://openai.com/index/step-toward-defining-the-standard-model"
+      ]
+    }
+  ]
+}
