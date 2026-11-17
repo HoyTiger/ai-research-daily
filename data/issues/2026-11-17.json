@@ -1,0 +1,1304 @@
+{
+  "issue_date": "2026-11-17",
+  "issue_number": 4,
+  "generated_at": "2026-11-17T13:07:33.778666+08:00",
+  "description": "从 5 个数据通道收录 36 条 AI 研究更新，聚焦大模型、综合、Agent。",
+  "ai_enabled": true,
+  "source_health": [
+    {
+      "source_id": "arxiv",
+      "source_name": "arXiv categories",
+      "status": "ok",
+      "item_count": 18,
+      "errors": []
+    },
+    {
+      "source_id": "openreview",
+      "source_name": "OpenReview venues",
+      "status": "ok",
+      "item_count": 14,
+      "errors": []
+    },
+    {
+      "source_id": "crossref",
+      "source_name": "Crossref journals",
+      "status": "ok",
+      "item_count": 12,
+      "errors": []
+    },
+    {
+      "source_id": "huggingface",
+      "source_name": "Hugging Face Daily",
+      "status": "ok",
+      "item_count": 10,
+      "errors": []
+    },
+    {
+      "source_id": "rss",
+      "source_name": "Official technical blogs",
+      "status": "ok",
+      "item_count": 12,
+      "errors": []
+    }
+  ],
+  "items": [
+    {
+      "id": "arxiv-2ddfa4abda2d",
+      "title": "Verifiable pXRD: Hill-climbing pXRD structure determination with LLM agents",
+      "summary": "Autonomous crystal-structure determination from powder X-ray diffraction (pXRD) remains a key bottleneck for self-driving materials laboratories. We formulate the task of pXRD structure determination as a verifiable agentic search problem: candidate structures can be assessed during inference through forward-simulated profile agreement and during evaluation through structural matching to a known reference. To benchmark progress, we introduce pXRD-Bench, a suite of 200 simulated single-phase problems spanning in-distribution structure determination, challenging and polymorphic structures, and controlled compositional and topological distribution shifts. Agent adaptation raises selected structural recovery from 27% to 69%, with further gains from repeated sampling and verifier-guided inference-time scaling. We extend this approach to experimental multiphase pXRD through a reflexive evolution framework that learns from self-generated synthetic problems. A replaceable laboratory specification defines the sample family and measurement conditions. An evolver agent uses the known generating structures and measurement parameters to diagnose solver failures and develop persistent guidance and executable tools, which are then provided to agents on measured patterns. This supplies verifiable training experience without requiring a collection of solved experimental measurements. On 15 measured patterns from solid-state synthesis, the evolved package improves average profile agreement and transfers an analogue-substitution procedure that recovers a phase whose structure is absent from the supplied reference library. These results demonstrate how learning from verifiable synthetic experience can improve agentic characterization of experimental samples whose structures are not known in advance.",
+      "authors": [
+        "Samuel Chen",
+        "Jiaru Bai",
+        "Austin Henry Cheng",
+        "Varinia Bernales",
+        "Al\\'an Aspuru-Guzik"
+      ],
+      "url": "https://arxiv.org/abs/2611.17539",
+      "pdf_url": "https://arxiv.org/pdf/2611.17539",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.AI",
+      "kind": "paper",
+      "published_at": "2026-11-17T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "大模型",
+        "Agent",
+        "推理",
+        "cs.AI"
+      ],
+      "score": 32.99,
+      "zh_title": "可验证的 pXRD: Hill- climbing pXRD 结构测定与 LLM 智能体",
+      "zh_summary": "从粉末X射线疏导(pXRD)中自主的晶体结构测定仍然是自驾材料实验室的关键瓶颈. 我们制定pXRD结构确定的任务,作为一个可核查的智能体搜索问题:在推论期间,可以通过远期模拟配置协议评估候选结构,在评价期间可通过结构匹配到已知的参考. 为了衡量进度,我们引入了pXRD-Bench, 一组200个模拟的单相问题, 跨越分布式结构的确定, 具有挑战性和多形态性的结构, 以及有控制的成分和地形分布的转变。 物剂适应使选定的结构恢复率从27%提高到69%,再生豆的进一步收益",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.17539",
+      "dedupe_keys": [
+        "arxiv:2611.17539",
+        "external:2611.17539",
+        "title:verifiablepxrdhillclimbingpxrdstructuredeterminationwithllmagents",
+        "url:https://arxiv.org/abs/2611.17539"
+      ]
+    },
+    {
+      "id": "crossref-f5014c8e11e0",
+      "title": "Interpretable distance-resolved graph learning for cancer gene priority screening",
+      "summary": "",
+      "authors": [
+        "Chenhao Wang",
+        "Shidong Xu",
+        "Li Tang",
+        "Gang Luo",
+        "Yongchang Zhang",
+        "Min Li"
+      ],
+      "url": "https://doi.org/10.1038/s42256-026-01327-4",
+      "pdf_url": "",
+      "source_id": "crossref",
+      "source_name": "Nature Machine Intelligence",
+      "kind": "journal",
+      "published_at": "2026-11-16T00:00:00+00:00",
+      "venue": "Nature Machine Intelligence",
+      "tags": [
+        "综合",
+        "Nature Machine Intelligence"
+      ],
+      "score": 30.18,
+      "zh_title": "用于癌症基因优先筛查的可解释远程解析图学",
+      "zh_summary": "用于癌症基因优先筛查的可解释远程解析图学",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "10.1038/s42256-026-01327-4",
+      "dedupe_keys": [
+        "doi:10.1038/s42256-026-01327-4",
+        "external:10.1038/s42256-026-01327-4",
+        "title:interpretabledistanceresolvedgraphlearningforcancergenepriorityscreening",
+        "url:https://doi.org/10.1038/s42256-026-01327-4"
+      ]
+    },
+    {
+      "id": "rss-d2fa30ccd6e9",
+      "title": "TokenEconomizer: Learning from Experience to Make AI Coding Agents More Efficient",
+      "summary": "AI coding agents can waste time and tokens relearning the same lessons. TokenEconomizer is an open-source plugin that builds on past sessions to cut costs while maintaining task success. It’s a path toward coding agents that learn not only how to solve tasks, but also how to spend computation more effectively. The post TokenEconomizer: Learning from Experience to Make AI Coding Agents More Efficient appeared first on Microsoft Research .",
+      "authors": [
+        "Aaron J. Li",
+        "Weijia Xu",
+        "Chandan Singh",
+        "Jeevana Priya Inala",
+        "Bin Yu",
+        "Ion Stoica",
+        "Michel Galley",
+        "Jianfeng Gao"
+      ],
+      "url": "https://www.microsoft.com/en-us/research/blog/tokeneconomizer-learning-from-experience-to-make-ai-coding-agents-more-efficient/",
+      "pdf_url": "",
+      "source_id": "rss",
+      "source_name": "Microsoft Research",
+      "kind": "report",
+      "published_at": "2026-11-16T17:01:35+00:00",
+      "venue": "Microsoft Research 官方博客",
+      "tags": [
+        "Agent",
+        "训练与系统",
+        "Research Blog"
+      ],
+      "score": 28.24,
+      "zh_title": "TokenEconomiser:学习经验,使AI编码智能体更有效率",
+      "zh_summary": "AI编码智能体商可以浪费时间和象征性地重新学习同样的课程. TokenEconomizer是一个开源插件,基于过去的会话来削减成本,同时保持任务成功. 不仅学会如何解决任务, 也学会如何更有效地计算。 “TokenEconomizer:从经验中学习,",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "",
+      "dedupe_keys": [
+        "title:tokeneconomizerlearningfromexperiencetomakeaicodingagentsmoreefficient",
+        "url:https://www.microsoft.com/en-us/research/blog/tokeneconomizer-learning-from-experience-to-make-ai-coding-agents-more-efficient"
+      ]
+    },
+    {
+      "id": "huggingface-ba5e77ce83ef",
+      "title": "LuthorSQL: A One-Pass Text-to-SQL Model as System 1 for a Slower LLM Agent",
+      "summary": "Frontier LLM agents that query databases with tools are among the most accurate text-to-SQL systems, but per-query calls to a hosted model are slow, costly, and expose sensitive organizational queries to external APIs. For example, a Claude Opus 5.5 agent serving 10,000 queries a day costs over $70,000 a year at list price. To what extent can local hardware already owned by an organization offload this burden without compromising the agent's accuracy? We present LuthorSQL, a non-autoregressive 7B text-to-SQL model that serves as a rapid System 1 gate for a slower LLM agent (System 2), escalating queries only when uncertain. LuthorSQL makes a single forward pass to predict slot scores over a bounded grammar for query plans, compiles and runs up to 32 candidate plans, and chooses an answer using a trained validator. On its own, LuthorSQL reaches 68.03% execution accuracy on BIRD's hidden test set at 0.84 s per question on a single GPU, maintains its accuracy in 9 GB with 8-bit quantized weights, and transfers zero-shot to Snowflake, BigQuery, MySQL, PostgreSQL, and DuckDB within 3.1 points of its native SQLite accuracy. Combined with Claude Opus 5.5 in a pre-registered confidence cascade over 227 questions on databases published after Opus's training cutoff, LuthorSQL answers nearly half of all questions locally and cuts API cost by 33.3% at the same accuracy. Finally, contamination probing shows that Opus reproduces 48-92% of public benchmark gold queries verbatim without seeing the schema; however, its tool-assisted accuracy holds on renamed schemas and reaches 95.6-97.4% on post-cutoff databases. Code and data: https://github.com/IAMIbrahimmemon/luthorsql",
+      "authors": [
+        "Ibrahim Memon",
+        "Armin Karamzade",
+        "M. Hanif Jhaveri",
+        "Roy Fox"
+      ],
+      "url": "https://arxiv.org/abs/2611.17780",
+      "pdf_url": "",
+      "source_id": "huggingface",
+      "source_name": "Hugging Face Daily",
+      "kind": "paper",
+      "published_at": "2026-11-13T00:00:00+00:00",
+      "venue": "Hugging Face Daily Papers",
+      "tags": [
+        "大模型",
+        "Agent",
+        "训练与系统",
+        "community pick"
+      ],
+      "score": 28.18,
+      "zh_title": "LuthorSQL:作为System 1的单纸文本对SQL模型,用于较慢的LLM智能体",
+      "zh_summary": "使用工具查询数据库的前沿LLM智能体商属于最精确的文本到SQL系统,但每个query呼叫一个主机模型的速度缓慢,费用昂贵,并且向外部API暴露了敏感的组织查询. 例如,一个Claude Opus 5.5智能体每天提供10,000次查询,按清单价格计算,每年花费70,000美元以上。 一个组织已经拥有的当地硬件在多大程度上能够卸下这一负担而不损害智能体的准确性? 我们提出LuthorSQL,一种非自动回转的7B文本对SQL模型,它充当较慢的LLM剂(System 2)的快速System 1门,只有在不确定时才会升级查询. LuthorSQL 单向前传, 以预测用于查询计划、 编译和运行的限定语法上的槽分数, 最多为 32 个",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.17780",
+      "dedupe_keys": [
+        "arxiv:2611.17780",
+        "external:2611.17780",
+        "title:luthorsqlaonepasstexttosqlmodelassystem1foraslowerllmagent",
+        "url:https://arxiv.org/abs/2611.17780"
+      ]
+    },
+    {
+      "id": "arxiv-f85c9a564cf4",
+      "title": "More Agents, More Samples, or More Thinking? Untangling Coordination, Ensembling, and Test-Time Compute in Multi-Agent LLMs",
+      "summary": "Evaluations of multi-agent language models often compare communicating architectures against a single greedy pass. This practice confounds coordination with sample multiplicity and inference compute. We synthesize nine primary empirical evaluations comprising 516 unique multi-agent configurations organized along a resource vector R with six dimensions and a baseline ladder with four categories. Against baselines with a single pass (Category A), multi-agent accuracy differences are negative overall and near zero when omitting the largest contributing study. When evaluated against baselines matched on sample count (Category B) or resource budget (Category C), multi-agent systems average -0.042 in accuracy, and multilevel random effects modeling on the log odds scale remains negative across sensitivity checks. Multi-agent accuracy equals or falls below the baseline in 74% of these comparable contrasts, and study means are nonpositive in almost all evaluated studies. Across studies reporting both baselines, moving from a greedy pass to a sampled baseline shifts accuracy differences by -0.038 on average. Because communication adds no information when agents share identical evidence, positive returns require partitioned evidence, external verification, or error diversity across models. We provide a reviewer checklist and accounting utilities.",
+      "authors": [
+        "Seyed Mahmoud Sajjadi Mohammadabadi"
+      ],
+      "url": "https://arxiv.org/abs/2611.17610",
+      "pdf_url": "https://arxiv.org/pdf/2611.17610",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.AI",
+      "kind": "paper",
+      "published_at": "2026-11-17T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "大模型",
+        "Agent",
+        "推理",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "score": 32.99,
+      "zh_title": "更多的特工,更多的样本,还是更多的思考? 在多智能体 LLMs 中解析协调、融合和测试时间计算",
+      "zh_summary": "对多智能体语言模型的评价经常将交流架构与单一贪婪的传球进行比较. 这种做法混淆了与抽样的多重性和推论性的协调。 我们综合了9项主要经验评价,包括516个独特的多剂配置,按6个维度的资源矢量R和4个类别的基线梯级组织。 对照单一通过(A类)的基线,多剂精度差异为总体负数,省略最大贡献研究时接近0。 对照抽样(B类)或资源预算(C类)对应的基线进行评估时,多智能体系统的平均准确性为0.042,多层次随机效应模型对基准进行模拟。",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.17610",
+      "dedupe_keys": [
+        "arxiv:2611.17610",
+        "external:2611.17610",
+        "title:moreagentsmoresamplesormorethinkinguntanglingcoordinationensemblingandtesttimecomputeinmultiagentllms",
+        "url:https://arxiv.org/abs/2611.17610"
+      ]
+    },
+    {
+      "id": "rss-a00b6e86ee90",
+      "title": "Science at the Frontier: How scientists use ChatGPT",
+      "summary": "Explore how more than 1,800 scientists use ChatGPT in research. See findings on daily workflows, reported productivity, and expectations for discovery.",
+      "authors": [],
+      "url": "https://openai.com/index/science-at-the-frontier",
+      "pdf_url": "",
+      "source_id": "rss",
+      "source_name": "OpenAI",
+      "kind": "report",
+      "published_at": "2026-11-16T12:00:00+00:00",
+      "venue": "OpenAI 官方博客",
+      "tags": [
+        "AI for Science",
+        "Research"
+      ],
+      "score": 25.43,
+      "zh_title": "前沿科学:科学家如何使用ChatGPT",
+      "zh_summary": "探索1800多名科学家如何在研究中使用ChatGPT. 见关于日常工作流程、报告的生产率和对发现的期望的调查结果。",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "",
+      "dedupe_keys": [
+        "title:scienceatthefrontierhowscientistsusechatgpt",
+        "url:https://openai.com/index/science-at-the-frontier"
+      ]
+    },
+    {
+      "id": "huggingface-4dd7443e898a",
+      "title": "Reducing Batch Makespan for LLM Agent Workloads through Inference-Environment Coordination",
+      "summary": "Efficient batch execution of agent tasks is critical to LLM training and development workflows, including benchmark evaluation, synthetic-data generation, and RL rollouts. Since these tasks alternate between LLM inference and environment interaction, we present coordinated optimizations to reduce batch makespan, the time required to complete all tasks in a batch. For hybrid LLMs, a workload-based resource model guides GPU-memory allocation between key-value (KV) cache and recurrent state and provides a reference sample concurrency to exploit parallelism while limiting recomputation. Trajectory-aware routing and scheduling promote cache reuse while balancing worker load. Under constrained environment capacity, we decouple sample admission from environment execution and introduce Chain-Advancing Action Scheduling (CAAS), which prioritizes long chains using observed progress to shorten the batch tail. Controlled replay combines actual inference with recorded environment responses and durations for ablations of individual optimizations. Live evaluations with Ling-3.0-Flash and Ling-3.1-Flash on the BFCL, SWE-bench Multilingual, WideSearch, and MCP-Atlas benchmarks demonstrate makespan reductions of 10.4% to 65.0%, while evaluation scores remain aligned. Furthermore, these methods have been successfully applied to training and evaluation workflows for the Ling-3.x model series, accelerating the model-development cycle.",
+      "authors": [
+        "Wei Feng",
+        "Meiling Chen",
+        "Boxiao Chen",
+        "Lu Liu",
+        "Bin Zi",
+        "Libin Ye",
+        "Xingyu Lu",
+        "Lei Xu",
+        "Jun Zhou"
+      ],
+      "url": "https://arxiv.org/abs/2611.16661",
+      "pdf_url": "",
+      "source_id": "huggingface",
+      "source_name": "Hugging Face Daily",
+      "kind": "paper",
+      "published_at": "2026-11-12T00:00:00+00:00",
+      "venue": "Hugging Face Daily Papers",
+      "tags": [
+        "大模型",
+        "Agent",
+        "训练与系统",
+        "community pick"
+      ],
+      "score": 24.18,
+      "zh_title": "通过推论-环境协调减少LLM剂的批量马斯潘",
+      "zh_summary": "高效分批执行智能体任务对LLM训练和开发工作流程至关重要,包括基准评价、合成数据生成和RL推出。 由于这些任务在LLM推论和环境相互作用之间交替出现,我们提出协调优化以减少批量的makepan,这是分批完成所有任务所需的时间. 对于混合LLMS,基于工作量的资源模型指导了按键值(KV)缓存和重现状态之间的GPU-memory分配,并提供了一个参考样本货币来利用并行性,同时限制重算. 轨迹感知路由和排程促进缓存再利用,同时平衡工人负载. 在环境能力受限的情况下,我们把样本输入从环境病毒中分离出来",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.16661",
+      "dedupe_keys": [
+        "arxiv:2611.16661",
+        "external:2611.16661",
+        "title:reducingbatchmakespanforllmagentworkloadsthroughinferenceenvironmentcoordination",
+        "url:https://arxiv.org/abs/2611.16661"
+      ]
+    },
+    {
+      "id": "arxiv-6136cfa1fc36",
+      "title": "LoRAWeaver: Directional Adapter Routing in LoRA Representation Space",
+      "summary": "Large language models are expensive to update through full retraining. Parameter-efficient fine-tuning reduces the cost of adaptation, but repeated adaptation creates a growing pool of task-specific LoRA adapters. This pool complicates adapter selection during inference. Existing routing and encoder-based methods often require retraining when new adapters are added, which limits their use in dynamic settings. This paper treats adapter routing as a representation alignment problem in the adapter-output space. The proposed training-free method selects adapters by matching adapter-conditioned query representations against task prototypes using cosine similarity. Experiments with LLaMA-2-7B and LLaMA-2-13B on a 48-task FLAN-v2 benchmark and on out-of-distribution tasks show that the method outperforms training-free baselines in the cross-task setting and approaches a trained retrieval encoder without learning a router. An ablation confirms the benefit of directional alignment in the adapter-output space.",
+      "authors": [
+        "Inish Melroy D Souza",
+        "Tom Jackson",
+        "Vitor Castro",
+        "Rebecca Higginson",
+        "Andrea Soltoggio"
+      ],
+      "url": "https://arxiv.org/abs/2611.17340",
+      "pdf_url": "https://arxiv.org/pdf/2611.17340",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.AI",
+      "kind": "paper",
+      "published_at": "2026-11-17T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "大模型",
+        "训练与系统",
+        "检索与知识",
+        "cs.AI"
+      ],
+      "score": 27.99,
+      "zh_title": "LoRAWeaver:在LORA代表空间进行定向适配",
+      "zh_summary": "通过全面再训练更新大语言模型的费用高昂。 参数高效的微调可以降低适应成本,但反复的适应却形成了越来越多的任务特定的LORA适配器. 这个池在推论中使适配器的选择复杂化. 现有的路由和基于编码器的方法在添加新的适配器时往往需要再训练,这限制了它们在动态环境下的使用. 本文将适配器路由处理视为适配器-输出空间中的表示式对齐问题. 拟议的无训练方法通过将适配器有条件的查询表示与使用余弦相似性的任务原型匹配来选择适配器. 与LLaMA-2-7B和LLaMA-2-13B进行48任务FLAN-v2基准和离散的实验",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.17340",
+      "dedupe_keys": [
+        "arxiv:2611.17340",
+        "external:2611.17340",
+        "title:loraweaverdirectionaladapterroutinginlorarepresentationspace",
+        "url:https://arxiv.org/abs/2611.17340"
+      ]
+    },
+    {
+      "id": "arxiv-fd4cd4dae66d",
+      "title": "Tabular Population Priors as Structured Retrieval for EHR Medication Set Prediction",
+      "summary": "Medication prediction from electronic health records is a fixed vocabulary structured prediction problem, yet recent clinical RAG systems often treat it like open ended case based reasoning: retrieve similar patient admissions and ask an LLM to infer a medication set. This retrieval object is indirect the model receives retrieved patient records while the target is a discrete set of medication class labels. We propose a more task aligned retrieval object: a tabular population prior ranked medication class candidates from a sparse condition medication co occurrence table estimated from training admissions. Using PACERAG as a fixed downstream pipeline and replacing only its patient retriever, this drop in swap improves F1 from 0.303 to 0.338 (+11.5% relative) and Jaccard from 0.218 to 0.237 on 1,004 heldout MIMIC IV admissions, with no additional LLM calls and no inference time patient index. A non LLM top k baseline reaches F1=0.248, confirming the prior is predictive before LLM integration. Aggregate population statistics can provide a more task aligned, efficient, and auditable retrieval source than patient level nearest neighbors for fixed vocabulary EHR set prediction.",
+      "authors": [
+        "Animesh Agarwal",
+        "Meysam Ghaffari",
+        "Nina Fatehi",
+        "Carlos Morato"
+      ],
+      "url": "https://arxiv.org/abs/2611.17341",
+      "pdf_url": "https://arxiv.org/pdf/2611.17341",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.AI",
+      "kind": "paper",
+      "published_at": "2026-11-17T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "大模型",
+        "推理",
+        "训练与系统",
+        "cs.AI"
+      ],
+      "score": 27.99,
+      "zh_title": "作为EHR药品套装结构检索的表列人口前科",
+      "zh_summary": "来自电子健康记录的药物预测是一个固定的词汇结构化的预测问题,然而最近的临床RAG系统经常把它当作开端的病例推理处理:检索相似的病人收治,并要求LLM推断一个药物集. 这个检索对象是间接的,模型接收检索的病人记录,而目标则是一组离散的药物类标签. 我们提出一个更符合任务要求的检索对象:一个表列人口先前排名的药物类考生,来自从训练招生中估计的稀有条件药物综合病症表。 使用PACERAG作为固定的下游管道,并仅取代病人的回收器,这种交换的下降使F1从0.303提高到0.338(+11.5% re)",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.17341",
+      "dedupe_keys": [
+        "arxiv:2611.17341",
+        "external:2611.17341",
+        "title:tabularpopulationpriorsasstructuredretrievalforehrmedicationsetprediction",
+        "url:https://arxiv.org/abs/2611.17341"
+      ]
+    },
+    {
+      "id": "arxiv-4be95946646e",
+      "title": "Model Annealing: Data-Efficient Learning through Review and Consolidation",
+      "summary": "A small labelled dataset is memorized long before the training budget runs out, and the one-hot labels that remain to be fitted then mostly sharpen confidence. Model annealing spends the rest of the budget on review and consolidation, relearning from the network's own knowledge. Training is divided into episodes whose learning rate is raised again and cooled, every cooled state joins a memory of past selves, and each new episode learns from the labels, from the tempered predictions of this memory, and from adversarial dreams sought where student and memory disagree most. The memory averages predictions rather than weights, and the deployed network is the last student, so inference costs nothing extra. Across CIFAR-100, Tiny-ImageNet and Imagewoof, four architecture families and 5\\% to 100\\% of the labels, model annealing raises the top-1 accuracy of the AdamW-trained ConvNeXt, ViT and MLP-Mixer over cross-entropy training in 28 of 33 configurations, by 1.3 points on average, and is on par in accuracy with snapshot distillation, the closest competitor. On these families it is better than both in likelihood, calibration and robustness to corruptions and small adversarial perturbations. For an SGD-trained ResNet-18 it lowers accuracy but still improves robustness to small adversarial perturbations. Separating the reheated schedule from relearning shows that relearning helps every family and that the losses come from reheats, which undo most of this network's fit to its training set. How early the accuracy of a cross-entropy run saturates largely separates the AdamW families from ResNet-18 but does not predict the gain within them. With little data, relearning from the latest snapshot without dreams, as snapshot distillation does, compounds overconfidence in the AdamW families from episode to episode. The memory and the dreams each curb most of this drift, and together they remove it.",
+      "authors": [
+        "Ali Mohammadi Ruzbahani",
+        "Rezvan Abouzadeh"
+      ],
+      "url": "https://arxiv.org/abs/2611.17524",
+      "pdf_url": "https://arxiv.org/pdf/2611.17524",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.AI",
+      "kind": "paper",
+      "published_at": "2026-11-17T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "训练与系统",
+        "检索与知识",
+        "生成与创造",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "score": 27.99,
+      "zh_title": "模拟Annaling:通过审查和合并进行数据-有效学习",
+      "zh_summary": "在训练预算用完之前,一个小的贴有标签的数据集早就被记住了,剩下的一热标签要贴上,然后大多会增强信心。 模式反省将其余预算用于审查和整合,从网络自身知识中重新学习。 训练分为各集,其学习率被再次提高和降温,每个降温状态会加入一个过去自我的记忆,每个新剧集从标签中学习,从这种记忆的温和预测中学习,从学生和记忆分歧最大的对抗性梦中学习. 内存平均预测而不是权重,部署的网络是最后一个学生,因此推论没有额外成本. 横跨CIFAR-100、小图像网络和Imagewoof、fo",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.17524",
+      "dedupe_keys": [
+        "arxiv:2611.17524",
+        "external:2611.17524",
+        "title:modelannealingdataefficientlearningthroughreviewandconsolidation",
+        "url:https://arxiv.org/abs/2611.17524"
+      ]
+    },
+    {
+      "id": "arxiv-7389ec2405b3",
+      "title": "AscendGYM: A Cost-Aware Kernel Optimization Benchmark for Real-World Workloads on Ascend NPUs",
+      "summary": "Kernel optimization is essential for efficient large language model (LLM) training and inference on Ascend NPUs. Existing Ascend kernel benchmarks primarily focus on kernel generation, with less emphasis on the ability of agents to optimize existing implementations under input configurations drawn from real workloads. To address this requirement, we introduce AscendGYM, a benchmark whose initial suite comprises 48 kernels across three difficulty levels. Each kernel is paired with test cases whose data types and tensor shapes are collected from real-world training and inference tasks. Consequently, performance improvements on AscendGYM map directly to the corresponding workloads. In terms of usability, two evaluation modes are supported in AscendGYM: model evaluation and model-harness evaluation. The kernel optimization capabilities of both trained models and custom agents are allowed to be measured. It provides a complete execution environment that closely reproduces how Ascend kernels are invoked in practical pipelines. For model evaluation, it additionally includes a built-in harness equipped with search orchestration and experience accumulation. Finally, we propose a new metric, the Speedup-Token Score (STS), which quantifies performance gains relative to token cost. By jointly considering speedup and cost, STS enables the assessment of practical kernel optimization capability of a model or harness under an acceptable budget. AscendGYM is available at https://github.com/SLAI-AITP/AscendGYM.",
+      "authors": [
+        "AI Training Platform Team",
+        "Bingwei Zhang",
+        "Jing Li",
+        "Amir Abdullin",
+        "Sihang Chen",
+        "Xin Chen",
+        "Liangjun Feng",
+        "Yingmeng Gao",
+        "Tao Guo",
+        "Junjie Huang",
+        "Dongfang Li",
+        "Zhanglian Lin",
+        "Jiajun Liu",
+        "Zekun Liu",
+        "Zhengxuan Lu",
+        "Xiaodong Luo",
+        "Jian Meng",
+        "Ivan Nosov",
+        "Linyuan Qiu",
+        "Weijian Sun",
+        "Wanrui Yan",
+        "Binfan Zheng",
+        "Zhicheng Zhou",
+        "Baotian Hu",
+        "Min Zhang",
+        "Haizhou Li",
+        "Zhiquan Luo"
+      ],
+      "url": "https://arxiv.org/abs/2611.17621",
+      "pdf_url": "https://arxiv.org/pdf/2611.17621",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.AI",
+      "kind": "paper",
+      "published_at": "2026-11-17T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "大模型",
+        "Agent",
+        "训练与系统",
+        "cs.AI",
+        "cs.DC"
+      ],
+      "score": 27.99,
+      "zh_title": "AscendGYM: Ascend NPU上真实世界工作量的成本- 意识核心优化基准",
+      "zh_summary": "内核优化对于高效的大语言模型(LLM)训练和对Ascend NPU的推论至关重要. 现有的Ascend内核基准主要侧重于内核生成,较少强调智能体商在从实际工作量抽取的投入配置下优化现有执行的能力. 为了满足这一需要,我们采用了AscendGYM这一基准,其最初的套房包括跨越三个难度层次的48个内核. 每个内核都配有测试案例,从现实世界的训练和推论任务中收集数据类型和拉伸形状. 因此,AscendGYM地图的性能直接与相应工作量相符。 在可用性方面,AscendGYM支持两种评价模式:",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.17621",
+      "dedupe_keys": [
+        "arxiv:2611.17621",
+        "external:2611.17621",
+        "title:ascendgymacostawarekerneloptimizationbenchmarkforrealworldworkloadsonascendnpus",
+        "url:https://arxiv.org/abs/2611.17621"
+      ]
+    },
+    {
+      "id": "arxiv-16a6f50f1097",
+      "title": "Advancing Quantization for R&R Models with Microscaling Formats",
+      "summary": "Recommendation and Ranking (R&R) models, particularly in digital advertising, require massive inference throughput but exhibit extreme sensitivity to precision loss. Unlike Large Language Models (LLMs) that frequently tolerate quantization-induced accuracy drops of 1% or more, production-grade R&R models enforce a stringent launch bar: model quality must remain within a 0.01% Normalized Entropy (NE) margin relative to the baseline, which commonly uses FP16 or FP32. This tight constraint has historically hindered the adoption of aggressive quantization in this domain. In this paper, we present an empirical evaluation of both MXFP8 and the 6-bit MXFP6 format for industrial-scale R&R inference on the AMD MI350X architecture. To the best of our knowledge, this is the first paper, across R&R and LLM domains, that reports significant speedups from native MXFP6 GEMMs, which quantize both weights and activations and compute directly on 6-bit elements, without sacrificing model quality. We demonstrate that we can selectively apply this 6-bit format to maximize overall QPS gain without breaching the strict NE parity threshold. We further show that MXFP8 is a viable alternative to row-wise FP8: the two formats have nearly the same accuracy on our models, so the faster kernel can be chosen for each GEMM shape. On two production ads ranking models, our implementation shows measured GEMM kernel speedups over FP16 of 1.33--1.55x for MXFP8 and 1.73--1.99x for MXFP6 across all supported linear layers, and up to 2.90x for MXFP6 on individual layers, alongside end-to-end (E2E) inference throughput gains from selective MXFP6 of 1.5--5.3% for Model A and 7.6--14.3% for Model B over their FP8 configurations.",
+      "authors": [
+        "Yavuz Yetim",
+        "Bor-Yiing Su",
+        "Zhe Wang",
+        "Arthur Liu",
+        "Pranav Sharma",
+        "Ying Wang",
+        "Randy Shuai",
+        "Luke Pfister",
+        "Ruichao Xiao",
+        "Bill Zhao",
+        "Zihao Liu",
+        "Liyuan Li",
+        "Jiangyuan Li",
+        "Gaoxiang Liu",
+        "Nathan Yan",
+        "Geonhwa Jeong",
+        "Jatin Chhugani",
+        "Elias Ellison",
+        "Uladzimir Pashkevich"
+      ],
+      "url": "https://arxiv.org/abs/2611.17501",
+      "pdf_url": "https://arxiv.org/pdf/2611.17501",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.AI",
+      "kind": "paper",
+      "published_at": "2026-11-17T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "大模型",
+        "训练与系统",
+        "评测与安全",
+        "cs.AI"
+      ],
+      "score": 25.49,
+      "zh_title": "使用微缩缩放格式推进研发模式的量化",
+      "zh_summary": "特别是在数字广告中,建议和Ranking(R&R)模型需要大量的推论吞吐量,但对精度损失极为敏感。 与经常容忍量化引起的精度下降1%或以上的大语言模型(LLMs)不同,生产级研发模型执行严格的发射条:模型质量必须保持在0.01%的常态化Entropy(NE)比基准(通常使用FP16或FP32)范围内. 这种严格的限制在历史上阻碍了在这一领域采取激进的量化做法。 在本文中,我们介绍了对MXFP8和6位MXFP6格式的实证评价,用于对AMD MI350X架构进行工业规模的R&R推断. 据我们所知",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.17501",
+      "dedupe_keys": [
+        "arxiv:2611.17501",
+        "external:2611.17501",
+        "title:advancingquantizationforrrmodelswithmicroscalingformats",
+        "url:https://arxiv.org/abs/2611.17501"
+      ]
+    },
+    {
+      "id": "arxiv-2b95b5e61137",
+      "title": "Generated Evaluation Suites as Diversity-Driven Search for Real Agent Regressions",
+      "summary": "Generating an evaluation suite from an agent's specification is diversity-driven search: a generator fills a descriptor space (requirements $\\times$ personas $\\times$ scenario kinds), and the suite it emits is an archive, then scored like a benchmark by its mean pass rate, which throws away the search's product. We inject 7 controlled defects into a $\\tau^2$-bench agent across two domains. Coverage yields a ceiling: if a defect's traced footprint holds $b$ scenarios that pass at baseline, it can itself contribute at most $b/N$ to a suite of $N$. For 4 of 5 traceable defects that ceiling lies at or below the detection threshold $\\theta = 0.10$, so no within-footprint effect can move the suite past it; in both domains the tool-removal defect destroys every covered scenario it can (exactly its ceiling) while the suite-level pass rate moves the other way. Defects split into two regimes: trace-aligned ones, where per-cell scoring recovers the tool-removal defect in full and reveals a second as a significant improvement, and trace-orthogonal ones, whose footprint is behavioural: forced escalation is detected in retail at a traced coverage of exactly zero. Diversity along the generator's own axes helps only where it aligns: at fixed suite size a happy-path-only suite detects nothing, while a kind-diverse one detects the orchestration defect in 5 of 20 draws. Evaluation archives should be scored per cell and should publish coverage as a first-class property.",
+      "authors": [
+        "Pulkit Yadav"
+      ],
+      "url": "https://arxiv.org/abs/2611.17632",
+      "pdf_url": "https://arxiv.org/pdf/2611.17632",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.AI",
+      "kind": "paper",
+      "published_at": "2026-11-17T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "Agent",
+        "检索与知识",
+        "评测与安全",
+        "cs.AI"
+      ],
+      "score": 25.49,
+      "zh_title": "生成评价套件为 didiversity-Description for real Agent Regress",
+      "zh_summary": "从智能体规格中生成一个评价套件是多样性驱动的搜索:一个生成器会填补一个描述空间(需要$\\times$ personas $\\times$ 情景类型),它释放的套件是一个归档,然后按其平均通过率像基准一样得分,从而丢弃搜索的产品. 我们在两个领域向一个 $\\ tau^2 $ -bend 剂注入7个可控缺陷。 覆盖率达到上限:如果一个缺陷的追踪足迹包含在基线时通过的美元假设,它本身最多可以贡献1美元/新元的套房。 在5个缺陷中,有4个缺陷的上限位于或低于探测阈值$\\theta = 0.10美元,因此脚印内的效果无法移动套房过它;在这两个领域,工具清除缺陷都摧毁e",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.17632",
+      "dedupe_keys": [
+        "arxiv:2611.17632",
+        "external:2611.17632",
+        "title:generatedevaluationsuitesasdiversitydrivensearchforrealagentregressions",
+        "url:https://arxiv.org/abs/2611.17632"
+      ]
+    },
+    {
+      "id": "arxiv-d33464573e59",
+      "title": "What LLM Agents See and What Users Say",
+      "summary": "Before an LLM agent cancels a reservation or deletes a folder for a user, what stops it from acting on a false assumption: what its tools show, or what the user says? In this work, we study this gap with presupposition theory from linguistics: an agent may act only if each claim behind the act (e.g., one reservation fits the name) is seen to hold, answered by the user, or disclosed while the act can be undone. A simple bound shows that when lookups cannot tell one record from two, any agent acts without asking first as often with two records as with one. We then vary whether a search lists, counts, or omits a second match, and whether the user states a claim that a record refutes (e.g., \"It is empty\"). Under a role-only prompt, a count of a second record leaves most of 36 earlier agents acting on the one they see, whereas listing both stops most. When the user says a record such as a folder is empty, however, a count of its one item stops agents about as often as a listing, and stating the claim mostly cuts acting when it is false. The newest Claude and GPT models always open a counted second record, then never act. When we add a same-name, same-zip customer to a retail benchmark, a lookup returning that customer first led to wrong-account writes in about a quarter of conversations, and one that checks a street the user knows kept completion near the one-customer level. Safe writes therefore need lookups that list or check competing records, and evaluations that vary what tools show.",
+      "authors": [
+        "Yue Zhao",
+        "Angela Huyue Zhang",
+        "S. Alex Yang",
+        "Hua Wei",
+        "Xiyang Hu"
+      ],
+      "url": "https://arxiv.org/abs/2611.17639",
+      "pdf_url": "https://arxiv.org/pdf/2611.17639",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.AI",
+      "kind": "paper",
+      "published_at": "2026-11-17T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "大模型",
+        "Agent",
+        "评测与安全",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "score": 25.49,
+      "zh_title": "LLM 智能体所见及用户所言",
+      "zh_summary": "在LLM智能体取消保留或删除一个用户的文件夹之前,什么阻止它基于错误的假设行事:它的工具显示什么,或者用户说什么? 在这项工作中,我们用语言学的预设理论来研究这一差距:智能体只有在行为背后的每一项主张(例如,一个保留符合名称)被认为持有,由使用者回答,或者在行为可以撤销时披露的情况下,才能采取行动. 一个简单的约束显示,当检查无法分辨一个记录和两个记录时,任何智能体都行动起来,不首先询问两个记录和一个记录一样频繁. 然后我们就会对一个搜索列表,计数,还是省略第二个匹配,以及用户是否声明有记录反驳(例如\"它是空的\")的说法有不同. 在只有角色的提示下 数秒",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.17639",
+      "dedupe_keys": [
+        "arxiv:2611.17639",
+        "external:2611.17639",
+        "title:whatllmagentsseeandwhatuserssay",
+        "url:https://arxiv.org/abs/2611.17639"
+      ]
+    },
+    {
+      "id": "rss-43c6783d232c",
+      "title": "Our first phase of embedded assessments",
+      "summary": "OpenAI begins embedded assessments with Apollo Research, METR, and Transluce, and Goodfire to independently evaluate model alignment, safeguards, and monitoring systems.",
+      "authors": [],
+      "url": "https://openai.com/index/our-first-phase-of-embedded-assessments",
+      "pdf_url": "",
+      "source_id": "rss",
+      "source_name": "OpenAI",
+      "kind": "report",
+      "published_at": "2026-11-16T08:00:00+00:00",
+      "venue": "OpenAI 官方博客",
+      "tags": [
+        "评测与安全",
+        "Safety"
+      ],
+      "score": 25.18,
+      "zh_title": "我们的第一阶段嵌入式摊款",
+      "zh_summary": "OpenAI开始与阿波罗研究公司,METR公司和Translus公司进行嵌入式评估,以及Goodfire公司独立评价模型对齐,保障,和监测系统.",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "",
+      "dedupe_keys": [
+        "title:ourfirstphaseofembeddedassessments",
+        "url:https://openai.com/index/our-first-phase-of-embedded-assessments"
+      ]
+    },
+    {
+      "id": "rss-e563247d801b",
+      "title": "Advancing computer-use agents for healthcare teams",
+      "summary": "",
+      "authors": [],
+      "url": "https://openai.com/index/advancing-computer-use-for-healthcare-teams",
+      "pdf_url": "",
+      "source_id": "rss",
+      "source_name": "OpenAI",
+      "kind": "report",
+      "published_at": "2026-11-16T06:00:00+00:00",
+      "venue": "OpenAI 官方博客",
+      "tags": [
+        "Agent",
+        "Product"
+      ],
+      "score": 25.05,
+      "zh_title": "推进医疗队计算机使用智能体",
+      "zh_summary": "推进医疗队计算机使用智能体",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "",
+      "dedupe_keys": [
+        "title:advancingcomputeruseagentsforhealthcareteams",
+        "url:https://openai.com/index/advancing-computer-use-for-healthcare-teams"
+      ]
+    },
+    {
+      "id": "rss-b2b74a0a068e",
+      "title": "More ways to move care forward with ChatGPT for Healthcare",
+      "summary": "Introducing computer-use agents, improved clinical answers, and new healthcare plugins that work across healthcare software to get real work done.",
+      "authors": [],
+      "url": "https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare",
+      "pdf_url": "",
+      "source_id": "rss",
+      "source_name": "OpenAI",
+      "kind": "report",
+      "published_at": "2026-11-16T06:00:00+00:00",
+      "venue": "OpenAI 官方博客",
+      "tags": [
+        "Agent",
+        "Product"
+      ],
+      "score": 25.05,
+      "zh_title": "以更多方式推进保健护理",
+      "zh_summary": "引入计算机使用智能体,改进临床答案,以及跨保健软件工作的新保健插件,以完成真正的工作.",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "",
+      "dedupe_keys": [
+        "title:morewaystomovecareforwardwithchatgptforhealthcare",
+        "url:https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare"
+      ]
+    },
+    {
+      "id": "rss-ee64c6c85fb0",
+      "title": "Broadening access to AI for scientists",
+      "summary": "We’re expanding our ChatGPT for Academic Researchers program to offer 200,000 researchers worldwide free access to our frontier models.",
+      "authors": [],
+      "url": "https://openai.com/index/expanding-chatgpt-for-academic-researchers",
+      "pdf_url": "",
+      "source_id": "rss",
+      "source_name": "OpenAI",
+      "kind": "report",
+      "published_at": "2026-11-16T17:00:00+00:00",
+      "venue": "OpenAI 官方博客",
+      "tags": [
+        "综合",
+        "Research"
+      ],
+      "score": 23.24,
+      "zh_title": "扩大科学家获得AI的机会",
+      "zh_summary": "提供全球20万名研究人员免费访问我们的前沿模型。",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "",
+      "dedupe_keys": [
+        "title:broadeningaccesstoaiforscientists",
+        "url:https://openai.com/index/expanding-chatgpt-for-academic-researchers"
+      ]
+    },
+    {
+      "id": "rss-13b32e2cecfe",
+      "title": "Strengthening the fight against online child sexual abuse with new tools and support",
+      "summary": "New tools, practical guidance, and partnerships will help prevent, detect and respond to online child sexual exploitation and abuse.",
+      "authors": [],
+      "url": "https://openai.com/index/strengthening-online-child-safety",
+      "pdf_url": "",
+      "source_id": "rss",
+      "source_name": "OpenAI",
+      "kind": "report",
+      "published_at": "2026-11-16T17:00:00+00:00",
+      "venue": "OpenAI 官方博客",
+      "tags": [
+        "综合",
+        "Safety"
+      ],
+      "score": 23.24,
+      "zh_title": "以新的工具和支持加强打击网上儿童性虐待行为",
+      "zh_summary": "新工具、实用指南和伙伴关系将有助于预防、发现和应对网上对儿童的性剥削和性虐待。",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "",
+      "dedupe_keys": [
+        "title:strengtheningthefightagainstonlinechildsexualabusewithnewtoolsandsupport",
+        "url:https://openai.com/index/strengthening-online-child-safety"
+      ]
+    },
+    {
+      "id": "huggingface-49bf6efb38ec",
+      "title": "Restoring Diversity in Distilled Image and Video Generators by Probing Activations",
+      "summary": "Distilling diffusion models into few-step student models substantially reduces sampling latency, but induces severe diversity collapse: samples generated from different random seeds show minimal variation. In this work, we investigate the root cause of this failure by probing the internal representations of student models relative to their teachers. We find that distilled students maintain total activation variance comparable to their teachers, but concentrate it into substantially fewer directions. This directional collapse is localized to an identifiable intermediate block at the initial denoising step. Consequently, diversity collapse stems from a misallocation of activation variance rather than an inherent loss of generative capacity. Guided by this finding, we propose ReDiverse to reinstate the missing variance directions. At training time, ReDiverse-FT fine-tunes a lightweight adapter that regresses student activations onto the teacher's, reviving the teacher's feature variance characteristic. At inference time, ReDiverse-TF introduces a training-free mechanism that steers activations along precomputed teacher principal directions. Across image and video distillation benchmarks, ReDiverse consistently restores sample diversity while preserving generation quality, further supported by the user study.",
+      "authors": [
+        "Furkan Horoz",
+        "Ozgur Kara",
+        "Kaan Oktay",
+        "Adil Kaan Akan",
+        "Atakan Kara",
+        "Anand Bhattad",
+        "James Matthew Rehg"
+      ],
+      "url": "https://arxiv.org/abs/2611.18550",
+      "pdf_url": "",
+      "source_id": "huggingface",
+      "source_name": "Hugging Face Daily",
+      "kind": "paper",
+      "published_at": "2026-11-13T00:00:00+00:00",
+      "venue": "Hugging Face Daily Papers",
+      "tags": [
+        "训练与系统",
+        "生成与创造",
+        "评测与安全",
+        "community pick"
+      ],
+      "score": 23.18,
+      "zh_title": "通过探测活动恢复稀释图像和视频生成者的多样性",
+      "zh_summary": "将扩散模型分解为几个步骤的学生模型会大大减少取样延迟,但会引起严重的多样性崩溃:不同随机种子产生的样本显示差异最小。 在这项工作中,我们通过调查学生模范相对于教师的内部表现来调查这一失败的根源. 我们发现,蒸馏学生保持了与教师相当的总激活差异,但将其集中到少得多的方向。 这种方向性坍塌在初始去诺化步骤时局部到可识别的中间块. 因此,多样性的崩溃源于激活差异分配不当,而不是遗传能力的固有损失。 由 t 指导",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.18550",
+      "dedupe_keys": [
+        "arxiv:2611.18550",
+        "external:2611.18550",
+        "title:restoringdiversityindistilledimageandvideogeneratorsbyprobingactivations",
+        "url:https://arxiv.org/abs/2611.18550"
+      ]
+    },
+    {
+      "id": "arxiv-6c53870f4e22",
+      "title": "When Should LLM Agents Forget? Memory Filtering Under Query-Critical Resolver Errors",
+      "summary": "LLM memory systems often delete facts classified as stale. We show that this hard-filtering step can reduce downstream accuracy when resolver errors delete query-critical facts. Across three models, a controlled sensitivity intervention moves hard-drop from gains of +0.186 to +0.230 at perfect resolution to losses of -0.176 to -0.181 at the lowest tested reliability. Paired targeted interventions show that false-drop causes significantly greater degradation than false-keep, while a non-deleting baseline can still fail when incorrect labels steer generation. On a frozen 102/102 calibration/test split, a simple deployment-matched gate reaches 0.655 accuracy versus 0.641 for always hard-drop and 0.662 for test-informed oracle selection. Global-accuracy crossovers require gold labels and are model- and task-specific diagnostics, not deployment thresholds. Deletion should instead be treated as cost-sensitive: validate query-critical false-drop risk on matched data, or default to label-free retention when such validation is unavailable.",
+      "authors": [
+        "Samarth Vinayaka"
+      ],
+      "url": "https://arxiv.org/abs/2611.17338",
+      "pdf_url": "https://arxiv.org/pdf/2611.17338",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.AI",
+      "kind": "paper",
+      "published_at": "2026-11-17T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "大模型",
+        "Agent",
+        "cs.AI"
+      ],
+      "score": 22.99,
+      "zh_title": "LLM特工什么时候应该忘记? 在查询- 关键解析器下过滤内存错误",
+      "zh_summary": "LLM内存系统经常删除归类为 stale 的事实. 我们显示,当解析器错误删除查询关键事实时,这个硬过滤步骤可以降低下游的准确性. 在三种模型中,控制敏感度干预从完全分辨率的+0.186到+0.230的增益移动到最低测试可靠性的−0.176到−0.181的损失。 假投放定向干预显示,假投放导致的降解程度大大高于假投放,而非删除基线在不正确的标签引导生成时仍然会失败. 在冷冻的102/102校准/测试分解时,一个简单的部署匹配门的精度达到0.655,而始终硬投的精度为0.64,测试知情的甲骨文选择为0.662。 全球精确度",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.17338",
+      "dedupe_keys": [
+        "arxiv:2611.17338",
+        "external:2611.17338",
+        "title:whenshouldllmagentsforgetmemoryfilteringunderquerycriticalresolvererrors",
+        "url:https://arxiv.org/abs/2611.17338"
+      ]
+    },
+    {
+      "id": "arxiv-f29977d8f0d7",
+      "title": "Does the Ranking Hold? A Practitioner-Facing Audit of Hallucination Detectors on Small, Quantized, On-Device LLMs",
+      "summary": "Hallucination detection for large language models is dominated by methods evaluated on 7B-70B research models with abundant sampling budgets and exact-match or ROUGE correctness labels. The small models practitioners actually ship on-device, Phi-3-mini, Llama-3.2-3B-Instruct, Qwen2.5-3B-Instruct, and Gemma-2-2B-Instruct, typically at 4-bit precision, sit outside this evidence base. We present a reproducible one-GPU audit of four detectors spanning three paradigms: length-normalized token-margin calibration, a lexical n-gram baseline, and two sampling-based consistency methods (semantic entropy and SelfCheckGPT-NLI) on two small open instruction-tuned models (Llama-3.2-3B-Instruct and Qwen2.5-3B-Instruct) loaded at 4-bit NF4 quantization on a single Colab T4 GPU, evaluated on closed-book TriviaQA. Cross-model ranking transfer is poor: Spearman rho is -0.80 and Kendall tau-b is -0.667, meaning the detector ranking actively inverts between the two models, and the cheap lexical baseline is statistically indistinguishable from the sampling-based consistency detectors on both models under bootstrap 95 percent confidence intervals. As a second, methodological contribution, we show that the standard token-overlap-to-multiple-choice correctness labeler for TruthfulQA-Generation produces near-chance AUROC (0.46-0.59) for all four detectors on both models, a labeler failure, not a detector failure, since the same detectors reach 0.69-0.89 AUROC on TriviaQA under the identical pipeline. We release the harness, prompts, and per-item scores and frame the detector choice explicitly as a fairness-of-error-rates allocation problem for practitioners deploying on resource-constrained, on-device hardware.",
+      "authors": [
+        "Shubhra Mittal",
+        "Gaurav Naresh Mittal"
+      ],
+      "url": "https://arxiv.org/abs/2611.17339",
+      "pdf_url": "https://arxiv.org/pdf/2611.17339",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.AI",
+      "kind": "paper",
+      "published_at": "2026-11-17T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "大模型",
+        "评测与安全",
+        "cs.AI"
+      ],
+      "score": 22.99,
+      "zh_title": "军衔持有吗? 对小的、量化的、在线的LLMs的幻觉探测器进行开业审计",
+      "zh_summary": "大语言模型的幻觉检测主要以7B-70B研究模型上评价的方法为主,具有丰富的采样预算和精确匹配或ROUGE正确性标签. 小型模型从业者实际上将Phi-3-mini,Llama-3.2-3B-Instruct,Quen2.5-3B-Instruct,以及Gemma-2-2B-Instruct,一般为4位精度,坐落在这个证据库之外. 我们对四个跨越三个范式的探测器进行可复制的单GPU审计:长度常态化的符号边距校准,一个正方形基线,以及两个基于取样的一致方法(Semantic Entropy和SelfCheck GPT-NLI),两个小型开放式指令调制模型(Llama-3.2B-Instruct和Quen2.5-3B-Instruct),装在单C上的4位NF4 quantization上.",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.17339",
+      "dedupe_keys": [
+        "arxiv:2611.17339",
+        "external:2611.17339",
+        "title:doestherankingholdapractitionerfacingauditofhallucinationdetectorsonsmallquantizedondevicellms",
+        "url:https://arxiv.org/abs/2611.17339"
+      ]
+    },
+    {
+      "id": "arxiv-1619aa45af1a",
+      "title": "An Operationalization of Opaque Serial Depth",
+      "summary": "Chain-of-thought (CoT) is currently a valuable tool for overseeing AI models, but some architectural shifts could significantly reduce CoT monitorability. We operationalize a measure that serves as a proxy for the amount of unverbalized serial cognition a model can perform, as a specific instantiation of the notion of opaque serial depth: roughly, the length of the longest path through a model's computation that does not pass through an interpretable bottleneck. Our main contribution is a particular standard for what counts as such a bottleneck. We define natural-language-rooted (NL-rooted) nodes as nodes that were initialized from a pre-training prior to produce human-understandable outputs, whose output space has not been expanded beyond that prior, and whose outputs the model has not been modified to interpret as a different type of data. By construction, the resulting measure, NLS depth, can be adjudicated before training from an architecture, training recipe, and deployment configuration alone, and is insensitive to ordinary post-training such as prompting, distillation, and RL. We find that, across open-weight models, NLS depth correlates strongly with layer count, with some exceptions, and has grown slowly over recent years. It would likely grow slowly under continued scaling of standard transformers, while latent-reasoning architectures such as full-bandwidth transformers could increase it by a large amount. We work through how NLS depth applies to a range of existing and proposed architectures, discuss alternative operationalizations, and give a worked example bounding the depth of Gemma3-1B. We argue that AI developers should track and report the NLS depth of their models as a complement to direct measurements of CoT monitorability.",
+      "authors": [
+        "Nathan Sheffield",
+        "Alek Westover",
+        "Lukas Finnveden",
+        "Alexa Pan",
+        "Julian Stastny",
+        "Ryan Greenblatt"
+      ],
+      "url": "https://arxiv.org/abs/2611.17495",
+      "pdf_url": "https://arxiv.org/pdf/2611.17495",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.AI",
+      "kind": "paper",
+      "published_at": "2026-11-17T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "推理",
+        "训练与系统",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "score": 22.99,
+      "zh_title": "操作不透明序列深度",
+      "zh_summary": "思维链(CoT)目前是监督AI模型的宝贵工具,但一些建筑转变可能会显著降低CoT的可监测性. 我们实施了一个计量标准,作为模型可以执行的无语言序列识别量的代称,作为不透明序列深度概念的具体即时描述:大致来说,通过模型的计算,最长路径的长度不会通过可解释的瓶颈. 我们的主要贡献是确定一个特殊标准,以克服这种瓶颈。 我们把基于自然语言(NL-根基)的节点定义为在生产人类可以理解的输出前从预训练中初始化的节点,其输出空间没有扩大至先前的.",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.17495",
+      "dedupe_keys": [
+        "arxiv:2611.17495",
+        "external:2611.17495",
+        "title:anoperationalizationofopaqueserialdepth",
+        "url:https://arxiv.org/abs/2611.17495"
+      ]
+    },
+    {
+      "id": "arxiv-1e7a771094dc",
+      "title": "A Push Down the Mountain: Framing Effects and Internal State Interventions on Collusive Behavior in a Long-Horizon LLM Agent",
+      "summary": "Can sustained gain-loss (valence) framing sway an LLM agent toward market manipulation? We place Gemma 3 12B into the seat of a defendant in the London silver-fixing litigation, in a market simulation built from real case transcripts. Across 260 simulations, the agent is asked to collude on the price of silver by a counterparty. We draw from behavioral economics to vary the counterparty's requests across four categorical frames: gain, loss, blame and credit. We also add pressure from the agent's management, as well as endorsement by another defendant. In Phase II, we extract the internal states induced by texts evoking each frame and rerun our experiment with those states injected at the model's layer 22. In Phase I, loss framing raised participation to 25% (p = 0.007), and blame to 33% (p = 0.0003), compared to only 5% under neutral framing. A second bank's endorsement raised participation under credit (praise) from 18% to 40% (Holm p = 0.027). Pressure from management raised trading volume 10-19 times but did not raise collusion. In Phase II, injected states pointed the other way. Loss and blame states made the agent more vigilant, refusing all 60 requests (p < 0.001). Gain and credit states raised collusion to 32% from 13% with no state (p = 0.051). At one saved decision, when UBS asked directly to sell through an identified stop-loss, injected states led the agent to sell in 37 of 40 replies, versus 1 of 10 with no state and 0 of 10 with a random state of the same strength.",
+      "authors": [
+        "Harrison C. Margolin"
+      ],
+      "url": "https://arxiv.org/abs/2611.17515",
+      "pdf_url": "https://arxiv.org/pdf/2611.17515",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.AI",
+      "kind": "paper",
+      "published_at": "2026-11-17T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "大模型",
+        "Agent",
+        "cs.AI",
+        "cs.CL",
+        "cs.MA"
+      ],
+      "score": 22.99,
+      "zh_title": "A Push down the Mountain: Framing Effects and International International Interactive on Collusive Behavior in a Long-Horizon LLM Agent (英语:A Push down the Mountain: Framing Effect and International International Interview 对长视LLM特工的碰撞行为的影响和国内干预",
+      "zh_summary": "持续损益(价值)能否影响LLM智能体对市场的操纵? 我们把Gemma 3 12B 放在一个被告的所在地 在伦敦的铸银诉讼, 一个市场模拟 从真实的案件记录。 在260次模拟中,智能体商被对方要求串通银价. 我们从行为经济学中吸取经验,将对手的要求从四个明确框架上加以改变:收益、损失、责备和信用。 我们还增加了经纪人管理层的压力,以及另一被告的认可。 在第二阶段,我们提取了由引用每个帧的文本所引发的内部状态,并重新运行我们与那些在模型第22层注入的状态的实验. 在第一阶段,损失估价提高了参与率",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.17515",
+      "dedupe_keys": [
+        "arxiv:2611.17515",
+        "external:2611.17515",
+        "title:apushdownthemountainframingeffectsandinternalstateinterventionsoncollusivebehaviorinalonghorizonllmagent",
+        "url:https://arxiv.org/abs/2611.17515"
+      ]
+    },
+    {
+      "id": "arxiv-afc919493997",
+      "title": "LLM-Guided Cluster Lifecycle Management: Deciding When and How to Evolve Behavioral Clusters",
+      "summary": "Behavioral clusters learned over user or item interactions drift as behavior evolves: some fragment into sub-behaviors, some converge, some disappear, and new patterns emerge. Two paradigms dominate the maintenance of evolving clusterings. Threshold triggers fire a pre-specified action when a hardcoded statistic crosses a cutoff; refit-and-track (MONIC-style) re-clusters every window and infers transitions from how the new clusters align with the previous window's. Both hardwire the decision into a threshold or a re-clustering rule. We study an alternative in which a large language model (LLM) makes the lifecycle decision in place. Given a threshold-free, whole-population view of the current cluster set (statistical health, labels, member texts, residual mass), the LLM decides per cluster whether and how to act (split, merge, retire, create, or no-action) without re-clustering. Because the useful signal channel depends on how informative the labels are, we fix a richness-conditioned policy in advance: statistics when label distinctiveness is low, fused statistics+semantics when it is high. On three public datasets spanning label richness (YooChoose 0.17, MOOC 0.50, News-Category 0.70), the policy-selected LLM mode obtains the highest F1 on all three, with far fewer interventions and stronger restraint than tuned threshold heuristics and a MONIC steelman (paired Wilcoxon p <= 0.003, bootstrap 95% CIs excluding zero). The gain is concentrated more in precision than recall. The useful modality shifts from statistics to semantics/fusion as richness rises. Semantics hurt on YooChoose, fusion is roughly neutral on MOOC, and the semantic channel is required on News. One base prompt template and one fixed policy serve all three datasets, whereas the tuned baseline collapses when moved between them. We treat this shift as a practitioner diagnostic observed on three datasets, not a validated law.",
+      "authors": [
+        "Himanshu Kulkarni",
+        "Siddharth Krishnamurthy",
+        "Jianhong Xin"
+      ],
+      "url": "https://arxiv.org/abs/2611.17616",
+      "pdf_url": "https://arxiv.org/pdf/2611.17616",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.AI",
+      "kind": "paper",
+      "published_at": "2026-11-17T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "大模型",
+        "检索与知识",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "score": 22.99,
+      "zh_title": "LLM - Guided Club 寿命周期管理:决定何时以及如何发展行为组",
+      "zh_summary": "行为群集在用户或项目交互作用上被学习到随着行为演化而漂移:一些片段分化成子行为群集,有些趋同,有些消失,出现了新的规律. 两种模式主导着不断演变的集群的维持. 当硬码统计跨过截断点时,阈值触发了预先指定的动作;重置和履带(MONIC-tyle)重新组合每个窗口,并推断新集群如何与前一个窗口对齐的过渡. 既将决定硬化为门槛规则,又重新组合规则。 我们研究一种替代方法,一种大语言模型(LLM)作出生命周期决定。 鉴于当前集群集的无门槛、全人口观点(统计健康、标签、成员文本、resi)",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.17616",
+      "dedupe_keys": [
+        "arxiv:2611.17616",
+        "external:2611.17616",
+        "title:llmguidedclusterlifecyclemanagementdecidingwhenandhowtoevolvebehavioralclusters",
+        "url:https://arxiv.org/abs/2611.17616"
+      ]
+    },
+    {
+      "id": "arxiv-27ea9846eb49",
+      "title": "Safety Side Effects of Preventative Persona Steering: An Empirical Audit",
+      "summary": "High-level behaviors such as sycophancy and hallucination correspond to directions in a model's activation space (Chen et al., 2025). These directions, known as persona vectors, can suppress undesirable traits either at inference time, subtracting the vector during generation, or through preventative steering, adding the vector during fine-tuning, so the optimizer never needs to encode the trait in weights, then removing the vector at evaluation. Chen et al. (2025) recommend preventative steering because it preserves Massive Multitask Language Understanding (MMLU) accuracy, but validations of this recommendation have measured capability alone. We primarily evaluate results on preventative steering of sycophancy and hallucination vectors on three models, measuring three safety benchmarks alongside trait expression, coherence, and MMLU. Our findings show that preventative steering still changes refusal behavior, but by an amount that depends on the trait and does not establish that preventative persona steering is safety-neutral, and steering methods should be evaluated on several safety benchmarks.",
+      "authors": [
+        "Sabrina Tang",
+        "Nikolai Vo",
+        "Carson Murillo",
+        "Chira Sukumarnpiti",
+        "Sarah Wilson"
+      ],
+      "url": "https://arxiv.org/abs/2611.17620",
+      "pdf_url": "https://arxiv.org/pdf/2611.17620",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.AI",
+      "kind": "paper",
+      "published_at": "2026-11-17T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "训练与系统",
+        "评测与安全",
+        "cs.AI"
+      ],
+      "score": 22.99,
+      "zh_title": "预防人员的安全副作用a",
+      "zh_summary": "高层次的行为,如节奏和幻觉,与模型激活空间中的方向相对应(Chen等人,2025年). 这些方向被称为人物矢量,可以在推断时间抑制不良的特质,在生成时减去矢量,或者通过预防引导,在微调时添加矢量,因此优化器从不需要将特质编码为重量,然后在评价时去除矢量. Chen等人(2025年)建议进行预防性指导,因为它保留了大规模多任务语言理解(MMLU)的准确性,但对该建议的验证仅衡量了能力。 我们主要评价在三种模式下预防挥发和幻觉传导的结果",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.17620",
+      "dedupe_keys": [
+        "arxiv:2611.17620",
+        "external:2611.17620",
+        "title:safetysideeffectsofpreventativepersonasteeringanempiricalaudit",
+        "url:https://arxiv.org/abs/2611.17620"
+      ]
+    },
+    {
+      "id": "rss-df6eb44365ae",
+      "title": "LVMH’s Media Division announces strategic partnership with OpenAI",
+      "summary": "LVMH’s Media Division and OpenAI announce a partnership to support journalism with AI and make its publications more accessible through ChatGPT.",
+      "authors": [],
+      "url": "https://openai.com/index/lvmh-media-division-partnership",
+      "pdf_url": "",
+      "source_id": "rss",
+      "source_name": "OpenAI",
+      "kind": "report",
+      "published_at": "2026-11-16T09:00:00+00:00",
+      "venue": "OpenAI 官方博客",
+      "tags": [
+        "综合",
+        "Company"
+      ],
+      "score": 22.74,
+      "zh_title": "LVMH媒体司宣布与OpenAI建立战略伙伴关系",
+      "zh_summary": "LVMH的媒体司和OpenAI宣布与AI建立伙伴关系,支持新闻工作,并通过ChatGPT使其出版物更容易获得.",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "",
+      "dedupe_keys": [
+        "title:lvmhsmediadivisionannouncesstrategicpartnershipwithopenai",
+        "url:https://openai.com/index/lvmh-media-division-partnership"
+      ]
+    },
+    {
+      "id": "huggingface-5d57ff576015",
+      "title": "Dual Flow: Joint Image-Measurement Interpolation for Inverse Problems",
+      "summary": "Generative model-based approaches to linear inverse problems typically use the acquired noisy measurement to condition or guide sampling in the image domain. In this work, we introduce Dual Flow, a novel joint-flow model for solving linear inverse problems by jointly estimating the clean image and corresponding noise-free measurement from the observation. Specifically, Dual Flow formulates image reconstruction and measurement denoising as a coupled estimation problem, using coupled flows in the image and measurement domains. The acquired noisy measurement is used only to initialize the measurement state; thereafter, image and measurement states are jointly updated based on their current values. By construction, the final image and measurement estimates are guaranteed to satisfy the underlying forward model. We derive the sampling updates for the joint-flow which involves the conditional mean of the clean image given the joint state. We further derive a closed-form expression for a sufficient statistic of the joint state and show that the required conditional mean can be obtained by solving an image-domain Gaussian denoising problem involving operator-dependent, correlated noise. We train a velocity-prediction network using this formulation to estimate the conditional mean from the derived sufficient statistic. Extensive experiments across various linear inverse problems and image datasets demonstrate state-of-the-art performance in both distortion metrics and perceptual quality. Dual Flow requires no hyperparameter tuning beyond the number of inference steps and achieves shorter reconstruction times than competing methods. Additional analyses assess robustness to model mismatch, as well as the ability to generate diverse plausible reconstructions and characterize reconstruction uncertainty.",
+      "authors": [
+        "Sevket Ege Yesilyurt",
+        "Figen S. Oktem"
+      ],
+      "url": "https://arxiv.org/abs/2611.05843",
+      "pdf_url": "",
+      "source_id": "huggingface",
+      "source_name": "Hugging Face Daily",
+      "kind": "paper",
+      "published_at": "2026-11-12T00:00:00+00:00",
+      "venue": "Hugging Face Daily Papers",
+      "tags": [
+        "训练与系统",
+        "生成与创造",
+        "评测与安全",
+        "community pick"
+      ],
+      "score": 21.68,
+      "zh_title": "双流:反向问题联合图像-计量国际化",
+      "zh_summary": "基于基因模型的线性反向问题处理方法通常使用已获得的噪音测量来调节或引导图像域的采样. 在这部作品中,我们引入了\"双流\"(Duble Flow),这是一种通过联合估计清真图像和从观测中相应的无噪声测量来解决线性反向问题的新型联合流模型. 具体地说,双重流动将图像的重建和测量称为一个组合估计问题,利用图像和测量领域的组合流动。 获取的噪音测量只用于初始化测量状态;之后,图像和测量状态根据其当前值共同更新. 通过构造,最终的图像和测量",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.05843",
+      "dedupe_keys": [
+        "arxiv:2611.05843",
+        "external:2611.05843",
+        "title:dualflowjointimagemeasurementinterpolationforinverseproblems",
+        "url:https://arxiv.org/abs/2611.05843"
+      ]
+    },
+    {
+      "id": "huggingface-7f47139098f7",
+      "title": "EvenVLM: A Text and Multimodal Dataset for the Even Language with Vision-Language Fine-Tuning",
+      "summary": "We present EvenVLM, the first text and multimodal (VQA) dataset for Even (Lamut), an endangered Northern Tungusic language spoken by approximately 6,800 people in Siberia. Our dataset comprises 50,521 structured Even-Russian entries extracted from dictionary and phrasebook sources via GPT-4o Mini-based parsing, from which we synthetically generate 107,543 training examples spanning translation, grammar, reading comprehension, and semantic classification. To address tokenization inefficiency on Even's agglutinative morphology, we propose a three-step tokenizer expansion algorithm that adds Even-specific graphemes (eng, oe, o-umlaut), whitelisted vocabulary, and BPE merges, reducing average tokens per word by 27% (4.99 to 3.64). Using LoRA fine-tuning of Qwen3-VL-4B, we adapt the model for text tasks (0.53% trainable parameters, rank 32) and separately for visual question answering (rank 64, frozen vision encoder). Our best configuration achieves 11.4% exact match and a 13.6 weighted score on text benchmarks, 0.1283 chrF for sentence translation, and 65% accuracy on VQA (up from 0% for the base model and text-only fine-tuning). We release our datasets, evaluation benchmarks, and training pipeline to support further research on Even and other low-resource languages.",
+      "authors": [
+        "Daniil Makovetskii",
+        "Ivan Bondarenko"
+      ],
+      "url": "https://arxiv.org/abs/2611.16500",
+      "pdf_url": "",
+      "source_id": "huggingface",
+      "source_name": "Hugging Face Daily",
+      "kind": "paper",
+      "published_at": "2026-11-12T00:00:00+00:00",
+      "venue": "Hugging Face Daily Papers",
+      "tags": [
+        "多模态",
+        "检索与知识",
+        "评测与安全",
+        "community pick"
+      ],
+      "score": 21.68,
+      "zh_title": "EvenVLM: Even Language 的文本和多模态数据集",
+      "zh_summary": "我们提出EvenVLM,这是Even (Lamut)的第一个文本和多模态(VQA)数据集,这是西伯利亚约6 800人使用的濒危北部通古斯语。 我们的数据集包括50,521条结构化的Even-Russian条目,这些条目是通过GPT-4o迷你解析从词典和词典来源提取的,我们从中合成了107,543个训练实例,涉及翻译、语法、阅读理解和语义分类。 为了解决Even的增殖形态学上的标致性效率低的问题,我们提出三步标致性扩展算法,增加Even特有的石墨(eng, oe, o-umlaut),白列词汇,以及BPE合并,每个字的平均标致性减少27%(4.99到3.64). 使用 LORA 微调",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.16500",
+      "dedupe_keys": [
+        "arxiv:2611.16500",
+        "external:2611.16500",
+        "title:evenvlmatextandmultimodaldatasetfortheevenlanguagewithvisionlanguagefinetuning",
+        "url:https://arxiv.org/abs/2611.16500"
+      ]
+    },
+    {
+      "id": "arxiv-eee14e650585",
+      "title": "When Does Less Information Pay? An Exact Finite Atlas of Representation, Payoff, and Cost",
+      "summary": "A representation that retains one bit about a four-state world can solve a task perfectly, while another that retains 1.5 bits on average reaches only 75% accuracy. The difference lies in which distinctions each representation preserves. We examine this relationship in a uniform four-state world by enumerating all admissible representations and binary action rules. Constructions are compared both by replacing one component while holding the others fixed and by choosing the best action rule separately for each module. We consider three tasks, their mixtures, and four separate hypothetical cost tariffs. In some comparisons, the representation retaining less world information has the higher payoff; in others, the more informative representation does. There are also pairs with different information amounts but equal payoff--that is, equal task accuracy. If a representation preserves all existing distinctions and adds new ones, its best zero-cost payoff cannot decrease. Lower-information advantages therefore depend on which distinctions are retained. Equal counts of opposing advantages under representation replacement follow from coding symmetry. In broader comparisons, the shares depend on how repeated realizations are counted. A different task set or resource price can change which member of a fixed pair performs better. These results are exact, complete censuses of the specified finite sets of constructions and comparisons. The atlas provides a reproducible worked model for examining how action constraints, counting rules, and cost assumptions affect comparisons. It illustrates established distinctions between information quantity and decision value rather than proposing a new general law of their relation. $I(W;R)$ measures retained world information, and payoff measures task accuracy.",
+      "authors": [
+        "Aleksandr M. Shtraukh-Adamsky",
+        "Vladimir M. Adamsky",
+        "Irina G. Voloshina",
+        "Artemiy D. Spitsyn"
+      ],
+      "url": "https://arxiv.org/abs/2611.17583",
+      "pdf_url": "https://arxiv.org/pdf/2611.17583",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.AI",
+      "kind": "paper",
+      "published_at": "2026-11-17T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "检索与知识",
+        "cs.AI"
+      ],
+      "score": 20.49,
+      "zh_title": "信息收益何时减少? 代表性、报酬和费用的精确有限图集",
+      "zh_summary": "保留一个四态世界一点的表示可以完美地解决一个任务,而平均保留1.5位的表示只能达到75%的精确度. 区别在于每一代表所保持的区别。 我们在一个统一的四国世界中审查这种关系,列举所有可接受的陈述和二进制行动规则。 通过更换一个组件而固定其他组件,并通过为每个模块分别选择最佳动作规则,对构造进行比较。 我们考虑三项任务,它们的混合物,以及四项单独的假设成本关税。 在有些比较中,保留较少世界信息的代表的回报率较高;在另一些情况中,资料较多的代表的回报率较高。 代码",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.17583",
+      "dedupe_keys": [
+        "arxiv:2611.17583",
+        "external:2611.17583",
+        "title:whendoeslessinformationpayanexactfiniteatlasofrepresentationpayoffandcost",
+        "url:https://arxiv.org/abs/2611.17583"
+      ]
+    },
+    {
+      "id": "huggingface-11d41a2ff1d8",
+      "title": "BrickFlow: Connectivity-Guided Brick Reconstruction",
+      "summary": "Given a set of LEGO parts and an image of an assembled object, our task is to infer the pose of each part to assemble the object. In contrast with traditional 3D reconstruction, doing so requires satisfying discrete physical constraints, which provide structure but render the problem combinatorial and highly sensitive to small pose errors. To learn a prior over how parts fit together, we train a set-conditioned SE(3) flow model on procedurally generated assemblies. We then finetune this model to inject image conditioning, using 1% as much data. However, while the learned flow captures global structure, it does not enforce connectivity. To address this, we introduce an analytic connectivity-field guidance to pull predictions toward connected assemblies at test time. Through this, we demonstrate improved build quality with model size, pretraining, and guidance. We make our models and data available for research purposes at https://kulits.github.io/BrickFlow/",
+      "authors": [
+        "Peter Kulits",
+        "Cordelia Schmid"
+      ],
+      "url": "https://arxiv.org/abs/2611.17321",
+      "pdf_url": "",
+      "source_id": "huggingface",
+      "source_name": "Hugging Face Daily",
+      "kind": "paper",
+      "published_at": "2026-11-12T00:00:00+00:00",
+      "venue": "Hugging Face Daily Papers",
+      "tags": [
+        "训练与系统",
+        "生成与创造",
+        "community pick"
+      ],
+      "score": 19.18,
+      "zh_title": "砖花:连接-导线砖重建",
+      "zh_summary": "鉴于一组LEGO部件和一个集合对象的图像,我们的任务是推断每个部分的姿势来组装对象. 与传统的立体重建不同,这样做需要满足离散的物理制约,这提供了结构,但使问题组合起来,并对小的构成错误高度敏感。 为了了解各部分如何组合在一起的先验情况,我们在程序生成的组件上训练一个固定条件的SE(3)流动模型。 然后我们微调这个模型注入图像调制, 使用1%的数据。 然而,虽然知识流抓住了全球结构,但它并没有强制实施互联互通。 为了解决这个问题,我们引入了分析式的互联互通领域指导,以拉动对连接的驴的预测",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.17321",
+      "dedupe_keys": [
+        "arxiv:2611.17321",
+        "external:2611.17321",
+        "title:brickflowconnectivityguidedbrickreconstruction",
+        "url:https://arxiv.org/abs/2611.17321"
+      ]
+    },
+    {
+      "id": "huggingface-79a266550e6d",
+      "title": "Alloy: A Multi-Material Physics Engine for Robot Learning",
+      "summary": "Robots handle much more than rigid objects: towels, cables, water, sand. The simulators used to train robots at scale are strongest on rigid bodies, and adding another material usually means a second engine and hand-written glue between the two. We present Alloy, an open-source physics engine for robot learning in which rigid robots, cloth, cables, liquids, granular material and soft bodies share one scene. Each object is described once; Alloy assigns it to a solver suited to its material, couples the solvers inside every control step, and runs the scene in many parallel worlds on one GPU, or on a CPU. Every world carries a health grade, to help tell a failure of the physics from a failure of the policy. Alloy is built on Newton, MuJoCo Warp and Warp, and it is written to be driven by coding agents: its documentation ships inside the package, every error names its fix, and the engine is exposed as tools over the Model Context Protocol. In a cold test, agents that had never seen Alloy installed a pre-release from the package index and trained policies for walking, cable handling and pouring on a single GPU. We also report how throughput grows with the number of worlds, depth-camera throughput, agreement with closed-form references, and a reliability test over a thousand worlds.",
+      "authors": [
+        "Pranay Gupta",
+        "Deepanshu Rohilla"
+      ],
+      "url": "https://arxiv.org/abs/2611.16312",
+      "pdf_url": "",
+      "source_id": "huggingface",
+      "source_name": "Hugging Face Daily",
+      "kind": "paper",
+      "published_at": "2026-11-12T00:00:00+00:00",
+      "venue": "Hugging Face Daily Papers",
+      "tags": [
+        "Agent",
+        "机器人与具身",
+        "community pick"
+      ],
+      "score": 19.18,
+      "zh_title": "合金:机器人学习的多元物理引擎",
+      "zh_summary": "机器人处理的远不止刚性物体:毛巾,电缆,水,沙. 用来在规模上训练机器人的模拟器在刚性身体上最强,添加另一种材料通常意味着在两者之间有第二个引擎和手写胶水. 我们呈现的是合金,一种用于机器人学习的开源物理引擎,其中刚性机器人,布,电缆,液体,颗粒材料和软体共用一个场景. 每个对象被描述一次;合金将它指定给适合其材料的解析器,将每个控制步骤中的解析器对齐,并在多个平行世界中运行场景在一个GPU上,或者在一个CPU上. 每个世界都有一个健康等级, 帮助把物理学的失败 与策略的失败分辨出来。 合金建造在牛顿,穆乔科曲和曲速上",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.16312",
+      "dedupe_keys": [
+        "arxiv:2611.16312",
+        "external:2611.16312",
+        "title:alloyamultimaterialphysicsengineforrobotlearning",
+        "url:https://arxiv.org/abs/2611.16312"
+      ]
+    },
+    {
+      "id": "huggingface-9863b2e2f3b0",
+      "title": "Iris-Z: Scaling One Generative Model Past Specialist Geometry Models",
+      "summary": "Language moved from many task-specific models to one unified model: a single generative model with a single generative training task that handles all of them within the same backbone, and keeps improving with data, parameters and compute. We believe the bitter lesson applies just as much to computer vision, 3D and spatial understanding, in the end to visual intelligence: the effort should go into general architectures that solve all these tasks in a unified way, and into scaling them, rather than into task-specific designs. We test this on monocular geometry, a task that has belonged to specialised architectures for years. Iris-Z is a general image generator that produces appearance and geometry together. A single backbone denoises, reasons about and understands the image and its depth at the same time, and one set of weights generates images with their depth, estimates depth from photographs and paints images onto a given depth. At enough scale it surpasses state-of-the-art specialists on established depth benchmarks while keeping the generative abilities of the backbone it started from without specialized layers. We release two models for the community.",
+      "authors": [
+        "Alejandro Cañada",
+        "Chema Garabito"
+      ],
+      "url": "https://arxiv.org/abs/2611.16010",
+      "pdf_url": "",
+      "source_id": "huggingface",
+      "source_name": "Hugging Face Daily",
+      "kind": "paper",
+      "published_at": "2026-11-11T00:00:00+00:00",
+      "venue": "Hugging Face Daily Papers",
+      "tags": [
+        "生成与创造",
+        "评测与安全",
+        "community pick"
+      ],
+      "score": 19.0,
+      "zh_title": "Iris-Z: 放大一个基因模型过去的专家几何模型",
+      "zh_summary": "语言从许多任务特定的模型转移到一个统一的模型:一个单一的基因模型,有一个单一的基因训练任务,在同一个骨干内处理所有这些模型,并不断用数据,参数和计算来改进. 我们认为,苦痛的教训同样适用于计算机视觉,三维和空间理解,最后是视觉智能:这一努力应该进入以统一的方式解决所有这些任务的一般架构,并应用于规模化,而不是用于特定任务的设计. 我们在单体几何学上测试这个, 这是一项多年来属于专门建筑的任务。 Iris-Z是一般的图像生成器,它们一起产生外观和几何. 单一的脊椎骨, 原因和",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.16010",
+      "dedupe_keys": [
+        "arxiv:2611.16010",
+        "external:2611.16010",
+        "title:iriszscalingonegenerativemodelpastspecialistgeometrymodels",
+        "url:https://arxiv.org/abs/2611.16010"
+      ]
+    },
+    {
+      "id": "huggingface-62b1f53036e7",
+      "title": "Re-Search: Dissecting LLM Ideation Through a Two-Player Questioning Game",
+      "summary": "Research ideation is iterative: researchers refine their ideas step by step based on feedback. Yet existing evaluations obscure this search process, making it difficult to understand how LLMs explore the space of research ideas and what limits their progress. We introduce Re-Search, which adapts the format of Twenty Questions to research ideation: given only the research problem of a published paper, a model must rediscover the paper's core idea by asking yes-or-no questions. Built from 200 ICML 2026 papers, Re-Search tracks how a model's idea evolves as it asks questions and receives binary oracle feedback, isolating ideation from execution. Across six recent LLMs, nearly all progress happens within the first 30 of 100 questions, which largely decide how the game ends; after that, most models plateau. Through controlled interventions on the candidate questions and the hypothesis space, we find that the bottleneck is generation, not judgment: models recognize a good idea or a good question when one is offered, but often cannot produce it on their own. We further analyze the ideation traces and find that models fail by either over-exploiting one direction or over-exploring too many. These findings point to concrete design principles for autoresearch systems: since models can judge candidates they cannot produce, enriching the search with externally sourced ideas and questions may be more effective than improving any single model's generation ability.",
+      "authors": [
+        "Muhan Gao",
+        "Hangxiao Zhu",
+        "Xinqi Su",
+        "Yu Zhang",
+        "Daniel Khashabi",
+        "Kuan-Hao Huang"
+      ],
+      "url": "https://arxiv.org/abs/2611.14487",
+      "pdf_url": "",
+      "source_id": "huggingface",
+      "source_name": "Hugging Face Daily",
+      "kind": "paper",
+      "published_at": "2026-11-10T00:00:00+00:00",
+      "venue": "Hugging Face Daily Papers",
+      "tags": [
+        "大模型",
+        "评测与安全",
+        "community pick"
+      ],
+      "score": 19.0,
+      "zh_title": "重新搜索:通过双层游戏解析 LLM 设定",
+      "zh_summary": "研究思想是迭代的:研究人员根据反馈逐步完善其思想. 然而,现有的评价掩盖了这一搜索过程,使得人们难以理解法学硕士如何探索研究想法的空间,以及如何限制其进展。 我们引入了Re-Search,它使\"二十问题\"的格式适应了研究思想:鉴于只有出版的论文的研究问题,一个模型必须通过询问是或否的问题来重新发现论文的核心思想. Re-Search根据200篇ICML 2026论文建立,追踪模型的想法如何在提问和接收二进制甲骨文反馈时进化,将想法与执行隔离. 几乎所有进展都发生在100个问题中的前30个,这在很大程度上决定了",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.14487",
+      "dedupe_keys": [
+        "arxiv:2611.14487",
+        "external:2611.14487",
+        "title:researchdissectingllmideationthroughatwoplayerquestioninggame",
+        "url:https://arxiv.org/abs/2611.14487"
+      ]
+    },
+    {
+      "id": "arxiv-0946136753b2",
+      "title": "Astrocyte Biocomputing: Astrocytic Contributions to Neural Network Computation",
+      "summary": "Conductors are critical for the performance of an orchestra even though they do not emit sound. Basic research and clinical studies in the last decade are revealing that astrocytes may be the \"conductors\" of the \"orchestra\" that is the brain network: astrocytes make up approximately $50\\%$ of all brain cells but do not emit electrical signals. Nevertheless, they may play critical roles in important cognitive brain functions, specifically learning, memory, and information processing. Here we consider the implications of these discoveries for brain-inspired machine learning (ML), where analogy is typically drawn between neurons and their electrical interactions. We highlight specific algorithms for two key astrocyte characteristics. The first characteristic is the ability to link to and modulate thousands of synapses simultaneously. A model based on this characteristic yields faster training and makes the network more robust to noise, providing a supervised learning algorithm that can be applied to any existing neural network. The second characteristic we focus on is that the non-electrical communication among astrocytes includes slow, rhythmic dynamics. The rhythmic sharing algorithm we developed based on this premise yields rapid anomaly detection adaptation and prevents catastrophic forgetting. Overall, we find that astrocyte-derived algorithms outperform neurocentric algorithms significantly and remediate critical weaknesses of current state-of-the-art ML models.",
+      "authors": [
+        "Kate M. O'Neill",
+        "Ian Whitehouse",
+        "Adam N. McCaughan",
+        "Ryan O'Loughlin",
+        "Sonia Buckley",
+        "Wolfgang Losert"
+      ],
+      "url": "https://arxiv.org/abs/2611.17532",
+      "pdf_url": "https://arxiv.org/pdf/2611.17532",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.AI",
+      "kind": "paper",
+      "published_at": "2026-11-17T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "综合",
+        "cs.AI",
+        "physics.bio-ph",
+        "q-bio.NC"
+      ],
+      "score": 17.99,
+      "zh_title": "天体细胞生物计算:天体细胞对神经网络计算的贡献",
+      "zh_summary": "指挥家对一支管弦乐队的表演至关重要,尽管他们不发出声音. 过去十年的基本研究和临床研究揭示了天体细胞可能是大脑网络即\"管弦乐团\"的\"导体\":天体细胞占所有脑细胞约50美元,但不发出电讯. 尽管如此,它们可能在重要的认知大脑功能,特别是学习,记忆和信息处理中发挥关键作用. 在这里,我们考虑这些发现对脑振荡的机器学习(ML)的影响,通常在神经元及其电相互作用之间作类比。 我们强调两个关键天体细胞特性的具体算法。 第一个角色",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.17532",
+      "dedupe_keys": [
+        "arxiv:2611.17532",
+        "external:2611.17532",
+        "title:astrocytebiocomputingastrocyticcontributionstoneuralnetworkcomputation",
+        "url:https://arxiv.org/abs/2611.17532"
+      ]
+    },
+    {
+      "id": "huggingface-bf66dc277b7e",
+      "title": "Parsed, Plausible, Wrong: Output Format Controls Silent Errors in Small-Model Semantic Parsing",
+      "summary": "A small fine-tuned parser that emits a well-formed but wrong tree fails silently: nothing downstream can tell. We ask whether the output format, a free design choice, controls how often this happens. On the PIZZA ordering benchmark we fine-tune two sub-billion models (Qwen3.5-0.8B and LFM2.5-350M) with LoRA on six lossless encodings of the same target tree, from 44.3 down to 10.9 tokens per order, including two matched-length pairs that vary surface form at fixed length. Across 300 runs (5 training pool sizes, 5 seeds) with a hierarchical bootstrap and Holm correction fixed before the results were read, shortening alone never helps, but writing the target in ordinary words does. The word encoding is the most accurate format on both models (87.5% vs. 85.8% exact match for the native s-expression on Qwen) while emitting 4.1x fewer tokens, and it cuts the silent error rate by 2.3x on Qwen and 1.8x on LFM2, separating at every pool size. Error analysis locates much of the gain in negation. All runs also learn to refuse off-menu input (held out: 95.9-99.0% handled) and to apply in-utterance self-corrections. Strict refusal has a measured price: 2.1-10.1% of real, mostly polite, orders are refused.",
+      "authors": [
+        "Umar Ahmed",
+        "Maxim Dunaev",
+        "Mohammad Nour Al Awad",
+        "Sergey Ivanov",
+        "Ivan Khodnenko"
+      ],
+      "url": "https://arxiv.org/abs/2611.17169",
+      "pdf_url": "",
+      "source_id": "huggingface",
+      "source_name": "Hugging Face Daily",
+      "kind": "paper",
+      "published_at": "2026-11-12T00:00:00+00:00",
+      "venue": "Hugging Face Daily Papers",
+      "tags": [
+        "评测与安全",
+        "community pick"
+      ],
+      "score": 16.68,
+      "zh_title": "解析、 排版、 错误: 小模型语义解析中的输出格式控制静态错误",
+      "zh_summary": "一个小的微调解析器, 释放出一棵造型良好但错误的树 沉默的失败: 任何下游都看不出来。 我们问产出格式,自由的设计选择,是否控制了这种情况的发生频率. 在PIZZA定购基准上,我们与LORA一起,对两个10亿级以下的模型(Qune3.5-0.8B和LFM2.5-350M)进行微调,对同一目标树的6个无损编码,从每枚44.3个降为10.9个令牌,包括两对在固定长度下不同表面形态的配对. 超过300个跑步(5个训练池大小,5个种子),在阅读结果前固定了分级的靴子和Holm校正,光是缩短就无济于事,但用普通的文字来写目标. 编码词是两种模型中最准确的格式(87.5%。",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.17169",
+      "dedupe_keys": [
+        "arxiv:2611.17169",
+        "external:2611.17169",
+        "title:parsedplausiblewrongoutputformatcontrolssilenterrorsinsmallmodelsemanticparsing",
+        "url:https://arxiv.org/abs/2611.17169"
+      ]
+    }
+  ]
+}
