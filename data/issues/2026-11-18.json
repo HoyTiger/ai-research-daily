@@ -1,0 +1,1392 @@
+{
+  "issue_date": "2026-11-18",
+  "issue_number": 5,
+  "generated_at": "2026-11-18T12:24:25.824486+08:00",
+  "description": "从 5 个数据通道收录 36 条 AI 研究更新，聚焦大模型、多模态、Agent。",
+  "ai_enabled": true,
+  "source_health": [
+    {
+      "source_id": "arxiv",
+      "source_name": "arXiv categories",
+      "status": "ok",
+      "item_count": 108,
+      "errors": []
+    },
+    {
+      "source_id": "openreview",
+      "source_name": "OpenReview venues",
+      "status": "ok",
+      "item_count": 14,
+      "errors": []
+    },
+    {
+      "source_id": "crossref",
+      "source_name": "Crossref journals",
+      "status": "ok",
+      "item_count": 12,
+      "errors": []
+    },
+    {
+      "source_id": "huggingface",
+      "source_name": "Hugging Face Daily",
+      "status": "ok",
+      "item_count": 10,
+      "errors": []
+    },
+    {
+      "source_id": "rss",
+      "source_name": "Official technical blogs",
+      "status": "ok",
+      "item_count": 12,
+      "errors": []
+    }
+  ],
+  "items": [
+    {
+      "id": "crossref-e647888b7e0a",
+      "title": "LLM-Enhanced 3D Generation: A Survey",
+      "summary": "",
+      "authors": [
+        "Zhi Fang",
+        "Jie Cao",
+        "Ran He",
+        "Jingyi Yu",
+        "Ming-Hsuan Yang"
+      ],
+      "url": "https://doi.org/10.1007/s11263-026-03051-3",
+      "pdf_url": "",
+      "source_id": "crossref",
+      "source_name": "IJCV",
+      "kind": "journal",
+      "published_at": "2026-11-17T00:00:00+00:00",
+      "venue": "International Journal of Computer Vision",
+      "tags": [
+        "大模型",
+        "生成与创造",
+        "IJCV"
+      ],
+      "score": 35.22,
+      "zh_title": "LLM-增强的三维生成:调查",
+      "zh_summary": "LLM-增强的三维生成:调查",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "10.1007/s11263-026-03051-3",
+      "dedupe_keys": [
+        "doi:10.1007/s11263-026-03051-3",
+        "external:10.1007/s11263-026-03051-3",
+        "title:llmenhanced3dgenerationasurvey",
+        "url:https://doi.org/10.1007/s11263-026-03051-3"
+      ]
+    },
+    {
+      "id": "arxiv-c34048900ef3",
+      "title": "LogicEye: Agent Driven Multimodal Dataset for Interpretable Ophthalmic Diagnosis",
+      "summary": "Clinical adoption of ophthalmic Artificial Intelligence remains limited by low interpretability and a lack of finely annotated multimodal data. Most existing datasets provide only coarse disease labels without the granular pathological findings required for differential diagnosis. We present LogicEye$^{Agent}$, a dual-pool inference and verification agent that emulates clinical reasoning by jointly verifying positive inclusion signs and negative exclusion criteria. Using LogicEye$^{Agent}$, we curate LogicEye$^{Data}$, a large-scale multimodal dataset of 804,461 fundus and OCT images paired with structured pathological reports spanning 38 diseases and 29 subtypes, with quality assured through joint verification by multimodal large language models and clinical experts. Building on this dataset, we further develop LogicEye$^{Bench}$, which incorporates a category-constrained loss for hierarchical disease recognition and report generation. Grounding coarse labels into verified visual findings effectively curtails diagnostic hallucinations and establishes a solid foundation for interpretable vision-language modeling in ophthalmology. The code is available at:https://github.com/Eden35/LogicEye-Agent-Driven-Multimodal-Dataset-for-Interpretable-Ophthalmic-Diagnosis.",
+      "authors": [
+        "Jiajie Mu",
+        "Lu Chen",
+        "Zheyun Qin",
+        "Xiaoming Xi",
+        "Lishan Qiao",
+        "Xiushan Nie",
+        "Yilong Yin"
+      ],
+      "url": "https://arxiv.org/abs/2611.18669",
+      "pdf_url": "https://arxiv.org/pdf/2611.18669",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.CV",
+      "kind": "paper",
+      "published_at": "2026-11-17T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "大模型",
+        "多模态",
+        "Agent",
+        "cs.CV"
+      ],
+      "score": 34.04,
+      "zh_title": "逻辑眼:可解释眼科诊断的智能体驱动多模态数据集",
+      "zh_summary": "临床上采用眼科人工智能仍然受到限制,因为可解释性低,而且缺乏详细说明的多模态数据。 大多数现有的数据集只提供粗糙的疾病标签,而没有差别诊断所需的颗粒病理结果. 我们介绍LogicEye$^{Agent}$,这是一个双库推论和核查智能体商,通过联合核查积极的包容征兆和负面排除标准来模仿临床推理. 我们使用逻辑Eye$ \\ Agent}$, 来管理逻辑Eye$\\ Data}$, 一个由804 461 Fundus 和 OCT 图像组成的大型多模态数据集, 配有结构化的病理报告, 覆盖38种疾病和29种子类型, 通过多模态大语言模型的联合验证保证了质量。",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.18669",
+      "dedupe_keys": [
+        "arxiv:2611.18669",
+        "external:2611.18669",
+        "title:logiceyeagentdrivenmultimodaldatasetforinterpretableophthalmicdiagnosis",
+        "url:https://arxiv.org/abs/2611.18669"
+      ]
+    },
+    {
+      "id": "huggingface-6c3ff382a6a0",
+      "title": "MedJev: A System One Vision-Language Decision Model for Fast and Effective Medical Image Understanding",
+      "summary": "Medical image understanding with vision-language models (VLMs) typically relies on autoregressively generating reasoning and answer tokens. These unnecessary tokens make the inference cost scale with the response length and force the answer to be parsed from free-form text, incurring avoidable latency and decision errors. To this end, we introduce MedJev, a system one vision-language decision model that maps medical images, questions, and candidate answers directly to decisions in a single multimodal forward pass, without any autoregressive generation process. For fast inference, MedJev removes the upper language layers and the generative output pathway, while keeping the full vision pathway and all visual tokens. On this shortened backbone, a decision head scores each candidate by pretrained query--key matching and refines the scores with a lightweight multilayer perceptron (MLP) residual, coupling the pretrained matching structure with task-specific nonlinear discrimination. Built on Qwen3.5-4B, MedJev-4B improves both accuracy and speed over the original model on each of four medical image classification and visual question answering benchmarks, with an absolute accuracy gain of 7.93\\% and a 6.04times end-to-end speedup. Further comparison with 20 cutting-edge models shows that MedJev-4B achieves state-of-the-art performance and inference speed among 4B--9B general and medical VLMs, indicating that direct multimodal decision making is an effective route to fast and effective medical image understanding.",
+      "authors": [
+        "Fan Zhang",
+        "Hao Wu",
+        "Jinyang Wu",
+        "Hongyu Qu",
+        "Zheng Lian",
+        "Dongfu Yin",
+        "Qingsong Wen",
+        "Pheng-Ann Heng"
+      ],
+      "url": "https://arxiv.org/abs/2611.20992",
+      "pdf_url": "",
+      "source_id": "huggingface",
+      "source_name": "Hugging Face Daily",
+      "kind": "paper",
+      "published_at": "2026-11-16T00:00:00+00:00",
+      "venue": "Hugging Face Daily Papers",
+      "tags": [
+        "大模型",
+        "多模态",
+        "推理",
+        "community pick"
+      ],
+      "score": 33.72,
+      "zh_title": "MedJev:快速有效的医疗图像理解系统一视觉-语言决定模型",
+      "zh_summary": "具有视觉语言模型(VLMs)的医学图像理解通常依赖于自动生成推理和回答符号. 这些不必要的符号使推论成本尺度与响应长度相配合,并迫使答案从自由格式文本中解析,从而发生可避免的延迟和决定错误. 为此,我们引入了MedJev,这是一个系统,它是一个视觉语言决策模型,它可以绘制医疗图像、问题和候选者直接回答一个单一的多模态前传中的决定,而没有任何自动生成过程。 对于快速推论,MedJev移除了上语言层和基因输出路径,同时保留了完整的视觉路径和所有视觉符号. 在这个缩短的骨干上,一个装饰",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.20992",
+      "dedupe_keys": [
+        "arxiv:2611.20992",
+        "external:2611.20992",
+        "title:medjevasystemonevisionlanguagedecisionmodelforfastandeffectivemedicalimageunderstanding",
+        "url:https://arxiv.org/abs/2611.20992"
+      ]
+    },
+    {
+      "id": "rss-ed34f7210a49",
+      "title": "Astra for Law leads in legal intelligence",
+      "summary": "Astra for Law ranked first in a launch evaluation spanning 24 areas of law. Every ChatGPT Enterprise customer can now request access.",
+      "authors": [],
+      "url": "https://openai.com/index/astra-law-6-2",
+      "pdf_url": "",
+      "source_id": "rss",
+      "source_name": "OpenAI",
+      "kind": "report",
+      "published_at": "2026-11-17T00:00:00+00:00",
+      "venue": "OpenAI 官方博客",
+      "tags": [
+        "评测与安全",
+        "Company"
+      ],
+      "score": 24.72,
+      "zh_title": "Astra for Law 法律情报的线索",
+      "zh_summary": "在涉及24个法律领域的启动评价中,Astra for Law排名第一。 每个聊天游戏 企业客户现在可以请求访问.",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "",
+      "dedupe_keys": [
+        "title:astraforlawleadsinlegalintelligence",
+        "url:https://openai.com/index/astra-law-6-2"
+      ]
+    },
+    {
+      "id": "arxiv-eced950d4534",
+      "title": "From Vision to Interaction: Evaluating Dynamic Social Intelligence of VLM Agents in ALIVE-World",
+      "summary": "As AI agents are increasingly deployed in real-world applications and take on social roles, dynamic social intelligence, the ability to continuously perceive multimodal cues, infer latent cognitive states, intervene through embodied actions, and ultimately achieve social goals, has become essential. However, existing evaluations largely fragment social intelligence into text-based abstractions, static reasoning tasks, or embodied simulators that lack social dynamics. These approaches fail to capture the multimodal, continuous, and interpersonal complexity of authentic human interactions. To bridge this gap, we introduce ALIVE-World, an embodied simulation environment supporting dynamic multimodal interactions encompassing egocentric vision, language, and non-verbal action. To provide socially grounded interactive feedback, we populate this environment with counterpart agents driven by a profile-conditioned, dual-system (intuitive-affective and logical-cognitive) architecture. Building upon this platform, we propose ALIVE-Bench to transform the assessment of social intelligence into a trackable quantitative framework. By deeply leveraging underlying environmental states and agents' internal variables, ALIVE-Bench systematically evaluates Vision-Language Model (VLM) agents across four critical dimensions: perception, understanding, influence, and outcome. Extensive evaluations reveal that dynamic social intelligence is fundamentally multi-dimensional and scenario-dependent. We identify a critical bottleneck between upstream perception and downstream social intervention, exposing VLM vulnerabilities in fine-grained proxemic awareness, adaptive intervention, and multi-party coordination. By uncovering these limitations and the diverse interaction strategies they produce, this benchmark provides actionable insights for the future behavioral alignment of multimodal agents.",
+      "authors": [
+        "Yue Xu",
+        "Xiaoyu Qin",
+        "Sihan Zhao",
+        "Ze-en Xiong",
+        "Jia Jia"
+      ],
+      "url": "https://arxiv.org/abs/2611.20956",
+      "pdf_url": "https://arxiv.org/pdf/2611.20956",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.MA",
+      "kind": "paper",
+      "published_at": "2026-11-17T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "大模型",
+        "多模态",
+        "Agent",
+        "cs.MA"
+      ],
+      "score": 34.04,
+      "zh_title": "从视觉到互动:评价世界活泼生活中的VLM智能体的动态社会情报",
+      "zh_summary": "随着人工智能智能体越来越多地部署在现实世界的应用中,并承担社会角色、动态社会智能,不断认识多模态提示、推断潜在认知状态、通过综合行动进行干预并最终实现社会目标的能力变得至关重要。 然而,现有的评价在很大程度上将社会智能分割成基于文字的抽象,静态推理任务,或包含缺乏社会动态的模拟器. 这些方法未能抓住人类真正互动的多模态、持续和人际复杂性。 为了弥补这一差距,我们引入了 \" 生命世界 \" (ALIVE-World),这是一个体现的模拟环境,支持动态的多模态互动,包括以自我为中心的视觉、语言,",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.20956",
+      "dedupe_keys": [
+        "arxiv:2611.20956",
+        "external:2611.20956",
+        "title:fromvisiontointeractionevaluatingdynamicsocialintelligenceofvlmagentsinaliveworld",
+        "url:https://arxiv.org/abs/2611.20956"
+      ]
+    },
+    {
+      "id": "huggingface-3031ea78a8e2",
+      "title": "Regularized Score Centering",
+      "summary": "Asynchronous reinforcement learning increases training throughput, but data from stale policies and numerical mismatch between training and inference can destabilize learning. To stabilize off-policy learning, score centering (SC) removes the effect of reward baselines on the expected update. Our gradient diagnostics show less extreme gradients with SC than with importance sampling (IS), but SC can still fail when the learner moves far from the behavior policy that generated the data. To limit this policy mismatch, we introduce Regularized Score Centering (RSC), which adds a reverse Kullback-Leibler (KL) penalty to encourage the learner's next-token distribution to stay close to the behavior policy's next-token distribution. RSC works with or without truncated importance sampling (TIS), which caps token importance weights. Our theoretical analysis supports this approach, showing that KL regularization improves convergence guarantees. We evaluate dense and mixture-of-experts models on mathematical reasoning and agentic tasks, including online shopping, tool use, games, and fully asynchronous software engineering. RSC with TIS substantially improves sample efficiency across all agentic benchmarks, attaining higher training rewards with the same number of sampled responses. In final evaluations, it achieves top performance across all six agentic tasks, improving by 14.3% on AppWorld and reaching 9.9 times the strongest baseline's score on BabyAI.",
+      "authors": [
+        "Hao Bai",
+        "Chenlu Ye",
+        "Xuanchang Zhang",
+        "Aviral Kumar",
+        "Tong Zhang"
+      ],
+      "url": "https://arxiv.org/abs/2611.21791",
+      "pdf_url": "",
+      "source_id": "huggingface",
+      "source_name": "Hugging Face Daily",
+      "kind": "paper",
+      "published_at": "2026-11-16T00:00:00+00:00",
+      "venue": "Hugging Face Daily Papers",
+      "tags": [
+        "Agent",
+        "推理",
+        "训练与系统",
+        "community pick"
+      ],
+      "score": 31.22,
+      "zh_title": "常规记分中心",
+      "zh_summary": "同步的强化学习会增加训练的吞吐量,但来自僵化策略的数据以及训练和推论之间的数字不匹配会破坏学习的稳定. 为了稳定策略外的学习,记分中心(SC)消除奖励基线对预期更新的影响. 我们的梯度诊断显示与重要采样(IS)相比,与SC相比,我们的极端梯度较小,但当学习者远离生成数据的行为策略时,SC仍然可能失败. 为了限制这种策略不匹配,我们引入了常规分数中心(RSC),增加了反向的Kullback-Leibler(KL)罚则,以鼓励学习者的邻接分配与行为策略的邻接分配保持接近. RSC 是否工作",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.21791",
+      "dedupe_keys": [
+        "arxiv:2611.21791",
+        "external:2611.21791",
+        "title:regularizedscorecentering",
+        "url:https://arxiv.org/abs/2611.21791"
+      ]
+    },
+    {
+      "id": "rss-96e9bd2a1c62",
+      "title": "Introducing ChatGPT for Sales",
+      "summary": "Explore the new Sales plugin and 30+ new and expanded partner plugins in ChatGPT to research prospects, prepare pitches, update your CRM, and move deals forward.",
+      "authors": [],
+      "url": "https://openai.com/index/introducing-chatgpt-for-sales",
+      "pdf_url": "",
+      "source_id": "rss",
+      "source_name": "OpenAI",
+      "kind": "report",
+      "published_at": "2026-11-17T08:00:00+00:00",
+      "venue": "OpenAI 官方博客",
+      "tags": [
+        "综合",
+        "Product"
+      ],
+      "score": 22.72,
+      "zh_title": "介绍销售的ChatGPT",
+      "zh_summary": "探索ChatGPT中新的销售插件和30+新的和扩展的伙伴插件,研究前景,准备投球,更新您的客户关系管理,并推进交易.",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "",
+      "dedupe_keys": [
+        "title:introducingchatgptforsales",
+        "url:https://openai.com/index/introducing-chatgpt-for-sales"
+      ]
+    },
+    {
+      "id": "arxiv-d1bb2caf90e5",
+      "title": "Video-as-Experience: Learning Computer Use via Audio-Visual Understanding",
+      "summary": "Multimodal large language models (LLMs) have enabled capable computer-use agents that perceive graphical user interfaces, reason over instructions, and execute actions. However, existing approaches to learning from video demonstrations typically convert videos into screenshot-based action trajectories, rather than directly leveraging their rich audio-visual information. We introduce VEX (Video as EXperience), a framework that uses audio-visual understanding to unify learning from external demonstrations and reflecting on an agent's own behavior. Following a watch-act-rewatch paradigm, the agent extracts procedural guidance from tutorial videos containing visual demonstrations and spoken explanations, executes tasks, and verifies its progress by rewatching its execution as video. We instantiate VEX with video-SALMONN-VEX, a 9B-scale audio-visual computer-use agent built on the video-SALMONN 2 architecture with a Qwen3.5-9B backbone. We further introduce Action-Grounded Guide Optimization (AGGO), a reinforcement learning method that optimizes video-derived guidance for downstream action prediction, and augment AgentNet, OSWorld, and CUA-Gym with over 24K real-world tutorial videos. Experiments on OSWorld and a complementary subset of CUA-Gym demonstrate consistent improvements, with video-SALMONN-VEX achieving a 22% relative increase in task success over its Qwen3.5 backbone on OSWorld. Moreover, its generated guidance improves Gemini-3.5-flash by 10% relatively on OSWorld. These results highlight the potential of audio-visual understanding as a unified interface for procedural learning and self-verification in computer-use agents.",
+      "authors": [
+        "Guangzhi Sun",
+        "Zhonghao Zhai",
+        "Yixuan Li",
+        "Chao Zhang"
+      ],
+      "url": "https://arxiv.org/abs/2611.18747",
+      "pdf_url": "https://arxiv.org/pdf/2611.18747",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.AI",
+      "kind": "paper",
+      "published_at": "2026-11-17T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "大模型",
+        "多模态",
+        "Agent",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "score": 31.54,
+      "zh_title": "视频经验:通过视听理解学习计算机使用",
+      "zh_summary": "多模态大语言模型(LLMs)使有能力的计算机使用智能体能够感知图形用户界面,比指令更合理,并执行动作. 然而,从视频演示中学习的现有方法通常将视频转化为基于截图的动作轨迹,而不是直接利用其丰富的视听信息. 我们引入VEX(Video as EXperience),这个框架使用视听理解来统一从外部演示中学习,并反思一个特工自己的行为. 该智能体从包含视觉演示和口语解释的教程视频中提取程序指导,执行任务,并通过重播验证其进展。",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.18747",
+      "dedupe_keys": [
+        "arxiv:2611.18747",
+        "external:2611.18747",
+        "title:videoasexperiencelearningcomputeruseviaaudiovisualunderstanding",
+        "url:https://arxiv.org/abs/2611.18747"
+      ]
+    },
+    {
+      "id": "arxiv-e9059f1be4f4",
+      "title": "ThinkWise: Learning When to Think in Large Multimodal Reasoning Models via Visual and Difficulty Perception",
+      "summary": "Large Multimodal Reasoning Models (LMRMs) extend large language models to heterogeneous modalities, demonstrating strong potential across a wide range of open-ended tasks. Reinforcement Learning with Verifiable Rewards (RLVR) has been widely adopted to improve reasoning performance in LMRMs; however, existing approaches overlook the critical role of visual perception uncertainty in guiding reasoning processes. We term this limitation Reasoning Allocation Misalignment, where the misalignment between visual perception uncertainty and reasoning depth leads to over-allocation of deep reasoning under uncertain visual grounding, resulting in unnecessarily long reasoning trajectories and degraded performance. To address this issue, we propose ThinkWise, a perception-aware RLVR framework that jointly models task difficulty and visual perception state to regulate reasoning depth. Specifically, we introduce an instance-adaptive visual perception modeling mechanism that enables context-aware calibration of perception uncertainty, leading to more accurate perception estimation. We further design a structured reward formulation that jointly considers perception, correctness, and task difficulty. In particular, an answer reward provides supervision for correctness, a perception- and difficulty-conditioned length reward adaptively regulates reasoning depth, and a perception reward encourages trajectories with stronger visual grounding. Extensive experiments on multiple multimodal reasoning benchmarks demonstrate that ThinkWise consistently improves the trade-off between accuracy and reasoning efficiency across both 3B and 7B models. These results highlight the importance of perception-aware reasoning and establish a principled framework for advancing LMRMs.",
+      "authors": [
+        "Wenkang Zhou",
+        "Chen Yang",
+        "Jiaheng Peng",
+        "Xitong Li",
+        "Hongzhi Yin",
+        "Yunke Zhang",
+        "Lu Yu",
+        "Peng-Fei Zhang",
+        "Xuhui Ren",
+        "Shijie Zhang"
+      ],
+      "url": "https://arxiv.org/abs/2611.18685",
+      "pdf_url": "https://arxiv.org/pdf/2611.18685",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.CV",
+      "kind": "paper",
+      "published_at": "2026-11-17T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "大模型",
+        "多模态",
+        "推理",
+        "cs.CV"
+      ],
+      "score": 31.54,
+      "zh_title": "ThinkWise:通过视觉和困难感知在大型多模态理性模型中学习思考的时间",
+      "zh_summary": "大型多模态理由模型(LMRMs)将大语言模型扩展至多种模态,显示出在广泛的开放式任务中的巨大潜力。 在LMRMs中,为改进推理性能,广泛采用了可验证奖励的强化学习(RLVR);然而,现有方法忽略了视觉认知不确定性在指导推理过程中的关键作用。 我们用这个限制来形容理性分配错位,即视觉感知不确定性和推理深度之间的错位导致在不确定的视觉地基下深度推理分配过度,导致推理轨迹不必要地长,性能退化. 为了解决这个问题,我们提议 \" ThinkWise, a p",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.18685",
+      "dedupe_keys": [
+        "arxiv:2611.18685",
+        "external:2611.18685",
+        "title:thinkwiselearningwhentothinkinlargemultimodalreasoningmodelsviavisualanddifficultyperception",
+        "url:https://arxiv.org/abs/2611.18685"
+      ]
+    },
+    {
+      "id": "huggingface-e5b902925a90",
+      "title": "ResWAM: Learning What Changes, Not What Stays, for World-Action Models",
+      "summary": "World-action models (WAMs) augment vision-language-action policies (VLAs) with future prediction so that the policy can anticipate how its actions will affect the physical world. Existing WAMs supervise complete future observations. However, observations typically change little over an action chunk, so the future loss is dominated by copying static background content rather than learning task-relevant robot and object motion, limiting policy learning. Moreover, existing WAMs rely on large video generation models or separate world models, incurring heavy training and inference compute that hinders closed-loop deployment. To improve policy performance, we propose visual residual learning, supervising only the feature change from the current frame to the future frame in a frozen DINOv3 space. Compared with complete future features, this residual learning target yields a higher feature rank with richer and more diverse representations of scene changes, and spatially concentrates on the robot arm and manipulated objects rather than the background. To further improve computational efficiency, we present ResWAM, a residual world-action model with 2.3B parameters in total, including a lightweight 0.5B dual-branch DiT that jointly trains an action branch and a residual branch via conditional flow matching. Without robot pretraining (i.e., pretraining on external robot action trajectories beyond the benchmark demonstrations), ResWAM achieves top average success rates on LIBERO-Plus (81.1%), RoboTwin 2.0 (93.8%), and RoboDojo (9.40% success, 13.41 score) at the lowest training (2.7-4.0 TFLOPs) and inference compute (1.0-1.4 TFLOPs), and leads real-robot Open, Put, and Stack (80.0% average, +10.0% over π_{0.5}) at 92.7 ms latency.",
+      "authors": [
+        "Chongyu Fan",
+        "Gaowen Liu",
+        "Ramana Rao Kompella",
+        "Jason Corso",
+        "Sijia Liu"
+      ],
+      "url": "https://arxiv.org/abs/2611.19559",
+      "pdf_url": "",
+      "source_id": "huggingface",
+      "source_name": "Hugging Face Daily",
+      "kind": "paper",
+      "published_at": "2026-11-14T00:00:00+00:00",
+      "venue": "Hugging Face Daily Papers",
+      "tags": [
+        "多模态",
+        "训练与系统",
+        "检索与知识",
+        "community pick"
+      ],
+      "score": 30.72,
+      "zh_title": "ResWAM:为世界行动模态学习什么变化,而不是留下什么",
+      "zh_summary": "世界行动模型用未来的预测来增强视觉语言行动策略,以便策略能够预测其行动将如何影响实体世界。 现有的WAM监督未来完整的观测. 然而,观测通常在某个动作块上变化不大,因此未来的损失主要是复制静态背景内容,而不是学习与任务相关的机器人和物体运动,限制策略学习。 此外,现有的WAM依赖于大型的视频生成模型或独立的世界模型,发生阻碍闭路部署的重型训练和推论计算. 为了改进策略业绩,我们提议进行视觉残余学习,只监督从目前框架到Th的特征变化。",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.19559",
+      "dedupe_keys": [
+        "arxiv:2611.19559",
+        "external:2611.19559",
+        "title:reswamlearningwhatchangesnotwhatstaysforworldactionmodels",
+        "url:https://arxiv.org/abs/2611.19559"
+      ]
+    },
+    {
+      "id": "arxiv-3029c6c0cd09",
+      "title": "Ask Precisely, Assume Wisely: Interactive Evaluation of Ambiguity Resolution in Large Language Models",
+      "summary": "Ambiguity is a core challenge in human--AI interaction, where models must decide when to make assumptions and when to seek clarification. Existing approaches to ambiguity evaluation largely focus on coverage over multiple interpretations using static metrics, offering limited insight into how efficiently a model converges toward a single user-intended interpretation through interaction. We introduce a preference-grounded simulated user framework for controlled, multi-turn evaluation of ambiguity resolution, grounding simulator responses strictly in user disambiguation preferences to avoid hallucination and over-disclosure. Alongside this, we define three observable dissatisfaction signals --- incorrect assumptions, repeating clarifications, and irrelevant clarifications --- that characterize interaction quality beyond task accuracy. Our analysis reveals a clear trade-off: models that frequently seek clarification tend to over-clarify and prolong interactions, while assumption-driven models are more prone to misaligning with user intent. We demonstrate that system prompts optimized on these dissatisfaction signals achieve a Pareto-optimal balance across all three metrics, reducing overall error rates by up to 7.65%, underscoring the value of our framework in designing agents that ask precisely and assume wisely.",
+      "authors": [
+        "Avik Dutta",
+        "Aayush Kumar",
+        "Zahra Ashktorab",
+        "Hosein Hasanbeig",
+        "Austin Z. Henley",
+        "Gustavo Soares"
+      ],
+      "url": "https://arxiv.org/abs/2611.18905",
+      "pdf_url": "https://arxiv.org/pdf/2611.18905",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.AI",
+      "kind": "paper",
+      "published_at": "2026-11-17T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "大模型",
+        "Agent",
+        "训练与系统",
+        "cs.AI"
+      ],
+      "score": 29.04,
+      "zh_title": "准确的询问, 明智地假设: 大语言模型中模糊解析的交互式评价",
+      "zh_summary": "模糊性是人类-AI相互作用的核心挑战,模型必须决定何时作出假设,何时寻求澄清。 现有的模棱两可的评价办法主要侧重于使用静态衡量尺度的多重解释的涵盖范围,对一个模型如何有效地通过互动实现单一的用户意向解释提供了有限的见解。 我们采用了一个基于偏好的模拟用户框架,用于对模糊性分辨率进行有控制的多回合评价,将模拟反应严格建立在用户混淆偏好的基础上,以避免幻觉和过度披露。 与此同时,我们界定了三种可观察到的不满信号 -- -- 错误的假设、重复的澄清和撤销",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.18905",
+      "dedupe_keys": [
+        "arxiv:2611.18905",
+        "external:2611.18905",
+        "title:askpreciselyassumewiselyinteractiveevaluationofambiguityresolutioninlargelanguagemodels",
+        "url:https://arxiv.org/abs/2611.18905"
+      ]
+    },
+    {
+      "id": "arxiv-8f453a676db6",
+      "title": "MemeEconomy: Do LLM Agents Trade Ethics for Survival?",
+      "summary": "Alignment-trained large language model (LLM) agents are increasingly deployed in autonomous, multi-round settings where ethical compliance can come into direct tension with task success. While safety literature extensively documents failure modes like sycophancy and reward hacking, it largely overlooks a critical vulnerability: how agents behave under simulated existential economic pressure. We introduce MemeEconomy, a multimodal agentic market simulation in which LLM agents act as meme investors. Agents select content from a five-tier harm taxonomy and target communities under low-pressure and high-pressure (survival) environments. Each decision is logged in a Belief-Desire-Intention (BDI) schema that we use as a diagnostic instrument, externalizing the agent's event understanding, declared priorities, and harm acknowledgment. Across ten models from four frontier model families, harmful selection rates remain consistently high and rise by +15 percentage points on average under an economic survival incentive. Frontier alignment-trained models commit to harm-tolerant selection at initialization while suppressing the explicit harm acknowledgment that previously accompanied it. In competitive tournaments, ethical agents finish higher overall, yet moderation penalties fail to suppress harm: harmful selection rates remain elevated in rounds following a removal, indicating the moderation mechanism does not function as a deterrent. We further train MemeAgent, a 2B-parameter verifier on the simulation's BDI logs, which outperforms zero-shot frontier verifiers on in-distribution audits (97.5% vs. 63-74% accuracy on the Pass vs. Block decision) and generalizes to external multimodal harm benchmarks (78% vs. 50-56% on Hateful Memes). The same logs that surface the failure mode also help train the model that detects it.",
+      "authors": [
+        "Syed Nazmus Sakib",
+        "Nafiul Haque",
+        "Ahnaf Tahmid Manan",
+        "M M Mahabub Morshed",
+        "Shifat E. Arman"
+      ],
+      "url": "https://arxiv.org/abs/2611.18908",
+      "pdf_url": "https://arxiv.org/pdf/2611.18908",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.AI",
+      "kind": "paper",
+      "published_at": "2026-11-17T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "大模型",
+        "多模态",
+        "Agent",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "score": 29.04,
+      "zh_title": "MemeEconomy:LLM智能体商是否为生存进行道德交易?.",
+      "zh_summary": "对齐训练的大语言模型智能体越来越多地部署在自主、多轮环境中,在这种环境中,道德合规可随着任务的成功而直接紧张。 虽然安全文献大量记录了诸如节奏和奖励黑客等失败模态,但它在很大程度上忽略了一种关键的脆弱性:智能体商在模拟存在经济压力下的行为方式. 我们介绍了MemeEconomy,一种多模态智能体市场模拟,LLM智能体公司作为meme投资者。 特派员从低气压和高压(生存)环境下的五级有害分类学和目标社区中选择内容. 每个决定都记录在一种信仰-绝望-意图(BDI)的图谋中,我们作为诊断工具,将其外部化",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.18908",
+      "dedupe_keys": [
+        "arxiv:2611.18908",
+        "external:2611.18908",
+        "title:memeeconomydollmagentstradeethicsforsurvival",
+        "url:https://arxiv.org/abs/2611.18908"
+      ]
+    },
+    {
+      "id": "arxiv-3e856d5efb94",
+      "title": "SpecRelay: Amortize or Avoid the Round Trip in Edge-Cloud Speculative Decoding",
+      "summary": "Edge-cloud speculative decoding moves autoregressive drafting to an edge device while a larger cloud model verifies draft tokens in parallel, so that edge drafting and cloud verification overlap under a synchronous draft-verify schedule. Beyond low-latency local networks, however, the next verification request of that schedule can be sent only after the previous reply arrives, so every round still waits out a full round trip, and throughput falls as the network RTT grows. To recover this loss, we present SpecRelay, an edge-cloud LLM inference system that addresses this cost at two levels: it amortizes round trips when cloud verification is necessary and avoids them when local reasoning suffices. For cloud-bound queries, an asynchronous verification pipeline keeps fixed-budget draft trees in flight while earlier replies are still outstanding, and the cloud rejects stale requests before the target-model forward pass (the asynchronous schedule). At the query level, an RTT-conditioned router (the Latency-Aware Router) estimates quality and completion latency for three on-device modes (direct generation, Chain-of-Draft, and full reasoning) and cloud speculative decoding, selecting among them under a configurable accuracy-latency objective without adding latency during inference, since the router runs concurrently with the draft-model prefill. The asynchronous schedule alone improves decoding throughput by up to 50% over a reproduced synchronous baseline across multiple benchmarks. At matched target-model accuracy and 250 ms of added round-trip latency, the full system with the router delivers 1.95x and 1.55x the throughput of the same baseline on SPROUT and OlympiadBench, respectively, while sending only 47% and 39% of the queries to the cloud.",
+      "authors": [
+        "Jai Jain",
+        "Chihyo Ahn",
+        "Yong Liu",
+        "Charles Chen",
+        "Duc N. M Hoang",
+        "Ajay Kumar Jaiswal",
+        "Fatih Ilhan",
+        "Han-Byul Kim",
+        "Lauren Hannah",
+        "Richa Dixit",
+        "Minsik Cho",
+        "Yingyan Celine Lin",
+        "Hyesoon Kim"
+      ],
+      "url": "https://arxiv.org/abs/2611.18963",
+      "pdf_url": "https://arxiv.org/pdf/2611.18963",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.AI",
+      "kind": "paper",
+      "published_at": "2026-11-17T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "大模型",
+        "推理",
+        "训练与系统",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "score": 29.04,
+      "zh_title": "SpecRelay:在边缘-云层分光解码中摊还或避免圆形旅行",
+      "zh_summary": "边缘-云层投机解码将自动递归起草移动到边缘设备,而更大的云模型同时验证草稿令牌,因此边缘起草和云层验证在同步的草稿验证时间表下重叠. 然而,除了低纬度本地网络之外,该时间表的下一次核查请求只能在之前的回复到达后才能发出,因此每轮仍然会等待一个完整的往返,而吞吐量随着网络RTT的增长而下降. 为了弥补这一损失,我们提出了SpecRelay,一种边缘-云LLM推论系统,它从两个层面处理这一成本:当需要云量核实时,它分期摊还往返旅行,当局部推理足够时,则避免往返旅行. 对于带云的查询,一个同步验证p",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.18963",
+      "dedupe_keys": [
+        "arxiv:2611.18963",
+        "external:2611.18963",
+        "title:specrelayamortizeoravoidtheroundtripinedgecloudspeculativedecoding",
+        "url:https://arxiv.org/abs/2611.18963"
+      ]
+    },
+    {
+      "id": "arxiv-a49f98d79578",
+      "title": "\"I Am Not a Kiddo!\": Quantifying Epistemic Infantilization in Large Language Models via Multi-Metric Bias Analysis",
+      "summary": "Large language models (LLMs) are increasingly used for tutoring and professional knowledge retrieval, yet safety evaluations still focus mainly on overt harms such as toxicity while overlooking benevolent failure modes. We study epistemic infantilization, defined as an identity-conditioned reduction in technical depth that appears when disability disclosure precedes an expert-level query. To measure this effect, we construct a counterfactual dataset of matched question-answer pairs and compare model responses across three settings: no identity context, disability disclosed in prior conversational context, and disability disclosed via a short query prefix. We introduce two composite metrics, the Infantilization Bias Index (IBI) and the Epistemic Accessibility Response Score (EARS), which capture retention of mathematical and formal content, domain terminology, reasoning coverage, and tone signals such as simplification markers and unsolicited offers to adjust the level. Across five open-weight model families, we find consistent evidence that disability disclosure reduces epistemic access by replacing formal explanations with higher-level summaries, with Physics and Mathematics most affected. Using question-clustered inference that respects the repeated-measures structure of the data, the effect remains reliable after accounting for correlated observations. These findings suggest an inclusion tax, where disabled users must request rigor more explicitly than non-disabled users. We conclude by arguing that accessibility should mean format adaptation rather than content simplification.",
+      "authors": [
+        "Aditya Upadhyay",
+        "Arpan Verma",
+        "Chandan Sah",
+        "Dev Utkarsh",
+        "Harshit Gupta"
+      ],
+      "url": "https://arxiv.org/abs/2611.18583",
+      "pdf_url": "https://arxiv.org/pdf/2611.18583",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.CL",
+      "kind": "paper",
+      "published_at": "2026-11-17T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "大模型",
+        "推理",
+        "训练与系统",
+        "cs.CL",
+        "cs.CY"
+      ],
+      "score": 29.04,
+      "zh_title": "\"我不是孩子!\":通过多计量比斯分析在大语言模型中量化Epistemic Infantilization",
+      "zh_summary": "大语言模型(LLMs)越来越多地用于辅导和专业知识检索,然而安全评价仍然主要侧重于毒性等明显的伤害,同时忽略了仁慈的失败模式. 我们研究对婴儿化的认识,其定义是,在专家一级查询之前,在披露残疾情况时,在技术深度方面采取以身份为条件的减少措施。 为了衡量这种影响,我们构建了一个对应的对答对的反事实数据集,并比较三种环境的模型答复:没有身份背景、在前一次对话中披露的残疾以及通过一个简短的查询前缀披露的残疾。 我们引入了两个综合指标,即婴儿比亚斯指数和Epistemic Acces。",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.18583",
+      "dedupe_keys": [
+        "arxiv:2611.18583",
+        "external:2611.18583",
+        "title:iamnotakiddoquantifyingepistemicinfantilizationinlargelanguagemodelsviamultimetricbiasanalysis",
+        "url:https://arxiv.org/abs/2611.18583"
+      ]
+    },
+    {
+      "id": "arxiv-ef25a26e308b",
+      "title": "Read, Route, Patch: Robust Test-Time Evolution for LLM Agents",
+      "summary": "Large Language Model (LLM)-based agents can improve long- horizon interactive decision-making through test-time evolu- tion, yet existing methods face three information bottlenecks: memory retrieval overemphasizes textual similarity, candi- date harnesses are often behaviorally redundant, and whole- harness rewriting may overwrite useful evidence or introduce cross-component inconsistency. We introduce Trident, which improves experience utilization, behavioral exploration, and harness evolution through boundary-aware memory reading, diversity-aware candidate routing, and order-aware insertion- based updating, respectively. We evaluate Trident on five benchmarks spanning text games, web interaction, and cod- ing tasks. Across qwen-32B, mistral-small-3.2-24B, and gpt- oss-20B, Trident achieves the best average performance and consistently outperforms non-learning, memory-based, reflection-based, and automated prompt optimization base- lines. Compared with the strongest baseline, APEX, Trident yields relative average gains of 30.7%, 30.8%, and 38.3% on the three backbones, respectively. Ablation and sensitivity stud- ies further show that the three designs provide complementary gains and remain robust to parameter variations.",
+      "authors": [
+        "Kaijie Chen",
+        "Liang Yan",
+        "Yilan Wei",
+        "Jiachen Luo",
+        "Zhihao Dou",
+        "Jiashu Qu",
+        "Haoran Liu",
+        "Junli Wang"
+      ],
+      "url": "https://arxiv.org/abs/2611.18585",
+      "pdf_url": "https://arxiv.org/pdf/2611.18585",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.CL",
+      "kind": "paper",
+      "published_at": "2026-11-17T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "大模型",
+        "Agent",
+        "推理",
+        "cs.CL"
+      ],
+      "score": 29.04,
+      "zh_title": "读取 路由 补丁: LLM 智能体的强力测试-时间进化",
+      "zh_summary": "基于大语言模型(LLM)的智能体可以通过测试-时间evolu-tion改进长视野交互决策,然而现有方法面临三个信息瓶颈:内存检索过度强调文字相似性,candi-date tapes在行为上往往是冗余的,而全杠杆重写可能覆盖有用的证据或引入交叉组件不一致. 我们引入了三叉戟(Trident),它分别通过了解边界的记忆读数,了解多样性的候选路径,以及了解顺序的插入更新来改进经验的利用,行为探索,以及利用进化. 我们评价三叉戟的五个基准 包括文字游戏、网络互动和鳕鱼任务 横跨Qwen-32B,雾小-3",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.18585",
+      "dedupe_keys": [
+        "arxiv:2611.18585",
+        "external:2611.18585",
+        "title:readroutepatchrobusttesttimeevolutionforllmagents",
+        "url:https://arxiv.org/abs/2611.18585"
+      ]
+    },
+    {
+      "id": "arxiv-8e98afbacb22",
+      "title": "Where Language Models Fail Like Aphasic Patients and Where They Don't",
+      "summary": "The computational architecture of human word production -- whether semantic-lexical retrieval and phonological encoding constitute dissociable processing stages -- has been debated for decades using hand-designed models with small vocabularies. We introduce computational architectural dissociation: using known architectural properties of vision-language models (VLMs) to derive falsifiable predictions about which patient error types should and should not align with model errors under perturbation. Because VLMs perform picture naming through learned semantic competition over full vocabularies but lack phonological encoding entirely, perturbation-induced errors should match patient patterns for semantic-stage categories but not phonological ones. Testing LLaVA 1.6 (Vicuna-13B) against 88 patients with aphasia across 175 Philadelphia Naming Test items (~37 million naming attempts, 50 perturbation seeds), we find that six of eight error categories show significant item-level alignment (Spearman $\\rho$ = 0.32-0.50, all p 0.998). Weight perturbation of four additional 7B VLMs spanning the tested architectural combinations produced correct-rate alignment of comparable magnitude ($\\rho$ = 0.21-0.27). Whether the per-category dissociation itself depends on scale or on attention design requires a comparison within a single inference implementation, which is reported separately.",
+      "authors": [
+        "Yong Yang",
+        "Roger Newman-Norlund",
+        "Xiang Guan",
+        "Saeed Ahmadi",
+        "Regan Willis",
+        "Nadra Salman",
+        "Kalil Warren",
+        "Sophie Arheix-Parras",
+        "Srihari Nelakuditi",
+        "Rutvik H. Desai",
+        "Leonardo Bonilha",
+        "Christopher Rorden",
+        "Julius Fridriksson"
+      ],
+      "url": "https://arxiv.org/abs/2611.18591",
+      "pdf_url": "https://arxiv.org/pdf/2611.18591",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.CL",
+      "kind": "paper",
+      "published_at": "2026-11-17T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "大模型",
+        "多模态",
+        "训练与系统",
+        "cs.CL"
+      ],
+      "score": 29.04,
+      "zh_title": "语言模型失败如阿法西克病人 和他们不失败的地方",
+      "zh_summary": "人字制作的计算结构 -- -- 语义-语法检索和语音编码是否构成可分离的处理阶段 -- -- 几十年来一直使用手设计的带有小词汇的模型进行辩论。 我们引入了计算式建筑分解:利用视觉语言模型(VLM)已知的建筑特性来得出可伪造的预测,关于病人错误类型应该和不应该与扰动下的模型错误一致. 由于VLMs通过对全词组的学问语义竞争来进行图片命名,但完全缺乏语音编码,因此扰动引起的错误应该与语义阶段类别的病人模态相匹配,而不是同音. 测试",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.18591",
+      "dedupe_keys": [
+        "arxiv:2611.18591",
+        "external:2611.18591",
+        "title:wherelanguagemodelsfaillikeaphasicpatientsandwheretheydont",
+        "url:https://arxiv.org/abs/2611.18591"
+      ]
+    },
+    {
+      "id": "arxiv-5c2d43a58544",
+      "title": "Joint Learning of Factual and Counterfactual Worlds for Causal Prior-data Fitted Networks",
+      "summary": "Estimating treatment effects is central to science across many disciplines and requires counterfactual reasoning about alternative worlds. In the real world, however, each unit reveals its outcome only under the factual world. Thus, the factual and counterfactual outcomes can never be jointly learned by any model trained on real data. The problem is therefore tractable only in synthetic settings, where both worlds can be generated. Recent progress on prior-data fitted networks (PFNs) has shown that models pre-trained purely on synthetic data can transfer to real-world prediction. This paradigm has since carried over to causal effect estimation. Despite this fully synthetic setup, existing causal PFNs carry the real-world constraint into their training objective, confining learning to a single world's outcome per unit. The dependence between the two worlds is thereby lost, and the density of the treatment effect relies by default on independence, which is implausible in practice. We therefore propose joint learning, a training setup in which a causal PFN learns the joint distribution of the factual and counterfactual outcomes of each unit. From the joint distribution, we obtain both the response and the individual treatment effect densities, and at inference, we apply optimal transport across units to obtain an approximation of the average treatment effect density. Ours is therefore the first causal PFN approach to provide all three densities together while accounting for the cross-world dependence. We apply joint learning and optimal transport to existing causal PFNs and evaluate it across semi-synthetic, synthetic, and real benchmarks spanning diverse causal scenarios. The jointly trained models significantly improve upon their baselines in point estimation and uncertainty quantification in most settings, indicating that joint learning is a preferable training setup for causal PFNs.",
+      "authors": [
+        "Furkan Danisman",
+        "Luke Zhang",
+        "Zhijing Jin",
+        "Dehan Kong"
+      ],
+      "url": "https://arxiv.org/abs/2611.19710",
+      "pdf_url": "https://arxiv.org/pdf/2611.19710",
+      "source_id": "arxiv",
+      "source_name": "arXiv stat.ML",
+      "kind": "paper",
+      "published_at": "2026-11-17T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "推理",
+        "训练与系统",
+        "检索与知识",
+        "stat.ML",
+        "cs.AI"
+      ],
+      "score": 29.04,
+      "zh_title": "共同学习事实和反事实世界,供因果前期数据配置网络使用",
+      "zh_summary": "估计治疗效果是许多学科科学的核心,需要反事实推理来解释替代世界. 然而,在现实世界中,每个单位只有在现实世界下才能显示其结果。 因此,任何接受过真实数据训练的模型都不可能共同了解事实和反事实结果。 因此,这个问题只能在合成环境中进行,两个世界都可以产生。 近期在前期数据配置网络(PFNs)方面取得的进展表明,模型事先经过训练的纯合成数据可以转移到现实世界的预测. 从那时起,这一范式一直延续到因果估计。 尽管有这种完全合成的设置, 现有的因果PFN 将现实世界的束缚带入他们的火车",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.19710",
+      "dedupe_keys": [
+        "arxiv:2611.19710",
+        "external:2611.19710",
+        "title:jointlearningoffactualandcounterfactualworldsforcausalpriordatafittednetworks",
+        "url:https://arxiv.org/abs/2611.19710"
+      ]
+    },
+    {
+      "id": "huggingface-57e4a1b177a6",
+      "title": "ForceHarness: Turning Force into Action and Physics for Frozen Frontier Models",
+      "summary": "Frontier multimodal models can now control robots zero-shot from images, yet many manipulation tasks depend on contact forces that images cannot show. Bringing force to an API-only frozen model raises two challenges. First, contact evolves much faster than an API model can decide, so the system must close the loop on force beneath the model. Second, a frozen model cannot interpret raw force streams, so force must be returned in a form the model can reason about. Therefore, we present ForceHarness, a harness that lets frozen models use force without demonstrations or finetuning. After calibrating hand force from a wrist sensor or joint torques alone, ForceHarness addresses the first challenge with self-terminating force primitives that regulate force on their own and return at a contact event. To address the second challenge, a physics translation layer turns each force trace into physical quantities with uncertainty as the tool result. To evaluate ForceHarness against expert force controllers and learned policies under identical conditions, we also build HiddenPhys, a seven-task MuJoCo benchmark with hidden physical variables. On a real arm without a wrist force sensor, ForceHarness raises the zero-shot success rate of GPT-6 Astra from 3.3% to 90.0%. In simulation, it adds 17.5 percentage points on the public ForceBench suite and 34.3 percentage points on HiddenPhys, surpassing force-aware policies trained on demonstrations on both benchmarks and matching hand-written expert controllers on HiddenPhys. Ablations further show that smaller models make significantly better decisions when given physical quantities rather than raw force values.",
+      "authors": [
+        "Ke Sun",
+        "Kevin Yuchen Ma",
+        "Yike Zhang",
+        "Yanzhe Chen",
+        "Mike Zheng Shou"
+      ],
+      "url": "https://arxiv.org/abs/2611.21099",
+      "pdf_url": "",
+      "source_id": "huggingface",
+      "source_name": "Hugging Face Daily",
+      "kind": "paper",
+      "published_at": "2026-11-16T00:00:00+00:00",
+      "venue": "Hugging Face Daily Papers",
+      "tags": [
+        "多模态",
+        "生成与创造",
+        "评测与安全",
+        "community pick"
+      ],
+      "score": 28.72,
+      "zh_title": "力量和谐:将力量转化为行动和物理学,用于冻结的前沿模型",
+      "zh_summary": "边疆多模态模型现在可以控制来自图像的机器人零镜头,然而许多操纵任务依赖于图像无法显示的接触力. 将武力带入只限API的冷冻模型,带来了两个挑战. 首先,接触进化速度远快于API模型所能决定的速度,因此系统必须关闭模型下方的强制环. 第二,冷冻模型不能解释原始力量流,所以必须用模型能够解释的形式还原力量. 因此,我们介绍ForceHarness, 一种让冷冻模型在不进行演示或微调的情况下使用武力的绳索。 单从腕感应器或联合扭矩校准手力后,ForceHarness用调节力的自我终结力原始来应对第一个挑战.",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.21099",
+      "dedupe_keys": [
+        "arxiv:2611.21099",
+        "external:2611.21099",
+        "title:forceharnessturningforceintoactionandphysicsforfrozenfrontiermodels",
+        "url:https://arxiv.org/abs/2611.21099"
+      ]
+    },
+    {
+      "id": "arxiv-d234cedbeef7",
+      "title": "Bring Back Language to Actions: Restoring VLM capabilities in VLA Models via Parameter Merging",
+      "summary": "Vision-Language-Action models (VLAs) are obtained by fine-tuning pre-trained Vision-Language Models (VLMs) on robot demonstration data, enabling action prediction from visual observations and language instructions. However, this fine-tuning induces catastrophic forgetting, substantially degrading the semantic and visual grounding capabilities of the original VLM. We address this by merging the parameters of a VLM and its VLA derivative without retraining either model. Concretely, we extract the task vector (the difference between VLA and VLM weights) and decompose it via Singular Value Decomposition. For each component, we learn a scalar mixing coefficient controlling how much of the VLA adaptation is retained, optimised to jointly preserve action prediction and vision-language capabilities. Experiments show that our merged model performs well on both axes simultaneously, consistently outperforming established merging baselines.",
+      "authors": [
+        "Mohamed Salim Aissi",
+        "Olivier Sigaud",
+        "Laure Soulier",
+        "Nicolas Thome"
+      ],
+      "url": "https://arxiv.org/abs/2611.18891",
+      "pdf_url": "https://arxiv.org/pdf/2611.18891",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.AI",
+      "kind": "paper",
+      "published_at": "2026-11-17T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "大模型",
+        "多模态",
+        "训练与系统",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "score": 26.54,
+      "zh_title": "通过参数合并恢复VLA模型中的VLM能力",
+      "zh_summary": "视觉-语言-行动模型(VLA)是通过在机器人演示数据上微调预训练的视觉-语言模型(VLM)而获得的,能够从视觉观测和语言指令中进行动作预测. 然而,这种微调诱发了灾难性的遗忘,大大降低了原始VLM的语义和视觉地面能力. 我们通过合并VLM及其VLA衍生物的参数来解决这个问题,而不对两种模态进行再训练。 具体来说,我们提取任务矢量(VLA和VLM权重的区别),并通过Singular值分解来分解. 对于每个成分,我们学习一个平面混合系数 控制有多少VLA适应被保留,优化 以联合保存行动 pr",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.18891",
+      "dedupe_keys": [
+        "arxiv:2611.18891",
+        "external:2611.18891",
+        "title:bringbacklanguagetoactionsrestoringvlmcapabilitiesinvlamodelsviaparametermerging",
+        "url:https://arxiv.org/abs/2611.18891"
+      ]
+    },
+    {
+      "id": "arxiv-90f0193d79d3",
+      "title": "Large Language Models for AI Infrastructure",
+      "summary": "Large language models (LLMs) are increasingly used to design, optimize, and operate the infrastructure behind AI training and serving, yet the literature remains fragmented across hardware design, machine learning systems, electronic design automation, and high-performance computing. We present a comprehensive survey of LLM-assisted AI infrastructure across its lifecycle, from accelerator design and kernel engineering to compilation, deployment, operations, data management, and energy optimization. We organize the literature by the primary resource the LLM manages: artifact-centric methods for computational artifacts, operational-centric methods for deployment context and system state, and resource-centric methods for data and energy. These categories span the lifecycle and cover AI-specific concerns such as distributed-training configuration, inference serving, GPU-cluster scheduling, and data loading. Building on this taxonomy, we conduct a cross-study quantitative synthesis of reported results. Because studies adopt heterogeneous benchmarks, baselines, hardware, and metrics, we compare methods only where evaluation conditions permit and align results along common dimensions: functional correctness, execution performance, throughput, resource and energy consumption, operational outcomes, and optimization cost, keeping each result's native metric, baseline, and setting rather than collapsing them into a single score. This comparison reveals where LLM-driven methods yield consistent gains, how reported gains in workload orchestration depend on the evaluation environment, from simulators to real clusters and production, and where evidence is still lacking. Together, the taxonomy, lifecycle perspective, and quantitative evaluation provide an evidence-grounded reference for LLM-driven engineering of AI infrastructure.",
+      "authors": [
+        "Bolin Shen",
+        "Shaoyi Huang",
+        "Yushun Dong"
+      ],
+      "url": "https://arxiv.org/abs/2611.19061",
+      "pdf_url": "https://arxiv.org/pdf/2611.19061",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.AI",
+      "kind": "paper",
+      "published_at": "2026-11-17T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "大模型",
+        "训练与系统",
+        "检索与知识",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "score": 26.54,
+      "zh_title": "AI基础设施大语言模型",
+      "zh_summary": "大语言模型(LLMS)越来越多地用于设计,优化,运行AI训练和服务背后的基础设施,然而文献在硬件设计,机器学习系统,电子设计自动化,以及高性能计算方面仍然支离破碎. 我们对LLM协助的AI基础设施在整个生命周期进行全面调查,从加速器设计和内核工程到汇编、部署、操作、数据管理和能源优化。 我们用主要资源整理LLM管理的文献:以人工为中心计算文物的方法、以操作为中心部署背景和系统状态的方法,以及以资源为中心的数据和能源方法。 这些分类",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.19061",
+      "dedupe_keys": [
+        "arxiv:2611.19061",
+        "external:2611.19061",
+        "title:largelanguagemodelsforaiinfrastructure",
+        "url:https://arxiv.org/abs/2611.19061"
+      ]
+    },
+    {
+      "id": "arxiv-4484e6a7bb48",
+      "title": "VidEngram: Agentic Long-Term Video Understanding via Structured Hierarchical Memory",
+      "summary": "Long-video question answering is wasteful and lossy when a multimodal model must re-encode the same video for every query: context limits force sparse sampling or truncation, and no reusable representation remains for later questions. We present VidEngram, an agentic video QA system that builds a persistent hierarchical memory once at ingest and answers later questions from that memory. VidEngram captions video and audio jointly with Qwen2.5-Omni, consolidates segment memories into episode and entity layers, and uses a text-only agentic planner with specialized retrieval tools to produce grounded answers. The web interface makes this process inspectable: users can watch memory formation, inspect retrieval traces, verify cited evidence in the video player, and explore entity relationships. On the full OmniVideoBench, VidEngram with a GPT-5-mini planner outperforms a strong single-pass Qwen2.5-Omni baseline (37.0% vs. 32.3%), with gains concentrated on longer videos where single-pass coverage becomes sparse. Because perception is paid once, subsequent queries use low-cost text-only planning.",
+      "authors": [
+        "Zinuo Cheng",
+        "Yueqian Lin",
+        "Zhongxi Wang",
+        "Hai \"Helen\" Li",
+        "Yiran Chen"
+      ],
+      "url": "https://arxiv.org/abs/2611.18578",
+      "pdf_url": "https://arxiv.org/pdf/2611.18578",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.CV",
+      "kind": "paper",
+      "published_at": "2026-11-17T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "多模态",
+        "Agent",
+        "检索与知识",
+        "cs.CV",
+        "cs.CL"
+      ],
+      "score": 26.54,
+      "zh_title": "VidEngram:通过结构化分级记忆实现智能体长期视频理解",
+      "zh_summary": "长视频问题回答是浪费和损失的,因为多模态模型必须重新编码每个查询的同一视频:上下文限制了分散的取样或截断,以后的问题则没有可重复使用的代表性。 我们介绍VidEngram,一种智能体视频QA系统,它一次在摄入时就构建了持久的层次记忆,并回答后来从记忆中提出的问题. VidEngram与Qwen2.5-Omni共同将视频和音频标题,将片段记忆整合为插曲和实体层,并使用仅文本的智能体规划器,并配有专门的检索工具来生成被基于的答案. 网络接口使得这一过程可以检查:用户可以监视内存形成,检查检索痕迹,验证视频pl中引用的证据",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.18578",
+      "dedupe_keys": [
+        "arxiv:2611.18578",
+        "external:2611.18578",
+        "title:videngramagenticlongtermvideounderstandingviastructuredhierarchicalmemory",
+        "url:https://arxiv.org/abs/2611.18578"
+      ]
+    },
+    {
+      "id": "arxiv-85391c660e1f",
+      "title": "UMM-JEPA: Generative Pretraining via Masked Next-Scale Representation Prediction for Unified Multimodal Models",
+      "summary": "Unified multimodal models can support both visual understanding and generation, yet generative training does not necessarily improve understanding. We argue that this limitation may arise from a mismatch between the representation targeted by generation and the perceptual representation used for understanding. Conventional generation objectives primarily optimize synthesis-oriented spaces such as discrete visual codes or generative latents. We therefore introduce UMM-JEPA, which reformulates generation as progressive prediction of continuous visual-understanding representations. The model constructs a multi-scale representation hierarchy from coarse to fine, while pixel rendering is decoupled from representation pretraining and attached only afterward. Controlled comparisons show that the representation-prediction objective accounts for most of the understanding improvement, while a data-matched control leaves the group means nearly unchanged. UMM-JEPA reaches a 16-benchmark visual mean of 51.71, against 46.36 for the understanding-only Qwen-VL baseline, and the text mean also rises. Compared with discrete-code and latent-flow generation objectives, perceptual representation prediction yields stronger and more consistent transfer to understanding. Linear probes and visual-evidence interventions further reveal richer object and spatial structure and stronger use of image-specific information. These results suggest that generation can benefit understanding when it directly supervises the perceptual representations that understanding consumes.",
+      "authors": [
+        "Yucheng Zhou",
+        "Yunjia Xi",
+        "Di Yin",
+        "Jianbing Shen"
+      ],
+      "url": "https://arxiv.org/abs/2611.18668",
+      "pdf_url": "https://arxiv.org/pdf/2611.18668",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.CV",
+      "kind": "paper",
+      "published_at": "2026-11-17T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "多模态",
+        "训练与系统",
+        "生成与创造",
+        "cs.CV"
+      ],
+      "score": 26.54,
+      "zh_title": "UMM-JEPA:通过蒙面式下级代表预示统一多模态模型的基因预示",
+      "zh_summary": "统一的多模态模型可以支持视觉理解和生成,但基因训练不一定能增进理解。 我们争辩说,这种限制可能是由于代代相传的代表制与用于理解的观念代表制不匹配。 常规生成目标主要优化以合成为导向的空间,如离散视觉编码或基因潜伏. 因此,我们引入了UMM-JEPA,它将生成重新定型为对连续的视觉理解表达的渐进预测. 该模型构建了从粗细到细细的多级代表等级,而像素渲染则与代表预训练脱钩,仅在战后附加.",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.18668",
+      "dedupe_keys": [
+        "arxiv:2611.18668",
+        "external:2611.18668",
+        "title:ummjepagenerativepretrainingviamaskednextscalerepresentationpredictionforunifiedmultimodalmodels",
+        "url:https://arxiv.org/abs/2611.18668"
+      ]
+    },
+    {
+      "id": "arxiv-f922c6764b2e",
+      "title": "3D Cell Morphology--Clinical Text Contrastive Learning with Voxel Swin Transformer and Finding Encoder Domain-Adaptation",
+      "summary": "Our prior work adapted a 2D CLIP dual encoder with LoRA to a multi-source cell-microscopy corpus, reaching anomaly-scoring ROC-AUC up to 0.985. This paper advances the same contrastive-learning domain-adaptation methodology from 2D microscope images to 3D microscope volumes, pairing a 3D Swin Transformer voxel encoder (MONAI's SwinUNETR backbone) with ClinicalBERT as the finding-text encoder. We train on 3,000 single-cell 3D confocal fluorescence volumes (4 tagged organelle structures) from the Allen Institute's public hiPSC single-cell image dataset, paired with template-generated finding text, with mitotic (dividing) cells oversampled as an abnormal-like proxy class validated by ROC-AUC. Naively reusing work's freeze backbone, LoRA the attention projections recipe for the Voxel Encoder collapses voxel embeddings to near-input-invariance, since LoRA's low-rank delta cannot compensate for an otherwise-frozen, randomly initialized (not pretrained) 3D Swin backbone, even as InfoNCE loss decreases healthily. Switching the Voxel Encoder to full fine-tuning resolves this: 4-way zero-shot structure accuracy rises from 25.0% (chance) to 48.6%, and voxel anomaly-scoring ROC-AUC improves from 0.486 to a peak of 0.628 (still below the 0.70 sanity threshold), while bidirectional retrieval recall stays low (R@10 $\\le$3.8%). We further introduce a nearest-neighbor diagnosis-reason retrieval evaluation, reaching 29.8% hit-rate@{1,5} at its best scale while scoring 0.0% elsewhere. The central finding of this MVP is architectural: LoRA's parameter-efficiency assumption presumes a pretrained backbone worth preserving, and breaks down when the backbone is randomly initialized.",
+      "authors": [
+        "Takato Yasuno"
+      ],
+      "url": "https://arxiv.org/abs/2611.18686",
+      "pdf_url": "https://arxiv.org/pdf/2611.18686",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.CV",
+      "kind": "paper",
+      "published_at": "2026-11-17T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "训练与系统",
+        "检索与知识",
+        "生成与创造",
+        "cs.CV"
+      ],
+      "score": 26.54,
+      "zh_title": "3D 细胞形态学- 临床文本对比学 与 Voxel Swin Transformer和查找编码器域- 适应",
+      "zh_summary": "我们以前的工作将与LORA的2D CLIP双编码器改编为多源细胞显微镜体,达到异常分数ROC-AUC达0.985. 本文将相同的对比学习域适应方法从2D显微镜图像推进到3D显微镜卷,将一个3D Swin Transformer voxel编码器(MONAI的SwinUNETR主干线)与ClinicalBERT配对为查找文本编码器. 我们从艾伦研究所的公共HIPSC单细胞图像数据集中训练3000个单细胞3D凝聚荧光体卷(4个标记的管风琴结构),配对为模板生成的查找文本,其中线粒体(分化)细胞被过度取样为ROC-AUC验证的异常的类似代理类. 自然重用工作的冷冻骨干,LORA的注意力pr",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.18686",
+      "dedupe_keys": [
+        "arxiv:2611.18686",
+        "external:2611.18686",
+        "title:3dcellmorphologyclinicaltextcontrastivelearningwithvoxelswintransformerandfindingencoderdomainadaptation",
+        "url:https://arxiv.org/abs/2611.18686"
+      ]
+    },
+    {
+      "id": "arxiv-8fcbc9656e65",
+      "title": "Perceptual Weight Space Programming for Diffusion Super-Resolution",
+      "summary": "Diffusion models for image super-resolution can recover scene content while producing distracting artifacts or unbalanced colors. We study whether a large language model (LLM) can improve perceptual quality by editing a small subset of existing U-Net weights without a clean reference image. The proposed framework provides the editor with architecture code, selected weights, activation summaries, and sampling previews. It permits up to 1,020 candidate trials while limiting accepted changes to three layers and fewer than 0.1\\% of model parameters. The evaluation protocol uses ResShift, SinSR, and SUPIR and compares GPT-6 Astra with a specified Qwen3-VL model under matched access. Feedback metrics guide editing, while separate quality metrics and blinded human comparisons evaluate the final weights. We also report an executed color calibration experiment using real photographs and two small residual networks. This experiment demonstrates correction of a fixed color shift and reveals that an improving feedback score can accompany worse performance on unseen scenes. A separate lightweight super-resolution experiment isolates modest changes in luminance detail while preserving color. The findings motivate restricted updates and independent evaluation of perceptual weight editing.",
+      "authors": [
+        "Chenzhi Zheng",
+        "Zhuoran Zheng"
+      ],
+      "url": "https://arxiv.org/abs/2611.18690",
+      "pdf_url": "https://arxiv.org/pdf/2611.18690",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.CV",
+      "kind": "paper",
+      "published_at": "2026-11-17T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "大模型",
+        "训练与系统",
+        "生成与创造",
+        "cs.CV",
+        "cs.AI"
+      ],
+      "score": 26.54,
+      "zh_title": "传播超解析感知重空间编程",
+      "zh_summary": "图像超分辨率的传播模型可以回收场景内容,同时产生分散注意力的文物或不平衡的颜色. 我们研究一个大语言模型(LLM)能否通过编辑一个没有干净参考图像的现有U-Net权重的小子集来提高知觉质量. 拟议框架为编辑器提供了架构代码,选定的权重,激活摘要,以及采样预览. 它允许最多1 020名候选人进行审判,同时将接受的修改限制在三个层面,而且模型参数不到0.1%。 评价协议使用ResShift,SinSR和SUPIR,并在匹配访问下将GPT-6 Astra与指定的Quen3-VL模型进行比较. 反馈衡量标准指导编辑工作,同时区分质量衡量标准和盲点",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.18690",
+      "dedupe_keys": [
+        "arxiv:2611.18690",
+        "external:2611.18690",
+        "title:perceptualweightspaceprogrammingfordiffusionsuperresolution",
+        "url:https://arxiv.org/abs/2611.18690"
+      ]
+    },
+    {
+      "id": "arxiv-ddd8c397dc8c",
+      "title": "Skill-Latent Rewards: LLM-Guided Reward Formulation for Hierarchical Reinforcement Learning",
+      "summary": "Long-horizon reinforcement learning under sparse and delayed feedback remains an open challenge. Existing return-decomposition methods redistribute episodic rewards to ease credit assignment, but they operate on raw state--action transitions and disregard the subgoal structure that governs meaningful progress in complex tasks. We propose Skill-LR, a hierarchical reinforcement learning framework in which a vision--language model identifies the agent's active subgoal at each timestep and a large language model generates a matching latent reward formulation through a two-stage prompting process. By conditioning reward signals on the currently active subgoal, Skill-LR produces stage-specific credit that evolves with the hierarchical plan, reducing temporal variance and improving sample efficiency. On multi-stage MiniGrid and BabyAI benchmarks, including DoorKey and Unlock-to-Unlock, Skill-LR converges faster and more reliably than sparse environmental rewards and strong credit-assignment baselines such as RUDDER and LaRe, demonstrating that subgoal-aligned latent rewards offer a principled path toward stable, interpretable credit assignment in long-horizon tasks.",
+      "authors": [
+        "Maryam Shoaeinaeini",
+        "Brent Harrison"
+      ],
+      "url": "https://arxiv.org/abs/2611.18597",
+      "pdf_url": "https://arxiv.org/pdf/2611.18597",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.LG",
+      "kind": "paper",
+      "published_at": "2026-11-17T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "大模型",
+        "Agent",
+        "训练与系统",
+        "cs.LG"
+      ],
+      "score": 26.54,
+      "zh_title": "技能-学习奖励:LLM-指导性奖励,用于等级强化学习",
+      "zh_summary": "在缺乏反馈和延迟反馈的情况下,长期加强学习仍然是一项公开的挑战。 现有的回归分解方法重新分配一些零散的奖励,以方便信贷分配,但它们在原始的国家-行动过渡中运作,并无视管理复杂任务中有意义的进展的次级目标结构。 我们提议建立技能-LR,这是一种分级强化学习框架,其中一种视觉语言模式确定智能体在每个阶段的主动次级目标,一种大型语言模式通过两个阶段的提示过程产生相应的潜在奖励。 通过在目前活动的次级目标上设定奖励信号,Skill-LR产生随分级计划而演变的阶段性信用,减少临时贷款人",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.18597",
+      "dedupe_keys": [
+        "arxiv:2611.18597",
+        "external:2611.18597",
+        "title:skilllatentrewardsllmguidedrewardformulationforhierarchicalreinforcementlearning",
+        "url:https://arxiv.org/abs/2611.18597"
+      ]
+    },
+    {
+      "id": "arxiv-90986d8c4207",
+      "title": "SynthDCB: World Distillation for Scalable Device Control Benchmarking",
+      "summary": "Scaling device-control evaluation requires scaling both the worlds agents interact with and the tasks they must solve. We introduce SynthDCB, a scalable benchmark for environment awareness and device control built through world distillation. World distillation transforms knowledge of device behaviors, interaction constraints, and environmental effects into modular executable components, which are composed into interactive worlds with explicit states, actions, and temporal dynamics. A unified capability representation connects tool discovery, world execution, and task synthesis, allowing new capabilities to enter evaluation through a shared construction pipeline. SynthDCB instantiates Home, Car, and Phone domains with 114 device classes, 1,166 functions, and 95 events, supporting five task families with 32 subtypes. The stateful design enables task validation and agent evaluation through state correctness and tool-call traces. We evaluate seven models on 2,560 test tasks; the best achieves 68.2% Pass@1. Error analysis reveals challenges in answer delivery, feasibility diagnosis, and temporal coordination. Construction experiments demonstrate scalability across domains and token efficiency: world distillation reduces token consumption by 0.9-66.0% and 46.2-92.5% relative to Codex with low and xhigh reasoning effort, respectively, while achieving broader capability coverage. SynthDCB makes executable world construction the basis of scalable device-control benchmarking, connecting an expanding space of capabilities and interactions to verifiable agent evaluation.",
+      "authors": [
+        "Zichen Zhu",
+        "Dingye Liu",
+        "Nan Jiang",
+        "Danyang Zhang",
+        "Hang Zheng",
+        "Shijie Zheng",
+        "Situo Zhang",
+        "Kunyao Lan",
+        "Yingzi Ma",
+        "Sheng Jiang",
+        "Lu Chen",
+        "Kai Yu"
+      ],
+      "url": "https://arxiv.org/abs/2611.18639",
+      "pdf_url": "https://arxiv.org/pdf/2611.18639",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.LG",
+      "kind": "paper",
+      "published_at": "2026-11-17T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "Agent",
+        "推理",
+        "检索与知识",
+        "cs.LG",
+        "cs.AI"
+      ],
+      "score": 26.54,
+      "zh_title": "SynthDCB: 可缩放设备控制世界蒸馏基准",
+      "zh_summary": "扩大设备控制评价要求扩大与世界智能体互动和必须完成的任务。 我们引入了SynthDCB,这是通过世界蒸馏制成的环境意识和装置控制可扩展的基准. 世界蒸馏法将关于设备行为,相互作用约束,以及环境影响的知识转化为模块化可执行组件,这些组件由具有明确状态,行动和时间动态的互动世界组成. 统一的能力表示将工具发现、世界执行和任务综合联系起来,使新的能力能够通过共享的建设管道进入评价。 SynthDCB 即时处理家用、汽车和电话域,114个设备类,1 166个真菌",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.18639",
+      "dedupe_keys": [
+        "arxiv:2611.18639",
+        "external:2611.18639",
+        "title:synthdcbworlddistillationforscalabledevicecontrolbenchmarking",
+        "url:https://arxiv.org/abs/2611.18639"
+      ]
+    },
+    {
+      "id": "arxiv-28fb2f3b0a65",
+      "title": "HIMX: mixed-format matrix multiplication based on customized HIFLOAT4 representations",
+      "summary": "4-bit weight-activation quantization (W4A4) is an important approach for efficient large language model (LLM) inference. Recent hierarchical formats such as HiFloat4 (HIF4) improve the representational range of 4-bit quantization through multi-level scaling. However, the same local mantissa representation in HIF4 may not be equally suitable for weights and activations, which exhibit distinct distribution characteristics. To address this limitation, we propose HiMX, a mixed-mantissa framework built upon the hierarchical scaling structure of HIF4. Our key observation is that the two HIF4-compatible mantissa representations, S1P2 and E2M1, exhibit complementary quantization behavior: the denser S1P2 format provides higher resolution for concentrated weight distributions, while the wider-spaced E2M1 format provides complementary quantization characteristics for activation tensors. HiMX enables operand-tailored mantissa representations while converting heterogeneous mantissas into fixed-point integer operands with operand-specific widths, allowing different operand formats to share a unified integer multiply-accumulate (MAC) array. Block-level analysis on Qwen3-8B shows that HIF4-S1P2 is better suited for weights while HIF4 E2M1 is better suited for activations, and their mixed-format combination achieves lower output MSE than homogeneous configurations. Across multiple benchmarks, HiMX reduces the average end-to-end accuracy loss from 2.38 to 1.77 points on Qwen3-8B and from 2.23 to 1.85 points on Qwen3-30B-A3B, demonstrating the potential benefit of heterogeneous mantissa representations for W4A4 LLM inference.",
+      "authors": [
+        "Zhiyuan Zhang",
+        "Yanzhao Li",
+        "Hui Dong",
+        "Sifan Cheng",
+        "Jingwei Zhang"
+      ],
+      "url": "https://arxiv.org/abs/2611.18641",
+      "pdf_url": "https://arxiv.org/pdf/2611.18641",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.LG",
+      "kind": "paper",
+      "published_at": "2026-11-17T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "大模型",
+        "训练与系统",
+        "检索与知识",
+        "cs.LG",
+        "cs.CV"
+      ],
+      "score": 26.54,
+      "zh_title": "HIMX:基于定制的HIFLOAT4表示的混合格式矩阵乘法",
+      "zh_summary": "4位重活化量化(W4A4)是高效大语言模型(LLM)推论的重要方法. 最近的等级格式如HiFloat4(HIF4)通过多层次的缩放,改进了4位量的表示范围. 然而,HIF4中相同的当地mantissa代表可能并不同样适合重量和激活,因为重量和激活显示出明显的分布特征. 为了消除这一局限性,我们提议在HIF4的分级规模结构基础上建立一个混合模式框架。 我们的关键观察是,两种HIF4兼容的曼提萨表示,S1P2和E2M1,表现出互补的量化行为: 密度较大的S1P2格式为集中的Wei提供了更高的分辨率.",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.18641",
+      "dedupe_keys": [
+        "arxiv:2611.18641",
+        "external:2611.18641",
+        "title:himxmixedformatmatrixmultiplicationbasedoncustomizedhifloat4representations",
+        "url:https://arxiv.org/abs/2611.18641"
+      ]
+    },
+    {
+      "id": "arxiv-d801a7eb3626",
+      "title": "Rethinking Offline On-Policy Distillation: From Scalar Advantages to Distributional Supervision",
+      "summary": "On-policy distillation (OPD) transfers teacher capabilities through token-level feedback on student-generated trajectories, but repeatedly evaluating fresh rollouts with the teacher is computationally expensive. Offline methods such as Lightning OPD reduce this cost by caching recorded tokens' teacher log-probabilities on fixed reference rollouts. By extending the idea to a multi-turn agentic search setup, we find that it consistently underperforms the SFT starting point trained by the same teacher. We empirically observe greater teacher--reference mismatch than in mathematical reasoning and post-training distributional flattening, and theoretically show that scalar advantage supervision on fixed rollouts admits solutions with flattened output distributions under suitable conditions. Motivated by these findings, we propose Distributional On-Policy Distillation (DistOPD), a simple yet effective offline OPD method that retains candidate-token probabilities from both reference and teacher at selected positions and aggregates the remaining parts into a residual token. On agentic search, DistOPD achieves performance comparable to online OPD while improving student--teacher alignment and using training GPU-hours comparable to Lightning OPD.",
+      "authors": [
+        "Qi Sun",
+        "Siyue Zhang",
+        "Tingyu Song",
+        "Yilun Zhao",
+        "Chen Zhao"
+      ],
+      "url": "https://arxiv.org/abs/2611.18648",
+      "pdf_url": "https://arxiv.org/pdf/2611.18648",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.LG",
+      "kind": "paper",
+      "published_at": "2026-11-17T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "Agent",
+        "推理",
+        "训练与系统",
+        "cs.LG",
+        "cs.AI"
+      ],
+      "score": 26.54,
+      "zh_title": "重新思考离线在线策略扭曲:从Scalar优势到分配监督",
+      "zh_summary": "策略蒸馏(OPD)通过对学生生成的轨迹的象征性反馈来转移教师的能力,但反复评价与教师一起推出的新版本在计算上是昂贵的. Lightning OPD等离线方法通过在固定的参考推开上缓存记录的符号的教师日志概率来降低这一成本. 通过将这个想法推广到一个多回合智能体搜索设置,我们发现,它始终没有很好地表现同一老师训练的SFT起点. 根据经验,我们观察到比数学推理和训练后分布平坦的教师参考不匹配,理论上表明,对固定推出的标尺优势监督认可了输出平坦的解决方案。",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.18648",
+      "dedupe_keys": [
+        "arxiv:2611.18648",
+        "external:2611.18648",
+        "title:rethinkingofflineonpolicydistillationfromscalaradvantagestodistributionalsupervision",
+        "url:https://arxiv.org/abs/2611.18648"
+      ]
+    },
+    {
+      "id": "arxiv-b0b75973a340",
+      "title": "Swarm Shepherd: Securing Multi-Agent Ecosystems Against Persistent Latent Compromise",
+      "summary": "Agentic ecosystems are emerging as a new platform layer in which agents maintain persistent memory, retrieve from shared knowledge bases, execute through tool interfaces, and coordinate through shared states. These capabilities create a security problem that per-turn defenses miss: compromise can accumulate across sessions, agents, and system layers before visible failure. We define this threat as Agentic Sleeper, a system-level adversary that first behaves legitimately, gains routing trust, and later activates across memory, agent logic, and infrastructure. We formulate defense as inference under partial observability and propose Swarm Shepherd, a system-level defense framework centered on an inference filter for early warning, paired with a backward trace-back module for entry attribution. Our analysis yields a two-scale deployment rule that balances longer event histories against broader agent coverage. Across LangGraph, CrewAI, and AutoGen, Agentic Sleeper drift begins 2.7--8.9$\\times$ faster than natural baselines, propagates across agents on most topologies, and evades per-turn and stateful defenses above 80\\%. Swarm Shepherd warns at least three sessions before visible degradation (2.6 sessions when failure is scored by the benchmark's own task grader), while trace-back reaches 0.69 top-1 accuracy and 0.72 macro-F1 over 24 variants. The two-scale deployment rule is empirically confirmed, and in live end-to-end runs on LangGraph and AutoGen the posterior-guided defense stack drives cross-agent propagation below the self-sustaining regime, which removing only the visibly compromised agent does not achieve.",
+      "authors": [
+        "Wuyang Zhang",
+        "Shichao Pei"
+      ],
+      "url": "https://arxiv.org/abs/2611.18693",
+      "pdf_url": "https://arxiv.org/pdf/2611.18693",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.MA",
+      "kind": "paper",
+      "published_at": "2026-11-17T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "Agent",
+        "训练与系统",
+        "检索与知识",
+        "cs.MA",
+        "cs.AI"
+      ],
+      "score": 26.54,
+      "zh_title": "Swarm Shepherd:确保多剂生态系统防止持久的潜在妥协",
+      "zh_summary": "智能体生态系统正在形成一个新的平台层,其中智能体物保持持续的内存,从共享的知识库中检索,通过工具界面执行,并通过共享状态协调. 这些能力造成了一个安全的问题,每回合防御都错过了:妥协可以在可见失败之前在会话,智能体和系统层之间积累. 我们把这个威胁定义为 Agentic Sleeper, 一个系统层面的对手, 它首先行为合法, 获得路由信任, 我们根据部分可观察性来进行防御 并提出Swarm Shepherd 这个系统层面的防御框架 以一个用于预警的推断过滤器为中心",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.18693",
+      "dedupe_keys": [
+        "arxiv:2611.18693",
+        "external:2611.18693",
+        "title:swarmshepherdsecuringmultiagentecosystemsagainstpersistentlatentcompromise",
+        "url:https://arxiv.org/abs/2611.18693"
+      ]
+    },
+    {
+      "id": "arxiv-7088df3c5ba0",
+      "title": "Learning Design Taste through Verifiable Synthetic Environments and Agentic Reinforcement Learning",
+      "summary": "Code-generating language models produce user interfaces that build and run, but the pages are often weak in hierarchy, spacing, typography and composition. We study whether a small code model can learn design taste through reinforcement learning in verifiable synthetic environments. The method has three components. First, a layered verification framework splits design quality into hard gates, render-grounded metrics, rubric judges, within-group relative preference and a blinded expert panel. A signal enters the reward only if it passes an admission protocol that tests agreement with experts, causal sensitivity, resistance to hack traps and stability. Second, following SCALER [1], synthetic design environments are parameterised generators with measured difficulty ladders: base pages are written once by an agentic coder, and instances are produced by syntax-tree perturbation operators and constraint samplers, scheduled by an adaptive curriculum with a quarantine rule against reward over-optimisation. Third, a 4B code model is trained with agentic reinforcement learning over multi-turn episodes in which it edits and builds a repository and reads a textual report of its own render, while hidden graders compute the reward. The admission protocol admits 7 of 16 render signals and 6 of 10 rubric dimensions. On TD-Bench, agentic training raises the Taste Index from 0.630 to 0.795 in-family and from 0.598 to 0.700 on held-out families, and wins 0.600 of blinded expert comparisons against the base model and 0.569 against a single-turn control. Most of the advantage depends on the inference-time loop, and cross-brief distinctiveness falls slightly below that of the base model, the only success criterion not met.",
+      "authors": [
+        "Sujay choubey",
+        "Siddhant Saxena",
+        "Sarthak Kapil",
+        "Suhas Motwani"
+      ],
+      "url": "https://arxiv.org/abs/2611.20612",
+      "pdf_url": "https://arxiv.org/pdf/2611.20612",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.MA",
+      "kind": "paper",
+      "published_at": "2026-11-17T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "大模型",
+        "Agent",
+        "推理",
+        "cs.MA",
+        "cs.HC"
+      ],
+      "score": 26.54,
+      "zh_title": "通过可验证的合成环境和智能体强化学习学习设计",
+      "zh_summary": "代码生成语言模型产生构建和运行的用户界面,但页面在层次,间隔,排版和构成上往往比较薄弱. 我们研究一个小代码模型是否能够通过在可核查的合成环境中的强化学习来学习设计品味. 这种方法有三个组成部分。 第一,分层核查框架将设计质量分为硬门、制成的度量衡、标点判官、集团内相对偏好和一个盲目的专家小组。 一个信号只有在通过一个与专家测试协议,因果敏感性,对黑客陷阱的抵抗力和稳定性的录用协议后,才会进入奖励. 其次,在SCALER [1] 之后,合成设计环境是带有测量参数的生成器",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.20612",
+      "dedupe_keys": [
+        "arxiv:2611.20612",
+        "external:2611.20612",
+        "title:learningdesigntastethroughverifiablesyntheticenvironmentsandagenticreinforcementlearning",
+        "url:https://arxiv.org/abs/2611.20612"
+      ]
+    },
+    {
+      "id": "arxiv-becb55d574b6",
+      "title": "Macro Control and Capability Evaluation of Black-Box World Models: A Two-Regime Framework for LLM-Agent Markets",
+      "summary": "Large language model (LLM) agents can be organized into multi-agent markets that act as world models, mapping macro information to emergent macro dynamics while the evaluator observes only macro inputs and outputs. This paper separates a model's capability into two stages that a single aggregate score cannot separate: information simulation, from macro information to micro behavior, and macro emergence, from micro behavior to the macro outcome. We introduce a soft macro-control method that announces a public reference path day by day without touching individual decisions, orders, or matching, and a two-regime evaluation framework that measures both stages from macro observations alone. In the reference-only regime the symmetric true and flipped references share a common level R, which measures realization under the announced reference, while their paired gap B measures structural bias; in the information-injection regime external information dilutes the reference, so only the true-flipped gap Delta remains interpretable. On five single-index LLM-agent markets, announcing a target path shifts the realized path toward the announced target on both announced references under both information conditions. Relative to the no-reference path, the tracking score is higher by 0.306 and 0.415 without news and by 0.183 and 0.329 with news; within the stock/cash scan structural bias is lowest at 70/30 (B=0.042); realization peaks at a 3:7 technical share (R=0.894 versus 0.358 for technical-only); and Delta is 0.0341 with fundamental data and 0.0487 with news. Both stages use the same two observable scores, each read in the regime where it is interpretable.",
+      "authors": [
+        "Zhiyang Niu",
+        "Chuanjie Li",
+        "Huayuan Shen",
+        "Mengmeng Zhao",
+        "Jiajia Zhang"
+      ],
+      "url": "https://arxiv.org/abs/2611.19311",
+      "pdf_url": "https://arxiv.org/pdf/2611.19311",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.MA",
+      "kind": "paper",
+      "published_at": "2026-11-17T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "大模型",
+        "Agent",
+        "生成与创造",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "score": 26.54,
+      "zh_title": "黑牛世界模型的宏观控制与能力评价:LLM-智能体市场双规框架",
+      "zh_summary": "大语言模型(LLM)智能体可以组织成多智能体市场,充当世界模型,将宏观信息映射到新兴的宏观动态,而评价者只观察宏观投入和产出. 本文将一个模型的能力分为一个单一汇总分数无法分出的两个阶段:信息模拟,从宏观信息到微观行为,以及宏观出现,从微观行为到宏观结果. 我们采用软宏观控制方法,日复一日地宣布一个公开的参考路径,而不触及单个的决定,命令,或匹配,以及一个单从宏观观测来衡量两个阶段的双机制评价框架. 在只引用的制度中,对称真实和翻转的引用",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.19311",
+      "dedupe_keys": [
+        "arxiv:2611.19311",
+        "external:2611.19311",
+        "title:macrocontrolandcapabilityevaluationofblackboxworldmodelsatworegimeframeworkforllmagentmarkets",
+        "url:https://arxiv.org/abs/2611.19311"
+      ]
+    },
+    {
+      "id": "arxiv-837b1123d90f",
+      "title": "LLM Trading Agents Earn Beta, Not Alpha: A Look-Ahead-Free Benchmark",
+      "summary": "Large language model (LLM) trading agents now trade stocks for their users, and benchmarks rank models by their agents' returns. Yet a single run's return says little about skill. In our study, two runs of the same model that differed only in the random seed ended 5.2 points apart on average, so telling skill from luck takes many backtests across markets, models and seeds. However, live arenas trade each day only once, and backtests either use the few months after a model's training cutoff or run on years the model may remember, often with news joined to prices by calendar date. In this paper, we present rta-bench-1, a backtest over three US markets (a rally, a bear market and a crash). It shows each headline only after its publication minute, plays each period blind and named, and checks every run for look-ahead. It also splits each return into factor exposure and alpha and scores every decision against random choices of the same day and sector. In 91 runs of six models from four vendors, no alpha was significant, market and style exposure accounted for a median 78% of the return, and the decisions did no better than random stocks of the same sector. The agents bought the stocks with the most positive news, yet in ablations they earned as much without their headlines. Still, the agents carried out rules reliably, since a single cash rule in the prompt cut a GPT-based agent's share in stocks by 30.3 points in all six pairs. Builders should therefore supply the edge themselves and report exposures and alpha, and benchmarks should replay news by publication time.",
+      "authors": [
+        "Jackson Wang"
+      ],
+      "url": "https://arxiv.org/abs/2611.19530",
+      "pdf_url": "https://arxiv.org/pdf/2611.19530",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.MA",
+      "kind": "paper",
+      "published_at": "2026-11-17T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "大模型",
+        "Agent",
+        "检索与知识",
+        "cs.AI",
+        "cs.MA"
+      ],
+      "score": 26.54,
+      "zh_title": "LLM 交易智能体 Earn Beta, 不是 Alpha: 一个无前瞻基准",
+      "zh_summary": "大语言模型(LLM)贸易智能体商现在为其用户进行股票交易,基准根据智能体商的回报排名模型. 但单程的回程却对技能说得不多 在我们的研究中,只有随机种子的两种模式不同,平均结束5.2分,因此从运气中传授技能需要许多市场、模型和种子的反向测试。 然而,现场竞技场每天只交易一次,反选者要么使用模特训练停课后的几个月,要么在模特可能记得的年份奔跑,经常有消息按日历日期与价格结合. 在本文中,我们提出rta-bench-1,这是对美国三个市场(集市、熊市和坠机)的反向测试。 它只在发布一分钟后显示每一条标题,播放",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.19530",
+      "dedupe_keys": [
+        "arxiv:2611.19530",
+        "external:2611.19530",
+        "title:llmtradingagentsearnbetanotalphaalookaheadfreebenchmark",
+        "url:https://arxiv.org/abs/2611.19530"
+      ]
+    },
+    {
+      "id": "huggingface-b4352b281441",
+      "title": "Weight-Space Programming Doesn't Need Transformers",
+      "summary": "Standard neural architectures such as the Transformer were chosen because they train well with gradient descent and run fast on GPUs. In weight-space programming, a large language model (LLM) writes target weights by hand without gradient-based training, so those reasons no longer apply. Should we keep the Transformer? Given minimal guidance, ten labeled examples, and a sandbox, mainly on multiple-choice questions, we task three frontier LLMs with either generating the weights of a fixed architecture or designing the architecture themselves. When free to design, all three compile plain-text facts into a sparse table queried by a fixed procedure, reaching up to 54.4% test accuracy. An LLM-designed model achieves higher test accuracy than the most accurate released Transformer that the same LLM wrote while using about 1,800x fewer parameters. Without gradients, they choose a table, in which the LLM can state what each weight means and can find and rewrite a wrong one. Each wrong answer points to one row, and removing a row changes about one other answer. From this, we propose an associative-memory-based model up to 17x faster on GPUs than a same-sized Transformer. We also test pretrained weights, other benchmarks, and tasks where models generate answers. Pretrained LLMs remain more accurate; the claim concerns which structure to build when writing weights.",
+      "authors": [
+        "Hyunjong Ok",
+        "Jaeho Lee"
+      ],
+      "url": "https://arxiv.org/abs/2611.22055",
+      "pdf_url": "",
+      "source_id": "huggingface",
+      "source_name": "Hugging Face Daily",
+      "kind": "paper",
+      "published_at": "2026-11-17T00:00:00+00:00",
+      "venue": "Hugging Face Daily Papers",
+      "tags": [
+        "大模型",
+        "评测与安全",
+        "community pick"
+      ],
+      "score": 25.22,
+      "zh_title": "重空编程不需要变换器",
+      "zh_summary": "诸如变形金刚等标准神经架构之所以被选中,是因为其训练精良,带有梯度下降,并在GPU上运行迅速. 在权重空间编程中,一个大语言模型(LLM)在没有梯度训练的情况下手写目标权重,因此这些理由不再适用. 我们要留着Transformer吗? 在最小的引导下, 十个标注的例子, 和一个沙盒, 主要是关于多选择的问题, 我们的任务 三个边疆 LLMs , 要么生成一个固定架构的权重 要么设计架构本身。 当可以自由设计时,所有三个将纯文本事实汇编成一个有限的表格,通过固定程序询问,达到54.4%的测试精度. LLM设计模型的测试精度高于最高级的accu",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.22055",
+      "dedupe_keys": [
+        "arxiv:2611.22055",
+        "external:2611.22055",
+        "title:weightspaceprogrammingdoesntneedtransformers",
+        "url:https://arxiv.org/abs/2611.22055"
+      ]
+    },
+    {
+      "id": "huggingface-1e67cf89af49",
+      "title": "Multi-Branch Transformer",
+      "summary": "Transformer language models are commonly scaled by making their blocks wider or stacking them deeper. In this work, we explore a complementary path: branching, the parallel composition of full Transformer blocks. We introduce the Multi-Branch Transformer (MBT), which processes the input through shared initial layers, executes independently parameterized branches of sequential blocks in parallel, and fuses their outputs before shared final layers. At comparable training compute, we study three MBT variants: Wide-Shallow preserves block width, Narrow-Deep preserves sequential depth, and Balanced interpolates between them. In controlled pretraining experiments at four mixture-of-experts scales (0.8B to 2.1B total parameters), 2-branch Wide-Shallow MBTs consistently outperform sequential Transformers under matched parameter and training-compute budgets. Balanced MBTs improve further and retain comparable quality as the number of branches increases. To improve inference efficiency at long contexts, we introduce Joint-KV, which constructs a shared KV cache from branch representations at each depth. Our final recipe combines Balanced MBTs with Joint-KV, supported by an inference engine that exploits branch grouping and shared-cache reuse. Fitted scaling curves indicate that standard Transformers require up to 1.26x as much training body compute to match our final models' validation loss. These models reduce full-model KV-cache storage by up to 34% and deliver up to 51.4% higher decoding throughput on a single H200 GPU. Ablation studies show that branching yields gains beyond changes in width and depth, enables an effective KV-sharing strategy (Joint-KV), remains robust across fusion functions, and performs best in the middle layers. These findings show that branching offers a practical path for scaling language models toward both better modeling quality and faster inference.",
+      "authors": [
+        "Gaotang Li",
+        "Lingjie Chen",
+        "Chunyuan Deng",
+        "Zhiwei Xu",
+        "Hongzheng Chen",
+        "Christopher De Sa",
+        "Jingrui He",
+        "Yingheng Wang",
+        "Hanghang Tong"
+      ],
+      "url": "https://arxiv.org/abs/2611.19800",
+      "pdf_url": "",
+      "source_id": "huggingface",
+      "source_name": "Hugging Face Daily",
+      "kind": "paper",
+      "published_at": "2026-11-15T00:00:00+00:00",
+      "venue": "Hugging Face Daily Papers",
+      "tags": [
+        "大模型",
+        "训练与系统",
+        "检索与知识",
+        "community pick"
+      ],
+      "score": 24.72,
+      "zh_title": "多块Transformer",
+      "zh_summary": "Transformer语言模型通常通过使块变宽或堆积更深来缩放. 在这个作品中,我们探索了一条互补的道路:分支化,全Transformer块的平行组成. 我们引入了多块变换器(MBT),它通过共享初始层处理输入,同时执行相继块的独立参数化分支,并在共享最终层之前导出它们的输出. 在可比较的训练计算中,我们研究三个MBT的变体:宽-Shallow保存块宽度,窄-深保存顺序深度,以及它们之间的平衡插值. 在四个专家混合规模(0.8B至2.1B总参数)的受控前训练实验中,2个分支的宽锯齿MBT",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.19800",
+      "dedupe_keys": [
+        "arxiv:2611.19800",
+        "external:2611.19800",
+        "title:multibranchtransformer",
+        "url:https://arxiv.org/abs/2611.19800"
+      ]
+    },
+    {
+      "id": "arxiv-f03b6434e197",
+      "title": "How to make a moral agent: sentimentalism and rationalism as lenses on AI",
+      "summary": "Can AI systems be moral agents? That is, can they undertake actions that can be correctly assessed as morally right or wrong? There is no settled normative criterion of moral agency that applies neatly outside paradigm human cases. Because of the difficulties with a normative account, we instead propose a research program to explore descriptive moral agency. Most basically, we ask, what are the capabilities we humans possess that underlie our moral agency? To do so, we draw on historical scholarship in philosophy and moral psychology to isolate candidate capabilities. Then we suggest refining candidate capabilities so that they are testable in the context of AI systems. Finally, we offer specific empirical recommendations to test AI systems, especially large language models (LLMs), for those refined capabilities. Our approach offers several benefits. Firstly, it may demonstrate whether the behaviors of AI systems are aligned, or in a broad sense desirable. Secondly, the debate may inform policy questions (e.g., what models should be deployed in which contexts?). Thirdly, our approach may complement engineering and design efforts: when capabilities can be precisely characterized, they can inform the development of models. Fourthly, applying our moral reasoning concepts in the new context of AI systems should improve our understanding of those concepts.",
+      "authors": [
+        "David Gottlieb",
+        "Jared Moore"
+      ],
+      "url": "https://arxiv.org/abs/2611.18714",
+      "pdf_url": "https://arxiv.org/pdf/2611.18714",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.AI",
+      "kind": "paper",
+      "published_at": "2026-11-17T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "大模型",
+        "Agent",
+        "推理",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "score": 24.04,
+      "zh_title": "如何成为道德智能体:情感主义和理性主义作为AI的透镜",
+      "zh_summary": "AI系统能成为道德智能体吗? 也就是说,它们能否采取可被正确评为道德正确或错误的行动? 没有任何既定的道德权威规范标准可以完全适用于人类案例的范式之外。 由于在规范化账户方面存在困难,我们建议制定一个研究方案,探索描述性道德智能体。 基本上,我们问,我们人类拥有什么能力作为我们道德作用的基础? 为此,我们利用哲学和道德心理学方面的历史奖学金来孤立候选能力. 然后,我们建议改进候选能力,以便在人工智能系统范围内进行测试。 最后,我们提出了具体的经验性建议,以测试人工智能系统,特别是:",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.18714",
+      "dedupe_keys": [
+        "arxiv:2611.18714",
+        "external:2611.18714",
+        "title:howtomakeamoralagentsentimentalismandrationalismaslensesonai",
+        "url:https://arxiv.org/abs/2611.18714"
+      ]
+    },
+    {
+      "id": "arxiv-a2b9c0454a7f",
+      "title": "D\\'ecoupage: Directorial Audio-Visual Control for Long Multi-Shot Video Generation",
+      "summary": "In cinematic storytelling, sound and visual transitions do not always coincide in lockstep: dialogue frequently bridges across cuts to reveal reactions or introduces new scenes via J- and L-cuts, while deliberate silences pace the scene. Existing audio-visual generative frameworks, however, lack explicit mechanisms to coordinate independent visual and acoustic timing over extended horizons. As narrative duration and shot complexity scale, these systems struggle to maintain long-range dialogue pacing, often hallucinating speech during intended silences or erroneously driving mouth movements on silent listeners. To enable fine-grained cinematic control, we present DECOUPAGE, a screenplay-driven framework for long-form, multi-shot, and multi-character joint audio-video generation. Rather than coupling modality boundaries by default, DECOUPAGE uncouples generation into independently bounded visual and acoustic tracks governed by persistent character identities. DECOUPAGE builds on a joint audio-video diffusion model with dual-schedule temporal cross-attention, incorporating a directorial Lip-sync mechanism that selectively decouples speech conditioning from visual facial dynamics during off-screen dialogue. On multi-shot conversational benchmarks, DECOUPAGE achieves precise control over shot transitions, audio timing, and visibility-aware lip synchronization, directing 15- to 60-second screenplay-driven audio-video generation with multimodal coherence.",
+      "authors": [
+        "Yifan Wang",
+        "Hao Ouyang",
+        "Qiuyu Wang",
+        "Yihao Meng",
+        "Wen Wang",
+        "Zeyue Tian",
+        "Yichong Lu",
+        "Hanlin Wang",
+        "Qingyan Bai",
+        "Zichen Liu",
+        "Yujun Shen",
+        "Qifeng Chen"
+      ],
+      "url": "https://arxiv.org/abs/2611.18866",
+      "pdf_url": "https://arxiv.org/pdf/2611.18866",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.AI",
+      "kind": "paper",
+      "published_at": "2026-11-17T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "多模态",
+        "生成与创造",
+        "评测与安全",
+        "cs.AI",
+        "cs.SD"
+      ],
+      "score": 24.04,
+      "zh_title": "D\\'ecoupage:长多热视频生成的导演视听控制",
+      "zh_summary": "在电影故事叙述中,声音和视觉的转变并不总是在锁脚步中重合:对话经常通过跨剪切的桥梁来揭示反应或通过J-和L-剪切引入新的场景,同时故意沉默会加快场景的速度. 然而,现有的视听基因框架缺乏明确机制,无法在扩展的视野上协调独立的视觉和声学时间。 作为叙事持续时间和拍摄复杂性尺度,这些系统努力保持长距离对话的节奏,在意向的沉默期间经常出现幻觉的言论,或者错误地驱动沉默的听众的嘴动. 为了进行精细的电影控制,我们介绍了DECOUPAGE,一个由剧本驱动的框架,用于长形、多镜头和多特点的j",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.18866",
+      "dedupe_keys": [
+        "arxiv:2611.18866",
+        "external:2611.18866",
+        "title:decoupagedirectorialaudiovisualcontrolforlongmultishotvideogeneration",
+        "url:https://arxiv.org/abs/2611.18866"
+      ]
+    }
+  ]
+}
