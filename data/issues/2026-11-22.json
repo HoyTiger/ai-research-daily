@@ -1,0 +1,874 @@
+{
+  "issue_date": "2026-11-22",
+  "issue_number": 9,
+  "generated_at": "2026-11-22T11:13:38.168481+08:00",
+  "description": "从 5 个数据通道收录 24 条 AI 研究更新，聚焦训练与系统、评测与安全、大模型。",
+  "ai_enabled": true,
+  "source_health": [
+    {
+      "source_id": "arxiv",
+      "source_name": "arXiv categories",
+      "status": "ok",
+      "item_count": 18,
+      "errors": []
+    },
+    {
+      "source_id": "openreview",
+      "source_name": "OpenReview venues",
+      "status": "ok",
+      "item_count": 14,
+      "errors": []
+    },
+    {
+      "source_id": "crossref",
+      "source_name": "Crossref journals",
+      "status": "ok",
+      "item_count": 12,
+      "errors": []
+    },
+    {
+      "source_id": "huggingface",
+      "source_name": "Hugging Face Daily",
+      "status": "ok",
+      "item_count": 10,
+      "errors": []
+    },
+    {
+      "source_id": "rss",
+      "source_name": "Official technical blogs",
+      "status": "ok",
+      "item_count": 12,
+      "errors": []
+    }
+  ],
+  "items": [
+    {
+      "id": "crossref-2adffa41095b",
+      "title": "Sound2Vision: Generating Diverse Visuals from Audio through Cross-Modal Latent Alignment",
+      "summary": "How does audio describe the world around us? In this work, we propose a method for generating images of visual scenes from diverse in-the-wild sounds. This cross-modal generation task is challenging due to the significant information gap between auditory and visual signals. We address this challenge by designing a model that aligns audio-visual modalities by enriching audio features with visual information and translating them into the visual latent space. These features are then fed into the pre-trained image generator to produce images. To enhance image quality, we use sound source localization to select audio-visual pairs with strong cross-modal correlations. Our method achieves substantially better results on the VEGAS and VGGSound datasets compared to previous work and demonstrates control over the generation process through simple manipulations to the input waveform or latent space. Furthermore, we analyze the geometric properties of the learned embedding space and demonstrate that our learning approach effectively aligns audio-visual signals for cross-modal generation. Based on this analysis, we show that our method is agnostic to specific design choices, showing its generalizability by integrating various model architectures and different types of audio-visual data.",
+      "authors": [
+        "Sung-Bin Kim",
+        "Arda Senocak",
+        "Hyunwoo Ha",
+        "Tae-Hyun Oh"
+      ],
+      "url": "https://doi.org/10.1007/s11263-026-03106-5",
+      "pdf_url": "",
+      "source_id": "crossref",
+      "source_name": "IJCV",
+      "kind": "journal",
+      "published_at": "2026-11-21T00:00:00+00:00",
+      "venue": "International Journal of Computer Vision",
+      "tags": [
+        "生成与创造",
+        "评测与安全",
+        "IJCV"
+      ],
+      "score": 35.3,
+      "zh_title": "Sound2Vision:通过跨 Modal Lentention 对齐从音频生成多样的视觉",
+      "zh_summary": "音频如何描述我们周围的世界? 在这部作品中,我们提出了一种方法,从各种闪烁的声音产生视觉场景的图像. 由于听觉信号和视觉信号之间的重大信息差距,这一跨模式生成任务具有挑战性. 我们通过设计一种将视听方式与视觉信息相结合的模式来应对这一挑战,该模式将音频特征与视觉信息丰富起来,并将其转化为视觉潜在空间。 这些特性随后被输入到预先训练的图像生成器中以生成图像. 为了提高图像质量,我们使用声音源本地化来选择具有强烈跨模式关联的视听对. 我们的方法在 VEGAS 和 VGGSound 数据集 compa 上取得了更好的效果",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "10.1007/s11263-026-03106-5",
+      "dedupe_keys": [
+        "doi:10.1007/s11263-026-03106-5",
+        "external:10.1007/s11263-026-03106-5",
+        "title:sound2visiongeneratingdiversevisualsfromaudiothroughcrossmodallatentalignment",
+        "url:https://doi.org/10.1007/s11263-026-03106-5"
+      ]
+    },
+    {
+      "id": "arxiv-186fcefb6c97",
+      "title": "Density Feedback Control for Transferability of Generative Sparse Adversarial Attacks",
+      "summary": "Generator-based sparse adversarial attacks train encoder--decoder networks to produce transferable sparse perturbations for black-box robustness evaluation. Their perturbation density, however, is set only indirectly by a fixed sparsity coefficient whose mapping to density is unknown and shifts during training, so reaching a target density requires re-tuning; this fixed pressure also yields little transferability gain once density reduction begins. We propose Density Feedback Control (DFC), which tightens or relaxes this coefficient at the end of each epoch according to the gap between the observed hard-mask density and the target, without changing the generator architecture or loss. At a 10\\% target density, DFC brings the mean density of three base attacks within one percentage point of the target in a single run and improves the transfer attack success rate (ASR) of two of them on CNN and Transformer targets, including under per-image $\\ell_0$ budgets, while perturbing fewer pixels. Tracing GPG's training, we observe that as DFC relaxes the coefficient, the transfer ASR recovers with the density and overtakes the fixed-coefficient baseline with fewer pixels. For EGS-TSSA, which restricts perturbations to source-model feature-importance regions, DFC yields no consistent gain; we analyze how this restriction interacts with density feedback.",
+      "authors": [
+        "Dongsu Song",
+        "Jay Hoon Jung"
+      ],
+      "url": "https://arxiv.org/abs/2611.25001",
+      "pdf_url": "https://arxiv.org/pdf/2611.25001",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.LG",
+      "kind": "paper",
+      "published_at": "2026-11-21T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "训练与系统",
+        "生成与创造",
+        "评测与安全",
+        "cs.LG",
+        "cs.CV"
+      ],
+      "score": 24.11,
+      "zh_title": "遗传性斜面攻击可转移性密度反馈控制",
+      "zh_summary": "基于发电机的零星对抗攻击列车编码器-解码器网络生成可转移的零星扰动,用于黑箱稳健性评价. 然而,它们的扰动密度只是由固定的溅射系数间接设定的,而固定的溅射系数的映射密度是未知的,在训练期间会发生转变,因此达到目标密度需要重新调整;这种固定压力也很少在密度降低开始后产生可转移性增益. 我们提议密度反馈控制(DFC),它根据观测到的硬面罩密度与目标之间的差距,在每个纪元末收紧或放松这个系数,而不改变生成器架构或丢失. 在10QQ目标密度下, DFC 带来三个基数的平均密度",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.25001",
+      "dedupe_keys": [
+        "arxiv:2611.25001",
+        "external:2611.25001",
+        "title:densityfeedbackcontrolfortransferabilityofgenerativesparseadversarialattacks",
+        "url:https://arxiv.org/abs/2611.25001"
+      ]
+    },
+    {
+      "id": "huggingface-dbe902a628cb",
+      "title": "PAD: Policy-Aware Data Valuation for Autonomous Driving",
+      "summary": "End-to-end autonomous driving increasingly depends on scaling training demonstrations, yet data growth does not guarantee proportional gains. However, additional data do not guarantee better policies: a demonstration that benefits one planner may be redundant or harmful to another. Existing curation methods typically infer data value from intrinsic sample properties or training-dependent proxies that do not measure downstream policy utility. To address this, we introduce Policy-Aware Data Valuation (PAD), a framework that assigns each candidate demonstration a utility specific to the target driving policy. PAD combines scene-level calibration feedback with projected policy gradients and a regularized approximation of local training geometry, producing scalable influence-based values for the policy. A controlled group-removal study establishes the directional fidelity of these values, while cross-planner analysis shows that the same candidate pool induces markedly different rankings across planner families. On DiffusionDrive, PAD improves EPDMS over real-only training by 3.5 points on NavTest and 5.0 points on NavHard. Policy-specific curation consistently outperforms real-only and full-pool training across diffusion-, regression-, and flow-matching-based planners while substantially reducing scene-level regressions. These results establish policy-aware data valuation as a basis for replacing indiscriminate data accumulation with targeted policy improvement, enabling more efficient and reliable scaling of autonomous-driving systems.",
+      "authors": [
+        "Chengkai Xu",
+        "Yicheng Guo",
+        "Jiaqi Liu",
+        "Yiming Cui",
+        "Shiyu Fang",
+        "Peng Hang",
+        "Hao Zhang",
+        "Jian Sun"
+      ],
+      "url": "https://arxiv.org/abs/2611.25604",
+      "pdf_url": "",
+      "source_id": "huggingface",
+      "source_name": "Hugging Face Daily",
+      "kind": "paper",
+      "published_at": "2026-11-19T00:00:00+00:00",
+      "venue": "Hugging Face Daily Papers",
+      "tags": [
+        "训练与系统",
+        "生成与创造",
+        "community pick"
+      ],
+      "score": 22.3,
+      "zh_title": "PAD: 自动驾驶的策略-智能数据估价",
+      "zh_summary": "端到端自主驾驶越来越依赖于规模化的训练示范,然而数据增长并不能保证比例收益. 然而,补充数据并不能保证更好的策略:一个规划者受益的示范可能是多余的或对另一个规划者有害的。 现有的校准方法通常从内在样本属性或不衡量下游策略效用的依赖训练的智能体推断出数据值。 为了解决这一问题,我们引入了“策略意识数据估价”,这个框架为每个候选人分配一个具体针对目标驱动策略的效用。 PAD 将场景级校准反馈与预测的策略梯度相结合,并将本地训练几何学、生产学的近似值正规化",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.25604",
+      "dedupe_keys": [
+        "arxiv:2611.25604",
+        "external:2611.25604",
+        "title:padpolicyawaredatavaluationforautonomousdriving",
+        "url:https://arxiv.org/abs/2611.25604"
+      ]
+    },
+    {
+      "id": "rss-d37fb7b6346e",
+      "title": "Managing frontier AI risk: From training to deployment",
+      "summary": "OpenAI explains how it manages frontier AI risk from training through deployment with model alignment, sandboxing, blocking safeguards, and monitoring.",
+      "authors": [],
+      "url": "https://openai.com/index/managing-frontier-ai-risk",
+      "pdf_url": "",
+      "source_id": "rss",
+      "source_name": "OpenAI",
+      "kind": "report",
+      "published_at": "2026-11-18T06:00:00+00:00",
+      "venue": "OpenAI 官方博客",
+      "tags": [
+        "评测与安全",
+        "Safety"
+      ],
+      "score": 20.67,
+      "zh_title": "管理前沿AI风险:从训练到部署",
+      "zh_summary": "OpenAI解释了它如何管理边疆AI的风险:通过部署模式对齐、沙箱、屏蔽保障和监测来进行训练。",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "",
+      "dedupe_keys": [
+        "title:managingfrontierairiskfromtrainingtodeployment",
+        "url:https://openai.com/index/managing-frontier-ai-risk"
+      ]
+    },
+    {
+      "id": "arxiv-3d5b5a430131",
+      "title": "A Model of Diverse Sampling from Language Models",
+      "summary": "Language models often produce high-quality individual samples but poor sets, with repeated samples clustering around the same semantic modes. We formalize diverse generation as sampling a size-$K$ subset of complete strings from a determinantal point process (DPP), where the likelihood encodes item quality, and the embedding geometry encodes repulsion between similar outputs. Exact inference over all strings is intractable, so we propose PoolDPP: draw a finite candidate pool from a tractable proposal, importance-weight the candidates toward the target quality, and run a $K$-DPP sampler on the induced pool kernel; a greedy MAP variant provides deterministic selection. We prove a finite-sample bound with an explicit constant: the KL divergence between the sampler's output and the target $K$-DPP decays as O(1/N) in the pool size. Empirically, PoolDPP extends the quality--diversity frontier on open-ended generation and the precision--recall frontier on ambiguous text-to-SQL (Ambrosia), and on mathematical reasoning (GSM8K), it raises diversity at about the same pass@$K$.",
+      "authors": [
+        "Manuel Prada-Corral",
+        "Yahya Emara",
+        "Timothy J. O'Donnell",
+        "Ryan Cotterell",
+        "Tim Vieira"
+      ],
+      "url": "https://arxiv.org/abs/2611.25003",
+      "pdf_url": "https://arxiv.org/pdf/2611.25003",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.LG",
+      "kind": "paper",
+      "published_at": "2026-11-21T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "大模型",
+        "推理",
+        "训练与系统",
+        "cs.LG",
+        "cs.AI"
+      ],
+      "score": 24.11,
+      "zh_title": "语言模型的多样化样本模型",
+      "zh_summary": "语言模型往往能产生高质量的单个样本,但数据集差,重复的样本围绕相同的语义模式集群. 我们正式确定不同的一代,从一个决定性点过程(DPP)中取样一个大小-K$的完整字符串子集,其中可能性编码了项目质量,而嵌入几何编码则在类似输出之间产生反感。 对所有字符串的精确推论是难以解决的,因此我们提议 PoolDPP : 从可操作的提案中抽取一个有限的候选组合, 将候选组合对准目标质量的重要性加权, 在诱导的池内核上运行一个$K$-DPP的采样器; 一个贪婪的 MAP 变体提供了决定性的选择。 我们用一个明确的常数证明一个有限度的样本:KL之间的差别",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.25003",
+      "dedupe_keys": [
+        "arxiv:2611.25003",
+        "external:2611.25003",
+        "title:amodelofdiversesamplingfromlanguagemodels",
+        "url:https://arxiv.org/abs/2611.25003"
+      ]
+    },
+    {
+      "id": "huggingface-d9245e48868d",
+      "title": "RL Post-Training in Diffusion Transformers Is Activation Steering",
+      "summary": "Reinforcement learning (RL) post-training substantially improves the visual quality, text rendering, and compositional accuracy of diffusion transformers. Because capabilities such as rendering requested text or composing multiple objects are inherently prompt-dependent, a natural hypothesis is that improving them requires learning complex, input-dependent transformations. To isolate how much of these gains an input-independent shift explains, we probe each RL-tuned model with a deliberately simple parameterization: a fixed set of steering vectors added to the block outputs of the frozen base model. On SD3.5-M, these vectors hold 65x fewer parameters than the RL-tuned LoRA (0.29M against 18.8M). We fit them to match the velocity predictions of public RL-tuned checkpoints, with no reward in the objective. Although the vectors are identical for every prompt, token, and sampling seed, they recover 90.0-96.3% of the reward gains of six RL-tuned image models, and 89.8% and 111.9% on two RL-tuned video models. Initialized at zero and trained with online RL, the vectors alone exceed the reward gains of weight-based RL on text rendering (OCR) and human preference (PickScore) on SD3.5-M. A constant shift thus suffices for most of the gain of policy-gradient RL post-training: without new input-dependent transformations, it steers the pretrained generator toward what it can already compute.",
+      "authors": [
+        "Tuna Han Salih Meral",
+        "Kaan Oktay",
+        "Alec Helbling",
+        "Atakan Kara",
+        "Duen Horng Chau",
+        "Pinar Yanardag"
+      ],
+      "url": "https://arxiv.org/abs/2611.26627",
+      "pdf_url": "",
+      "source_id": "huggingface",
+      "source_name": "Hugging Face Daily",
+      "kind": "paper",
+      "published_at": "2026-11-19T00:00:00+00:00",
+      "venue": "Hugging Face Daily Papers",
+      "tags": [
+        "训练与系统",
+        "生成与创造",
+        "community pick"
+      ],
+      "score": 22.3,
+      "zh_title": "RL 扩散变换器的后训练是激活引导",
+      "zh_summary": "强化学习(RL)后训练大大提高了扩散变压器的视觉质量、文本渲染和组成精度。 由于渲染所请求的文本或组合多个对象等能力本质上是即时的依赖,一个自然假设是,改进它们需要学习复杂,投入依赖的转换. 为了隔离这些收益中有多少是输入式独立转换解释,我们用一个刻意简单的参数化来探究每个RL调制模型:在冻结基模型的块输出中添加了一组固定的引导矢量. 在SD3.5-M上,这些矢量持有的参数比RL调值LORA(0.29M对18.8M)少65x. 我们让他们适应公众的预测速度",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.26627",
+      "dedupe_keys": [
+        "arxiv:2611.26627",
+        "external:2611.26627",
+        "title:rlposttrainingindiffusiontransformersisactivationsteering",
+        "url:https://arxiv.org/abs/2611.26627"
+      ]
+    },
+    {
+      "id": "rss-8390dca3a1ab",
+      "title": "Advancing chip design with OpenAI models",
+      "summary": "OpenAI models optimized circuits used in Jalapeño silicon and improved RISC‑V core designs, showing progress in AI-assisted chip design with GPT‑6 Astra.",
+      "authors": [],
+      "url": "https://openai.com/index/advancing-chip-design-with-our-models",
+      "pdf_url": "",
+      "source_id": "rss",
+      "source_name": "OpenAI",
+      "kind": "report",
+      "published_at": "2026-11-18T00:00:00+00:00",
+      "venue": "OpenAI 官方博客",
+      "tags": [
+        "综合",
+        "Research"
+      ],
+      "score": 17.8,
+      "zh_title": "使用 OpenAI 模型推进芯片设计",
+      "zh_summary": "OpenAI模型优化了Jalapeño硅与改进的RISC‐V核心设计中使用的电路,显示了AI辅助芯片设计与GPT‐6 Astra的进度.",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "",
+      "dedupe_keys": [
+        "title:advancingchipdesignwithopenaimodels",
+        "url:https://openai.com/index/advancing-chip-design-with-our-models"
+      ]
+    },
+    {
+      "id": "arxiv-3381d0c72406",
+      "title": "Long-Range Video Presentation Attack Detection: A Three-Class Benchmark Across 1-100 m and Two Sensor Types",
+      "summary": "Face presentation attack detection (PAD) systems deployed in border control and airport surveillance are constrained by a critical assumption: subjects are captured at close range, typically under one meter. No existing benchmark systematically addresses multi-distance capture, diverse environmental conditions, and concurrent spoofing and occlusion-based attacks, leaving deployed models underprepared for real-world scenarios. We introduce a video-based PAD dataset of 374,000+ frames from 261 unique identities collected across five standoff distances (1 m-100 m) under indoor and outdoor conditions using a DSLR camera (C) and a mobile sensor (M), with three-class labels: live, spoof, and props (occlusions); models are trained and evaluated on video clips rather than single frames. We fine-tune and benchmark four CNN architectures: MobileNetV3, MobileNet, EfficientNet, and ResNet-50. The higher-resolution DSLR maintains near-perfect spoof classification rate across all distances, while the lower-resolution mobile sensor degrades sharply beyond 50 m, with props classification rate dropping to 55% at 75 m for MobileNetV3. EfficientNet achieves the best overall performance (98.48% accuracy, ACER 2.01%). Generalization tests on unseen attack datasets yield 89-94% accuracy, validating cross-domain robustness. These results establish capture distance and sensor resolution as critical but underexplored axes of PAD difficulty. The dataset will be publicly released under an End-User License Agreement to support reproducible long-range PAD research.",
+      "authors": [
+        "Lambert Igene",
+        "Mohammad Zahir Uddin Chowdhury",
+        "Afzal Hossain",
+        "Sandip Purnapatra",
+        "Peter Johnson",
+        "Stephanie Schuckers"
+      ],
+      "url": "https://arxiv.org/abs/2611.25108",
+      "pdf_url": "https://arxiv.org/pdf/2611.25108",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.LG",
+      "kind": "paper",
+      "published_at": "2026-11-21T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "训练与系统",
+        "生成与创造",
+        "评测与安全",
+        "cs.LG",
+        "cs.CV"
+      ],
+      "score": 24.11,
+      "zh_title": "远程视频演示攻击检测:跨越1-100米和两种传感器类型的三级基准",
+      "zh_summary": "部署在边界管制和机场监视中的面部表情攻击探测系统受到一个关键假设的限制:目标被近距离捕获,通常在一个米以下。 现有基准没有系统地处理多距离捕捉、不同的环境条件以及同时发生的偷袭和隔离攻击,使部署的模式对现实世界的情景准备不足。 我们使用DSLR相机(C)和移动传感器(M)在室内外条件下收集的来自261个独特距离(1米-100米)的374 000+帧的PAD视频数据集,有三类标签:直播、扫描和道具(包含);模型在视频cli上得到训练和评估",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.25108",
+      "dedupe_keys": [
+        "arxiv:2611.25108",
+        "external:2611.25108",
+        "title:longrangevideopresentationattackdetectionathreeclassbenchmarkacross1100mandtwosensortypes",
+        "url:https://arxiv.org/abs/2611.25108"
+      ]
+    },
+    {
+      "id": "arxiv-eff7d61382ab",
+      "title": "Temporal Extrapolation of Elastic Seismic Wave Propagation in Layered Media Using Neural Operators",
+      "summary": "Temporal prediction of seismic velocity fields beyond the time interval represented in training remains challenging for neural operator models. This study develops a coupled neural operator framework for stress-conditioned temporal prediction in layered elastic media. A time-integrator-embedded Deep Operator Network (TI-DeepONet) advances the velocity field through an embedded fourth-order Runge-Kutta (RK4) scheme, while a Fourier Neural Operator (FNO) learns a residual correction to the predicted spatial field. The two components are trained jointly in a predictor-corrector configuration. Prediction is initialized with reference velocity fields at the first two time levels and proceeds autoregressively, with reference stress fields and prescribed excitation supplied throughout rollout, including beyond the training interval. Four cases consider horizontally polarized shear (SH) waves in four-layer soil columns with fixed total depths of 50 and 280 m, excited by third-order Gaussian-derivative (DOG3) wavelets with central frequencies between 0.5 and 6 Hz. Layer thicknesses and shear-wave velocities vary across profiles. Evaluations on test profiles extend beyond the training interval by up to twice its duration. The predictions reproduce principal velocity arrivals and depth-dependent response patterns, with accuracy varying across profiles. Across the four cases, mean peak-normalized root-mean-square errors (NRMSEs) range from 0.53% to 2.31% over the full evaluation windows and from 0.61% to 2.82% over the extrapolation intervals. Both metrics use each profile's peak absolute reference velocity over the full evaluation window as the normalizer. These results demonstrate temporal velocity prediction under reference-stress conditioning for the tested configurations; autonomous continuation of the coupled velocity-stress wavefield remains to be established.",
+      "authors": [
+        "Dibyajyoti Nayak",
+        "Yuze Pu",
+        "Kami Mohammadi",
+        "Somdatta Goswami"
+      ],
+      "url": "https://arxiv.org/abs/2611.25130",
+      "pdf_url": "https://arxiv.org/pdf/2611.25130",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.LG",
+      "kind": "paper",
+      "published_at": "2026-11-21T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "检索与知识",
+        "生成与创造",
+        "评测与安全",
+        "cs.LG",
+        "physics.geo-ph"
+      ],
+      "score": 24.11,
+      "zh_title": "利用神经运算器在层状介质中进行弹性地震波传播的时间外推",
+      "zh_summary": "对神经操作器模型而言,在训练所显示的时间间隔之外对地震速度场进行时间预测仍然是挑战。 本研究为分层弹性介质中的压力条件时间预测开发了结合神经操作器框架. 一个时间集成的深层操作员网络(TI-DeepONet)通过嵌入式第四顺序的Runge-Kutta(RK4)计划推进速度场,而一个Fourier神经操作员(FNO)则学习到对预测空间场的剩余修正. 这两个组件以预测器-校正器配置进行联合训练。 预测在前两个时间级别以参考速度字段初始化,并自动进行,并附有参考压力字段和规定前",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.25130",
+      "dedupe_keys": [
+        "arxiv:2611.25130",
+        "external:2611.25130",
+        "title:temporalextrapolationofelasticseismicwavepropagationinlayeredmediausingneuraloperators",
+        "url:https://arxiv.org/abs/2611.25130"
+      ]
+    },
+    {
+      "id": "arxiv-62b171f35592",
+      "title": "Rate-distortion Assessment for Hierarchical Content Summarization",
+      "summary": "Powerful generative models including large language and vision models have demonstrated success across a wide range of content generation, editing and manipulation tasks via end-to-end prompt-based generation. However, current assessment of the quality of generative content manipulation remains subjective, limiting scientific understanding of model capabilities. Inspired by rate-distortion theory from Shannon information compression theory, in this work we formalize hierarchical content summarization as an information encoding problem. We design a principled framework to extract the semantic hierarchy of the source content to support quantitative characterization of the rate-distortion trade-off between compression efficiency (rate) against information loss (distortion) during generative content manipulation, which allows us to benchmark various models with respect to performance conditional on rate budget of interest. We demonstrate the use of the framework with empirical experiments on content summarization for long-context question-answering with state-of-the-art large language models, offering new insights into their efficiency and comprehension capabilities. We further demonstrate the use of the semantic hierarchy as guidance for performing effective retrieval augmented generation, showing improved rate-distortion characteristics against current baselines.",
+      "authors": [
+        "Yunye Gong",
+        "Indranil Sur",
+        "Jared Claypoole",
+        "Pritish Sahu",
+        "Ajay Divakaran"
+      ],
+      "url": "https://arxiv.org/abs/2611.25151",
+      "pdf_url": "https://arxiv.org/pdf/2611.25151",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.LG",
+      "kind": "paper",
+      "published_at": "2026-11-21T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "大模型",
+        "检索与知识",
+        "评测与安全",
+        "cs.LG"
+      ],
+      "score": 24.11,
+      "zh_title": "分级内容的速率扭曲评估",
+      "zh_summary": "强大的基因模型,包括大型语言和视觉模型,通过端到端的即时生成,在广泛的内容生成,编辑和操纵任务中都显示出成功. 然而,目前对基因内容操纵质量的评估仍然是主观的,限制了对模型能力的科学理解. 受香农信息压缩理论的速率扭曲理论的启发,在这部作品中,我们正式将层次性内容汇总作为一个信息编码问题. 我们设计了一个原则框架来提取源内容的语义等级,以支持对压缩效率(速率)与informati之间的速率扭曲权衡的定量定性",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.25151",
+      "dedupe_keys": [
+        "arxiv:2611.25151",
+        "external:2611.25151",
+        "title:ratedistortionassessmentforhierarchicalcontentsummarization",
+        "url:https://arxiv.org/abs/2611.25151"
+      ]
+    },
+    {
+      "id": "huggingface-e9a23ee79fd4",
+      "title": "Online Mistake Detection in Instruction-Conditioned Procedural Video",
+      "summary": "An assistant monitoring a person performing a procedure is most useful when it can detect mistakes while there is still time to recover. This requires judging actions against task instructions as the video unfolds, identifying the attempted step, locating it in time, and assessing its execution. Existing online detectors do not use the instruction text, while instruction-conditioned methods operate offline. In this paper, we study online, instruction-conditioned mistake detection in egocentric videos. Using only observed video, task instructions, and prior predictions, our model identifies and localizes completed action attempts and classifies them as correct, modified, slip, corrections, or additions; omitted steps are determined after the video ends. We compare a modular pipeline, with separate step identification, temporal localization, and execution verification, to a joint model that predicts all outputs in a single step. To support supervised learning from mistakes, we repartition EgoPER to include erroneous videos in all splits. The approaches achieve similar step-segmentation F1@0.5 (93.6% and 92.1%), while the joint model achieves higher binary mistake-detection F1@0.5 (84.1% vs. 80.7%), with its largest gain on slips (56.4% vs. 37.5%). Component-level analysis suggests that error propagation between stages contributes to the modular approach's lower detection score. On test videos containing mistakes, both designs outperform released AEM and ESTANet checkpoints under our evaluation protocol.",
+      "authors": [
+        "Amit Feldman",
+        "Ilan Shimshoni",
+        "Rotem Dror"
+      ],
+      "url": "https://arxiv.org/abs/2611.25567",
+      "pdf_url": "",
+      "source_id": "huggingface",
+      "source_name": "Hugging Face Daily",
+      "kind": "paper",
+      "published_at": "2026-11-19T00:00:00+00:00",
+      "venue": "Hugging Face Daily Papers",
+      "tags": [
+        "生成与创造",
+        "评测与安全",
+        "community pick"
+      ],
+      "score": 22.3,
+      "zh_title": "指令性程序视频中的在线错误检测",
+      "zh_summary": "如果助理人员能够发现错误,而现在还有时间恢复,则对执行程序的人进行监测是最有用的。 这需要根据任务指示来判断有关行动, 现有的在线探测器不使用指令文本,而带有指令条件的方法则在下线运行. 在本文中,我们学习在线, 教学条件错误检测 在自我中心视频。 我们的模型仅使用可观察到的视频、任务说明和先前的预测,识别和定位已完成的动作尝试,并将其归类为正确、修改、滑动、更正或添加;省略步骤在视频结束后确定",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.25567",
+      "dedupe_keys": [
+        "arxiv:2611.25567",
+        "external:2611.25567",
+        "title:onlinemistakedetectionininstructionconditionedproceduralvideo",
+        "url:https://arxiv.org/abs/2611.25567"
+      ]
+    },
+    {
+      "id": "arxiv-797e338e1f2d",
+      "title": "Watch Where You Linearize: Predicting and Correcting Model-Merging Interference",
+      "summary": "Model merging combines separately fine-tuned models by adding their task vectors to a shared backbone. Interference is typically assessed only after constructing and evaluating a candidate merge, making coefficient search expensive. We show that a first-order directional derivative of task A's outputs along task B's vector can predict interference, but only when evaluated at the appropriate model. At the receiver model, this derivative forecasts nearby merges per task and per example, halves the accuracy error of a no-change baseline, and identifies most examples whose predictions flip. For full multi-task merges, a single evaluation is insufficient; two evaluations along the merge path are needed. At the shared pretrained backbone, however, the derivative is nearly orthogonal to realized changes in our vision experiments and only partly predictive in LoRA language-model pilots. Controls link this failure to displacement along the receiver's own task vector, not simply parameter distance; the mismatch appears within the first few dozen fine-tuning steps. Freezing receiver-local responses produces a surrogate affine in the merge coefficients. We use it to construct LR-Merge, a label-free correction that optimizes coefficients through convex teacher matching on unlabeled probes, without backpropagation through merged networks. LR-Merge improves all tested closed-form, isotropic, and sparsified base mergers, with gains generally increasing as more tasks are merged. Using pretrained rather than receiver-local responses instead degrades the base merge. LR-Merge matches exact teacher matching through a merged network, which takes roughly three times longer to converge and performs similarly at an equal compute budget. Once built, the surrogate answers new coefficient and task-subset queries in seconds.",
+      "authors": [
+        "Ido Nitzan Hidekel",
+        "Dan Raviv"
+      ],
+      "url": "https://arxiv.org/abs/2611.25000",
+      "pdf_url": "https://arxiv.org/pdf/2611.25000",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.LG",
+      "kind": "paper",
+      "published_at": "2026-11-21T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "训练与系统",
+        "评测与安全",
+        "cs.LG"
+      ],
+      "score": 21.61,
+      "zh_title": "注意线性化之处: 预测和校正模型- 模拟干扰",
+      "zh_summary": "模型合并通过将其任务矢量添加到共享的主干线上,将分别进行微调的模型合并. 通常在构建和评价候选人合并后才评估干扰,使系数搜索费用昂贵。 我们显示,任务A的输出与任务B的矢量的一阶方向衍生物可以预测干扰,但只有在适当的模型评价时才能预测. 在接收器模型中,这种附近的衍生预测将每个任务和每个例子合并,将一个不改变基线的准确性错误减半,并找出大多数预测会翻转的例子. 对于完全的多任务合并,单项评价是不够的;需要沿合并路径进行两项评价. 不过,在共同训练的骨干里,Deri",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.25000",
+      "dedupe_keys": [
+        "arxiv:2611.25000",
+        "external:2611.25000",
+        "title:watchwhereyoulinearizepredictingandcorrectingmodelmerginginterference",
+        "url:https://arxiv.org/abs/2611.25000"
+      ]
+    },
+    {
+      "id": "arxiv-58ce466715ae",
+      "title": "Auditing Learned Dynamics in Weather Models",
+      "summary": "Learned weather models are experimentally accessible computational systems whose internal representations can be inspected and manipulated. Using sparse autoencoder features from GraphCast, DeepMind's autoregressive weather forecasting model, we test whether causal relevance requires physical semantics, a question that matters for auditing whether AI forecasters used in high-assurance settings rely on reliable mechanisms. We also look at whether physically associated latent directions can be steered to improve extreme-event forecasts, where interventions are applied to the model's internal activations during the rollout. We find that ablating a feature locked to GraphCast's computational mesh increases global geopotential height error despite lacking conventional physical semantics. Second, suppressing convection- and low-level-vorticity-associated features weakens predicted tropical-cyclone deepening (the fall in central pressure during intensification), while amplifying them reduces intensity error, with amplification of convection features through feature scaling achieving a median of 51\\% error reduction over seven storms. Together, these results separate interpretable, physical association from causal utility and establish sparse features as experimental coordinates for auditing and intervening on learned weather dynamics.",
+      "authors": [
+        "Skylar Gu",
+        "Christina Last"
+      ],
+      "url": "https://arxiv.org/abs/2611.25119",
+      "pdf_url": "https://arxiv.org/pdf/2611.25119",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.LG",
+      "kind": "paper",
+      "published_at": "2026-11-21T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "生成与创造",
+        "AI for Science",
+        "cs.LG"
+      ],
+      "score": 21.61,
+      "zh_title": "天气模型中吸取的审计动态",
+      "zh_summary": "学习到的气象模型是试验性的可用计算系统,其内部表述可以检查和操纵. 使用GraphCast, DeepMind的自动天气预报模型中稀少的自动编码器特征,我们测试因果关系是否需要物理语义,这个问题对于审计在高保障环境下使用的AI预报器是否依赖于可靠的机制至关重要. 我们还研究是否可以引导与物理相关的潜在方向来改进极端事件的预测,在推展期间,干预应用于模型的内部激活。 我们发现,将一个特性锁定在GraphCast的计算网格上会增加全球地质潜力高度误差,尽管缺乏",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.25119",
+      "dedupe_keys": [
+        "arxiv:2611.25119",
+        "external:2611.25119",
+        "title:auditinglearneddynamicsinweathermodels",
+        "url:https://arxiv.org/abs/2611.25119"
+      ]
+    },
+    {
+      "id": "arxiv-53da4ceae320",
+      "title": "Game-Theoretic Data Allocation for Expert Specialization and Routing",
+      "summary": "Can the allocation used to train experts also predict which expert will perform best on a prompt? Such a connection would make the intended division of labor inspectable before training and allow the allocation itself to guide inference. We introduce InflEns, a mixture of LoRA experts whose training weights and inference routes come from the same location game in a fixed prompt-trait space. Players choose positions to maximize their expected shares of the prompt distribution, without using expert losses. We utilize the game's kernel-general theoretical criterion for when co-located positions become locally unstable to separation. We evaluate InflEns on a corpus assembled from seven safety-related benchmarks, which demonstrates that the highest-share expert has the lowest held-out response negative log-likelihood (NLL) on approximately 90% of prompts across four kernels under a sharpened simplex representation, compared with approximately 15% after permuting allocations across prompts. We demonstrate that the method performs comparably to published learned gates without having to train an explicit gate on the experts. Because the router is fixed, we can trace harmful behavior to a single expert and retrain only that expert, which lowers HarmBench attack success from 0.51 to 0.02 while keeping instruction following. The game also gives us several controls over how the experts specialize, including the kernel choice and its parameters, the trait-space geometry, and the number of experts. Importantly, InflEns is a general framework that can be extended to any encoder and data distribution.",
+      "authors": [
+        "Mark Lovett",
+        "Denis Lim",
+        "Soroush Vosoughi"
+      ],
+      "url": "https://arxiv.org/abs/2611.25167",
+      "pdf_url": "https://arxiv.org/pdf/2611.25167",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.LG",
+      "kind": "paper",
+      "published_at": "2026-11-21T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "训练与系统",
+        "评测与安全",
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "score": 21.61,
+      "zh_title": "Game-Theoretic Data Data Group for Expertional Speciality and Routing (游戏-理论数据分配) 专家专攻和游击",
+      "zh_summary": "用于训练专家的拨款能否预测哪些专家能迅速取得最佳成绩? 这种联系将使预定的分工在训练前可以检查,并使分配本身能够指导推断。 我们介绍InflEns,是LORA专家的混合体,他们的训练重量和推论路线来自同一地点的游戏,在一个固定的快速跟踪空间. 玩家选择位置,尽量扩大自己在即时发行的预期份额,而不用专家损失. 我们使用游戏的内核一般理论标准,用于当合用位置变得局部不稳定以致分离时. 我们从7个与安全有关的基准组装起来,对InflEns进行评估。",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.25167",
+      "dedupe_keys": [
+        "arxiv:2611.25167",
+        "external:2611.25167",
+        "title:gametheoreticdataallocationforexpertspecializationandrouting",
+        "url:https://arxiv.org/abs/2611.25167"
+      ]
+    },
+    {
+      "id": "arxiv-11477824716e",
+      "title": "{\\phi}TD: Distributional Reinforcement Learning using Characteristic Functions",
+      "summary": "Distributional Reinforcement Learning methods aim to learn the entire distribution of returns, yet current algorithmic approaches are limited to a narrow class of distributions. We propose $\\varphi$TD, a method to overcome this limitation by computing the loss in the frequency domain. We demonstrate that this further unifies quantile and categorical approaches to distributional RL, and enables the learning of distributions that were previously impossible to capture, such as mixtures of continuous distributions. We empirically study $\\varphi$TD, across synthetic benchmarks and large-scale deep RL environments and demonstrate that the flexibility obtained from wider parametric families can lead to improved performance.",
+      "authors": [
+        "Thomas Mousseau",
+        "Tyler Kastner",
+        "Davide Baldelli",
+        "Amir-massoud Farahmand"
+      ],
+      "url": "https://arxiv.org/abs/2611.25208",
+      "pdf_url": "https://arxiv.org/pdf/2611.25208",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.LG",
+      "kind": "paper",
+      "published_at": "2026-11-21T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "训练与系统",
+        "评测与安全",
+        "cs.LG"
+      ],
+      "score": 21.61,
+      "zh_title": "TD:利用特性函数进行分布式强化学习",
+      "zh_summary": "分布式强化学习方法旨在学习整个返回的分布,然而目前的算法方法仅限于狭义的分布类. 我们提出 $\\varphi$TD, 一种通过计算频率域损失来克服这一限制的方法. 我们证明,这进一步统一了分配RL的量化和绝对方法,使以前无法捕捉的分布得以学习,如连续分布的混合物。 我们从经验上研究了合成基准和大规模深层RL环境($\\varphi$TD),并表明从更广泛的参数化家庭获得的灵活性可导致业绩的改善。",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.25208",
+      "dedupe_keys": [
+        "arxiv:2611.25208",
+        "external:2611.25208",
+        "title:phitddistributionalreinforcementlearningusingcharacteristicfunctions",
+        "url:https://arxiv.org/abs/2611.25208"
+      ]
+    },
+    {
+      "id": "arxiv-8ffa1bcba99a",
+      "title": "Learning to Read Events for Exact State Tracking with Frozen Language Models",
+      "summary": "Long event streams require identifying each change and applying the changes in order. We train a selector on a frozen language model to read each transition. With API-only access, we ask the model to list the transitions. An external integer register composes them in order. A confidence rule can flag uncertain updates or retain several candidates. We study products of permutations of five items, a task that fixed-depth, log-precision transformers cannot solve on all input lengths under the standard conjecture that $\\mathrm{TC}^0 \\ne \\mathrm{NC}^1$. On two-event windows, a 27B model answered 3 of 100 correctly without visible reasoning and 96 of 100 when it generated intermediate steps. A frozen 0.8B model with a trained selector read every event in 299 of 299 windows of 43,687 events each. The same package passed 298 of 299 new windows on a fresh machine, missing the target of 0.99 for the one-sided 95% lower confidence bound. A separate follow-up sized to allow one failure yielded 472 of 473. On 1,000-event room-swap documents, three of ten models solved all five documents by reasoning alone. All seven models tested both ways at this length solved all five with extraction and the register, with no chain of thought requested. With concurrent extraction, median wall-clock time fell from 136.1 to 10.4 s for Sonnet 5.5 and from 313.5 to 28.0 s for GPT-6.1 Sol. At fixed per-token rates, mean cost per document fell by 55% for Sonnet 5.5 and 44% for GPT-6.1 Sol. A regular expression with an executor also solved all 15 fixed-format documents. On 500 free-form issue-tracker comments, a separately adapted 4B reader identified the recorded value in 68.8% of cases, compared with 61.0% for a frequency baseline fitted on the same training projects.",
+      "authors": [
+        "Jeonghoon Lee (Attractor Dynamics Inc.)"
+      ],
+      "url": "https://arxiv.org/abs/2611.25211",
+      "pdf_url": "https://arxiv.org/pdf/2611.25211",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.LG",
+      "kind": "paper",
+      "published_at": "2026-11-21T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "大模型",
+        "推理",
+        "cs.LG",
+        "cs.CL"
+      ],
+      "score": 21.61,
+      "zh_title": "用冷冻语言模式学习读取精确状态跟踪事件",
+      "zh_summary": "长事件流需要识别每个变化,并按顺序应用这些变化. 我们用冷冻的语言模型训练一个选手 来读读每一个过渡。 由于只使用API,我们请模型列出过渡. 外部整数寄存器按顺序排列。 信任规则可能使一些候选人更新或保留不确定。 我们研究五件物品的排列产物,在$\\mathrm{TC}^0\\ne\\mathrm{NC}^1$的标准推测下,固定深度,日志精度变压器无法解决所有输入长度的问题. 在两个事件窗口上,一个27B模型在没有明显推理的情况下正确回答100中的3个,在生成中间步骤时正确回答100中的96个. 冰冻的0.8B型机,配备训练有素的选手,在2次中阅读每场事件",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.25211",
+      "dedupe_keys": [
+        "arxiv:2611.25211",
+        "external:2611.25211",
+        "title:learningtoreadeventsforexactstatetrackingwithfrozenlanguagemodels",
+        "url:https://arxiv.org/abs/2611.25211"
+      ]
+    },
+    {
+      "id": "arxiv-950cf24739d3",
+      "title": "On the Impact of Feature Reduction Techniques on Adversarial Attacks",
+      "summary": "Adversarial attacks have posed significant threats to machine learning models by exploiting their inherent vulnerabilities. Researchers have established an interdisciplinary field called adversarial machine learning to explore these vulnerabilities and develop corresponding defense strategies. Feature reduction strategies are used to decrease the dimensionality of the data in order to reduce training time, avoid the curse of dimensionality, prevent overfitting, and mitigate redundant features. However, their effect on adversarial robustness across different classifiers and attack scenarios remains insufficiently explored. This study aims to analyze the effect of feature reduction techniques on the adversarial robustness of a diverse set of machine learning models under poisoning, backdoor, and universal adversarial perturbation attacks on the APT dataset. These models include support vector machine, decision tree, random forest, multi-layer perceptron, and k-nearest neighbors. The attained results are compared with scenarios where different feature reduction techniques are applied, including principal component analysis, permutation importance ranking, recursive feature elimination, and univariate mutual information. Metrics such as accuracy, F1-score, and mitigation score are employed to evaluate the effect of these techniques on adversarial robustness. The results demonstrate that permutation importance ranking and univariate mutual information generally provide the most consistent robustness improvements, while other methods exhibit more variable effects depending on the classifier and attack scenario.",
+      "authors": [
+        "Mohammad Meymani",
+        "Roozbeh Razavi-Far"
+      ],
+      "url": "https://arxiv.org/abs/2611.25004",
+      "pdf_url": "https://arxiv.org/pdf/2611.25004",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.LG",
+      "kind": "paper",
+      "published_at": "2026-11-21T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "评测与安全",
+        "cs.LG",
+        "cs.AI"
+      ],
+      "score": 19.11,
+      "zh_title": "减少特征技术对横向攻击的影响",
+      "zh_summary": "横向攻击通过利用机器的固有脆弱性,对机器学习模式构成重大威胁。 研究人员建立了一个名为对抗机器学习的跨学科领域,以探索这些弱点,并制定相应的防御战略. 降低特性策略用于降低数据的维度,以减少训练时间,避免维度的诅咒,防止过度调整,减少冗余特征. 然而,它们对于不同分类和攻击情景的对抗力的影响仍未得到充分探讨。 这项研究旨在分析减少特征技术对多种机体的对抗力le的影响。",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.25004",
+      "dedupe_keys": [
+        "arxiv:2611.25004",
+        "external:2611.25004",
+        "title:ontheimpactoffeaturereductiontechniquesonadversarialattacks",
+        "url:https://arxiv.org/abs/2611.25004"
+      ]
+    },
+    {
+      "id": "arxiv-d608dd69e755",
+      "title": "Fast and Memory-Light Evaluation of Density-Based Clusterings with the DISCO Index in R",
+      "summary": "DISCO is a recent internal cluster validity index for density-based clustering that, unlike earlier indices, also evaluates the quality of noise labels. The discoCVI package makes DISCO available in R. This article describes the design of the package and a typical workflow, in which DISCO is used to compare clusterings and to choose the parameters of HDBSCAN without ground truth, followed by the implementation introduced in version 0.2.0. DISCO is defined through density-connectivity distances between all pairs of points, so direct implementations store several n-by-n matrices. We show that every quantity DISCO needs can be read off the single-linkage merge tree of the mutual-reachability minimum spanning tree, so that the index can be computed exactly with memory that grows linearly with the number of points, while the running time remains quadratic as in the original definition. The implementation is tested against the previous version, agrees with the original Python implementation to within $3 \\times 10^{-13}$, and corrects the score of singleton clusters to match the published definition. In benchmarks, discoCVI is 23 to 138 times faster than its previous version for 500 to 4,000 points and 3 to 9 times faster than the Python reference for 500 to 8,000 points, using a fraction of the memory of both, and it scores 100,000 points in about 50 seconds with less than 200 MB of memory.",
+      "authors": [
+        "Amin Entezari"
+      ],
+      "url": "https://arxiv.org/abs/2611.25114",
+      "pdf_url": "https://arxiv.org/pdf/2611.25114",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.LG",
+      "kind": "paper",
+      "published_at": "2026-11-21T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "评测与安全",
+        "cs.LG",
+        "stat.CO"
+      ],
+      "score": 19.11,
+      "zh_title": "对基于密度的集群进行快速和记忆-光评价,R部分采用DISCO指数",
+      "zh_summary": "DISCO是最近针对基于密度的集群的内部集群有效性指数,它与之前的指数不同,也评价噪音标签的质量. 迪斯科CVI套装使得DISCO可以使用R. 本文描述了软件包的设计以及典型的工作流程,其中DISCO用于比较集群,并选择HDBSCAN没有地面真伪的参数,之后是0.2.0版本引入的实现. DISCO是通过所有对点之间的密度-连接距离来定义的,因此直接执行存储了数个n逐n矩阵. 我们显示,DISCO所需的每一数量都可以从互通性最小跨树的单链合并树上读取,以便精确计算指数",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.25114",
+      "dedupe_keys": [
+        "arxiv:2611.25114",
+        "external:2611.25114",
+        "title:fastandmemorylightevaluationofdensitybasedclusteringswiththediscoindexinr",
+        "url:https://arxiv.org/abs/2611.25114"
+      ]
+    },
+    {
+      "id": "arxiv-3bd28f97d326",
+      "title": "Bayesian $\\kappa$-Explorer for Minimax Model Estimation in MDPs",
+      "summary": "We study active exploration for minimax transition estimation in unknown Markov decision processes (MDPs). Frequentist $\\kappa$-Explorer~\\citep{gu2026kappa} addresses this problem through a parameterized family of exploration objectives, but requires confidence-bound constructions and joint optimization over plausible transition kernels and occupancy measures, introducing a computational burden that limits its practical applicability. We develop Bayesian $\\kappa$-Explorer, which simplifies this procedure by placing Dirichlet priors on the transition distributions. Under the posterior mean estimator, the posterior expected squared $\\ell_2$ error equals the total posterior variance, providing a closed-form exploration signal. The algorithm plans under the posterior mean model, eliminating confidence-set optimization. Under the stated assumptions, this simpler planning procedure retains the $\\widetilde{O}(T^{-1/3})$ surrogate convergence rate of frequentist $\\kappa$-Explorer. We further bound the maximum posterior variance relative to the optimal asymptotic minimax allocation benchmark. Experiments on Pendulum, Mountain Car, and Taxi demonstrate lower worst-case transition-estimation errors than the tested baselines.",
+      "authors": [
+        "Xihe Gu",
+        "Urbashi Mitra",
+        "Tara Javidi"
+      ],
+      "url": "https://arxiv.org/abs/2611.25160",
+      "pdf_url": "https://arxiv.org/pdf/2611.25160",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.LG",
+      "kind": "paper",
+      "published_at": "2026-11-21T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "评测与安全",
+        "cs.LG"
+      ],
+      "score": 19.11,
+      "zh_title": "Bayesian $\\ kappa$- 微磁共振模型估算法",
+      "zh_summary": "我们研究在未知的马尔科夫决策过程中积极探索小型最大过渡估计。 常客$\\kappa$-Explorer citep{gu2026kappa}通过一个参数化的勘探目标家族来解决这一问题,但需要建立信任的构筑,并联合优化对可能过渡的内核和占用措施,引入了限制其实际适用的计算负担。 我们开发了Bayesian $\\ kappa$ - Explorer,它简化了这个程序,将Drichlet的前身放在过渡分配上. 在后方表示估测符下,后方预期的$\\ell 2美元误差等于后方总差,提供闭合式探索信号. 算法计划",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.25160",
+      "dedupe_keys": [
+        "arxiv:2611.25160",
+        "external:2611.25160",
+        "title:bayesiankappaexplorerforminimaxmodelestimationinmdps",
+        "url:https://arxiv.org/abs/2611.25160"
+      ]
+    },
+    {
+      "id": "arxiv-364ce863335a",
+      "title": "Separating Interpretability and Reconstruction in Sparse Autoencoders",
+      "summary": "Sparse Autoencoders (SAEs) are effective tools for mechanistic interpretability by decomposing neural representations into sparse and interpretable features. However, a single sparse representation in traditional SAEs is responsible for both reconstruction fidelity and interpretability, which are not guaranteed to align. To separate these objectives, we propose DualSAE, a modular framework that augments standard SAEs with a plug-in Residual Branch. A standard SAE serves as the Sparse Branch, learning a sparse code that contains the dominant semantics of the input. The added Residual Branch models the non-semantic information omitted by the Sparse Branch. We ensure that the contributions of the two branches towards the overall reconstruction have minimal overlap through a decorrelation loss. We also adopt a two-stage training strategy that first stabilizes sparse representation learning before coupling with the Residual Branch. Across diverse encoder-SAE configurations on two vision datasets and two language corpora, DualSAE achieves mean relative improvements of approximately 29% in reconstruction fidelity and 34% in interpretability (measured by monosemanticity score). Moreover, with more interpretable representations, DualSAE yields consistent performance gains in the downstream applications of topic modeling, hypothesis generation, and LLM steering. Qualitative analysis further suggests that the Sparse Branch indeed preserves dominant semantic content, whereas the Residual Branch captures non-semantic information to improve reconstruction fidelity.",
+      "authors": [
+        "Anh Tien Nguyen",
+        "Dimitris Samaras",
+        "Mahdi S. Hosseini"
+      ],
+      "url": "https://arxiv.org/abs/2611.25165",
+      "pdf_url": "https://arxiv.org/pdf/2611.25165",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.LG",
+      "kind": "paper",
+      "published_at": "2026-11-21T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "大模型",
+        "cs.LG"
+      ],
+      "score": 19.11,
+      "zh_title": "在 Sparse 自动编码器中分离可解释性和重建",
+      "zh_summary": "Sparse自动编码器(SAEs)是机械解释的有效工具,通过将神经表达分解成稀疏和可解释的特征. 然而,在传统的高级经济实体中,只有很少的代表负责重建忠贞和可解释性,不能保证它们保持一致。 为了将这些目标分开,我们提议采用DualSAE这一模块化框架,用插件残余处来扩大标准SAE。 一个标准的SAE作为Sparse分支,学习一个包含输入语义占支配地位的稀疏代码. 新增的余留事项处模型是Sparse处省略的非语义信息。 我们保证两处对总体重建的贡献能够保持小型和小型的。",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.25165",
+      "dedupe_keys": [
+        "arxiv:2611.25165",
+        "external:2611.25165",
+        "title:separatinginterpretabilityandreconstructioninsparseautoencoders",
+        "url:https://arxiv.org/abs/2611.25165"
+      ]
+    },
+    {
+      "id": "arxiv-f88c4a1cc3e1",
+      "title": "PDE-State Conditioning for Learned Optimization Using Physics-Informed Neural Networks",
+      "summary": "Physics-informed neural network (PINN) optimization depends on global properties of the underlying PDE and how the physics residual evolves across the domain. Standard optimizers such as Adam use fixed gradient-based statistics, while learned PINN optimizers replace the fixed rule with a learned update built from local parameters and optimization-history features. However, none explicitly use PDE-level information. We study two coupled design questions: what PDE-level information should a learned optimizer observe, and how should that information influence its update? We introduce an 11-dimensional PDE state-capturing operator structure, residual geometry, and short-horizon update response, and use it to condition a structured meta-learned optimizer through bounded feature-wise modulation. Repeated design studies identify the compact residual-geometry state G2 and bounded FiLM as the strongest overall choices among those tested. The resulting PDE-State-conditioned optimizer improves all evaluation metrics (relative-L2, L1, solution MSE, and physics MSE) over Adam and the unconditioned learned optimizer on Linear Advection, KdV, and Burgers.",
+      "authors": [
+        "Farzana Yasmin",
+        "Ricardo Vilalta"
+      ],
+      "url": "https://arxiv.org/abs/2611.25185",
+      "pdf_url": "https://arxiv.org/pdf/2611.25185",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.LG",
+      "kind": "paper",
+      "published_at": "2026-11-21T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "评测与安全",
+        "cs.LG"
+      ],
+      "score": 19.11,
+      "zh_title": "PDE - State 利用物理-成形神经网络优化学习的条件",
+      "zh_summary": "物理知情神经网络(PINN)的优化取决于基础PDE的全球性特性以及物理残基如何在全域演化. 亚当等标准优化者使用基于梯度的固定统计数据,而学习的PINN优化者则用从本地参数和优化-历史特征中构建的学习更新来取代固定规则. 然而,没有任何国家明确使用PDE级信息。 我们研究两个相互关联的设计问题:一个有学问的优化者应该观察什么样的PDE级信息,以及这种信息应如何影响其更新? 我们引入一个11维的 PDE 状态捕捉操作器结构, 剩余几何, 和短视更新响应, 并使用它来条件一个结构化的元学习优化器",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.25185",
+      "dedupe_keys": [
+        "arxiv:2611.25185",
+        "external:2611.25185",
+        "title:pdestateconditioningforlearnedoptimizationusingphysicsinformedneuralnetworks",
+        "url:https://arxiv.org/abs/2611.25185"
+      ]
+    },
+    {
+      "id": "huggingface-6505a30f803a",
+      "title": "System 1 agents: a method for local, reliable and fast agentic AI",
+      "summary": "Agentic artificial intelligence could automate analyses of sensitive clinical data, but current agents depend on large language models (LLMs). Cloud LLMs expose patient data. Local LLMs hallucinate, and an invented value in a tool call propagates through every later step. Here we present a method to build System 1 agents: local agents that call tools without generating text. A deterministic compiler turns each tool's schema and the request into multiple-choice questions whose options come from the request and the schema, then a one-pass decision model answers them. On 1,952 requests to 157 biomedical tools, the best System 1 agent chose the right tool, or correctly declined, for 97.0% of requests, significantly ahead of all 18 local LLM-agent settings (best 95.2%). The System 1 agent filled 97.0% of 6,056 stated argument values. No System 1 call contained invented content, against 5.5-19.7% of LLM calls. The System 1 Agents framework is freely available as open-source software at https://github.com/eltzanis/SystemOneAgents.",
+      "authors": [
+        "Eleftherios Tzanis",
+        "Michail E. Klontzas"
+      ],
+      "url": "https://arxiv.org/abs/2611.21053",
+      "pdf_url": "",
+      "source_id": "huggingface",
+      "source_name": "Hugging Face Daily",
+      "kind": "paper",
+      "published_at": "2026-11-16T00:00:00+00:00",
+      "venue": "Hugging Face Daily Papers",
+      "tags": [
+        "大模型",
+        "Agent",
+        "community pick"
+      ],
+      "score": 19.0,
+      "zh_title": "System 1 智能体:一种用于本地,可靠和快速智能体AI的方法.",
+      "zh_summary": "智能体工智能可以对敏感的临床数据进行自动化分析,但当前物剂依赖于大语言模型(LLM). Cloud LLMs曝光患者数据. 本地LLMS幻觉,一个工具调用中发明的值通过以后的每一步传播. 在这里,我们提出了构建System 1智能体的方法:不生成文本而调用工具的本地智能体. 一个决定性的编译器将每个工具的图案和请求转化为多个选择问题,其选项来自请求和图案,然后一个单传决定模型回答. 在1 952项对157个生物医学工具的请求中,最好的System 1智能体选择了正确的工具,或者正确地拒绝了97.0%的请求,大大领先于所有18个本地LLM智能体设置",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.21053",
+      "dedupe_keys": [
+        "arxiv:2611.21053",
+        "external:2611.21053",
+        "title:system1agentsamethodforlocalreliableandfastagenticai",
+        "url:https://arxiv.org/abs/2611.21053"
+      ]
+    },
+    {
+      "id": "huggingface-4ddc57d7f124",
+      "title": "Squoosh Bench: Evaluating UX-1 on 318 Historical Website A/B Tests",
+      "summary": "Experimentation teams must decide which proposed website changes to test with live traffic. We evaluated whether forecasts from simulated shoppers could inform that choice. We screened 412 historical website A/B tests and evaluated four systems on the 318 that ran longer than 21 days. Each system predicted an original win, a variant win, or an inconclusive result. Page roles were masked and recorded outcomes were withheld during inference. Squoosh UX-1, a model fine-tuned on human browsing data, simulated 1,000 shoppers per arm and correctly classified 267 of 318 outcomes (84.0%, 95% Wilson interval 79.5-87.6%, treating experiments as independent). Qwen3 Next 80B, the strongest general-purpose configuration on outcome accuracy, correctly classified 196 of 318 (61.6%). UX-1 favored the variant in 126 experiments. In the live tests, 118 of those variants won (93.7%), four lost, and four had inconclusive results. The remaining 192 experiments included 19 additional variant wins.",
+      "authors": [
+        "Rohith Pasula",
+        "Johari Dramiga",
+        "Viraj Shah",
+        "Suzan Halim",
+        "Tyler Dooskin"
+      ],
+      "url": "https://arxiv.org/abs/2611.25200",
+      "pdf_url": "",
+      "source_id": "huggingface",
+      "source_name": "Hugging Face Daily",
+      "kind": "paper",
+      "published_at": "2026-11-18T00:00:00+00:00",
+      "venue": "Hugging Face Daily Papers",
+      "tags": [
+        "训练与系统",
+        "community pick"
+      ],
+      "score": 18.3,
+      "zh_title": "Squoosh法官席:评估318历史网站A/B上的UX-1",
+      "zh_summary": "实验组必须决定拟对哪些网站进行修改,以进行现场流量测试。 我们评价了模拟购物者的预测能否为这种选择提供参考。 我们筛选了412个历史网站A/B测试,并对318个超过21天的系统进行了评估。 每个系统都预测了原胜,变胜,或无定论的结果. 页面角色被蒙上面具,在推论期间没有记录结果。 Squoosh UX-1,一种对人浏览数据进行微调的模型,模拟了每只手臂1000名购物者,并将318个结果中的267个(84.0%,95%的威尔逊间隔79.5-87.6%,将实验视为独立)正确分类. Quen3 下80B,成果精度最强的通用配置,正确分类 1",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.25200",
+      "dedupe_keys": [
+        "arxiv:2611.25200",
+        "external:2611.25200",
+        "title:squooshbenchevaluatingux1on318historicalwebsiteabtests",
+        "url:https://arxiv.org/abs/2611.25200"
+      ]
+    },
+    {
+      "id": "arxiv-48d7e8db51f4",
+      "title": "Near-Quadratic Sample Compression for All VC Classes",
+      "summary": "The sample compression conjecture is a longstanding open problem in learning theory, originating in the work of Littlestone and Warmuth in the 1980s. At its heart is a connection between simplification and generalization: if a predictor consistent with a training sample is defined using only a small part of that sample, then it is likely to generalize. Sample compression schemes formalize this idea, and many natural learning algorithms can be analyzed this way. The sample compression conjecture of Floyd and Warmuth (1995) asserts that every binary concept class of VC dimension $d$ admits a sample compression scheme of size $O(d)$; a weaker conjecture asks only for size polynomial in $d$. Both have remained open: the first bound depending only on $d$, due to Moran and Yehudayoff (2016), is exponential in $d$. We prove the weaker conjecture by constructing a sample compression scheme of size $O(d^2 \\log^2 d)$.",
+      "authors": [
+        "Yang Cai",
+        "Vineet Gupta",
+        "Yanchen Jiang",
+        "Christopher Liaw",
+        "Aranyak Mehta",
+        "Shay Moran",
+        "Grigoris Velegkas",
+        "Di Wang",
+        "Manfred K. Warmuth"
+      ],
+      "url": "https://arxiv.org/abs/2611.25011",
+      "pdf_url": "https://arxiv.org/pdf/2611.25011",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.LG",
+      "kind": "paper",
+      "published_at": "2026-11-21T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "综合",
+        "cs.LG",
+        "cs.AI",
+        "cs.DS",
+        "math.CO"
+      ],
+      "score": 16.61,
+      "zh_title": "用于所有VC类的近四方样本压缩",
+      "zh_summary": "样本压缩猜想是学习理论中一个长期开放的问题,起源于20世纪80年代Littlestone和Warmuth的作品. 其核心是简化和概括之间的联系:如果一个与训练样本相一致的预测器仅使用该样本的一小部分来定义,那么它很可能被概括. 样本压缩方案将这个想法正规化,许多自然学习算法可以这样分析. Floyd和Warmuth(1995年)的样本压缩猜想称,每个VC维度的二进制概念类别美元都承认一个尺寸为$O(d)美元的样本压缩计划;一个较弱的猜想只要求以美元表示大小的多元性。 两者都保持开放:第一个约束仅取决于美元,",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.25011",
+      "dedupe_keys": [
+        "arxiv:2611.25011",
+        "external:2611.25011",
+        "title:nearquadraticsamplecompressionforallvcclasses",
+        "url:https://arxiv.org/abs/2611.25011"
+      ]
+    }
+  ]
+}
