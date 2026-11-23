@@ -1,0 +1,299 @@
+{
+  "issue_date": "2026-11-23",
+  "issue_number": 10,
+  "generated_at": "2026-11-23T11:45:23.413750+08:00",
+  "description": "从 4 个数据通道收录 7 条 AI 研究更新，聚焦Agent、多模态、大模型。",
+  "ai_enabled": true,
+  "source_health": [
+    {
+      "source_id": "arxiv",
+      "source_name": "arXiv categories",
+      "status": "empty",
+      "item_count": 0,
+      "errors": []
+    },
+    {
+      "source_id": "openreview",
+      "source_name": "OpenReview venues",
+      "status": "ok",
+      "item_count": 14,
+      "errors": []
+    },
+    {
+      "source_id": "crossref",
+      "source_name": "Crossref journals",
+      "status": "ok",
+      "item_count": 12,
+      "errors": []
+    },
+    {
+      "source_id": "huggingface",
+      "source_name": "Hugging Face Daily",
+      "status": "ok",
+      "item_count": 10,
+      "errors": []
+    },
+    {
+      "source_id": "rss",
+      "source_name": "Official technical blogs",
+      "status": "ok",
+      "item_count": 12,
+      "errors": []
+    }
+  ],
+  "items": [
+    {
+      "id": "huggingface-56c496249c0e",
+      "title": "Lost in the Hallway: Benchmarking Persistent Spatial Memory Across Revisits",
+      "summary": "Persistent spatial understanding is essential for embodied agents to operate reliably in environments they repeatedly encounter. It requires recognizing revisited places despite viewpoint changes, distinguishing them from similar-looking rooms, and updating memories as environments change. Yet existing evaluations often leave physical place identity across separated visits implicit. We introduce ReSpaceBench, a benchmark comprising 3,244 questions across 590 synthetic and real-home scenes, organized into 9 tasks spanning room association, persistent state tracking, and downstream reasoning. Controlled walkthroughs define visits by physical room entry and deliberately include same-type room distractors and cross-session object changes. Our evaluation of 32 models and 3 agentic video-understanding frameworks reveals substantial limitations: the strongest evaluated zero-shot model achieves 50.5% overall accuracy and 52.2% on a 450-question subset, compared with 90.1% for human annotators. The evaluated agentic frameworks offer no overall improvement over direct inference with the same base model. Analysis of agent execution traces reveals evidence omissions and incorrect cross-visit room associations as major failure modes, suggesting that iterative evidence seeking alone does not ensure consistent spatial memory. Further analyses expose a gap between recognizing familiar rooms and identifying the correct visited room, while annotation-guided sampling highlights the importance of preserving intervening visits and transitions. We also provide RS-30K, a separate training dataset from synthetic sources with no template, scene, route, or video overlap with the benchmark. Fine-tuning Qwen3-VL-8B raises overall accuracy from 35.5% to 60.4%, with the largest gains in association and improvements extending to real-life scenes.",
+      "authors": [
+        "Henry Zheng",
+        "Weibo Gong",
+        "Yang Yue",
+        "Rui Huang",
+        "Yang Zhang",
+        "Gao Huang"
+      ],
+      "url": "https://arxiv.org/abs/2611.21485",
+      "pdf_url": "",
+      "source_id": "huggingface",
+      "source_name": "Hugging Face Daily",
+      "kind": "paper",
+      "published_at": "2026-11-16T00:00:00+00:00",
+      "venue": "Hugging Face Daily Papers",
+      "tags": [
+        "Agent",
+        "推理",
+        "训练与系统",
+        "community pick"
+      ],
+      "score": 29.0,
+      "zh_title": "在大厅中失落:将持续空间记忆作为整个审查的基准",
+      "zh_summary": "持续的空间理解对于内含物剂在它们反复遇到的环境中可靠运行至关重要。 尽管观点有变化,但需要认识到重新审视的地方,将它们与类似的房间区分开来,并随着环境的变化更新记忆。 然而,现有的评价往往在分开的访问中隐含着实际地点的身份。 我们引入了ReSpace Bench, 一个包含3,244个问题的基准,涉及590个合成场景和真实家庭场景, 分为9个任务, 跨越房间协会,持续状态跟踪,以及下游推理。 受控的行走方式通过物理房间进入来定义访问,并刻意包括同类型的房间分散器和跨会场物体的改变. 我们的评价",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.21485",
+      "dedupe_keys": [
+        "arxiv:2611.21485",
+        "external:2611.21485",
+        "title:lostinthehallwaybenchmarkingpersistentspatialmemoryacrossrevisits",
+        "url:https://arxiv.org/abs/2611.21485"
+      ]
+    },
+    {
+      "id": "rss-aeb6e01a8422",
+      "title": "Perplexity and Intelligence",
+      "summary": "How perplexity measures progress in AI models, and why it could help developers establish a shared approach to evaluating emerging capabilities.",
+      "authors": [],
+      "url": "https://openai.com/index/perplexity-and-intelligence",
+      "pdf_url": "",
+      "source_id": "rss",
+      "source_name": "OpenAI",
+      "kind": "report",
+      "published_at": "2026-11-22T00:00:00+00:00",
+      "venue": "OpenAI 官方博客",
+      "tags": [
+        "综合",
+        "Research"
+      ],
+      "score": 22.27,
+      "zh_title": "困惑和智力",
+      "zh_summary": "复杂度如何衡量AI模型的进展,以及为什么它能帮助开发者建立评估新兴能力的共享方法.",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "",
+      "dedupe_keys": [
+        "title:perplexityandintelligence",
+        "url:https://openai.com/index/perplexity-and-intelligence"
+      ]
+    },
+    {
+      "id": "huggingface-08f3d9351fc4",
+      "title": "Prune to Expand: Training Prompt Enhancers with Less to Imitate",
+      "summary": "Prompt enhancement (PE) refines concise user prompts into detailed descriptions to improve the compositional aesthetics of generated images while preserving user intent. A common practice constructs supervised fine-tuning (SFT) pairs by deriving short, user-like prompts from dense captions, implicitly assuming that captions that improve image generation also provide effective supervision. In this paper, however, we uncover a counterintuitive finding: PE models trained on caption pairs with substantial generation gains perform comparably to those trained on pairs with only marginal gains. We argue that dense captions can impose redundant supervision by requiring PE models to reproduce image-specific details weakly related to user intent. Motivated by this discrepancy, we introduce Prune to Expand (P2E), a simple text-only method that refines dense-caption supervision by selectively removing redundant sentences under a per-example deletion bound while preserving explicit user requirements and informative visual structure. Extensive experiments under identical training configurations demonstrate that P2E improves alignment with human preferences and visual quality over conventional dense-caption SFT across diverse image categories and visual generators.",
+      "authors": [
+        "Tianhe Wu",
+        "Qilin Sun",
+        "Kede Ma"
+      ],
+      "url": "https://arxiv.org/abs/2611.27229",
+      "pdf_url": "",
+      "source_id": "huggingface",
+      "source_name": "Hugging Face Daily",
+      "kind": "paper",
+      "published_at": "2026-11-20T00:00:00+00:00",
+      "venue": "Hugging Face Daily Papers",
+      "tags": [
+        "多模态",
+        "训练与系统",
+        "生成与创造",
+        "community pick"
+      ],
+      "score": 27.27,
+      "zh_title": "扩展管道:训练少模仿的快速增强器",
+      "zh_summary": "即时增强(PE)将简洁的用户提示精炼成详细的描述,以改善生成图像的成分美学,同时保持用户的意向. 一种常见的做法通过从密集标题中得出简短的、类似于用户的提示来构建有监督的微调对子(SFT),隐含地假定改进图像生成的字幕也提供有效的监督. 然而,在本文中,我们发现了一个反直观的发现:在字幕配对方面接受过训练的PE模型,其生成收益相当于那些只获得边际收益的配对方面。 我们主张,密集的字幕可以通过要求PE模型复制与用户意图关系微弱的图像特定细节来强制进行冗余监督. 动机是",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.27229",
+      "dedupe_keys": [
+        "arxiv:2611.27229",
+        "external:2611.27229",
+        "title:prunetoexpandtrainingpromptenhancerswithlesstoimitate",
+        "url:https://arxiv.org/abs/2611.27229"
+      ]
+    },
+    {
+      "id": "huggingface-7cc80d8212ff",
+      "title": "Clover-35B-A3B-Preview Technical Report",
+      "summary": "We introduce Clover-35B-A3B-Preview (Clover), a mixture-of-experts diffusion language model with 35 billion total parameters and 3 billion activated parameters, supporting thinking-mode generation. Clover adapts Gated Delta Networks to block diffusion by combining recurrent memory of previously generated context with bidirectional softmax attention inside the current block. Historical memory readout competes with current-block tokens in a shared softmax, with learnable block-size calibration and a separate, zero-initialized right-context convolution branch. Clover leads the seven evaluated agent metrics, including 73.6 on SWE-bench Verified and 51.7 on Terminal-Bench 2.1. On internal agent workloads, it reaches a reported generation speed of 680 tokens/s using one NVIDIA GB300 GPU at BF16 precision and batch size one. We organize the evaluation around model quality, drafting and verification costs, and deployment under constrained memory. We also describe a decision-model variant that generates answers to related questions in one denoising pass. On an internal set of 500 groups, joint prediction raises question accuracy from 90.37% to 93.88% and all-correct group accuracy from 65.4% to 77.0%.",
+      "authors": [
+        "DiffuSpace Technical Team"
+      ],
+      "url": "https://arxiv.org/abs/2611.24636",
+      "pdf_url": "",
+      "source_id": "huggingface",
+      "source_name": "Hugging Face Daily",
+      "kind": "paper",
+      "published_at": "2026-11-18T00:00:00+00:00",
+      "venue": "Hugging Face Daily Papers",
+      "tags": [
+        "大模型",
+        "Agent",
+        "训练与系统",
+        "community pick"
+      ],
+      "score": 26.77,
+      "zh_title": "Clover-35B-A3B-审查技术报告",
+      "zh_summary": "我们引入了Clover-35B-A3B-Preview(Clover),是一种混合专家传播语言模型,总参数为350亿,激活参数为30亿,支持思维模式生成. Clover将Gated Delta Networks通过将以前生成的内存与当前块内的双向软马克思注意力相结合来进行阻断扩散. 历史记忆读出器在共享软max中与当前块符号竞争,具有可学习的块大小校准以及单独零初始化的右文本折叠分支. Clover领导着7个评估过的剂度量衡,包括SWE-bench验证仪上的73.6和终端-Bench 2.1. 在内部智能体工作量方面,报告生成速度为680吨",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.24636",
+      "dedupe_keys": [
+        "arxiv:2611.24636",
+        "external:2611.24636",
+        "title:clover35ba3bpreviewtechnicalreport",
+        "url:https://arxiv.org/abs/2611.24636"
+      ]
+    },
+    {
+      "id": "huggingface-01a147d592f8",
+      "title": "PURE: A Diagnostic Benchmark for Multi-Granularity Multimodal Identity Matching",
+      "summary": "Identity matching asks whether two records denote the same identity, yet the answer depends on the target granularity. Two records may match at the base level but not at the variant level: they share an underlying design while differing in attributes such as color or size. Final matching accuracy does not separately characterize the capabilities involved. To study this problem, we use e-commerce as a challenging real-world domain. We introduce PURE, a diagnostic benchmark for multi-granularity multimodal identity matching covering four capability dimensions: Perception, Understanding, Reasoning, and Evidence-grounded Judgment. The benchmark comprises 1,457 multiple-choice questions across 14 tasks, derived from real-world matching pairs and verified by two domain experts. Across ten recent MLLMs, overall scores range from 47.1% to 86.0%. Understanding receives the highest mean score and Judgment the lowest, with weaknesses in visual difference localization and variant-level rule judgment. Modality ablations show that models benefit from multimodal evidence but can incorrectly identify conflicts between matching records. In direct matching, most models recognize matching pairs more reliably than non-matching pairs at the base level, whereas the reverse holds at the variant level. PURE therefore reveals what aggregate matching accuracy hides: not only whether models judge a pair correctly, but where they struggle to interpret evidence and apply matching criteria.",
+      "authors": [
+        "Hengyu You",
+        "Xintong Wang",
+        "Jin Cao",
+        "Liang Ding"
+      ],
+      "url": "https://arxiv.org/abs/2611.22343",
+      "pdf_url": "",
+      "source_id": "huggingface",
+      "source_name": "Hugging Face Daily",
+      "kind": "paper",
+      "published_at": "2026-11-17T00:00:00+00:00",
+      "venue": "Hugging Face Daily Papers",
+      "tags": [
+        "大模型",
+        "多模态",
+        "推理",
+        "community pick"
+      ],
+      "score": 24.0,
+      "zh_title": "URE:多种特征匹配诊断基准",
+      "zh_summary": "身份匹配询问两个记录是否表示同一身份,然而答案取决于目标颗粒性. 两个记录可能在基数级别上匹配,但在变体级别上并不匹配:它们共享一个基础设计,但颜色或大小等属性不同. 最终匹配准确性并不单独描述所涉能力。 为了研究这一问题,我们把电子商务作为一个挑战性的现实世界领域。 我们提出了PURE, 即一个诊断性基准,用于多重力多模态身份匹配,涵盖四个能力层面:感知、理解、理性和循证判断。 基准包括14项任务的1 457个多重选择问题,来自现实世界的匹配对并经过核实",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.22343",
+      "dedupe_keys": [
+        "arxiv:2611.22343",
+        "external:2611.22343",
+        "title:pureadiagnosticbenchmarkformultigranularitymultimodalidentitymatching",
+        "url:https://arxiv.org/abs/2611.22343"
+      ]
+    },
+    {
+      "id": "huggingface-b40544f2149d",
+      "title": "AeroRSI: Recursive Self-Improvement for Aerial Vision-Language Navigation",
+      "summary": "Vision-language-action (VLA) models enable unmanned aerial vehicles (UAVs) to follow natural-language instructions, yet still fail frequently in closed-loop flight. Correcting these failures requires repairs, i.e., actions that avoid them at the states the policy itself reaches, which human pilots cannot label at scale and rule-based planners cannot supply reliably. In this paper, we present AeroRSI, a recursive self-improvement framework in which an aerial navigation policy iteratively learns from its own failures. Our key insight is that a failing policy should judge its own repairs by flying on from them. Judged in this way, its sampled actions and even rule-based proposals that hurt it when imitated directly become reliable supervision. Moreover, an episode terminates at its first failure, concealing subsequent failures until the earlier ones are repaired. AeroRSI thus renews its supervision in every round, anchoring the failures of the current policy, verifying repairs by its continuation, and distilling them while keeping its behavior elsewhere. On TravelUAV, three rounds raise the success rate of a supervised 2B-parameter policy from 46.4% to 67.5% and reduce collisions by half, surpassing the previous state of the art by 10.6 points from the same initialization without extra human labels or inference cost. Code and models are available at https://github.com/starsholic/AeroRSI.",
+      "authors": [
+        "Shiwei Wu",
+        "Yuwen Pan",
+        "Zhi Li",
+        "Yaowen Li",
+        "Yan Zhou",
+        "Xuemiao Xu",
+        "Yu Liu"
+      ],
+      "url": "https://arxiv.org/abs/2611.24077",
+      "pdf_url": "",
+      "source_id": "huggingface",
+      "source_name": "Hugging Face Daily",
+      "kind": "paper",
+      "published_at": "2026-11-18T00:00:00+00:00",
+      "venue": "Hugging Face Daily Papers",
+      "tags": [
+        "多模态",
+        "训练与系统",
+        "机器人与具身",
+        "community pick"
+      ],
+      "score": 21.77,
+      "zh_title": "AeroRSI:空中视野-语言导航的递归自我改进",
+      "zh_summary": "视觉语言动作(VLA)模型使得无人驾驶飞行器(UAVs)能够遵循自然语言指令,但在闭路飞行中仍然经常失败. 纠正这些失败需要修复,即采取在州内避免其策略本身达到的行动,而人类飞行员不能在规模上标注这种策略,而基于规则的规划者不能可靠地提供这种策略。 在本文中,我们介绍了AeroRSI, 这是一种递归性的自我改进框架,其中空中导航策略反复从其自身的失败中吸取教训。 我们的主要见解是,一项失败的策略应该通过从它们飞过来来判断它自己的修复工作。 这样判断,它所抽样的行动,甚至基于规则的建议,在直接模仿时会伤害它成为可靠的监督. 此外,",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.24077",
+      "dedupe_keys": [
+        "arxiv:2611.24077",
+        "external:2611.24077",
+        "title:aerorsirecursiveselfimprovementforaerialvisionlanguagenavigation",
+        "url:https://arxiv.org/abs/2611.24077"
+      ]
+    },
+    {
+      "id": "huggingface-c3de66544d22",
+      "title": "Duopra: From Full-Duplex Conversation to Full-Duplex Agency",
+      "summary": "Full-duplex interaction models exhibit strong conversational agency, enabling natural, low-latency turn-taking, backchannels, and interruptions. However, completing tasks further requires task agency: timely tool invocation and argument revision following user corrections. Frontend-backend agents separate initiation from execution: the frontend decides whether and what to request, while the backend determines how. Execution can be offloaded, but unsent requests cannot be executed, and incomplete ones can misdirect the backend. On Full-Duplex-Bench v3 (FDB v3), most failures of Realtime-Venus-Audio + Harness in our streaming pipeline occur before a domain tool executes. We introduce Duopra, a full-duplex interaction model that learns task execution alongside conversational control. Duopra treats the backend as a tool, accepting a self-contained natural-language request. Direct calls and backend delegation share an action interface and requirements for faithful initiation and correct execution. Its three-stage training combines protocol SFT, full-duplex RL rewarding timely and complete execution, and projector-only repair of talker conditioning after thinker updates. With the same backend, Pass@1 rises from 4.7% to 44.7%; Duopra achieves 47.7% calling tools directly (26.0% after SFT) and 49.3% with a DeepSeek backend. It improves three FDB v1.0 takeover rates over the base model. These results show that task agency can coexist with key conversational agency.",
+      "authors": [
+        "Chiyu Chen",
+        "Pengzhou Cheng",
+        "Yuezhao Ma",
+        "Xiaocheng Li",
+        "Can Liu",
+        "Haonan Hu",
+        "Yao Yao",
+        "Yifei Yang",
+        "Yijie Lu",
+        "Taolei Wang",
+        "Yansi Li",
+        "Muhuan Wu",
+        "Chenglu Sun",
+        "Gongshen Liu",
+        "Zhuosheng Zhang"
+      ],
+      "url": "https://arxiv.org/abs/2611.25773",
+      "pdf_url": "",
+      "source_id": "huggingface",
+      "source_name": "Hugging Face Daily",
+      "kind": "paper",
+      "published_at": "2026-11-19T00:00:00+00:00",
+      "venue": "Hugging Face Daily Papers",
+      "tags": [
+        "Agent",
+        "community pick"
+      ],
+      "score": 18.27,
+      "zh_title": "Duopra:从全双面对话到全双面智能体",
+      "zh_summary": "完全复式互动模型显示出强大的对话智能体,能够自然地、低纬度地进行转换、反通道和中断。 然而,完成任务还需要任务智能体:在用户更正后及时引用工具和修改论据。 前端后端智能体将启动与执行分开:前端决定是否以及要求什么,而后端决定如何. 执行可以被卸载,但未经同意的请求不能执行,不完整的请求可以错误地引导后端. 在Full-Duplex-Bench v3(FDB v3)上,我们流线管中Realtime-Venus-Audio + Harness的大部分故障发生在域工具执行之前. 我们介绍Duopra, 一个完全的交互模式, 学习任务执行 al",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.25773",
+      "dedupe_keys": [
+        "arxiv:2611.25773",
+        "external:2611.25773",
+        "title:duoprafromfullduplexconversationtofullduplexagency",
+        "url:https://arxiv.org/abs/2611.25773"
+      ]
+    }
+  ]
+}
