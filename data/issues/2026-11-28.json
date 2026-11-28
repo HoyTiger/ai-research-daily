@@ -1,0 +1,714 @@
+{
+  "issue_date": "2026-11-28",
+  "issue_number": 13,
+  "generated_at": "2026-11-28T12:45:55.143790+08:00",
+  "description": "从 5 个数据通道收录 18 条 AI 研究更新，聚焦大模型、训练与系统、生成与创造。",
+  "ai_enabled": true,
+  "source_health": [
+    {
+      "source_id": "arxiv",
+      "source_name": "arXiv categories",
+      "status": "ok",
+      "item_count": 36,
+      "errors": []
+    },
+    {
+      "source_id": "openreview",
+      "source_name": "OpenReview venues",
+      "status": "ok",
+      "item_count": 14,
+      "errors": []
+    },
+    {
+      "source_id": "crossref",
+      "source_name": "Crossref journals",
+      "status": "ok",
+      "item_count": 12,
+      "errors": []
+    },
+    {
+      "source_id": "huggingface",
+      "source_name": "Hugging Face Daily",
+      "status": "ok",
+      "item_count": 10,
+      "errors": []
+    },
+    {
+      "source_id": "rss",
+      "source_name": "Official technical blogs",
+      "status": "ok",
+      "item_count": 6,
+      "errors": []
+    }
+  ],
+  "items": [
+    {
+      "id": "crossref-fdd8ce77f9ea",
+      "title": "Generating proteins with computationally predicted functions and multiple states via multimodal diffusion",
+      "summary": "",
+      "authors": [
+        "Bowen Jing",
+        "Anna Sappington",
+        "Mihir Bafna",
+        "Ravi Shah",
+        "Adrina Tang",
+        "Rohith Krishna",
+        "Adam Klivans",
+        "Daniel J. Diaz",
+        "Bonnie Berger"
+      ],
+      "url": "https://doi.org/10.1038/s42256-026-01329-2",
+      "pdf_url": "",
+      "source_id": "crossref",
+      "source_name": "Nature Machine Intelligence",
+      "kind": "journal",
+      "published_at": "2026-11-27T00:00:00+00:00",
+      "venue": "Nature Machine Intelligence",
+      "tags": [
+        "多模态",
+        "生成与创造",
+        "AI for Science",
+        "Nature Machine Intelligence"
+      ],
+      "score": 37.7,
+      "zh_title": "通过多模态扩散生成具有计算预测函数和多种状态的蛋白质",
+      "zh_summary": "通过多模态扩散生成具有计算预测函数和多种状态的蛋白质",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "10.1038/s42256-026-01329-2",
+      "dedupe_keys": [
+        "doi:10.1038/s42256-026-01329-2",
+        "external:10.1038/s42256-026-01329-2",
+        "title:generatingproteinswithcomputationallypredictedfunctionsandmultiplestatesviamultimodaldiffusion",
+        "url:https://doi.org/10.1038/s42256-026-01329-2"
+      ]
+    },
+    {
+      "id": "huggingface-dfe91b569599",
+      "title": "LayoutRecall: Preserving Appearance in Multi-Round 3D Layout-Controlled Image Editing",
+      "summary": "3D layout-controlled image editing gives users explicit control over object placement and camera viewpoint. In a sequence of edits, however, the latest image can lose the appearance of an object when it is occluded or leaves view. The target layout specifies where the object should reappear, while its appearance must be recovered from earlier observations. We introduce LayoutRecall, a multi-round editor that stores and reuses appearance in the local coordinate systems of 3D boxes. Box-Surface Latent Memory retains image latents on box faces and retrieves them along rays in the target view. Geometry-Aligned Memory Conditioning supplies the retrieved tokens to a FLUX.2 editor using target-view positions, shared box-local embeddings, and object-wise attention. A correspondence loss encourages the editor to attend to matching observations during denoising. We also introduce LayoutLoop, a multi-round 3D layout-controlled image editing benchmark with calibrated layouts and designed revisits. We conduct extensive experiments on LayoutLoop and real-scene data to verify the ability of our method. The project page is at https://ykchizs.github.io/layoutrecall.github.io/.",
+      "authors": [
+        "Yankuan Chi",
+        "Xin Lin",
+        "Baihan Yang",
+        "Yuheng Liu",
+        "Jason Li",
+        "Truong Nguyen"
+      ],
+      "url": "https://arxiv.org/abs/2611.33885",
+      "pdf_url": "",
+      "source_id": "huggingface",
+      "source_name": "Hugging Face Daily",
+      "kind": "paper",
+      "published_at": "2026-11-25T00:00:00+00:00",
+      "venue": "Hugging Face Daily Papers",
+      "tags": [
+        "训练与系统",
+        "检索与知识",
+        "生成与创造",
+        "community pick"
+      ],
+      "score": 27.2,
+      "zh_title": "布局回顾: 在多径3D布局控制图像编辑中保留外观",
+      "zh_summary": "3D布局控制的图像编辑让用户对对象放置和相机视角有明确的控制. 然而,在编辑的顺序中,当物体被占用或离开视图时,最新的图像可能会失去其外观. 目标布局指定了物体应当重新出现的地方,而它的外观必须从早期的观测中恢复. 我们引入了布局Recall,一个多轮编辑器,存储和重用3D盒的本地坐标系统中的外观. Box-Surface Latent Memory在盒子面部保留图像潜伏,并在目标视图中沿射线取回. 几何- 对齐的内存条件 向一个 FLUX.2 编辑器提供回收的代号 , 使用目标视图位置、 共享框- 本地嵌入, 以及对象偏移",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.33885",
+      "dedupe_keys": [
+        "arxiv:2611.33885",
+        "external:2611.33885",
+        "title:layoutrecallpreservingappearanceinmultiround3dlayoutcontrolledimageediting",
+        "url:https://arxiv.org/abs/2611.33885"
+      ]
+    },
+    {
+      "id": "arxiv-4eea84c4bd2c",
+      "title": "Open-Source FUTO Keyboard Layouts and Predictive Text for a Few Endangered Languages",
+      "summary": "We present open-source FUTO Keyboard layouts and predictive text dictionaries for five endangered Uralic languages: Erzya, Moksha, Komi-Zyrian, Livonian, and Skolt Sami. Existing Divvun Android keyboard layouts are converted automatically into the YAML format used by FUTO Keyboard. For predictive text, we construct weighted AOSP dictionaries using translated Finnish lemma frequencies together with morphological frequencies extracted from small target-language corpora using finite-state transducers. This combination provides a practical way to rank inflected word forms when large monolingual corpora are unavailable. The resulting resources offer reusable mobile keyboard support for endangered Uralic languages.",
+      "authors": [
+        "Mika H\\\"am\\\"al\\\"ainen",
+        "Jack Rueter",
+        "Khalid Alnajjar"
+      ],
+      "url": "https://arxiv.org/abs/2611.33432",
+      "pdf_url": "https://arxiv.org/pdf/2611.33432",
+      "source_id": "arxiv",
+      "source_name": "arXiv cs.CL",
+      "kind": "paper",
+      "published_at": "2026-11-27T00:00:00-05:00",
+      "venue": "arXiv preprint",
+      "tags": [
+        "综合",
+        "cs.CL"
+      ],
+      "score": 16.51,
+      "zh_title": "少数濒危语言的开源 FUTO 键盘布局和预测文本",
+      "zh_summary": "我们为Erzya、Moksha、Komi-Zyrian、Livonian和Skolt Sami五种濒危乌拉利语提供了开源的FUTO键盘布局和预测文字词典。 现有的Divvun Android键盘布局会自动转换为FUTO键盘使用的YAML格式. 对于预测文本,我们使用芬兰翻译的lemma频率以及使用有限状态导电器从小型目标语言Corpora提取的形态频率构建加权AOSP词典。 这种组合提供了一种实用的方法,在无法使用大型单一语言的corpora时,对反映的单词形式进行排序. 由此产生的资源为濒危乌拉利语提供了可重复使用的移动键盘支持.",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.33432",
+      "dedupe_keys": [
+        "arxiv:2611.33432",
+        "external:2611.33432",
+        "title:opensourcefutokeyboardlayoutsandpredictivetextforafewendangeredlanguages",
+        "url:https://arxiv.org/abs/2611.33432"
+      ]
+    },
+    {
+      "id": "crossref-0670264118de",
+      "title": "Exploring nonlinear body oscillations for natural quadruped gaits",
+      "summary": "Animals’ body morphology shapes the gait patterns they can perform, where mechanical resonance reduces the need for active control. By tuning posture and muscle stiffness, they leverage their embodied intelligence to achieve effective gaits for different speeds. By contrast, most quadruped robots are not specifically designed to exploit mechanical resonance owing to the complexity of nonlinear dynamics and require dedicated locomotion controllers. To provide an alternative, we present a proof-of-concept framework making the nonlinear dynamics of a robot predictable in the design process and show how this knowledge can be leveraged such that multi-gait locomotion can emerge from nonlinear resonances—shaped by gravity, inertia and elasticity. Here we present the highly compliant quadruped robot eBert, on which we identify six nonlinear normal modes using our new theoretical tools and validate their existence in simulation and hardware. With black-box optimization to determine step length, simulations show how each nonlinear normal mode naturally develops into a distinct gait, manifesting different speeds, which also largely transfers to the robotic hardware. Our experiments show that eBert can exploit its mechanics to generate task-specific movements, which may serve as foundation for designing a new generation of agile and efficient robots leveraging embodied intelligence.",
+      "authors": [
+        "Annika Schmidt",
+        "Davide Calzolari",
+        "Arne Sachtler",
+        "Florian Christoph Loeffl",
+        "Daniel Seidel",
+        "Milan Hermann",
+        "Robert Burger",
+        "Thomas Gumpert",
+        "Antonin Raffin",
+        "Tristan Ehlert",
+        "Maximilian Pries",
+        "David Wandinger",
+        "Florian Schmidt",
+        "Manuel Keppler",
+        "Jinoh Lee",
+        "Alin Albu-Schäffer"
+      ],
+      "url": "https://doi.org/10.1038/s42256-026-01320-x",
+      "pdf_url": "",
+      "source_id": "crossref",
+      "source_name": "Nature Machine Intelligence",
+      "kind": "journal",
+      "published_at": "2026-11-27T00:00:00+00:00",
+      "venue": "Nature Machine Intelligence",
+      "tags": [
+        "训练与系统",
+        "检索与知识",
+        "机器人与具身",
+        "Nature Machine Intelligence"
+      ],
+      "score": 37.7,
+      "zh_title": "探索天然四面体运动",
+      "zh_summary": "动物的身体形态塑造了它们能够表现的步态,其中机械共振降低了主动控制的需求. 通过调节姿势和肌肉僵硬性,它们利用它们内含的智能,实现不同速度的有效速度. 相比之下,由于非线性动力学的复杂性,大多数四角形机器人并不是专门用来利用机械共振的,需要专门的运动控制器. 为了提供一种替代办法,我们提出了一个概念的证明框架,使机器人的非线性动力学在设计过程中具有可预测性,并表明如何利用这种知识,使多特征运动能够从非线性共振中产生——这种共振是由重力、惯性和弹性构成的。 在这里,我们",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "10.1038/s42256-026-01320-x",
+      "dedupe_keys": [
+        "doi:10.1038/s42256-026-01320-x",
+        "external:10.1038/s42256-026-01320-x",
+        "title:exploringnonlinearbodyoscillationsfornaturalquadrupedgaits",
+        "url:https://doi.org/10.1038/s42256-026-01320-x"
+      ]
+    },
+    {
+      "id": "huggingface-823773ba6ff6",
+      "title": "Revisiting LLMs as Context Engineers",
+      "summary": "As large language models (LLMs) are used in more and more new tasks, context engineering becomes a fundamental method to efficiently steer LLMs by constructing instruction prompts or metadata without intensive training. A growing number of LLM context engineering (LCE) approaches automate the task by casting the LLM itself as the engineer that draws generalizable instructions or experiences from offline trials as context. Although these methods resemble how humans learn from experiences, it remains unclear when and how LLMs can engineer effective context from data. To answer the question, we first establish a benchmark composed of datasets with different reasoning patterns. We compared different LCE methods with different LLM families in 8B size, showing that there is no single winner for all tasks, even compared with simple baselines like chain-of-thought. Even when scaling model capabilities via more parameters or generation iterations, LCEs do not consistently boost existing performance. Across all datasets and models, the performance gains of LCEs are negatively correlated (r=-0.5, ple 0.05) with the diversity of the failure modes of reasoning trajectories. Investigating how LCEs work, we find that (1) the improvement in instruction adherence can explain some success of LCEs; (2) one major bottleneck is whether LLMs can extract effective experiences out of natively diverse failures. Through this study, we uncover the limited capabilities of LCEs in abstracting principled contexts from diverse failure modes and understand how LCEs work, providing guidelines for future work.",
+      "authors": [
+        "Junrui Zhang",
+        "Zeyu Xu",
+        "Runchuan Zhu",
+        "Jie Peng",
+        "Long Zhang",
+        "Zixin Ding",
+        "Jiaxin Lin",
+        "Kai Wang",
+        "Jianmin Ji",
+        "Junyuan Hong"
+      ],
+      "url": "https://arxiv.org/abs/2611.30494",
+      "pdf_url": "",
+      "source_id": "huggingface",
+      "source_name": "Hugging Face Daily",
+      "kind": "paper",
+      "published_at": "2026-11-23T00:00:00+00:00",
+      "venue": "Hugging Face Daily Papers",
+      "tags": [
+        "大模型",
+        "推理",
+        "训练与系统",
+        "community pick"
+      ],
+      "score": 24.2,
+      "zh_title": "重新将法学硕士作为背景工程师",
+      "zh_summary": "由于大语言模型(LLMs)被越来越多地用于新的任务,背景工程成为高效引导LLM的一个基本方法,通过构建指令提示或元数据而不经过密集训练. 越来越多的LLM背景工程(LCE)通过将LLM本身铸造为从离线试验中吸取通俗指示或经验作为背景的工程师,将任务自动化. 虽然这些方法类似于人类如何从经验中吸取教训,但LLMs何时以及如何从数据中构建有效的环境仍然不清楚. 为了回答这个问题,我们首先建立了一个由不同推理模式的数据集组成的基准. 我们比较了不同的LCE方法 和不同的LLM家族 在8B大小,sho",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.30494",
+      "dedupe_keys": [
+        "arxiv:2611.30494",
+        "external:2611.30494",
+        "title:revisitingllmsascontextengineers",
+        "url:https://arxiv.org/abs/2611.30494"
+      ]
+    },
+    {
+      "id": "crossref-e63d306fce8d",
+      "title": "SEVERE++: Evaluating Benchmark Sensitivity in Generalization of Video Representation Learning",
+      "summary": "",
+      "authors": [
+        "Fida Mohammad Thoker",
+        "Letian Jiang",
+        "Chen Zhao",
+        "Piyush Bagad",
+        "Hazel Doughty",
+        "Bernard Ghanem",
+        "Cees G. M. Snoek"
+      ],
+      "url": "https://doi.org/10.1007/s11263-026-03073-x",
+      "pdf_url": "",
+      "source_id": "crossref",
+      "source_name": "IJCV",
+      "kind": "journal",
+      "published_at": "2026-11-27T00:00:00+00:00",
+      "venue": "International Journal of Computer Vision",
+      "tags": [
+        "生成与创造",
+        "评测与安全",
+        "IJCV"
+      ],
+      "score": 35.2,
+      "zh_title": "SEVERE++:在普及视频代表性学习方面评价基准敏感性",
+      "zh_summary": "SEVERE++:在普及视频代表性学习方面评价基准敏感性",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "10.1007/s11263-026-03073-x",
+      "dedupe_keys": [
+        "doi:10.1007/s11263-026-03073-x",
+        "external:10.1007/s11263-026-03073-x",
+        "title:severeevaluatingbenchmarksensitivityingeneralizationofvideorepresentationlearning",
+        "url:https://doi.org/10.1007/s11263-026-03073-x"
+      ]
+    },
+    {
+      "id": "huggingface-9c31d26fd5e0",
+      "title": "BiSAT: Bidirectionally Aligned Semantic-Acoustic Tokenization for Speech Language Models",
+      "summary": "Speech language models (LMs) generate speech as sequences of discrete tokens. Their tokenizer must therefore preserve both acoustic detail and linguistic content at a low bitrate. Semantic-enhanced tokenizers may lose acoustic detail, whereas acoustic-oriented tokenizers retain acoustic variation that makes language modeling harder. Unified tokenizers combine both, but representing acoustic detail and linguistic content within a single feature space can cause interference between the two objectives, and existing approaches typically align acoustic representations to fixed semantic targets from a frozen teacher. We propose Bidirectionally Aligned Semantic-Acoustic Tokenization (BiSAT), a unified tokenization framework with separate acoustic and semantic branches aligned by a shared-index mechanism. This design learns acoustic and semantic representations in separate continuous spaces while producing a single discrete code sequence, and it jointly optimizes both encoders without relying on fixed semantic teacher targets. Based on BiSAT, we develop BiSAT-TTS, a zero-shot text-to-speech system comprising an autoregressive text-speech LM and a conditional flow-matching acoustic decoder. Reconstruction, downstream understanding, and diagnostic analyses show that BiSAT effectively preserves semantic and acoustic information in the code stream, performs well on in-the-wild and out-of-domain speech, and learns complementary codebook representations. The frozen-code understanding results also support its feasibility and potential for code-based reward modeling in reinforcement learning post-training. BiSAT-TTS performs comparably to state-of-the-art speech LM-based TTS baselines with less training data, further supporting BiSAT's effectiveness for speech language modeling. The audio demos are available at https://seekmind-lab.github.io/bisat-demo.",
+      "authors": [
+        "Y. Lu",
+        "L. Wang",
+        "S. Okada"
+      ],
+      "url": "https://arxiv.org/abs/2611.30723",
+      "pdf_url": "",
+      "source_id": "huggingface",
+      "source_name": "Hugging Face Daily",
+      "kind": "paper",
+      "published_at": "2026-11-23T00:00:00+00:00",
+      "venue": "Hugging Face Daily Papers",
+      "tags": [
+        "大模型",
+        "训练与系统",
+        "生成与创造",
+        "community pick"
+      ],
+      "score": 21.7,
+      "zh_title": "BiSAT:语音语言模型双向语义声学调化",
+      "zh_summary": "语音语言模型(LM)生成语音作为离散符号的序列. 因此,它们的标语必须同时保留音响细节和语言内容,保持低比特率. 语义增强的代词器可能失去代词细节,而面向辅词的代词器则保留了声学变异,使得语言模型更难. 统一示意器两者兼而有之,但代表一个单一特征空间内的声学细节和语言内容可能会在两个目标之间造成干扰,而现有方法一般将声学表达方式与固定的语义目标从一个冷冻的老师调合. 我们提议双向语义-声调化(BiSAT),一个单独的声调和声调的统一的符号化框架",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.30723",
+      "dedupe_keys": [
+        "arxiv:2611.30723",
+        "external:2611.30723",
+        "title:bisatbidirectionallyalignedsemanticacoustictokenizationforspeechlanguagemodels",
+        "url:https://arxiv.org/abs/2611.30723"
+      ]
+    },
+    {
+      "id": "crossref-34e858497741",
+      "title": "Generating proteins with complex functions",
+      "summary": "",
+      "authors": [
+        "Sarah Alamdari",
+        "Kevin K. Yang"
+      ],
+      "url": "https://doi.org/10.1038/s42256-026-01330-9",
+      "pdf_url": "",
+      "source_id": "crossref",
+      "source_name": "Nature Machine Intelligence",
+      "kind": "journal",
+      "published_at": "2026-11-27T00:00:00+00:00",
+      "venue": "Nature Machine Intelligence",
+      "tags": [
+        "AI for Science",
+        "Nature Machine Intelligence"
+      ],
+      "score": 32.7,
+      "zh_title": "生成具有复杂功能的蛋白质",
+      "zh_summary": "生成具有复杂功能的蛋白质",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "10.1038/s42256-026-01330-9",
+      "dedupe_keys": [
+        "doi:10.1038/s42256-026-01330-9",
+        "external:10.1038/s42256-026-01330-9",
+        "title:generatingproteinswithcomplexfunctions",
+        "url:https://doi.org/10.1038/s42256-026-01330-9"
+      ]
+    },
+    {
+      "id": "crossref-021ae1831bc7",
+      "title": "A long-context generative foundation model for versatile RNA design",
+      "summary": "",
+      "authors": [
+        "Yanjie Huang",
+        "Guangye Lv",
+        "Ziheng Gao",
+        "Anyue Cheng",
+        "Wei Xie",
+        "Mengyan Chen",
+        "Zining Wang",
+        "Junxi Wang",
+        "Xinyi Ma",
+        "Yijun Huang",
+        "Yunpeng Xia",
+        "Weijin Liu",
+        "Yueyang Tang",
+        "Qingya Shi",
+        "Jiahao Wang",
+        "Lu Zhao",
+        "Yifang Cai",
+        "Jack X. Chen",
+        "Yi Yang",
+        "Shuangjia Zheng"
+      ],
+      "url": "https://doi.org/10.1038/s42256-026-01321-w",
+      "pdf_url": "",
+      "source_id": "crossref",
+      "source_name": "Nature Machine Intelligence",
+      "kind": "journal",
+      "published_at": "2026-11-27T00:00:00+00:00",
+      "venue": "Nature Machine Intelligence",
+      "tags": [
+        "大模型",
+        "Nature Machine Intelligence"
+      ],
+      "score": 32.7,
+      "zh_title": "多功能RNA设计的长语系基因基础模型",
+      "zh_summary": "多功能RNA设计的长语系基因基础模型",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "10.1038/s42256-026-01321-w",
+      "dedupe_keys": [
+        "doi:10.1038/s42256-026-01321-w",
+        "external:10.1038/s42256-026-01321-w",
+        "title:alongcontextgenerativefoundationmodelforversatilernadesign",
+        "url:https://doi.org/10.1038/s42256-026-01321-w"
+      ]
+    },
+    {
+      "id": "crossref-025e7be80991",
+      "title": "PiD-Ada: Generalized AI-Generated Image Detection Framework Guided by Pixelwise Decomposition Residuals",
+      "summary": "",
+      "authors": [
+        "Xinghe Fu",
+        "Rui Jiang",
+        "Zheng Yang",
+        "Yu Chen",
+        "Zequn Qin",
+        "Xi Li"
+      ],
+      "url": "https://doi.org/10.1007/s11263-026-03116-3",
+      "pdf_url": "",
+      "source_id": "crossref",
+      "source_name": "IJCV",
+      "kind": "journal",
+      "published_at": "2026-11-27T00:00:00+00:00",
+      "venue": "International Journal of Computer Vision",
+      "tags": [
+        "生成与创造",
+        "IJCV"
+      ],
+      "score": 32.7,
+      "zh_title": "PiD-Ada:通用AI-Generated图像检测框架,由像素分解残余物指导",
+      "zh_summary": "PiD-Ada:通用AI-Generated图像检测框架,由像素分解残余物指导",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "10.1007/s11263-026-03116-3",
+      "dedupe_keys": [
+        "doi:10.1007/s11263-026-03116-3",
+        "external:10.1007/s11263-026-03116-3",
+        "title:pidadageneralizedaigeneratedimagedetectionframeworkguidedbypixelwisedecompositionresiduals",
+        "url:https://doi.org/10.1007/s11263-026-03116-3"
+      ]
+    },
+    {
+      "id": "crossref-586383e4b094",
+      "title": "3D Reconstruction and Novel View Synthesis on Non-Lambertian Surfaces: A Survey",
+      "summary": "Non-Lambertian materials, including specular, glossy, and transparent surfaces, remain challenging for 3D reconstruction and novel view synthesis (NVS). Their strong view-dependent appearance and complex light transport violate the photometric-consistency assumptions that underline classical multi-view geometry and many modern learning-based pipelines. While early attempts often treat these effects as nuisances to be suppressed, recent progress in scene representations has shifted toward modeling view-dependent radiance, physically motivated light transport, and inverse rendering. This survey reviews state-of-the-art approaches for handling non-Lambertian effects in 3D reconstruction and NVS. We present a unified taxonomy that organizes methods by their underlying scene representations and further groups them into three paradigms: (i) View-dependent appearance modeling and component decomposition that explicitly separates diffuse and specular components; (ii) Reflection- and refraction-aware ray tracing that follows non-linear light paths; and (iii) Physically based inverse rendering that jointly estimates geometry, materials, and illumination. Methods designed for dynamic non-Lambertian scenes are regarded as a distinct research problem and are therefore discussed separately in this survey. We also summarize commonly used benchmark datasets, evaluation protocols, downstream tasks, and discuss open challenges such as geometry-material ambiguity and the trade-off between physical fidelity and computational efficiency. Overall, this survey aims to serve as a roadmap toward high-fidelity 3D scene representations for non-Lambertian surfaces. We also provide an online repository, available at https://github.com/TsingyuanChou/Awesome-3D-Non-Lambertian.",
+      "authors": [
+        "Qingyuan Zhou",
+        "Xinyi Liu",
+        "Weidong Yang",
+        "Jiayi Song",
+        "Youquan Liu",
+        "Lihao Sun",
+        "Ben Fei",
+        "Ying He",
+        "Wanli Ouyang"
+      ],
+      "url": "https://doi.org/10.1007/s11263-026-03122-5",
+      "pdf_url": "",
+      "source_id": "crossref",
+      "source_name": "IJCV",
+      "kind": "journal",
+      "published_at": "2026-11-27T00:00:00+00:00",
+      "venue": "International Journal of Computer Vision",
+      "tags": [
+        "评测与安全",
+        "IJCV"
+      ],
+      "score": 32.7,
+      "zh_title": "3D 非兰伯特海面的重建和小说视图合成:调查",
+      "zh_summary": "非兰伯特材料,包括光谱,光泽,透明的表面,对于3D重建和新颖的视图合成(NVS)来说仍然具有挑战性. 他们强烈的视线依赖外观和复杂的光传输违反了光度-一致性假设,这些假设强调古典多景几何和许多基于现代学习的管道. 虽然早期的尝试往往将这些影响视为需要抑制的烦恼,但近期在场景表现方面的进展已经转向模型化的视光依赖、物理驱动的光传输和反向渲染。 本次调查审查了处理3D重建和NVS中非兰伯特语影响的最新方法. 我们提出一个统一的分类法 来组织方法",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "10.1007/s11263-026-03122-5",
+      "dedupe_keys": [
+        "doi:10.1007/s11263-026-03122-5",
+        "external:10.1007/s11263-026-03122-5",
+        "title:3dreconstructionandnovelviewsynthesisonnonlambertiansurfacesasurvey",
+        "url:https://doi.org/10.1007/s11263-026-03122-5"
+      ]
+    },
+    {
+      "id": "huggingface-837579a0a00b",
+      "title": "Pretrained Tabular Features and the Measurement of Financial Proximity",
+      "summary": "Spatial arbitrage pricing theory (S-APT) extends factor models to allow returns to spill over between connected firms, beyond what common risk factors explain. In recent years, tabular foundation models (TFMs) have matched or outperformed tuned gradient-boosted and bagged ensembles on small and medium-sized tabular benchmarks. Although their predictive performance is strong, these models reveal little about what they have learned, which limits their use in regulated financial applications that require explanation. Internal representations are widely used to probe what neural networks learn and to measure similarity. In this paper, we use the frozen representations of four TFMs as a measure of financial dissimilarity in a spatial asset-pricing model of US equities from 2011 to 2025, and find that their estimated gains over a direct distance between the same disclosures become consistently positive once broad SEC filing data are included. This reframes tabular foundation models from black-box predictors into instruments for measuring economic structure, with immediate applications to peer selection, risk attribution and network-based asset pricing. More broadly, our findings suggest that the internal representations of foundation models, not only their predictions, deserve study as economic objects, opening a new line of research on what pretrained models know about firms.",
+      "authors": [
+        "Marcus Gawronsky"
+      ],
+      "url": "https://arxiv.org/abs/2611.31491",
+      "pdf_url": "",
+      "source_id": "huggingface",
+      "source_name": "Hugging Face Daily",
+      "kind": "paper",
+      "published_at": "2026-11-23T00:00:00+00:00",
+      "venue": "Hugging Face Daily Papers",
+      "tags": [
+        "大模型",
+        "检索与知识",
+        "评测与安全",
+        "community pick"
+      ],
+      "score": 21.7,
+      "zh_title": "预选表特征和金融近似度的测量",
+      "zh_summary": "空间套利定价理论(S-APT)扩展了要素模型,允许相关公司之间的收益溢出,超出共同风险因素的解释. 近年来,表格基础模型(TFMS)在中小型表格基准上与调制的梯度激发和包式组合相匹配或超标。 虽然它们的预测性能很强,但这些模型却很少揭示它们所学到的知识,这限制了它们在需要解释的受监管金融应用中的使用. 内部表现物被广泛用于探究神经网络学到了什么,并测量相似性. 在本文中,我们用四个TFM的冻结表示作为空间资产定价模型o中金融差异的衡量尺度.",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.31491",
+      "dedupe_keys": [
+        "arxiv:2611.31491",
+        "external:2611.31491",
+        "title:pretrainedtabularfeaturesandthemeasurementoffinancialproximity",
+        "url:https://arxiv.org/abs/2611.31491"
+      ]
+    },
+    {
+      "id": "huggingface-96e707a4faf4",
+      "title": "Damped Atomic Wave Integration Neurons (DAWIN): A Universal Primitive for Continuous-Time Spatiotemporal Learning",
+      "summary": "Conventional artificial neurons separate spatial feature aggregation from continuous physical time, limiting their ability to model irregular observations. We introduce the Damped Atomic Wave Integration Neuron (DAWIN), a continuous-time primitive for replacing standard neural layers in MLPs, Transformers, and graph neural networks. DAWIN couples spatial projection with elapsed-time-dependent wave excitation and integrates it into a local complex state through closed-form damped evolution, avoiding numerical differential equation solvers. We show that DAWIN generalizes static sinusoidal and memoryless wave neurons on interval-augmented inputs, derive closed-form gradients, and establish bounded-input bounded-output stability for positive damping and sampling intervals bounded away from zero. An associative Triton prefix-scan implementation, DAWINLinear, uses FP32 accumulation and achieves O(log L) parallel depth for sequence length L. Across 11 parameter-matched tasks covering irregular oscillators, MuJoCo dynamics, pedestrian trajectories, and PhysioNet 2012 clinical sequences, DAWIN outperforms Neural CDE on 9 tasks and ReLU-MLP on 8. It achieves the lowest error on dense clinical dynamics (0.9531 NRMSE, winning across all 10 seeds) and ties for the best mortality prediction (0.9993 AUROC). Shuffling elapsed intervals increases error by 58.2%-77.4% on selected dynamics tasks, versus 0.06% on a time-irrelevant control, supporting reliance on physical timing. On NVIDIA B200 GPUs, parallel wave integration accelerates inference by up to 2,630 times over its serial implementation and reduces peak GPU memory by up to 97.6% relative to Mamba in the tested configurations.",
+      "authors": [
+        "Byunggu Yu",
+        "Justin Kim"
+      ],
+      "url": "https://arxiv.org/abs/2611.30025",
+      "pdf_url": "",
+      "source_id": "huggingface",
+      "source_name": "Hugging Face Daily",
+      "kind": "paper",
+      "published_at": "2026-11-23T00:00:00+00:00",
+      "venue": "Hugging Face Daily Papers",
+      "tags": [
+        "训练与系统",
+        "检索与知识",
+        "community pick"
+      ],
+      "score": 19.2,
+      "zh_title": "DAWIN 原子波集成神经元:用于持续时间空间学习的通用原始",
+      "zh_summary": "常规人工神经元将空间特征聚合与连续的物理时间分开,限制了它们模拟不规则观测的能力. 我们引入了Damped Atomic Wave Integration Neuron(DAWIN),这是用于在MLPs,Transformer和图形神经网络中替换标准神经层的连续时间原始. DAWIN 配对空间投影,带有经过时间依赖的波激,并通过闭式坝式演化将其融入局部复杂状态,避免数值微分方程解析器. 我们显示,DAWIN在间隔增强的输入上将静态的sinusoidal和无记忆的波神经元概括化,得出闭式梯度,并确立正式大坝的限输入-输出稳定性。",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.30025",
+      "dedupe_keys": [
+        "arxiv:2611.30025",
+        "external:2611.30025",
+        "title:dampedatomicwaveintegrationneuronsdawinauniversalprimitiveforcontinuoustimespatiotemporallearning",
+        "url:https://arxiv.org/abs/2611.30025"
+      ]
+    },
+    {
+      "id": "huggingface-a517164c9562",
+      "title": "InitFree-SfM: When Initialization-Free Bundle Adjustment meets Learned Structure-from-Motion",
+      "summary": "Initialization-free bundle adjustment (InitFree BA) aims to jointly recover camera poses and scene structure without requiring an initial global estimate. It is a very challenging problem, especially compared to traditional BA where a good estimation is assumed. While recent methods optimize surrogate Object Space Error (OSE) objectives from random initialization, a low objective value does not necessarily yield an accurate reconstruction, revealing a gap between optimization and reconstruction. We show that existing InitFree BA pipelines struggle to produce accurate 3D reconstructions on modern SfM benchmarks, and demonstrate that incorporating learned metric depth substantially improves their practical feasibility. We introduce InitFree-SfM, a complete initialization-free SfM pipeline combining learned correspondences, metric depth, depth-consistent track construction, and joint metric refinement. Within this framework, we propose a simple depth-augmented OSE (dOSE), which complements the directional constraints of OSE by constraining landmark positions along their viewing rays. Our approach substantially outperforms existing InitFree BA methods and achieves competitive accuracy with established SfM pipelines, including on challenging low-overlap image collections. Importantly, our analysis challenges the prevailing emphasis on surrogate objectives in previous InitFree BA research, revealing that geometric constraints play a central role in accurate reconstruction, while OSE-based optimization provides further improvements.",
+      "authors": [
+        "Simon Weber",
+        "Mateo de Mayo",
+        "Je Hyeong Hong",
+        "Carl Olsson",
+        "Daniel Cremers",
+        "Ronald Clark"
+      ],
+      "url": "https://arxiv.org/abs/2611.31516",
+      "pdf_url": "",
+      "source_id": "huggingface",
+      "source_name": "Hugging Face Daily",
+      "kind": "paper",
+      "published_at": "2026-11-23T00:00:00+00:00",
+      "venue": "Hugging Face Daily Papers",
+      "tags": [
+        "生成与创造",
+        "评测与安全",
+        "community pick"
+      ],
+      "score": 19.2,
+      "zh_title": "InitFree-SfM:当初始化-免费套装调整满足学习的结构-从--运动",
+      "zh_summary": "初始化无捆绑调整(InitFree BA)旨在联合回收相机外观和场景结构,而不需要初步的全球估计. 这是一个非常具有挑战性的问题,尤其是与传统的BA相比,后者假设有良好的估计。 虽然最近的方法从随机初始化中优化了代理对象空间错误(OSE)的目标,但低目标值不一定产生准确的重建,揭示了优化与重建之间的差距. 我们表明,现有的自由BA输油管在现代SfM基准上进行精确的三维重建方面挣扎,并表明,纳入学到的量子深度可大大提高其实际可行性。 我们介绍InitFree -SfM,一个压缩机",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.31516",
+      "dedupe_keys": [
+        "arxiv:2611.31516",
+        "external:2611.31516",
+        "title:initfreesfmwheninitializationfreebundleadjustmentmeetslearnedstructurefrommotion",
+        "url:https://arxiv.org/abs/2611.31516"
+      ]
+    },
+    {
+      "id": "huggingface-bd239ba9031f",
+      "title": "What a Forecasting Leaderboard Can Establish: Resolution Reporting for Zero-Shot Time-Series Models",
+      "summary": "A foundation model for time series is pretrained once and then asked to forecast series it has never seen, so the evidence for it is its score on held-out datasets. Such datasets are scarce, and a few public leaderboards carry most comparisons, yet none of them states how small a difference its datasets can detect. We call that quantity the resolution of a board and introduce Vernier, a tool that computes it from the files a board already publishes. Vernier also reports which entries a board cannot separate from its leader and whether its order changes when unrelated parties submit. GIFT-Eval resolves 6.8 rank places, and its displayed neighbours sit 0.91 apart. The ten places of its top ten hold fewer than two resolvable steps. fev-bench, Chronos Benchmark II and TIME show the same pattern: their resolution is 3.6 to 19 times the gap between neighbours. With each of its 2,554 series as an independent source, BOOM is the one board that resolves its top ten. Below the resolution the order depends on who else submitted: across four boards, rules that rank against the pool reversed 43 top-ten pairs with neither entry rerun, in one update in seven. Boards also do not record how much history a model receives. On 70 configurations, shortening it raised the error of three of four open models, two of them by 15%. We release Vernier, which runs this report with one command on any leaderboard that publishes per-dataset scores: https://github.com/therealram18/vernier",
+      "authors": [
+        "Arya Sikder",
+        "Sriram Pillutla"
+      ],
+      "url": "https://arxiv.org/abs/2611.31619",
+      "pdf_url": "",
+      "source_id": "huggingface",
+      "source_name": "Hugging Face Daily",
+      "kind": "paper",
+      "published_at": "2026-11-23T00:00:00+00:00",
+      "venue": "Hugging Face Daily Papers",
+      "tags": [
+        "大模型",
+        "评测与安全",
+        "community pick"
+      ],
+      "score": 19.2,
+      "zh_title": "什么样的预测导板可以建立:零热时序模型的解析报告",
+      "zh_summary": "时间序列的基础模型被事先训练过一次,然后被要求预测它从未见过的序列,所以它的证据是它在被搁置数据集上的得分. 此类数据集稀缺,少数公共领导板承载了大多数的比较,但其中没有任何一个显示其数据集能够探测到多大的差别. 我们称这个数量是董事会的解析度,并引入了Vernier,这个工具从董事会已经公布的文件中计算出来. Vernier还报告说,董事会不能与领导人分开,在不相关的当事方提交申请时其命令是否改变。 GIFT-Eval解决6.8级位置,其显示的邻居相隔0.91. 其前十地中十地持不下二种可解步. Fev -bench, Chronos Be (英语).",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.31619",
+      "dedupe_keys": [
+        "arxiv:2611.31619",
+        "external:2611.31619",
+        "title:whataforecastingleaderboardcanestablishresolutionreportingforzeroshottimeseriesmodels",
+        "url:https://arxiv.org/abs/2611.31619"
+      ]
+    },
+    {
+      "id": "huggingface-722d91e69701",
+      "title": "Guarding with Judgment: Learning to Intervene for Multimodal Safety",
+      "summary": "When visual context makes an ordinary request unsafe to answer as asked, a blanket refusal may leave the user's need unresolved. Choosing how to help requires distinguishing an established hazard from a condition that still needs verification, a distinction that binary safety labels leave unspecified. We formulate this decision through four actions: allow, warn, review, and refuse. To ground these decisions in verifiable evidence, we build a corpus of 20,126 training audits and the JudiBench benchmark, connecting each action to diagnostic judgments, source evidence, and controlled context changes. Our guard, JudiAct, separately states what the source establishes, what condition governs the help, and how the rules apply. It then checks these three brief review items against the original inputs to predict diagnostic labels and a handling action. Supervised training learns individual judgments while comparing label assignments across related cases. A second stage swaps one review item at a time, using the resulting audit feedback to refine review generation. On JudiBench, JudiAct improves request and answer Macro-F1 by more than 28 percentage points over its 4B backbone. Across nine public benchmarks, it outperforms state-of-the-art guards on the mean delivered-answer score in both pre-generation and post-generation settings, cutting MM-SafetyBench attack success from 40.78% to 25.30%.",
+      "authors": [
+        "Jipei He",
+        "Cheng Cheng",
+        "Liuguo Wang",
+        "Zihan Wen",
+        "Changlin Yu",
+        "Wentao Song",
+        "Suyun Zhao"
+      ],
+      "url": "https://arxiv.org/abs/2611.28849",
+      "pdf_url": "",
+      "source_id": "huggingface",
+      "source_name": "Hugging Face Daily",
+      "kind": "paper",
+      "published_at": "2026-11-21T00:00:00+00:00",
+      "venue": "Hugging Face Daily Papers",
+      "tags": [
+        "多模态",
+        "评测与安全",
+        "community pick"
+      ],
+      "score": 19.0,
+      "zh_title": "保护判断:学习如何干预多模态安全",
+      "zh_summary": "当视觉上下文使得普通请求无法按要求回答时,一概拒绝可能会使用户的需求得不到解决. 选择如何帮助需要区分既定危险和仍需核查的条件,这种区分二进制安全标签未作说明。 我们通过四项行动作出这一决定:允许、警告、审查和拒绝。 为了将这些决定以可核查的证据为基础,我们建立了一套20 126项训练审计和Judi Bench基准,将每项行动与诊断判断、来源证据和可控制的背景变化联系起来。 我们的警卫,Judi Act, 分别说出什么是源 确定的,什么条件 管理帮助,如何适用规则。 然后检查这三件大衣",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.28849",
+      "dedupe_keys": [
+        "arxiv:2611.28849",
+        "external:2611.28849",
+        "title:guardingwithjudgmentlearningtointerveneformultimodalsafety",
+        "url:https://arxiv.org/abs/2611.28849"
+      ]
+    },
+    {
+      "id": "huggingface-45936b24a6d7",
+      "title": "So Many Ways to Multiply 3times3 Matrices: A Large Dataset of Rank-23 Schemes",
+      "summary": "A publicly available dataset of 62029 rank-23 schemes for 3times3 matrix multiplication is presented. Every scheme in it has its own rank pattern, an invariant formed by the ranks of the factor matrices of a scheme, so all schemes are pairwise inequivalent. The schemes were obtained by a numerical method combining gradient descent with alternating least squares and by flip graph search, and have ternary, integer or rational coefficients. Rank 23 is the best known for this format and is optimal for schemes with integer coefficients, but the number of essentially different schemes of this rank was poorly understood: the existing collections of Heule et al. and Mårtensson et al. contain many schemes that share only a small number of rank patterns (17376 schemes with 387 patterns and 15316 schemes with 568 patterns respectively). The dataset shows that the number of different rank patterns is much larger than previously known.",
+      "authors": [
+        "Andrew Igorevich Perminov"
+      ],
+      "url": "https://arxiv.org/abs/2611.31155",
+      "pdf_url": "",
+      "source_id": "huggingface",
+      "source_name": "Hugging Face Daily",
+      "kind": "paper",
+      "published_at": "2026-11-23T00:00:00+00:00",
+      "venue": "Hugging Face Daily Papers",
+      "tags": [
+        "训练与系统",
+        "community pick"
+      ],
+      "score": 16.7,
+      "zh_title": "因此,许多方法可以乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘3乘",
+      "zh_summary": "为3次3矩阵乘法提供了62029个排名-23计划的公开数据集. 它的每一个方案都有自己的等级模式,一种由一个方案要素矩阵的等级形成的不常态,因此所有方案都是对等的. 这些办法是通过将梯度递减与交替最小方块相结合的数值法和翻转图搜索法获得的,并具有三角、整数或合理系数。 排名23是这种格式最为人所知的,对于具有整数系数的计划来说是最佳的,但对这一级别上基本不同的计划的数目了解甚少:Heule等人和Mårtensson等人的现有汇编中包含许多只具有少量等级模式的计划(17376).",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.31155",
+      "dedupe_keys": [
+        "arxiv:2611.31155",
+        "external:2611.31155",
+        "title:somanywaystomultiply3times3matricesalargedatasetofrank23schemes",
+        "url:https://arxiv.org/abs/2611.31155"
+      ]
+    },
+    {
+      "id": "huggingface-69946f937906",
+      "title": "Markdown Is Not a Firewall: four coding agents, one rules file, four boundaries",
+      "summary": "Teams put a one-page rules file in a repository and call it a control on coding agents. A registered study found agents rarely look up a repository's contribution rules. I asked the security question: what does a rules file do at a boundary, against a gate? I tested one 278-word rules file, with hypotheses and analysis code deposited first. Claude Code, Codex CLI, Gemini CLI and OpenCode with DeepSeek worked through 20 small repositories with hidden tests, 12 for three of them. Three agents met four boundaries I built: a refused endpoint, a destructive shortcut, a planted instruction and a planted package. Permission prompts, each vendor's own control layer, were off by design. A gate in front of the mock service blocked and logged forbidden requests. Every verdict was read from records the agent could not change. Only my first scoring pass was blind to arm. My checkers found no real bugs, with the file or without it. The file cost one agent a third of its score: Codex CLI fell from 99.0 to 67.7 percent on hidden tests, and in 11 of its 36 steps reported the task complete with all tests passing while under half of the hidden tests passed. Its own tests passed. Faced with two of its rules that clash on these tasks, three agents followed the task and one followed the rule. Pooled, passes fell from 98.2 to 90.9 percent. Matched pairs fell 7.7 points, 1.3 without Codex CLI. Attempts to cross were rare: 5 in 90 gated steps, 3 without the file, 2 with it, all by OpenCode with DeepSeek, all blocked. With no gate, under the neutral file, the same requests reached the mock in 7 of 45 runs. By an error in my run script, the no-file and rules-file arms always ran behind the gate at the three HTTP boundaries, so I could not test whether the file changes what an agent does there. On what I could measure, the file acted as advice. A file tells an agent what you want. A gate decides what it gets.",
+      "authors": [
+        "Sandeep Dhuri"
+      ],
+      "url": "https://arxiv.org/abs/2611.27112",
+      "pdf_url": "",
+      "source_id": "huggingface",
+      "source_name": "Hugging Face Daily",
+      "kind": "paper",
+      "published_at": "2026-11-20T00:00:00+00:00",
+      "venue": "Hugging Face Daily Papers",
+      "tags": [
+        "Agent",
+        "community pick"
+      ],
+      "score": 16.5,
+      "zh_title": "标记 不是防火墙:四个编码智能体,一个规则文件,四个边界",
+      "zh_summary": "团队将一页规则文件放入寄存器,并称其为对编码智能体的控制. 注册研究发现智能体商很少查阅存储处的缴款规则. 我问了一个安全问题:规则文件在边界上对着大门做什么? 我测试了一个278字的规则文件, 假设和分析代码先保存。 Claude Code, Codex CLI,双子座CLI和与DeepSeek的OpenCode通过20个小寄存器进行了隐藏测试,其中3个有12个. 三个特工遇到了我建造的四条边界:一个被拒绝的终点,一个破坏性的捷径,一个人造指令和一个人造包. 许可提示,每个供应商自己的控制层, 被设计关闭。 模拟服务前的一扇门阻断并登录了禁止请求",
+      "ai_tldr": "",
+      "ai_why": "",
+      "external_id": "2611.27112",
+      "dedupe_keys": [
+        "arxiv:2611.27112",
+        "external:2611.27112",
+        "title:markdownisnotafirewallfourcodingagentsonerulesfilefourboundaries",
+        "url:https://arxiv.org/abs/2611.27112"
+      ]
+    }
+  ]
+}
